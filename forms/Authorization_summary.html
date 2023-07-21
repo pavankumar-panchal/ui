@@ -184,7 +184,8 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="teamleaderremarks">Remarks:</label>
+                                                            <label for="teamleaderremarks"
+                                                                class="float-start">Remarks:</label>
                                                             <textarea name="teamleaderremarks" cols="45"
                                                                 class="form-control" id="teamleaderremarks"
                                                                 data-gramm="false" wt-ignore-input="true"></textarea>
@@ -215,6 +216,184 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- form three -->
+    <div class="container mt-4">
+        <table class="table table-bordered">
+            <thead>
+                <tr style="cursor:pointer" onclick="showhide('filterdiv','toggleimg1');">
+                    <th class="header-line" colspan="2">
+                        &nbsp;&nbsp;Filter the Data
+                        <div class="float-end"><img src="../images/minus.jpg" border="0" id="toggleimg1"
+                                name="toggleimg1" align="absmiddle"></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" valign="top">
+                        <div id="filterdiv" style="display: block;">
+                            <form action="" method="post" name="filterform" id="filterform" onsubmit="return false;">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <!-- Add your form elements here -->
+
+
+
+                                        <div class="container mt-4">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="DPC_fromdate">From Date:</label>
+                                                            <div class="input-group">
+                                                                <input name="fromdate" type="text" class="form-control"
+                                                                    id="DPC_fromdate" autocomplete="off"
+                                                                    style="background:#FEFFE6;" value=""
+                                                                    datepicker_format="DD-MM-YYYY" maxlength="10"
+                                                                    isdatepicker="true">
+                                                                <span class="input-group-text">
+                                                                    <img id="CALBUTTONDPC_fromdate"
+                                                                        title="Open Calendar..."
+                                                                        datepicker_inputid="DPC_fromdate"
+                                                                        datepicker_format="DD-MM-YYYY"
+                                                                        class="calendarbutton"
+                                                                        src="../images/calendar_icon.png"
+                                                                        style="position: relative; cursor: pointer; vertical-align: bottom; height: 16px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="DPC_todate">To Date:</label>
+                                                            <div class="input-group">
+                                                                <input name="todate" type="text" class="form-control"
+                                                                    id="DPC_todate" autocomplete="off"
+                                                                    style="background:#FEFFE6;" value=""
+                                                                    datepicker_format="DD-MM-YYYY" maxlength="10"
+                                                                    isdatepicker="true">
+                                                                <span class="input-group-text">
+                                                                    <img id="CALBUTTONDPC_todate"
+                                                                        title="Open Calendar..."
+                                                                        datepicker_inputid="DPC_todate"
+                                                                        datepicker_format="DD-MM-YYYY"
+                                                                        class="calendarbutton"
+                                                                        src="../images/calendar_icon.png"
+                                                                        style="position: relative; cursor: pointer; vertical-align: bottom; height: 16px;">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="s_customername">Customer Name:</label>
+                                                            <input name="s_customername" type="text"
+                                                                class="form-control" id="s_customername" size="30"
+                                                                isdatepicker="true">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="s_customerid">Customer ID:</label>
+                                                            <input name="s_customerid" type="text" class="form-control"
+                                                                id="s_customerid" size="30" isdatepicker="true">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="s_category">Category:</label>
+                                                            <select name="s_category" id="s_category"
+                                                                class="form-control">
+                                                                <option value="" selected="selected">ALL</option>
+                                                                <option value="BLR">Bangalore</option>
+                                                                <option value="CSD">CSD</option>
+                                                                <option value="KKG">KKG</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Flag:</label>
+                                                            <div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="s_flagdatabasefield"
+                                                                        id="s_flagdatabasefield0" value="yes">
+                                                                    <label class="form-check-label"
+                                                                        for="s_flagdatabasefield0">Yes</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="s_flagdatabasefield"
+                                                                        id="s_flagdatabasefield1" value="no">
+                                                                    <label class="form-check-label"
+                                                                        for="s_flagdatabasefield1">No</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="s_flagdatabasefield"
+                                                                        id="s_flagdatabasefield2" value=""
+                                                                        checked="checked">
+                                                                    <label class="form-check-label"
+                                                                        for="s_flagdatabasefield2">Both</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Publish Record:</label>
+                                                            <div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="s_publishdatabasefield"
+                                                                        id="s_publishdatabasefield0" value="yes">
+                                                                    <label class="form-check-label"
+                                                                        for="s_publishdatabasefield0">Yes</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="s_publishdatabasefield"
+                                                                        id="s_publishdatabasefield1" value="no">
+                                                                    <label class="form-check-label"
+                                                                        for="s_publishdatabasefield1">No</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="s_publishdatabasefield"
+                                                                        id="s_publishdatabasefield2" value=""
+                                                                        checked="checked">
+                                                                    <label class="form-check-label"
+                                                                        for="s_publishdatabasefield2">Both</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="s_problem">Problem:</label>
+                                                            <input name="s_problem" type="text" class="form-control"
+                                                                id="s_problem" value="" size="30" isdatepicker="true">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               
+                                            </form>
+                                        </div>
+
+                                        <!-- Bootstrap JS (Optional for some components) -->
+
+
+                                        <!-- ... -->
+                                    </tbody>
+                                </table>
+                                <div class="row mt-3">
+                                    <div class="col-md-8">
+                                        <div id="filter-form-error"></div>
+                                    </div>
+                                    <div class="col-md-4 text-end">
+                                        <button name="view" type="submit" class="btn btn-primary"
+                                            onclick="formfilter('view');">View</button>
+                                        <img src="../images/toexcel.png" alt="To Excel" onclick="formfilter('toexcel');"
+                                            style="cursor:pointer;">
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </td>
