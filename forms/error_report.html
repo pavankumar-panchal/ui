@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Add your meta tags, title, and other headers here if needed -->
 
@@ -12,6 +13,7 @@
     body {
       background-color: #fff;
     }
+
     .container {
       background-color: #fff;
       padding: 20px;
@@ -20,15 +22,17 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     .mt-4 {
       margin-top: 20px;
     }
-
   </style>
 </head>
+
 <body>
   <div class="container mt-4 bg-light">
-    <h4  class="" style="padding:10px 30px 10px 30px; cursor:pointer" onclick="showhide('maindiv','toggleimg');">&nbsp;&nbsp;Enter the Details</h4>
+    <h4 class="" style="padding:10px 30px 10px 30px; cursor:pointer" onclick="showhide('maindiv','toggleimg');">
+      &nbsp;&nbsp;Enter the Details</h4>
     <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
       <div id="maindiv" style="display: block;">
         <table class="table table-bordered bg-light">
@@ -37,11 +41,13 @@
               <td style="border-right:1px solid #c2cad4;">
                 <div class="form-group">
                   <label for="fromdate">From Date:</label>
-                  <input name="fromdate" type="text" class="form-control swifttext" id="DPC_fromdate" size="30" autocomplete="off" value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                  <input name="fromdate" type="date" class="form-control swifttext" id="DPC_fromdate" size="30"
+                    autocomplete="off" value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
                 </div>
                 <div class="form-group">
                   <label for="todate">To Date:</label>
-                  <input name="todate" type="text" class="form-control swifttext" id="DPC_todate" size="30" autocomplete="off" value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                  <input name="todate" type="date" class="form-control swifttext" id="DPC_todate" size="30"
+                    autocomplete="off" value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
                 </div>
                 <div class="form-group">
                   <label for="s_productgroup">Product group:</label>
@@ -61,7 +67,8 @@
                 </div>
                 <div class="form-group">
                   <label for="errorreported">Error Description:</label>
-                  <input name="errorreported" type="text" class="form-control swifttext" id="errorreported" size="30" autocomplete="off" isdatepicker="true">
+                  <input name="errorreported" type="text" class="form-control swifttext" id="errorreported" size="30"
+                    autocomplete="off" isdatepicker="true">
                 </div>
               </td>
               <td>
@@ -81,11 +88,13 @@
                 </div>
                 <div class="form-group">
                   <label for="reportedto">Reported To:</label>
-                  <input name="reportedto" type="text" class="form-control swifttext" id="reportedto" size="30" autocomplete="off" isdatepicker="true">
+                  <input name="reportedto" type="text" class="form-control swifttext" id="reportedto" size="30"
+                    autocomplete="off" isdatepicker="true">
                 </div>
                 <div class="form-group">
                   <label for="customername">Reported By:</label>
-                  <input name="customername" type="text" class="form-control swifttext" id="customername" size="30" autocomplete="off" isdatepicker="true">
+                  <input name="customername" type="text" class="form-control swifttext" id="customername" size="30"
+                    autocomplete="off" isdatepicker="true">
                 </div>
               </td>
             </tr>
@@ -94,7 +103,8 @@
                 <div class="form-group">
                   <div id="form-error"></div>
                 </div>
-                <button name="view" type="submit" class="btn btn-primary" id="view" onclick="formsubmit();">View</button>
+                <button name="view" type="submit" class="btn btn-primary" id="view"
+                  onclick="formsubmit();">View</button>
               </td>
             </tr>
           </tbody>
@@ -113,4 +123,5 @@
     // Your JavaScript functions and code here
   </script>
 </body>
+
 </html>
