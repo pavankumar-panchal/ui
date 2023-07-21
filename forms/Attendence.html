@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Table Design</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
+                        <th class="header-line pl-3 bg-light">Enter Details </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="maindiv" style="display: block;">
+                                <form action="" method="post" name="submitform" id="submitform"
+                                    onsubmit="return false;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="userid">Executive Name:</label>
+                                                <select name="solvedby" id="solvedby" class="form-select form-control">
+                                                    <option value="">Make a selection</option>
+                                                    <!-- Add other options here -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="month">Month:</label>
+                                                <select name="solvedby" id="solvedby" class="form-select form-control">
+                                                    <option value="">Make a selection</option>
+                                                    <option value="">Make A Selection</option>
+                                                    <option value="01">January</option>
+                                                    <option value="02">February</option>
+                                                    <option value="03">March</option>
+                                                    <option value="04">April</option>
+                                                    <option value="05">May</option>
+                                                    <option value="06">June</option>
+                                                    <option value="07">July</option>
+                                                    <option value="08">August</option>
+                                                    <option value="09">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December </option>
+                                                    <!-- Add other options here -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="year">Year:</label>
+                                                <select name="solvedby" id="solvedby" class="form-select form-control">
+                                                    <option value="">Make a selection</option>
+                                                    <!-- Add other options here -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3" align="right">
+                                        <div class="col-md-12 text-right">
+                                            <div class="form-group">
+                                                <div id="form-error"></div>
+                                            </div>
+                                            <button type="button" class="btn btn-primary" id="display"
+                                                onclick="attendancedisplay()">Display</button>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <a href="./index.php?a_link=attendance_report_adv"
+                                                class="btn btn-primary">Advanced</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
