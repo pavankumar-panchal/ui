@@ -1,110 +1,58 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #6393df; border-top:none;">
-    <tbody>
-        <tr style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
-            <td class="header-line" style="padding:0">&nbsp;&nbsp;Enter Details</td>
-            <td align="right" class="header-line" style="padding-right:7px">
-                <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
-                        align="absmiddle"></div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" valign="top">
-                <div id="maindiv" style="display: block;">
-                    <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="2">
-                            <tbody>
-                                <tr>
-                                    <td valign="top">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="3">
-                                            <tbody>
-                                                <tr bgcolor="#f7faff">
-                                                    <td valign="top">Executive Name:</td>
-                                                    <td valign="top"><select name="userid" id="userid"
-                                                            class="swiftselect">
-                                                            <option value="" selected="selected">Make A Selection
-                                                            </option>
-                                                            <input type="hidden" name="lastslno" id="lastslno" value="">
-                                                            <input type="hidden" name="loggeduser" id="loggeduser"
-                                                                value="1">
-                                                            <input type="hidden" name="loggedusertype"
-                                                                id="loggedusertype" value="ADMIN">
-                                                            <input type="hidden" name="loggedreportingauthority"
-                                                                id="loggedreportingauthority" value="<br />
-<b>Warning</b>:  Undefined variable $reportingauthority in <b>/opt/lampp/htdocs/mywork/redesign/attendance/attendance.php</b> on line <b>43</b><br />
-"></td>
-                                                </tr>
+    <tbody><tr style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
+      <td class="header-line" style="padding:0">&nbsp;&nbsp;Enter the Details</td>
+      <td align="right" class="header-line" style="padding-right:7px">
+        <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg" align="absmiddle"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" valign="top">
+        <div id="maindiv" style="display: block;">
+          <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tbody><tr>
+                <td valign="top">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                    <tbody><tr bgcolor="#edf4ff">
+                      <td valign="top">From Date:</td>
+                      <td valign="top"><nobr><input name="fromdate" type="text" class="swifttext" id="DPC_fromdate" size="30" autocomplete="off" style="background:#FEFFE6;" value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true" fdprocessedid="unv8x9"><span>&nbsp;</span><img id="CALBUTTONDPC_fromdate" title="Open Calendar..." datepicker_inputid="DPC_fromdate" datepicker_format="DD-MM-YYYY" class="calendarbutton" src="../images/calendar_icon.png" style="position: relative; cursor: pointer; vertical-align: bottom; height: 16px;"><span>&nbsp;</span></nobr>
+                        <input name="username" type="hidden" class="swifttext" id="username" value="1">
+                      </td>
+                    </tr>
+                    <tr bgcolor="#f7faff">
+                      <td valign="top">To Date:</td>
+                      <td valign="top"><nobr><input name="todate" type="text" class="swifttext" id="DPC_todate" size="30" autocomplete="off" style="background:#FEFFE6;" value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true" fdprocessedid="6pecbh"><span>&nbsp;</span><img id="CALBUTTONDPC_todate" title="Open Calendar..." datepicker_inputid="DPC_todate" datepicker_format="DD-MM-YYYY" class="calendarbutton" src="../images/calendar_icon.png" style="position: relative; cursor: pointer; vertical-align: bottom; height: 16px;"><span>&nbsp;</span></nobr>
+                        <input name="usertype" type="hidden" class="swifttext" id="usertype" value="ADMIN">
+                      </td>
+                    </tr>
 
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td valign="top">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="3">
-                                            <tbody>
-                                                <tr bgcolor="#f7faff">
-                                                    <td valign="top">Month:</td>
-                                                    <td valign="top"><select name="month" id="month"
-                                                            class="swiftselect">
-                                                            <option value="">Make A Selection</option>
-                                                            <option value="01">January</option>
-                                                            <option value="02">February</option>
-                                                            <option value="03">March</option>
-                                                            <option value="04">April</option>
-                                                            <option value="05">May</option>
-                                                            <option value="06">June</option>
-                                                            <option value="07">July</option>
-                                                            <option value="08">August</option>
-                                                            <option value="09">September</option>
-                                                            <option value="10">October</option>
-                                                            <option value="11">November</option>
-                                                            <option value="12">December</option>
-                                                        </select></td>
-                                                </tr>
+                    <tr bgcolor="#edf4ff">
+                      <td valign="top">User Name:</td>
+                      <td valign="top">
+                                                        <select name="userid" id="userid" class="swiftselect" fdprocessedid="9mlttf">
+                                                        
+                      </td>
 
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td valign="top">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="3">
-                                            <tbody>
-                                                <tr bgcolor="#f7faff">
-                                                    <td valign="top">Year:</td>
-                                                    <td valign="top"><select name="year" id="year" class="swiftselect">
-                                                            <option value="">Make A Selection</option>
-                                                            <option value="2023">2023</option>
-                                                        </select></td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" align="right" valign="middle"
-                                        style="padding-right:15px; border-top:1px solid #d1dceb;">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" height="35">
-                                            <tbody>
-                                                <tr>
-                                                    <td width="68%" height="35" align="left" valign="middle">
-                                                        <div id="form-error"></div>
-                                                    </td>
-                                                    <td width="32%" height="35" align="right" valign="middle"><input
-                                                            name="display" type="button" class="swiftchoicebutton"
-                                                            id="display" value="Display"
-                                                            onclick="attendancedisplay()">&nbsp;&nbsp;&nbsp;
-                                                        <!-- <input name="advanced" type="button" class="swiftchoicebutton-orange" id="advanced" value="Advanced" href="./index.php?a_link=attendance_report_adv'" />-->
-                                                        <a href="./index.php?a_link=attendance_report_adv">Advanced</a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>
-                </div>
-            </td>
-        </tr>
-
-    </tbody>
-</table>
+                    </tr>
+                  </tbody></table>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="middle" style="padding-right:15px; border-top:1px solid #d1dceb;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" height="35">
+                    <tbody><tr>
+                      <td width="68%" height="35" align="left" valign="middle">
+                        <div id="form-error"></div>
+                      </td>
+                      <td width="15%" height="35" align="right" valign="middle"><input name="view" type="submit" class="swiftchoicebutton" id="view" value="View" onclick="formsubmit('view'); " fdprocessedid="mnaln6">
+                        &nbsp;&nbsp;&nbsp; <img src="../images/toexcel.png" border="0" align="absmiddle" onclick="formsubmit('toexcel');" style="cursor:pointer"></td>
+                    </tr>
+                  </tbody></table>
+                </td>
+              </tr>
+            </tbody></table>
+          </form>
+        </div>
+      </td>
+    </tr>
+  </tbody></table>
