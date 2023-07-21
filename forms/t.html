@@ -5,108 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <title>Filter the Data</title>
+  <title>Form Design with Bootstrap</title>
 </head>
 <body>
   <div class="container mt-4">
-    <form>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="DPC_fromdate">From Date:</label>
-            <div class="input-group">
-              <input name="fromdate" type="text" class="form-control" id="DPC_fromdate"
-                autocomplete="off" style="background:#FEFFE6;" value=""
-                datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
-              <span class="input-group-text">
-                <img id="CALBUTTONDPC_fromdate" title="Open Calendar..." datepicker_inputid="DPC_fromdate"
-                  datepicker_format="DD-MM-YYYY" class="calendarbutton"
-                  src="../images/calendar_icon.png"
-                  style="position: relative; cursor: pointer; vertical-align: bottom; height: 16px;">
-              </span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="DPC_todate">To Date:</label>
-            <div class="input-group">
-              <input name="todate" type="text" class="form-control" id="DPC_todate" autocomplete="off"
-                style="background:#FEFFE6;" value="" datepicker_format="DD-MM-YYYY" maxlength="10"
-                isdatepicker="true">
-              <span class="input-group-text">
-                <img id="CALBUTTONDPC_todate" title="Open Calendar..." datepicker_inputid="DPC_todate"
-                  datepicker_format="DD-MM-YYYY" class="calendarbutton"
-                  src="../images/calendar_icon.png"
-                  style="position: relative; cursor: pointer; vertical-align: bottom; height: 16px;">
-              </span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="s_customername">Customer Name:</label>
-            <input name="s_customername" type="text" class="form-control" id="s_customername" size="30"
-              isdatepicker="true">
-          </div>
-          <div class="form-group">
-            <label for="s_customerid">Customer ID:</label>
-            <input name="s_customerid" type="text" class="form-control" id="s_customerid" size="30"
-              isdatepicker="true">
-          </div>
-          <div class="form-group">
-            <label for="s_category">Category:</label>
-            <select name="s_category" id="s_category" class="form-control">
-              <option value="" selected="selected">ALL</option>
-              <option value="BLR">Bangalore</option>
-              <option value="CSD">CSD</option>
-              <option value="KKG">KKG</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Flag:</label>
-            <div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="s_flagdatabasefield" id="s_flagdatabasefield0" value="yes">
-                <label class="form-check-label" for="s_flagdatabasefield0">Yes</label>
+    <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td valign="top">From Date:</td>
+            <td valign="top">
+              <div class="input-group">
+                <input name="fromdate" type="text" class="form-control" id="DPC_fromdate" autocomplete="off" style="background:#FEFFE6;" value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                <span class="input-group-text"><img id="CALBUTTONDPC_fromdate" title="Open Calendar..." datepicker_inputid="DPC_fromdate" datepicker_format="DD-MM-YYYY" class="calendarbutton" src="../images/calendar_icon.png" style="cursor: pointer;"></span>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="s_flagdatabasefield" id="s_flagdatabasefield1" value="no">
-                <label class="form-check-label" for="s_flagdatabasefield1">No</label>
+            </td>
+          </tr>
+          <!-- Continue with other form fields -->
+          <!-- ... -->
+          <tr>
+            <td align="right" valign="middle" style="padding-right:15px; border-top:1px solid #d1dceb;" colspan="2">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="teamleaderremarks">Remarks:</label>
+                    <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks" data-gramm="false" wt-ignore-input="true"></textarea>
+                    <input type="hidden" name="lastslno" id="lastslno" value="">
+                    <input type="hidden" name="registervalue" id="registervalue" value="">
+                  </div>
+                </div>
+                <div class="col-md-6 text-end">
+                  <div id="form-error"></div>
+                  <input name="save" type="submit" class="btn btn-primary" id="save" value="Save" onclick="formsubmit('save')">
+                  <input name="new" type="reset" class="btn btn-secondary" id="new" value="Clear" onclick="clearinnerhtml();">
+                </div>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="s_flagdatabasefield" id="s_flagdatabasefield2" value="" checked="checked">
-                <label class="form-check-label" for="s_flagdatabasefield2">Both</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Publish Record:</label>
-            <div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="s_publishdatabasefield" id="s_publishdatabasefield0" value="yes">
-                <label class="form-check-label" for="s_publishdatabasefield0">Yes</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="s_publishdatabasefield" id="s_publishdatabasefield1" value="no">
-                <label class="form-check-label" for="s_publishdatabasefield1">No</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="s_publishdatabasefield" id="s_publishdatabasefield2" value="" checked="checked">
-                <label class="form-check-label" for="s_publishdatabasefield2">Both</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="s_problem">Problem:</label>
-            <input name="s_problem" type="text" class="form-control" id="s_problem" value="" size="30" isdatepicker="true">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-end">
-          <button name="view" type="submit" class="btn btn-primary">View</button>
-          <img src="../images/toexcel.png" alt="To Excel" style="cursor:pointer;">
-        </div>
-      </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </form>
   </div>
 
