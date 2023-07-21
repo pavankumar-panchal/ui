@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="container mt-4">
-        <table class="table table-bordered table-striped">
+    <div class="container mt-4 " >
+        <table class="table table-bordered table-striped" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <thead>
                 <tr style="cursor:pointer" onclick="showhide('pendingauthorization','toggleimg');">
-                    <th class="header-line" colspan="2">
+                    <th class="header-line bg-light" colspan="2">
                         &nbsp;&nbsp;Authorization Summary - You have <strong>0</strong> Records Pending for
                         Authorization
                         <div class="float-end"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
@@ -24,26 +24,26 @@
             </thead>
             <tbody>
                 <tr>
-                    <td width="50%" style="border-right:1px solid #d1dceb;">
+                    <td width="50%">
                         <table class="table table-bordered">
                             <tbody>
-                                <tr class="bg-light">
+                                <tr class="">
                                     <td valign="top">Calls:</td>
                                     <td valign="top">0</td>
                                 </tr>
-                                <tr class="bg-info">
+                                <tr>
                                     <td valign="top">Emails:</td>
                                     <td valign="top">0</td>
                                 </tr>
-                                <tr class="bg-light">
+                                <tr>
                                     <td valign="top">Errors:</td>
                                     <td valign="top">0</td>
                                 </tr>
-                                <tr class="bg-info">
+                                <tr>
                                     <td valign="top">Inhouse:</td>
                                     <td valign="top">0</td>
                                 </tr>
-                                <tr class="bg-light">
+                                <tr>
                                     <td valign="top">Onsite:</td>
                                     <td valign="top">0</td>
                                 </tr>
@@ -82,10 +82,10 @@
     </div>
     <!-- second form  -->
     <div class="container mt-4">
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <thead>
                 <tr style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
-                    <th class="header-line" colspan="2">
+                    <th class="header-line bg-light" colspan="2">
                         &nbsp;&nbsp;Enter / Edit / View Details
                         <div class="float-end"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
                                 align="absmiddle"></div>
@@ -109,25 +109,28 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="border-right:1px solid #d1dceb;">
+                                            <td>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="authorizedgroup">Category:</label>
-                                                            <select name="solvedby" id="solvedby" class="form-select form-control">
+                                                            <select name="solvedby" id="solvedby"
+                                                                class="form-select form-control">
                                                                 <option value="">Make a selection</option>
                                                                 <!-- Add other options here -->
-                                                              </select>
+                                                            </select>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label>Authorized:</label>
+                                                        <br>
+                                                        <div class="form-group"
+                                                            style="display: flex; flex-direction: row;">
+                                                            <label>Authorized:</label>&nbsp;&nbsp;&nbsp;
                                                             <div class="form-check">
                                                                 <input type="radio" name="authorizedatabasefield"
                                                                     id="authorizedatabasefield0" value="yes"
                                                                     checked="checked" class="form-check-input">
                                                                 <label for="authorizedatabasefield0"
                                                                     class="form-check-label">Yes</label>
-                                                            </div>
+                                                            </div>&nbsp;&nbsp;
                                                             <div class="form-check">
                                                                 <input type="radio" name="authorizedatabasefield"
                                                                     id="authorizedatabasefield1" value="no"
@@ -137,16 +140,19 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label>Flag the Entry:</label>
+
+                                                    <div class="col-md-6" style="margin-top:20px;">
+                                                        <div class="form-group "
+                                                            style="display: flex; flex-direction: row;">
+                                                            <label>Flag the Entry:</label> &nbsp;&nbsp;&nbsp;
+
                                                             <div class="form-check">
                                                                 <input type="radio" name="flagdatabasefield"
                                                                     id="flagdatabasefield0" value="yes"
                                                                     class="form-check-input">
                                                                 <label for="flagdatabasefield0"
                                                                     class="form-check-label">Yes</label>
-                                                            </div>
+                                                            </div>&nbsp;&nbsp;
                                                             <div class="form-check">
                                                                 <input type="radio" name="flagdatabasefield"
                                                                     id="flagdatabasefield1" value="no" checked="checked"
@@ -155,15 +161,18 @@
                                                                     class="form-check-label">No</label>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label>Publish:</label>
+                                                        <br> 
+                                                    
+                                                        <div class="form-group"
+                                                            style="display: flex; flex-direction: row; word-spacing: 10px; margin-top: 10px ;"> 
+                                                            <label>Publish:</label> &nbsp;
                                                             <div class="form-check">
                                                                 <input type="radio" name="publishdatabasefield"
                                                                     id="publishdatabasefield0" value="yes"
                                                                     class="form-check-input">
                                                                 <label for="publishdatabasefield0"
                                                                     class="form-check-label">Yes</label>
-                                                            </div>
+                                                            </div>&nbsp;
                                                             <div class="form-check">
                                                                 <input type="radio" name="publishdatabasefield"
                                                                     id="publishdatabasefield2" value="no"
@@ -182,7 +191,8 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="teamleaderremarks" class="float-start">Remarks:</label>
+                                                            <label for="teamleaderremarks"
+                                                                class="float-start">Remarks:</label>
                                                             <textarea name="teamleaderremarks" cols="45"
                                                                 class="form-control" id="teamleaderremarks"
                                                                 data-gramm="false" wt-ignore-input="true"></textarea>
@@ -201,7 +211,7 @@
                                                         <input type="hidden" name="loggedreportingauthority"
                                                             id="loggedreportingauthority" value="">
                                                     </div>
-                                                    <div class="col-md-6 text-end">
+                                                    <div class="col-md-6 text-end" style="margin-top: 10px;">
                                                         <div id="form-error"></div>
                                                         <input name="save" type="submit" class="btn btn-primary"
                                                             id="save" value="Save" onclick="formsubmit('save')">
