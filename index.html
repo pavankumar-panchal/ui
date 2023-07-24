@@ -14,26 +14,13 @@
   <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
   <meta name="author" content="Łukasz Holeczek">
   <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-  <title>CoreUI Free Bootstrap Admin Template</title>
+  <title>SSM Support</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
   <link rel="manifest" href="assets/favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- Vendors styles-->
   <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
@@ -46,13 +33,10 @@
   <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 
 </head>
-
 <body>
   <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
     <div class="sidebar-brand d-none d-md-flex">
-      <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
-        <use xlink:href="assets/brand/coreui.svg#full"></use>
-      </svg>
+    
       <!-- <img src="ssm-new-logo-removebg-preview.png" alt=""> -->
       <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
         <use xlink:href="assets/brand/coreui.svg#signet"></use>
@@ -64,7 +48,7 @@
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
           </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">NEW</span></a></li>
       <li class="nav-title">Options</li>
-      <li class="nav-item"><a class="nav-link" href="colors.html">
+      <li class="nav-item"><a class="nav-link" href="forms/Authorization_summary.html">
           <svg class="nav-icon">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-book"></use>
           </svg> Record Authorization</a></li>
@@ -75,21 +59,19 @@
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-screen-desktop"></use>
           </svg> Registers</a>
         <ul class="nav-group-items">
-          <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
-              Accordion</a></li>
-          <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-              Breadcrumb</a></li>
-          <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> Cards</a></li>
-          <li class="nav-item"><a class="nav-link" href="base/carousel.html"><span class="nav-icon"></span> Carousel</a>
+          <li class="nav-item"><a class="nav-link" href="forms/calls.html"><span class="nav-icon"></span>
+              Calls</a></li>
+          <li class="nav-item"><a class="nav-link" href="forms/email.html"><span class="nav-icon"></span>
+              Emails</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="nav-icon"></span> Errors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="nav-icon"></span> In-house</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="base/collapse.html"><span class="nav-icon"></span> Collapse</a>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="nav-icon"></span> Onsite</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="base/list-group.html"><span class="nav-icon"></span> List
-              group</a></li>
-          <li class="nav-item"><a class="nav-link" href="base/navs-tabs.html"><span class="nav-icon"></span> Navs &amp;
-              Tabs</a></li>
-          <li class="nav-item"><a class="nav-link" href="base/pagination.html"><span class="nav-icon"></span>
-              Pagination</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="nav-icon"></span> References</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="nav-icon"></span> Requirements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="nav-icon"></span>
+              Skype</a></li>
 
         </ul>
       </li>
@@ -98,28 +80,29 @@
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pen-nib"></use>
           </svg> Billings</a>
         <ul class="nav-group-items">
-          <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span>
-              Buttons</a></li>
-          <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span>
-              Buttons Group</a></li>
-          <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"></span>
-              Dropdowns</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="nav-icon"></span>
+              Invoices</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="nav-icon"></span>
+              Receipts</a></li>
+         
         </ul>
       </li>
 
       <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
           <svg class="nav-icon">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
-          </svg> Maste</a>
+          </svg> Masters</a>
         <ul class="nav-group-items">
-          <li class="nav-item"><a class="nav-link" href="forms/form-control.html"> Form Control</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms/select.html"> Select</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms/checks-radios.html"> Checks and radios</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms/range.html"> Range</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms/input-group.html"> Input group</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms/floating-labels.html"> Floating labels</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms/layout.html"> Layout</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms/validation.html"> Validation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Customer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Users</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Versions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Out Station Employees</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Dealers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Support Units</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Non Working Days</a></li>
         </ul>
       </li>
 
@@ -128,17 +111,17 @@
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
           </svg> Reports</a>
         <ul class="nav-group-items">
-          <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="forms/stats&reports.html"><span class="nav-icon"></span>
               Stats & Reports</a></li>
-          <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="forms/error_report.html"><span class="nav-icon"></span>
               Error Reports</a></li>
-          <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="forms/requirement_report.html"><span class="nav-icon"></span>
               Onsite Report</a></li>
-          <li class="nav-item"><a class="nav-link" href="notifications/toasts.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="forms/Onsite.html"><span class="nav-icon"></span>
               Chart View</a></li>
-          <li class="nav-item"><a class="nav-link" href="notifications/toasts.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="forms/chartview.html"><span class="nav-icon"></span>
               Attendence</a></li>
-          <li class="nav-item"><a class="nav-link" href="notifications/toasts.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="forms/dailyreport.html"><span class="nav-icon"></span>
               Daily Reports</a></li>
         </ul>
       </li>
@@ -749,14 +732,15 @@
                 <!-- Footer Menu-->
                 <div class="footer_menu">
                   <ul>
-                    <li><a href="#">Relyonsoft.com</a></li>
-                    <li><a href="#">Saraltds.com</a></li>
-                    <li><a href="#">Saralvat.com</a></li>
-                    <li><a href="#">saraltaxoffice.com</a></li>
-                    <li><a href="#">Saralpaypack.com</a></li>
-                    <li><a href="#">Relyonsoft.com</a></li>
-                    <li><a href="#">Saraltds.com</a></li>
-                    <li><a href="#">Saralvat.com</a></li>
+                    <li><a href="https://relyonsoft.com/">Relyonsoft.com</a></li>
+                    <li><a href="https://www.saraltds.com/">Saraltds.com</a></li>
+                    <li><a href="http://www.saralvat.com/">Saralvat.com</a></li>
+                    <li><a href="http://www.saraltaxoffice.com/">saraltaxoffice.com</a></li>
+                    <li><a href="https://saralpaypack.com/">Saralpaypack.com</a></li>
+                    <li><a href="https://saralpaypack.com/">Saralpaypack.com</a></li>
+                    <li><a href="https://www.saralaccounts.com/">Saralaccounts.com</a></li>
+                    <li><a href="http://saralxbrl.in/">saralxbrl.in/</a></li>
+                    <li><a href="https://userlogin.relyonsoft.com/">userlogin.relyonsoft.com</a></li>
 
                   </ul>
                 </div>
