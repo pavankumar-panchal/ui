@@ -236,13 +236,7 @@
             <div class="container-lg">
                 <div class="row">
                     <!-- content -->
-
-
-
                     <style>
-                        /* Add any additional custom CSS here */
-
-
                         .display {
                             display: flex;
                             flex-direction: row;
@@ -363,7 +357,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">Product Group(Optional):</td>
+                                                                    <td valign="top">Product Group:</td>
                                                                     <td valign="top">
                                                                         <span id="filterprdgroupdisplay">
                                                                             <select name="s_productgroup"
@@ -379,7 +373,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">Product Name:</td>
+                                                                    <td valign="top">Product Name(Optional)</td>
                                                                     <td valign="top">
                                                                         <span id="filterprdgroupdisplay">
                                                                             <select name="s_productgroup"
@@ -428,17 +422,11 @@
                                                                             wt-ignore-input="true"></textarea>
                                                                     </td>
                                                                 </tr>
-                                                            </tbody>
-                                                        </table>
-
-
-
-                                                        <table class="table table-bordered table2">
-                                                            <tbody>
                                                                 <tr class="bg-white">
                                                                     <td valign="top">Service Charge:</td>
                                                                     <td valign="top">
-
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="anonymous" id="databasefield11">
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
@@ -448,17 +436,47 @@
                                                                             <select name="s_productgroup"
                                                                                 class="form-select swiftselect form-control"
                                                                                 id="s_productgroup" onchange="">
+                                                                                <option value="" selected="selected">
+                                                                                    Make a Selection
+                                                                                </option>
 
-                                                                                <option value="notyetattended"
-                                                                                    selected="selected">Un Attended
+                                                                            </select>
+                                                                            <!-- Details are in javascript.js page as a function prdgroup();-->
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+
+
+                                                        <table class="table table-bordered table2">
+                                                            <tbody>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Support Units:</td>
+                                                                    <td valign="top">
+                                                                        <span id="filterprdgroupdisplay">
+                                                                            <select name="s_productgroup"
+                                                                                class="form-select swiftselect form-control"
+                                                                                id="s_productgroup" onchange="">
+                                                                                <option value="" selected="selected">
+                                                                                    Make a Selection
                                                                                 </option>
-                                                                                <option value="postponed">Postponed
-                                                                                </option>
-                                                                                <option value="inprocess">In Process
-                                                                                </option>
-                                                                                <option value="solved">Solved</option>
-                                                                                <option value="skipped">Skipped</option>
-                                                                                <option value="unsolved">Un Solved
+
+                                                                            </select>
+                                                                            <!-- Details are in javascript.js page as a function prdgroup();-->
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Assigned To:</td>
+                                                                    <td valign="top">
+                                                                        <span id="filterprdgroupdisplay">
+                                                                            <select name="s_productgroup"
+                                                                                class="form-select swiftselect form-control"
+                                                                                id="s_productgroup" onchange="">
+                                                                                <option value="" selected="selected">
+                                                                                    Make a Selection
                                                                                 </option>
 
                                                                             </select>
@@ -468,7 +486,7 @@
                                                                 </tr>
 
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">Assifned To:</td>
+                                                                    <td valign="top">Solved By:</td>
                                                                     <td valign="top">
                                                                         <span id="filterprdgroupdisplay">
                                                                             <select name="s_productgroup"
@@ -476,38 +494,56 @@
                                                                                 id="s_productgroup" onchange="">
 
                                                                                 <option value="notyetattended"
-                                                                                    selected="selected">Make A selection
+                                                                                    selected="selected">ALL
                                                                                 </option>
 
 
                                                                             </select>
-                                                                            <!-- Details are in javascript.js page as a function prdgroup();-->
                                                                         </span>
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">Solved By :</td>
+                                                                    <td valign="top">Solved Through:</td>
                                                                     <td valign="top">
-                                                                        <span id="filterprdgroupdisplay">
-                                                                            <select name="s_productgroup"
-                                                                                class="form-select swiftselect form-control"
-                                                                                id="s_productgroup" onchange="">
+                                                                        <label><input name="stremoteconnection"
+                                                                                id="stremoteconnection" type="checkbox"
+                                                                                value=""> Remote Connection
+                                                                        </label><label><input name="marketingperson"
+                                                                                id="marketingperson" type="checkbox"
+                                                                                value=""> Marketing Person
+                                                                        </label><label><input name="onsitevisit"
+                                                                                id="onsitevisit" type="checkbox"
+                                                                                value=""> Onsite Visit </label><br>
+                                                                        <label><input name="overphone" id="overphone"
+                                                                                type="checkbox" value=""> Over Phone
+                                                                        </label><label><input name="mail" id="mail"
+                                                                                type="checkbox" value=""> Mail </label>
 
-                                                                                <option value="notyetattended"
-                                                                                    selected="selected">Make A selection
-                                                                                </option>
-
-
-                                                                            </select>
-                                                                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Solved Date:</td>
+                                                                    <td valign="top">
+                                                                        <input name="customerid" type="date"
+                                                                            class="form-control" id="customername"
+                                                                            size="20" autocomplete="off"
+                                                                            isdatepicker="true">
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
                                                                     <td valign="top">Bill Number:</td>
                                                                     <td valign="top">
                                                                         <input name="customerid" type="text"
+                                                                            class="form-control" id="customername"
+                                                                            size="20" autocomplete="off"
+                                                                            isdatepicker="true">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Bill Number:</td>
+                                                                    <td valign="top">
+                                                                        <input name="customerid" type="date"
                                                                             class="form-control" id="customername"
                                                                             size="20" autocomplete="off"
                                                                             isdatepicker="true">
@@ -620,7 +656,19 @@
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">To Date:</td>
+                                                                    <td valign="top">
+                                                                        <div class="d-flex">
+                                                                            <input name="fromdate" type="date"
+                                                                                class="form-control" id="DPC_fromdate"
+                                                                                size="30" autocomplete="off"
+                                                                                value="21-07-2023"
+                                                                                datepicker_format="DD-MM-YYYY"
+                                                                                maxlength="10" isdatepicker="true">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
 
                                                                 <tr class="bg-white">
                                                                     <td valign="top">Anonymous:</td>
@@ -658,7 +706,16 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">Category :</td>
+                                                                    <td valign="top">Customer ID:</td>
+                                                                    <td valign="top">
+                                                                        <input name="complaintid" type="text"
+                                                                            class="form-control swifttext"
+                                                                            id="complaintid" size="30"
+                                                                            autocomplete="off" isdatepicker="true">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Category:</td>
                                                                     <td valign="top">
                                                                         <label><input name="categoryblr" type="checkbox"
                                                                                 id="categoryblr" value=""
@@ -668,7 +725,8 @@
                                                                                 checked="checked">CSD</label>
                                                                         <label><input name="categorykkg" type="checkbox"
                                                                                 id="categorykkg" value=""
-                                                                                checked="checked">KKG </label>
+                                                                                checked="checked">KKG
+                                                                        </label>
 
                                                                     </td>
                                                                 </tr>
@@ -680,6 +738,26 @@
                                                                             <option value="">ALL</option>
 
                                                                         </select>
+
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Caller Type:</td>
+                                                                    <td valign="top">
+                                                                        <label><input name="categoryblr" type="checkbox"
+                                                                            id="categoryblr" value=""
+                                                                            checked="checked">Customers</label>
+                                                                    <label><input name="categorycsd" type="checkbox"
+                                                                            id="categorycsd" value=""
+                                                                            checked="checked">Dealers</label>
+                                                                    <label><input name="categorykkg" type="checkbox"
+                                                                            id="categorykkg" value=""
+                                                                            checked="checked">Employees
+                                                                    </label>
+                                                                    <label><input name="categorykkg" type="checkbox"
+                                                                        id="categorykkg" value=""
+                                                                        checked="checked">SSM Users
+                                                                </label>
 
                                                                     </td>
                                                                 </tr>
@@ -715,35 +793,17 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">Compliant ID:</td>
-                                                                    <td valign="top">
-                                                                        <input name="complaintid" type="text"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
-
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Order By:</td>
+                                                                    <td valign="top">Status:</td>
                                                                     <td valign="top">
                                                                         <select name="productname" id="productname"
-                                                                            class="form-select form-control swiftselect">
-                                                                            <option value="">ALL</option>
+                                                                        class="form-select form-control swiftselect">
+                                                                        <option value="">ALL</option>
 
-                                                                        </select>
+                                                                    </select>
+
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Entered By:</td>
-                                                                    <td valign="top">
-                                                                        <select name="productname" id="productname"
-                                                                            class="form-select form-control swiftselect">
-                                                                            <option value="">ALL</option>
-
-                                                                        </select>
-                                                                    </td>
-                                                                </tr>
+                                                               
                                                             </tbody>
                                                         </table>
 
@@ -752,67 +812,65 @@
                                                         <table class="table table-bordered table2">
                                                             <tbody>
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">To Date:</td>
+                                                                    <td valign="top">Solved By:</td>
                                                                     <td valign="top">
-                                                                        <input name="complaintid" type="text"
+                                                                        <select name="productname" id="productname"
+                                                                            class="form-select form-control swiftselect">
+                                                                            <option value="">ALL</option>
+
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Solved Date:</td>
+                                                                    <td valign="top">
+                                                                        <input name="complaintid" type="date"
                                                                             class="form-control swifttext"
                                                                             id="complaintid" size="30"
                                                                             autocomplete="off" isdatepicker="true">
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">Customer ID:</td>
+                                                                    <td valign="top">Bill Date:</td>
                                                                     <td valign="top">
-                                                                        <input name="complaintid" type="text"
+                                                                        <input name="complaintid" type="date"
                                                                             class="form-control swifttext"
                                                                             id="complaintid" size="30"
                                                                             autocomplete="off" isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Celler Type:</td>
-                                                                    <td valign="top">
-                                                                        <label>
-                                                                            <input name="s_customer" type="checkbox"
-                                                                                id="s_customer" value="Customer"
-                                                                                checked="checked">
-                                                                            Customers </label><label>
-                                                                            <input name="s_dealer" type="checkbox"
-                                                                                id="s_dealer" value="Dealer"
-                                                                                checked="checked">Dealers</label>
-                                                                        <label>
-                                                                            <input name="s_employee" type="checkbox"
-                                                                                id="s_employee" value="employee"
-                                                                                checked="checked">Employees</label><label>
-                                                                            <input name="s_ssmuser" type="checkbox"
-                                                                                id="s_ssmuser" value="SSMUser"
-                                                                                checked="checked">SSM Users</label>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Status:</td>
-                                                                    <td valign="top">
-                                                                        <select name="status"
-                                                                            class="form-select form-control swiftselect"
-                                                                            id="status">
-                                                                            <option value="">ALL</option>
-
-                                                                        </select>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Solved By :</td>
-                                                                    <td valign="top">
-                                                                        <select name="status"
-                                                                            class="form-select form-control swiftselect"
-                                                                            id="status">
-                                                                            <option value="">ALL</option>
-
-                                                                        </select>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
                                                                     <td valign="top">Bill Number:</td>
+                                                                    <td valign="top">
+                                                                        <input name="complaintid" type="text"
+                                                                        class="form-control swifttext"
+                                                                        id="complaintid" size="30"
+                                                                        autocomplete="off" isdatepicker="true">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Acknowledgement Number:</td>
+                                                                    <td valign="top">
+                                                                        <input name="complaintid" type="text"
+                                                                            class="form-control swifttext"
+                                                                            id="complaintid" size="30"
+                                                                            autocomplete="off" isdatepicker="true">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Entered By:</td>
+                                                                    <td valign="top">
+                                                                        <select name="status"
+                                                                            class="form-select form-control swiftselect"
+                                                                            id="status">
+                                                                            <option value="">ALL</option>
+
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="bg-white">
+                                                                    <td valign="top">Compliant ID:</td>
                                                                     <td valign="top">
                                                                         <input name="complaintid" type="text"
                                                                             class="form-control swifttext"
@@ -859,12 +917,28 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="bg-white">
-                                                                    <td valign="top">Acknoledgement Number:</td>
+                                                                    <td valign="top">order By:</td>
                                                                     <td valign="top">
-                                                                        <input name="complaintid" type="text"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
+                                                                        <select name="status"
+                                                                        class="form-select form-control swiftselect"
+                                                                        id="status">
+                                                                        <option value="callertype">Caller Type</option>
+                                                                        <option value="category">Category</option>
+                                                                        <option value="complaintid" selected="selected">Compliant ID</option>
+                                                                        <option value="customerid">Customer ID</option>
+                                                                        <option value="customername">Registered Name</option>
+                                                                        <option value="date">Date</option>
+                                                                        <option value="userid">Entered By</option>
+                                                                        <option value="problem">Problem</option>
+                                                                        <option value="productname">Product Group</option>
+                                                                        <option value="productname">Product Name</option>
+                                                                        <option value="status">Status</option>
+                                                                        <option value="solvedby">Solved BY</option>
+                                                                        <option value="billno">Bill Number</option>
+                                                                        <option value="billdate">Bill Date</option>
+                                                                        <option value="acknowledgementno">Acknowledgement Number</option>
+
+                                                                    </select>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
