@@ -227,7 +227,7 @@
                         <li class="breadcrumb-item">
                             <span>Masters</span>
                         </li>
-                        <li class="breadcrumb-item active"><span>Products</span></li>
+                        <li class="breadcrumb-item active"><span>Locations</span></li>
                     </ol>
                 </nav>
             </div>
@@ -238,79 +238,101 @@
                     <!-- content -->
 
 
-                    <div class="container mt-4">
-                        <div class="card ">
-                          <div class="card-header bg-light" style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
-                            <div class="d-flex justify-content-between align-items-center">
-                              <span class="header-line pl-3">&nbsp;&nbsp;Enter / Edit / View Details</span>
-                              <img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg" class="img-fluid" style="max-height: 20px;" align="absmiddle">
+
+                    <div class="container mt-4 ">
+                        <div class="card border-light" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+                            <div class="card-header bg-light " style="cursor:pointer"
+                                onclick="showhide('maindiv','toggleimg');">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="header-line pl-3">Enter / Edit / View Details</span>
+                                    <img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
+                                        class="img-fluid" style="max-height: 20px;" align="absmiddle">
+                                </div>
                             </div>
-                          </div>
-                          <div class="card-body" id="maindiv" style="display: block;">
-                            <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                              <div class="row">
-                                <div class="col-md-6 border-right">
-                                  <div class="form-group">
-                                    <label for="productname">Product Name:</label>
-                                    <input name="productname" type="text" class="form-control swifttext" id="productname" size="30" isdatepicker="true">
-                                    <input type="hidden" name="lastslno" id="lastslno" value="">
-                                    <input type="hidden" name="loggeduser" id="loggeduser" value="1">
-                                    <input type="hidden" name="loggedusertype" id="loggedusertype" value="ADMIN">
-                                    <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority" value="<br />
-                                    <b>Warning</b>:  Undefined variable $reportingauthority in <b>/opt/lampp/htdocs/mywork/redesign/masters/products.php</b> on line <b>34</b><br />">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="shortformat">Product Short Format:</label>
-                                    <input name="shortformat" type="text" class="form-control swifttext" id="shortformat" size="30" isdatepicker="true">
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <label for="productgroup">Product Group:</label>
-                                    <span id="prdgroupspan">
-                                      <select name="productgroup" class="form-control swiftselect form-select" id="productgroup" onchange="productnamefunction();">
-                                        <option value="" selected="selected">Make a Selection</option>
-                                        <option value="null">null</option>
-                                        <option value="pro">pro</option>
-                                      </select>
-                                      <!-- Details are in javascript.js page as a function prdgroup(); -->
-                                    </span>
-                                  </div>
-                                  <div class="form-group ">
-                                    <label for="productinuse">Is Product in Use:</label>
-                                    <select name="productinuse" class="form-control swiftselect form-select" id="productinuse">
-                                      <option value="yes" selected="selected">Yes</option>
-                                      <option value="no">No</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="text-center float-end mt-3">
-                                <div id="form-error"></div>
-                                <input name="new" type="reset" class="btn btn-secondary swiftchoicebutton" id="new" value="New" onclick="newentry();clearinnerhtml();">
-                                <input name="save" type="submit" id="save" class="btn btn-primary swiftchoicebutton" value="Save" onclick="formsubmit('save')">
-                                <input name="delete" type="submit" class="btn btn-danger swiftchoicebuttondisabled" id="delete" value="Delete" onclick="formsubmit('delete')" disabled="disabled">
-                              </div>
-                            </form>
-                          </div>
+                            <div class="card-body" id="maindiv" style="display: block;">
+                                <form action="" method="post" name="submitform" id="submitform"
+                                    onsubmit="return false;">
+                                    <div class="row">
+                                        <div class="col-md-6 border-right">
+                                            <div class="form-group">
+                                                <label for="dealername">location Name:</label>
+                                                <input name="dealername" type="text" class="form-control"
+                                                    id="dealername" size="30" isdatepicker="true">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dealercompanyname">Business Name:</label>
+                                                <input name="dealercompanyname" type="text" class="form-control"
+                                                    id="dealercompanyname" size="30" isdatepicker="true">
+                                                <input type="hidden" name="lastslno" id="lastslno" value="1">
+                                                <input type="hidden" name="loggeduser" id="loggeduser" value="1">
+                                                <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                                    value="ADMIN">
+                                                <!-- Replace the following line with the actual value from the backend -->
+                                                <input type="hidden" name="loggedreportingauthority"
+                                                    id="loggedreportingauthority" value="">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="contactnumber">Address:</label>
+                                                <input name="contactnumber" type="text" class="form-control"
+                                                    id="contactnumber" size="30" isdatepicker="true">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="emailid">Place:</label>
+                                                <input name="emailid" type="text" class="form-control" id="emailid"
+                                                    size="30" isdatepicker="true">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="category">District:</label>
+                                                <input name="district" type="text" class="form-control" id="district"
+                                                    size="30" isdatepicker="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="skypeid">State:</label>
+                                                <input name="skypeid" type="text" class="form-control" id="skypeid"
+                                                    size="30" isdatepicker="true">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="district">phone:</label>
+                                                <input name="district" type="text" class="form-control" id="district"
+                                                    size="30" isdatepicker="true">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="place">Email ID:</label>
+                                                <input name="place" type="text" class="form-control" id="place"
+                                                    size="30" isdatepicker="true">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="state">Location Incharge:</label>
+                                                <input name="state" type="text" class="form-control" id="state"
+                                                    size="30" isdatepicker="true">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-3 float-end">
+                                        <div id="form-error"></div>
+                                        <input name="new" type="reset" class="btn btn-secondary" id="new" value="New"
+                                            onclick="newentry();clearinnerhtml();">
+                                        <input name="save" type="submit" class="btn btn-primary" id="save" value="Save"
+                                            onclick="formsubmit('save')">
+                                        <input name="delete" type="submit" class="btn btn-danger" id="delete"
+                                            value="Delete" onclick="formsubmit('delete')">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                      </div>
-                      
+                    </div>
 
 
-
-
-
-
-
-
-                    <!--  -->
                     <div class="container mt-4">
                         <div class="card">
-                            <div class="card-header bg-light" style="cursor:pointer"
+                            <div class="card-header bg-light style=" cursor:pointer"
                                 onclick="showhide('filterdiv','toggleimg1');">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="header-line pl-3">&nbsp;&nbsp;Filter the Data:</span>
+                                    <span class="header-line pl-3">Filter the Data:</span>
                                     <img src="../images/minus.jpg" border="0" id="toggleimg1" name="toggleimg1"
                                         class="img-fluid" style="max-height: 20px;" align="absmiddle">
                                 </div>
@@ -322,86 +344,102 @@
                                         <div class="col-md-6 border-right">
                                             <div class="form-group">
                                                 <label for="searchcriteria">Search Text:</label>
-                                                <div id="textname" style="display:block">
-                                                    <input name="searchcriteria" type="text"
-                                                        class="form-control swifttext" id="searchcriteria" size="40"
-                                                        isdatepicker="true">
-                                                </div>
-                                                <div id="groupname" style="display:none">
-                                                    <select name="s_productgroup" class="form-control form-select"
-                                                        id="s_productgroup" onchange="" >
-                                                            <option value="productname">Product Name</option>
-                                                            <option value="shortformat">Short Format</option>
-                                                             <option value="productgroup" selected="selected">Product Group</option>
-                                                            <option value="productinuse">Product In Use</option>
-                                                    </select>
-                                                    <!-- Details are in javascript.js page as a function prdgroup(); -->
-                                                </div>
+                                                <input name="searchcriteria" type="text" class="form-control"
+                                                    id="searchcriteria" size="40" isdatepicker="true">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group">
+                                            <div class="form-group ">
                                                 <label for="orderby">Order By:</label>
-                                                <select name="orderby" class="form-control swiftselect form-select" id="orderby">
-                                                    <option value="productname" selected="selected">Product Group
+                                                <select name="orderby" class="form-control form-select" id="orderby">
+                                                    <option value="locationname" selected="selected">Location Name
                                                     </option>
-                                                    <option value="productname">Product Name</option>
-                                                    <option value="releasedate">Release Date</option>
-                                                    <option value="productinuse">Product In Use</option>
+                                                    <option value="businessname">Business Name</option>
+                                                    <option value="address">Address</option>
+                                                    <option value="state">State</option>
+                                                    <option value="place">Place</option>
+                                                    <option value="district">District</option>
+                                                    <option value="phone">Phone</option>
+                                                    <option value="emailid">Email ID</option>
+                                                    <option value="locationincharge">Location Incharge</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mt-3">
-                                        In:
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" name="databasefield" id="databasefield0"
-                                                value="productname" checked="checked"
-                                                onclick="prdname('textname',databasefield0);" class="form-check-input">
-                                            <label class="form-check-label" for="databasefield0">Product Name</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" name="databasefield" id="databasefield0"
-                                                value="shortform" onclick="prdname('textname',databasefield2);"
-                                                class="form-check-input">
-                                            <label class="form-check-label" for="databasefield2">Product Short Format</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" name="databasefield" id="databasefield0"
-                                                value="productgroup" onclick="prdgroup('groupname',databasefield1);"
-                                                class="form-check-input">
-                                            <label class="form-check-label" for="databasefield1">Product Group</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" name="databasefield" id="databasefield0"
-                                                value="productinuse" onclick="prdgroup('groupname',databasefield1);"
-                                                class="form-check-input">
-                                            <label class="form-check-label" for="databasefield1">Product in Use</label>
+                                    <div class="row mt-2">
+                                        <div class="col-md-8">
+
+                                            <div class="form-group">
+                                                <label for="databasefield">Sort By:</label>
+                                                <div class="form-check form-check-inline">
+                                                    <label>
+                                                        <input type="radio" name="databasefield" id="databasefield0"
+                                                            value="locationname" checked="checked">
+                                                        Location Name</label>
+
+                                                </div>
+                                                <div class="form-check form-check-inline">
+
+                                                    <label>
+
+
+                                                        <input type="radio" name="databasefield" id="databasefield1"
+                                                            value="businessname">
+                                                        Business Name</label>
+                                                </div>
+                                                <div class="form-check form-check-inline"><label>
+                                                        <input type="radio" name="databasefield" value="address"
+                                                            id="databasefield2">
+                                                        Address</label> </div>
+                                                <div class="form-check form-check-inline"><label>
+                                                        <input type="radio" name="databasefield" value="place"
+                                                            id="databasefield3">
+                                                        Place</label> </div>
+                                                <div class="form-check form-check-inline"><label>
+                                                        <input type="radio" name="databasefield" value="district"
+                                                            id="databasefield5">
+                                                        District</label> </div>
+                                                <div class="form-check form-check-inline"><label>
+                                                        <input type="radio" name="databasefield" value="state"
+                                                            id="databasefield6">
+                                                        State</label> </div>
+                                                <div class="form-check form-check-inline"><label>
+                                                        <input type="radio" name="databasefield" value="phone"
+                                                            id="databasefield7">
+                                                        Phone</label> </div>
+                                                <div class="form-check form-check-inline"><label>
+                                                        <input type="radio" name="databasefield" value="emailid"
+                                                            id="databasefield8">
+                                                        Email Id</label> </div>
+                                                <div class="form-check form-check-inline"><label>
+                                                        <input type="radio" name="databasefield"
+                                                            value="locationincharge" id="databasefield4">
+                                                        Location Incharge</label>
+                                                </div>
+                                                <!--  -->
+
+                                                <!-- Add other radio options similarly -->
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="text-center mt-3 float-end">
                                         <div id="filter-form-error"></div>
-                                        <input name="view" type="submit" class="btn btn-primary swiftchoicebutton"
-                                            id="view" value="View" onclick="formfilter('view');">
-
-                                        <input name="view" type="submit" class="btn btn-warning swiftchoicebutton"
-                                            id="view" value="Excel" onclick="formfilter('view');">
-
-
+                                        <input name="view" type="submit" class="btn btn-primary" id="view" value="View"
+                                            onclick="formfilter('view')">
+                                        <input name="view" type="submit" class="btn btn-warning" id="view" value="Excel"
+                                            onclick="formfilter('view')">
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
 
-
-                    <!--  -->
                     <div class="col-md-12">
                     </div>
                 </div>
             </div>
             <footer class="footer_area section_padding_130_0 m-lg-4">
-                <div class="container ">
+                <div class="container">
                     <div class="row">
                         <!-- Single Widget-->
                         <div class="col-12 col-sm-6 col-lg-4">
