@@ -315,137 +315,128 @@
           </div>
 
 
-
+        
           <div class="container mt-4">
             <div class="card">
-                <div class="card-header bg-light style="cursor:pointer"
-                    onclick="showhide('filterdiv','toggleimg1');">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="header-line pl-3">Filter the Data:</span>
-                        <img src="../images/minus.jpg" border="0" id="toggleimg1" name="toggleimg1" class="img-fluid"
-                            style="max-height: 20px;" align="absmiddle">
+              <div class="card-header bg-light style=" cursor:pointer" onclick="showhide('filterdiv','toggleimg1');">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="header-line pl-3">Filter the Data:</span>
+                  <img src="../images/minus.jpg" border="0" id="toggleimg1" name="toggleimg1" class="img-fluid"
+                    style="max-height: 20px;" align="absmiddle">
+                </div>
+              </div>
+              <div class="card-body" id="filterdiv" style="display: block;">
+                <form action="" method="post" name="filterform" id="filterform" onsubmit="return false;">
+                  <div class="row">
+                    <div class="col-md-6 border-right">
+                      <div class="form-group">
+                        <label for="searchcriteria">Search Text:</label>
+                        <input name="searchcriteria" type="text" class="form-control" id="searchcriteria" size="40"
+                          isdatepicker="true">
+                      </div>
                     </div>
-                </div>
-                <div class="card-body" id="filterdiv" style="display: block;">
-                    <form action="" method="post" name="filterform" id="filterform" onsubmit="return false;">
-                        <div class="row">
-                            <div class="col-md-6 border-right">
-                                <div class="form-group">
-                                    <label for="searchcriteria">Search Text:</label>
-                                    <input name="searchcriteria" type="text" class="form-control" id="searchcriteria"
-                                        size="40" isdatepicker="true">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group ">
-                                    <label for="orderby">Order By:</label>
-                                    <select name="orderby" class="form-control form-select" id="orderby">
-                                        <option value="slno" selected="selected">Sl No</option>
-                                        <option value="dealercompanyname">Dealer Company Name</option>
-                                        <option value="dealername">Dealer Name</option>
-                                        <option value="contactnumber">Contact Number</option>
-                                        <option value="emailid">Email ID</option>
-                                        <option value="category">Category</option>
-                                        <option value="place">Place</option>
-                                        <option value="district">District</option>
-                                        <option value="state">State</option>
-                                        <option value="skypeid">Skype ID</option>
-                                    </select>
-                                </div>
-                            </div>
+                    <div class="col-md-6">
+                      <div class="form-group ">
+                        <label for="orderby">Order By:</label>
+                        <select name="orderby" class="form-control form-select" id="orderby">
+                          <option value="slno" selected="selected">Sl No</option>
+                          <option value="dealercompanyname">Dealer Company Name</option>
+                          <option value="dealername">Dealer Name</option>
+                          <option value="contactnumber">Contact Number</option>
+                          <option value="emailid">Email ID</option>
+                          <option value="category">Category</option>
+                          <option value="place">Place</option>
+                          <option value="district">District</option>
+                          <option value="state">State</option>
+                          <option value="skypeid">Skype ID</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-8">
+
+                      <div class="form-group">
+                        <label for="databasefield">Sort By:</label>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="databasefield" id="databasefield0"
+                            value="slno" checked>
+                          <label class="form-check-label" for="databasefield0">Sl No</label>
                         </div>
-                        <div class="row mt-2">
-                            <div class="col-md-8">
-                              
-                                <div class="form-group">
-                                    <label for="databasefield">Sort By:</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="databasefield"
-                                            id="databasefield0" value="slno" checked>
-                                        <label class="form-check-label" for="databasefield0">Sl No</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="databasefield"
-                                            id="databasefield1" value="oscompanyname">
-                                        <label class="form-check-label" for="databasefield1">OS Company</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="databasefield"
-                                            id="databasefield2" value="osname">
-                                        <label class="form-check-label" for="databasefield2">OS Name</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-    
-                                        <label>
-                                            <input type="radio" name="databasefield" id="databasefield0" value="osname">
-                                            OS Name</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-    
-                                        <label>
-                                            <input type="radio" name="databasefield" id="databasefield0" value="contactnumber">
-                                            Contact Number</label>
-    
-                                    </div>
-                                    <div class="form-check form-check-inline">
-    
-                                        <label>
-                                            <input type="radio" name="databasefield" id="databasefield0" value="emailid">
-                                            EmailID</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-    
-                                        <label>
-                                            <input type="radio" name="databasefield" id="databasefield0" value="category">
-                                            Category</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-    
-                                        <label>
-                                            <input type="radio" name="databasefield" id="databasefield0" value="place">
-                                            Place</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-    
-                                        <label>
-                                            <input type="radio" name="databasefield" id="databasefield0" value="district">
-                                            District</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-    
-                                        <label>
-                                            <input type="radio" name="databasefield" id="databasefield0" value="state">
-                                            State</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-    
-                                        <label>
-                                            <input type="radio" name="databasefield" id="databasefield0" value="skypeid">
-                                            Skype ID</label>
-                                    </div>
-                                    <!-- Add other radio options similarly -->
-                                </div>
-    
-    
-    
-    
-    
-    
-                            </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="databasefield" id="databasefield1"
+                            value="oscompanyname">
+                          <label class="form-check-label" for="databasefield1">OS Company</label>
                         </div>
-                        <div class="text-center mt-3 float-end">
-                            <div id="filter-form-error"></div>
-                            <input name="view" type="submit" class="btn btn-primary" id="view" value="View"
-                                onclick="formfilter('view')">
-                            <input name="view" type="submit" class="btn btn-warning" id="view" value="Excel"
-                                onclick="formfilter('view')">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="databasefield" id="databasefield2"
+                            value="osname">
+                          <label class="form-check-label" for="databasefield2">OS Name</label>
                         </div>
-                    </form>
-                </div>
+                        <div class="form-check form-check-inline">
+
+                          <label>
+                            <input type="radio" name="databasefield" id="databasefield0" value="osname">
+                            OS Name</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                          <label>
+                            <input type="radio" name="databasefield" id="databasefield0" value="contactnumber">
+                            Contact Number</label>
+
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                          <label>
+                            <input type="radio" name="databasefield" id="databasefield0" value="emailid">
+                            EmailID</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                          <label>
+                            <input type="radio" name="databasefield" id="databasefield0" value="category">
+                            Category</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                          <label>
+                            <input type="radio" name="databasefield" id="databasefield0" value="place">
+                            Place</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                          <label>
+                            <input type="radio" name="databasefield" id="databasefield0" value="district">
+                            District</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                          <label>
+                            <input type="radio" name="databasefield" id="databasefield0" value="state">
+                            State</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                          <label>
+                            <input type="radio" name="databasefield" id="databasefield0" value="skypeid">
+                            Skype ID</label>
+                        </div>
+                        <!-- Add other radio options similarly -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3 float-end">
+                    <div id="filter-form-error"></div>
+                    <input name="view" type="submit" class="btn btn-primary" id="view" value="View"
+                      onclick="formfilter('view')">
+                    <input name="view" type="submit" class="btn btn-warning" id="view" value="Excel"
+                      onclick="formfilter('view')">
+                  </div>
+                </form>
+              </div>
             </div>
-        </div>
-
-
+          </div>
 
           <div class="col-md-12">
           </div>
