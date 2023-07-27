@@ -1,52 +1,11 @@
+<?php
+include("../Navigation/nav.php");
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <!-- Add your meta tags, title, and other headers here if needed -->
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <!-- Additional CSS if required -->
   <style>
-    /* Add any additional custom CSS here */
-    body {
-      background-color: #f7f7f7;
-    }
-
-    .container {
-      background-color: #fff;
-      padding: 20px;
-      /* border: 1px solid #6393df; */
-      border-top: none;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .mt-4 {
-      margin-top: 20px;
-    }
-
-    .header-line {
-      padding: 0;
-      cursor: pointer;
-    }
-
-    td {
-      background-color: #eeebeb2a;
-      
-    }
-    tr{
-      height: 40px;
-    }
-
-    .table1,
-    .table2 {
-      width: 50%;
-      margin: 0;
-      padding: 0;
-    }
-
     .display {
       display: flex;
       flex-direction: row;
@@ -55,14 +14,13 @@
 </head>
 
 <body>
-  <div class="container mt-4">
-    <table class="table table-bordered" style="border: 1px solid #6393df; border-top: none;">
+  <div class="container mt-4 rounded ">
+    <table class="table table-bordered bg-light" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
       <tbody>
         <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
           <td class="bg-light">&nbsp;&nbsp;Enter the Details</td>
           <td align="right" class="bg-light">
-            <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
-                align="absmiddle"></div>
+
           </td>
         </tr>
         <tr>
@@ -70,7 +28,7 @@
             <div id="maindiv" style="display: block;">
               <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
                 <div class="display">
-                  <table class="table table-bordered table-striped table1">
+                  <table class="table table-bordered table1">
                     <tbody>
                       <tr class="bg-light">
                         <td valign="top">From Date:</td>
@@ -197,10 +155,10 @@
                         <td valign="top">Product group:</td>
                         <td valign="top">
                           <span id="filterprdgroupdisplay">
-                            <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
-                              onchange="">
+                            <select name="s_productgroup" class="form-select swiftselect form-control"
+                              id="s_productgroup" onchange="">
                               <option value="" selected="selected">Make a Selection</option>
-                             
+
                             </select>
                             <!-- Details are in javascript.js page as a function prdgroup();-->
                           </span>
@@ -211,7 +169,7 @@
                         <td valign="top">
                           <select name="productname" id="productname" class="form-select form-control swiftselect">
                             <option value="">ALL</option>
-                           
+
                           </select>
                         </td>
                       </tr>
@@ -262,13 +220,15 @@
                     <div class="col-md-8">
                       <div id="form-error"></div>
                     </div>
-                    <div class="col-md-4 float-right bg-light "align="right">
-                      <input name="view" type="submit" class="btn btn-primary " id="view" value="View" onclick="formsubmit('toview');">
-                      <input name="toexcel" type="submit" class="btn btn-warning" id="toexcel" value="To Excel" onclick="formsubmit('toexcel');">
+                    <div class="col-md-4 float-right bg-light " align="right">
+                      <input name="view" type="submit" class="btn btn-primary " id="view" value="View"
+                        onclick="formsubmit('toview');">
+                      <input name="toexcel" type="submit" class="btn btn-warning" id="toexcel" value="To Excel"
+                        onclick="formsubmit('toexcel');">
                     </div>
                   </div>
                 </div>
-                
+
               </form>
             </div>
           </td>
@@ -278,9 +238,7 @@
   </div>
 
   <!-- Bootstrap JS and any additional scripts if required -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
   <!-- Your JavaScript code and any additional scripts if required -->
   <script>
@@ -289,3 +247,9 @@
 </body>
 
 </html>
+
+<?php
+
+include("../Navigation/footer.php");
+
+?>
