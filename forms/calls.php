@@ -40,7 +40,7 @@
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
         <div class="sidebar-brand d-none d-md-flex">
 
-            <!-- <img src="ssm-new-logo-removebg-preview.png" alt=""> -->
+            <img src="../logo.png" alt="">
             <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
                 <use xlink:href="assets/brand/coreui.svg#signet"></use>
             </svg>
@@ -145,7 +145,7 @@
         </ul>
         <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
-    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+    <div class="wrapper d-flex flex-column min-vh-100 bg-white">
         <header class="header header-sticky mb-4">
             <div class="container-fluid">
                 <button class="header-toggler px-md-0 me-md-3" type="button"
@@ -276,7 +276,7 @@
                                                 <div class="display">
                                                     <table class="table table-bordered table1">
                                                         <tbody>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Call Type:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -295,7 +295,7 @@
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Anonymous:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -315,7 +315,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Registered Name:</td>
                                                                 <td valign="top">
                                                                     <input name="customername" type="text"
@@ -323,7 +323,7 @@
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Customer ID :</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="text"
@@ -331,7 +331,7 @@
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Date:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="date"
@@ -339,7 +339,7 @@
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Time:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="date"
@@ -347,7 +347,7 @@
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Category:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="text"
@@ -355,7 +355,7 @@
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">State:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -371,7 +371,7 @@
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Caller Type:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="text"
@@ -379,7 +379,7 @@
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Product group:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -395,7 +395,7 @@
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Product Name(Optional):</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -411,7 +411,7 @@
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Product version:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -427,7 +427,7 @@
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Person Name:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="text"
@@ -443,7 +443,7 @@
 
                                                     <table class="table table-bordered table2">
                                                         <tbody>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Problem:</td>
                                                                 <td valign="top">
                                                                     <textarea name="teamleaderremarks" cols="45"
@@ -452,7 +452,7 @@
                                                                         wt-ignore-input="true"></textarea>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Status:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -468,7 +468,7 @@
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Call Category:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -478,7 +478,7 @@
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Solved Through:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -491,7 +491,7 @@
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Transferred to :</td>
                                                                 <td valign="top">
                                                                     <select name="userid" id="userid"
@@ -500,7 +500,7 @@
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Remarks:</td>
                                                                 <td valign="top">
                                                                     <textarea name="teamleaderremarks" cols="45"
@@ -509,7 +509,7 @@
                                                                         wt-ignore-input="true"></textarea>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Complaint ID:</td>
                                                                 <td valign="top">
                                                                     <input name="complaintid" type="text"
@@ -518,7 +518,7 @@
                                                                         isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Team Leader Remarks:</td>
                                                                 <td valign="top">
 
@@ -570,7 +570,7 @@
                                                 <div class="display">
                                                     <table class="table table-bordered  table1">
                                                         <tbody>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">From Date:</td>
                                                                 <td valign="top">
                                                                     <div class="d-flex">
@@ -583,7 +583,7 @@
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">To Date:</td>
                                                                 <td valign="top">
                                                                     <div class="d-flex">
@@ -597,7 +597,7 @@
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Call Type:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -623,7 +623,7 @@
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Anonymous:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -649,7 +649,7 @@
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Customer Name:</td>
                                                                 <td valign="top">
                                                                     <input name="complaintid" type="text"
@@ -658,7 +658,7 @@
                                                                         isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Customer ID:</td>
                                                                 <td valign="top">
                                                                     <input name="complaintid" type="text"
@@ -667,7 +667,7 @@
                                                                         isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Category:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -694,7 +694,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Status:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -705,7 +705,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Call Type:</td>
                                                                 <td valign="top">
                                                                     <input name="s_customer" type="checkbox"
@@ -728,7 +728,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Product group:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -738,7 +738,7 @@
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Product Name:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -755,7 +755,7 @@
 
                                                     <table class="table table-bordered table2">
                                                         <tbody>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Problem:</td>
                                                                 <td valign="top">
                                                                     <textarea name="teamleaderremarks" cols="45"
@@ -764,7 +764,7 @@
                                                                         wt-ignore-input="true"></textarea>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Status:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -780,7 +780,7 @@
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Call Category:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -790,7 +790,7 @@
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Transferred To:</td>
                                                                 <td valign="top">
                                                                     <select name="status"
@@ -801,7 +801,7 @@
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Entered By:</td>
                                                                 <td valign="top">
                                                                     <select name="userid" id="userid"
@@ -810,7 +810,7 @@
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Compliant ID:</td>
                                                                 <td valign="top">
                                                                     <select name="supportunit"
@@ -821,7 +821,7 @@
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Flags:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -847,7 +847,7 @@
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Support Unit:</td>
                                                                 <td valign="top">
                                                                     <select name="status"
@@ -858,7 +858,7 @@
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-white">
+                                                            <tr class="bg-light">
                                                                 <td valign="top">Order By:</td>
                                                                 <td valign="top">
                                                                     <select name="status"
