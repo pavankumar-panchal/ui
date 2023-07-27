@@ -52,7 +52,7 @@
             <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
           </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">NEW</span></a></li>
       <li class="nav-title">Options</li>
-      <li class="nav-item"><a class="nav-link" href="../forms/Authorization_summary.html">
+      <li class="nav-item"><a class="nav-link" href="../forms/Authorization_summary.php">
           <svg class="nav-icon">
             <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-book"></use>
           </svg> Record Authorization</a></li>
@@ -63,9 +63,9 @@
             <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-screen-desktop"></use>
           </svg> Registers</a>
         <ul class="nav-group-items">
-          <li class="nav-item"><a class="nav-link" href="../forms/calls.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="../forms/calls.php"><span class="nav-icon"></span>
               Calls</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/email.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="../forms/email.php"><span class="nav-icon"></span>
               Emails</a></li>
           <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> Errors</a></li>
           <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> In-house</a>
@@ -115,18 +115,18 @@
             <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
           </svg> Reports</a>
         <ul class="nav-group-items">
-          <li class="nav-item"><a class="nav-link" href="../forms/stats&reports.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="../forms/stats&reports.php"><span class="nav-icon"></span>
               Stats & Reports</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/error_report.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="../forms/error_report.php"><span class="nav-icon"></span>
               Error Reports</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/requirement_report.html"><span
+          <li class="nav-item"><a class="nav-link" href="../forms/requirement_report.php"><span
                 class="nav-icon"></span>
               Onsite Report</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/Onsite.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="../forms/Onsite.php"><span class="nav-icon"></span>
               Chart View</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/Attendence.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="../forms/Attendence.php"><span class="nav-icon"></span>
               Attendence</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/dailyreport.html"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="../forms/dailyreport.php"><span class="nav-icon"></span>
               Daily Reports</a></li>
         </ul>
       </li>
