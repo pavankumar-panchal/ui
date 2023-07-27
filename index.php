@@ -30,7 +30,6 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.css">
   <!-- We use those styles to show code examples, you should remove them in your application.-->
   <link href="css/examples.css" rel="stylesheet">
   <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
@@ -230,6 +229,11 @@
       <div class="container-lg">
         <div class="row">
           <!--  Starts here -->
+
+
+
+
+
 
 
           <div class="card mb-4">

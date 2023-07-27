@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <base href="">
+    <base href="./">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -30,109 +30,109 @@
     <link rel="stylesheet" href="../css/style.min.css">
     <link rel="stylesheet" href="../css/style.min.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../style.css">
     <!-- We use those styles to show code examples, you should remove them in your application.-->
-    <link href="../css/examples.css" rel="css/stylesheet">
+    <link href="../css/examples.css" rel="stylesheet">
     <link href="../vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 
+</head>
 
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
         <div class="sidebar-brand d-none d-md-flex">
 
             <!-- <img src="ssm-new-logo-removebg-preview.png" alt=""> -->
-
             <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
-                <use xlink:href="../assets/brand/coreui.svg#signet"></use>
+                <use xlink:href="assets/brand/coreui.svg#signet"></use>
             </svg>
         </div>
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
-            <li class="nav-item"><a class="nav-link" href="../index.html">
+            <li class="nav-item"><a class="nav-link" href="index.php">
                     <svg class="nav-icon">
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
                     </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">NEW</span></a></li>
             <li class="nav-title">Options</li>
-            <li class="nav-item"><a class="nav-link" href="../../forms/Authorization_summary.html">
+            <li class="nav-item"><a class="nav-link" href="Authorization_summary.php">
                     <svg class="nav-icon">
-                        <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-book"></use>
+                        <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-book"></use>
                     </svg> Record Authorization</a></li>
 
             <li class="nav-title">Navigation</li>
-            <li class="nav-group"><a class="nav-link nav-group-toggle" href="../#">
+            <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
                     <svg class="nav-icon">
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-screen-desktop"></use>
                     </svg> Registers</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="../forms/calls.html"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="calls.php"><span class="nav-icon"></span>
                             Calls</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/email.html"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="email.php"><span class="nav-icon"></span>
                             Emails</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> Errors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> In-house</a>
+                    <li class="nav-item"><a class="nav-link" href="error_register.php"><span class="nav-icon"></span>
+                            Errors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="In-house.php"><span class="nav-icon"></span>
+                            In-house</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> Onsite</a>
+                    <li class="nav-item"><a class="nav-link" href="Onsite_register.php"><span class="nav-icon"></span>
+                            Onsite</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> References</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> Requirements</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="References.php"><span class="nav-icon"></span>
+                            References</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Requirements.php"><span class="nav-icon"></span>
+                            Requirements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skype.php"><span class="nav-icon"></span>
                             Skype</a></li>
 
                 </ul>
             </li>
-            <li class="nav-group"><a class="nav-link nav-group-toggle" href="../#">
+            <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
                     <svg class="nav-icon">
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-pen-nib"></use>
                     </svg> Billings</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="invoices.php"><span class="nav-icon"></span>
                             Invoices</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="receipts.php"><span class="nav-icon"></span>
                             Receipts</a></li>
 
                 </ul>
             </li>
 
-            <li class="nav-group"><a class="nav-link nav-group-toggle" href="../#">
+            <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
                     <svg class="nav-icon">
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
                     </svg> Masters</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="../#"> Customer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Users</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Locations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Versions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Out Station Employees</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Dealers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Categories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Support Units</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#"> Non Working Days</a></li>
+                    <li class="nav-item"><a class="nav-link" href="customers.php"> Customer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Users.php"> Users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="location.php"> Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Products.php"> Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="versions.php">Versions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Out_station.php"> Out Station Employees</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Dealers.php"> Dealers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Categories.php"> Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.php"> Support Units</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Non-working_days.php"> Non Working Days</a>
+                    </li>
                 </ul>
             </li>
 
-            <li class="nav-group"><a class="nav-link nav-group-toggle" href="../#">
+            <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
                     <svg class="nav-icon">
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
                     </svg> Reports</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="../forms/stats&reports.html"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="stats&reports.php"><span class="nav-icon"></span>
                             Stats & Reports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/error_report.html"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="error_report.php"><span class="nav-icon"></span>
                             Error Reports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/requirement_report.html"><span
+                    <li class="nav-item"><a class="nav-link" href="requirement_report.php"><span
                                 class="nav-icon"></span>
                             Onsite Report</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Onsite.html"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Onsite.php"><span class="nav-icon"></span>
                             Chart View</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Attendence.html"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="chartview.php"><span class="nav-icon"></span>
                             Attendence</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/dailyreport.html"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="dailyreport.php"><span class="nav-icon"></span>
                             Daily Reports</a></li>
                 </ul>
             </li>
@@ -140,7 +140,7 @@
         </ul>
         <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
-    <div class="wrapper d-flex flex-column min-vh-100 bg-white">
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
         <header class="header header-sticky mb-4">
             <div class="container-fluid">
                 <button class="header-toggler px-md-0 me-md-3" type="button"
@@ -148,31 +148,31 @@
                     <svg class="icon icon-lg">
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
                     </svg>
-                </button><a class="header-brand d-md-none" href="../#">
+                </button><a class="header-brand d-md-none" href="#">
                     <svg width="118" height="46" alt="CoreUI Logo">
-                        <use xlink:href="../assets/brand/coreui.svg#full"></use>
+                        <use xlink:href="assets/brand/coreui.svg#full"></use>
                     </svg></a>
                 <ul class="header-nav d-none d-md-flex">
-                    <li class="nav-item"><a class="nav-link" href="../#">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#">Help</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
                 </ul>
                 <ul class="header-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../#">
+                    <li class="nav-item"><a class="nav-link" href="#">
                             <svg class="icon icon-lg">
                                 <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
                             </svg></a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#">
+                    <li class="nav-item"><a class="nav-link" href="#">
                             <svg class="icon icon-lg">
                                 <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-list-rich"></use>
                             </svg></a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#">
+                    <li class="nav-item"><a class="nav-link" href="#">
                             <svg class="icon icon-lg">
                                 <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
                             </svg></a></li>
                 </ul>
                 <ul class="header-nav ms-3">
-                    <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="../#"
+                    <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#"
                             role="button" aria-haspopup="true" aria-expanded="false">
                             <div class="avatar avatar-md"><img class="avatar-img" src="../assets/img/avatars/8.jpg"
                                     alt="user@email.com">
@@ -181,37 +181,37 @@
                         <div class="dropdown-menu dropdown-menu-end pt-0">
                             <div class="dropdown-header bg-light py-2">
                                 <div class="fw-semibold">Account</div>
-                            </div><a class="dropdown-item" href="../#">
+                            </div><a class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
                                 </svg> Updates<span class="badge badge-sm bg-info ms-2">42</span></a><a
-                                class="dropdown-item" href="../#">
+                                class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
                                 </svg> Messages<span class="badge badge-sm bg-success ms-2">42</span></a><a
-                                class="dropdown-item" href="../#">
+                                class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-task"></use>
                                 </svg> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a><a
-                                class="dropdown-item" href="../#">
+                                class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-comment-square"></use>
                                 </svg> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
                             <div class="dropdown-header bg-light py-2">
                                 <div class="fw-semibold">Profile</div>
-                            </div><a class="dropdown-item" href="../#">
+                            </div><a class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                                </svg> View profile</a><a class="dropdown-item" href="../#">
+                                </svg> View profile</a><a class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-                                </svg> Edir profile</a><a class="dropdown-item" href="../#">
+                                </svg> Edir profile</a><a class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
                                 </svg> Change password<span class="badge badge-sm bg-secondary ms-2">42</span></a><a
-                                class="dropdown-item" href="../#">
+                                class="dropdown-item" href="#">
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../#">
+                                <a class="dropdown-item" href="#">
                                     <svg class="icon me-2">
                                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-account-logout">
                                         </use>
@@ -225,9 +225,9 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb my-0 ms-2">
                         <li class="breadcrumb-item">
-                            <span>Masters</span>
+                            <span>Home</span>
                         </li>
-                        <li class="breadcrumb-item active"><span>Products</span></li>
+                        <li class="breadcrumb-item active"><span>Dashboard</span></li>
                     </ol>
                 </nav>
             </div>
@@ -240,62 +240,78 @@
 
                     <div class="container mt-4">
                         <div class="card ">
-                          <div class="card-header bg-light" style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
-                            <div class="d-flex justify-content-between align-items-center">
-                              <span class="header-line pl-3">&nbsp;&nbsp;Enter / Edit / View Details</span>
-                              <img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg" class="img-fluid" style="max-height: 20px;" align="absmiddle">
+                            <div class="card-header bg-light" style="cursor:pointer"
+                                onclick="showhide('maindiv','toggleimg');">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="header-line pl-3">&nbsp;&nbsp;Enter / Edit / View Details</span>
+                                    <img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
+                                        class="img-fluid" style="max-height: 20px;" align="absmiddle">
+                                </div>
                             </div>
-                          </div>
-                          <div class="card-body" id="maindiv" style="display: block;">
-                            <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                              <div class="row">
-                                <div class="col-md-6 border-right">
-                                  <div class="form-group">
-                                    <label for="productname">Product Name:</label>
-                                    <input name="productname" type="text" class="form-control swifttext" id="productname" size="30" isdatepicker="true">
-                                    <input type="hidden" name="lastslno" id="lastslno" value="">
-                                    <input type="hidden" name="loggeduser" id="loggeduser" value="1">
-                                    <input type="hidden" name="loggedusertype" id="loggedusertype" value="ADMIN">
-                                    <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority" value="<br />
+                            <div class="card-body" id="maindiv" style="display: block;">
+                                <form action="" method="post" name="submitform" id="submitform"
+                                    onsubmit="return false;">
+                                    <div class="row">
+                                        <div class="col-md-6 border-right">
+                                            <div class="form-group">
+                                                <label for="productname">Product Name:</label>
+                                                <input name="productname" type="text" class="form-control swifttext"
+                                                    id="productname" size="30" isdatepicker="true">
+                                                <input type="hidden" name="lastslno" id="lastslno" value="">
+                                                <input type="hidden" name="loggeduser" id="loggeduser" value="1">
+                                                <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                                    value="ADMIN">
+                                                <input type="hidden" name="loggedreportingauthority"
+                                                    id="loggedreportingauthority"
+                                                    value="<br />
                                     <b>Warning</b>:  Undefined variable $reportingauthority in <b>/opt/lampp/htdocs/mywork/redesign/masters/products.php</b> on line <b>34</b><br />">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="shortformat">Product Short Format:</label>
-                                    <input name="shortformat" type="text" class="form-control swifttext" id="shortformat" size="30" isdatepicker="true">
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <label for="productgroup">Product Group:</label>
-                                    <span id="prdgroupspan">
-                                      <select name="productgroup" class="form-control swiftselect form-select" id="productgroup" onchange="productnamefunction();">
-                                        <option value="" selected="selected">Make a Selection</option>
-                                        <option value="null">null</option>
-                                        <option value="pro">pro</option>
-                                      </select>
-                                      <!-- Details are in javascript.js page as a function prdgroup(); -->
-                                    </span>
-                                  </div>
-                                  <div class="form-group ">
-                                    <label for="productinuse">Is Product in Use:</label>
-                                    <select name="productinuse" class="form-control swiftselect form-select" id="productinuse">
-                                      <option value="yes" selected="selected">Yes</option>
-                                      <option value="no">No</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="text-center float-end mt-3">
-                                <div id="form-error"></div>
-                                <input name="new" type="reset" class="btn btn-secondary swiftchoicebutton" id="new" value="New" onclick="newentry();clearinnerhtml();">
-                                <input name="save" type="submit" id="save" class="btn btn-primary swiftchoicebutton" value="Save" onclick="formsubmit('save')">
-                                <input name="delete" type="submit" class="btn btn-danger swiftchoicebuttondisabled" id="delete" value="Delete" onclick="formsubmit('delete')" disabled="disabled">
-                              </div>
-                            </form>
-                          </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="shortformat">Product Short Format:</label>
+                                                <input name="shortformat" type="text" class="form-control swifttext"
+                                                    id="shortformat" size="30" isdatepicker="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="productgroup">Product Group:</label>
+                                                <span id="prdgroupspan">
+                                                    <select name="productgroup"
+                                                        class="form-control swiftselect form-select" id="productgroup"
+                                                        onchange="productnamefunction();">
+                                                        <option value="" selected="selected">Make a Selection</option>
+                                                        <option value="null">null</option>
+                                                        <option value="pro">pro</option>
+                                                    </select>
+                                                    <!-- Details are in javascript.js page as a function prdgroup(); -->
+                                                </span>
+                                            </div>
+                                            <div class="form-group ">
+                                                <label for="productinuse">Is Product in Use:</label>
+                                                <select name="productinuse" class="form-control swiftselect form-select"
+                                                    id="productinuse">
+                                                    <option value="yes" selected="selected">Yes</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center float-end mt-3">
+                                        <div id="form-error"></div>
+                                        <input name="new" type="reset" class="btn btn-secondary swiftchoicebutton"
+                                            id="new" value="New" onclick="newentry();clearinnerhtml();">
+                                        <input name="save" type="submit" id="save"
+                                            class="btn btn-primary swiftchoicebutton" value="Save"
+                                            onclick="formsubmit('save')">
+                                        <input name="delete" type="submit"
+                                            class="btn btn-danger swiftchoicebuttondisabled" id="delete" value="Delete"
+                                            onclick="formsubmit('delete')" disabled="disabled">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                      </div>
-                      
+                    </div>
+
 
 
 
@@ -329,11 +345,12 @@
                                                 </div>
                                                 <div id="groupname" style="display:none">
                                                     <select name="s_productgroup" class="form-control form-select"
-                                                        id="s_productgroup" onchange="" >
-                                                            <option value="productname">Product Name</option>
-                                                            <option value="shortformat">Short Format</option>
-                                                             <option value="productgroup" selected="selected">Product Group</option>
-                                                            <option value="productinuse">Product In Use</option>
+                                                        id="s_productgroup" onchange="">
+                                                        <option value="productname">Product Name</option>
+                                                        <option value="shortformat">Short Format</option>
+                                                        <option value="productgroup" selected="selected">Product Group
+                                                        </option>
+                                                        <option value="productinuse">Product In Use</option>
                                                     </select>
                                                     <!-- Details are in javascript.js page as a function prdgroup(); -->
                                                 </div>
@@ -342,7 +359,8 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="orderby">Order By:</label>
-                                                <select name="orderby" class="form-control swiftselect form-select" id="orderby">
+                                                <select name="orderby" class="form-control swiftselect form-select"
+                                                    id="orderby">
                                                     <option value="productname" selected="selected">Product Group
                                                     </option>
                                                     <option value="productname">Product Name</option>
@@ -364,7 +382,8 @@
                                             <input type="radio" name="databasefield" id="databasefield0"
                                                 value="shortform" onclick="prdname('textname',databasefield2);"
                                                 class="form-check-input">
-                                            <label class="form-check-label" for="databasefield2">Product Short Format</label>
+                                            <label class="form-check-label" for="databasefield2">Product Short
+                                                Format</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="radio" name="databasefield" id="databasefield0"
