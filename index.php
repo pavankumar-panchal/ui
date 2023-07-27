@@ -30,6 +30,14 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="style.css">
+  <!-- grid js -->
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+  <!-- grid js  -->
+
+
   <!-- We use those styles to show code examples, you should remove them in your application.-->
   <link href="css/examples.css" rel="stylesheet">
   <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
@@ -127,7 +135,7 @@
               Onsite Report</a></li>
           <li class="nav-item"><a class="nav-link" href="forms/Onsite.php"><span class="nav-icon"></span>
               Chart View</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms/chartview.php"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="forms/Attedence.php"><span class="nav-icon"></span>
               Attendence</a></li>
           <li class="nav-item"><a class="nav-link" href="forms/dailyreport.php"><span class="nav-icon"></span>
               Daily Reports</a></li>
@@ -294,24 +302,15 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <!-- stops here -->
               </div class="col-md-12">
+
+              <div id="wrapper" class="table-container"></div>
+
             </div>
           </div>
         </div>
+
         <footer class="footer_area section_padding_130_0">
           <div class="container">
             <div class="row">
@@ -412,6 +411,56 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
       integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
       crossorigin="anonymous"></script>
+      <script>
+        // Sample data for the table (replace this with your actual data)
+        const data = [
+            ["1", "John Doe", "Address 1", "123456789", "john@example.com", "Contact 1", /* ... */ ],
+            ["2", "Jane Smith", "Address 2", "987654321", "jane@example.com", "Contact 2", /* ... */ ],
+            // Add more rows here...
+        ];
+
+        // Column definitions (replace this with your column names)
+        const columns = [
+            "ID",
+            "Customer Name",
+            "Address",
+            "Mobile Number",
+            "Email",
+            "Contact Person",
+            // Add more column names here...
+            "Column 7",
+            "Column 8",
+            "Column 9",
+            "Column 10",
+            "Column 11",
+            "Column 12",
+            "Column 13",
+            "Column 14",
+            "Column 15",
+            "Column 16",
+            "Column 17",
+            "Column 18",
+            "Column 19",
+            "Column 20",
+            "Column 21",
+            "Column 22",
+            "Column 23",
+            "Column 24",
+            "Column 25",
+        ];
+
+        new gridjs.Grid({
+            columns: columns.map((col) => ({ name: col })),
+            data: data,
+            pagination: { limit: 5 },
+            search: true,
+            sort: true,
+            language: {
+                "search": { "placeholder": "Search..." },
+                "pagination": { "previous": "⬅️", "next": "➡️", "results": () => "Records" }
+            }
+        }).render(document.getElementById("wrapper"));
+    </script>
     <script>
       document.getElementById('toggleButton').addEventListener('click', function () {
         var collapseExample = document.getElementById('collapseExample');

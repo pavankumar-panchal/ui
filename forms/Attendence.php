@@ -34,6 +34,10 @@
     <link href="../css/examples.css" rel="stylesheet">
     <link href="../vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 
+    <!-- grid js -->
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
 </head>
 
 <body>
@@ -66,20 +70,17 @@
                             Calls</a></li>
                     <li class="nav-item"><a class="nav-link" href="email.php"><span class="nav-icon"></span>
                             Emails</a></li>
-                    <li class="nav-item"><a class="nav-link" href="error_register.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="error_register.php"><span class="nav-icon"></span>
                             Errors</a></li>
                     <li class="nav-item"><a class="nav-link" href="In-house.php"><span class="nav-icon"></span>
                             In-house</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="Onsite_register.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Onsite_register.php"><span class="nav-icon"></span>
                             Onsite</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="References.php"><span class="nav-icon"></span>
                             References</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Requirements.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Requirements.php"><span class="nav-icon"></span>
                             Requirements</a></li>
                     <li class="nav-item"><a class="nav-link" href="skype.php"><span class="nav-icon"></span>
                             Skype</a></li>
@@ -124,18 +125,16 @@
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
                     </svg> Reports</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="stats&reports.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="stats&reports.php"><span class="nav-icon"></span>
                             Stats & Reports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="error_report.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="error_report.php"><span class="nav-icon"></span>
                             Error Reports</a></li>
                     <li class="nav-item"><a class="nav-link" href="requirement_report.php"><span
                                 class="nav-icon"></span>
                             Onsite Report</a></li>
                     <li class="nav-item"><a class="nav-link" href="Onsite.php"><span class="nav-icon"></span>
                             Chart View</a></li>
-                    <li class="nav-item"><a class="nav-link" href="chartview.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Attendence.php"><span class="nav-icon"></span>
                             Attendence</a></li>
                     <li class="nav-item"><a class="nav-link" href="dailyreport.php"><span class="nav-icon"></span>
                             Daily Reports</a></li>
@@ -218,7 +217,8 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">
                                     <svg class="icon me-2">
-                                        <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                                        <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-account-logout">
+                                        </use>
                                     </svg> Logout</a>
                         </div>
                     </li>
@@ -324,6 +324,8 @@
 
 
                     <div class="col-md-12">
+                        <div id="wrapper" class="table-container"></div>
+
                     </div>
                 </div>
             </div>

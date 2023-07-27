@@ -74,7 +74,7 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> References</a></li>
           <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span> Requirements</a></li>
-          <li class="nav-item"><a class="nav-link" href="../#"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="skype.php"><span class="nav-icon"></span>
               Skype</a></li>
 
         </ul>
@@ -115,17 +115,17 @@
             <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
           </svg> Reports</a>
         <ul class="nav-group-items">
-          <li class="nav-item"><a class="nav-link" href="../forms/stats&reports.php"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="stats&reports.php"><span class="nav-icon"></span>
               Stats & Reports</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/error_report.php"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="error_report.php"><span class="nav-icon"></span>
               Error Reports</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/requirement_report.php"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="requirement_report.php"><span class="nav-icon"></span>
               Onsite Report</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/Onsite.php"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="Onsite.php"><span class="nav-icon"></span>
               Chart View</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/Attendence.php"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="Attendence.php"><span class="nav-icon"></span>
               Attendence</a></li>
-          <li class="nav-item"><a class="nav-link" href="../forms/dailyreport.php"><span class="nav-icon"></span>
+          <li class="nav-item"><a class="nav-link" href="dailyreport.php"><span class="nav-icon"></span>
               Daily Reports</a></li>
         </ul>
       </li>

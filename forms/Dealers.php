@@ -135,7 +135,7 @@
                             Onsite Report</a></li>
                     <li class="nav-item"><a class="nav-link" href="Onsite.php"><span class="nav-icon"></span>
                             Chart View</a></li>
-                    <li class="nav-item"><a class="nav-link" href="chartview.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Attendence.php"><span class="nav-icon"></span>
                             Attendence</a></li>
                     <li class="nav-item"><a class="nav-link" href="dailyreport.php"><span class="nav-icon"></span>
                             Daily Reports</a></li>

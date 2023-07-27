@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid.js Table Example</title>
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="table-container"></div>
+    <script>
+        // Sample data for the table (replace this with your actual data)
+        const data = [
+            ["1", "John Doe", "Address 1", "123456789", "john@example.com", "Contact 1", /* ... */ ],
+            ["2", "Jane Smith", "Address 2", "987654321", "jane@example.com", "Contact 2", /* ... */ ],
+            // Add more rows here...
+        ];
+
+        // Column definitions (replace this with your column names)
+        const columns = [
+            "ID",
+            "Customer Name",
+            "Address",
+            "Mobile Number",
+            "Email",
+            "Contact Person",
+            // Add more column names here...
+            "Column 7",
+            "Column 8",
+            "Column 9",
+            "Column 10",
+            "Column 11",
+            "Column 12",
+            "Column 13",
+            "Column 14",
+            "Column 15",
+            "Column 16",
+            "Column 17",
+            "Column 18",
+            "Column 19",
+            "Column 20",
+            "Column 21",
+            "Column 22",
+            "Column 23",
+            "Column 24",
+            "Column 25",
+        ];
+
+        new gridjs.Grid({
+            columns: columns.map((col) => ({ name: col })),
+            data: data,
+            pagination: { limit: 5 },
+            search: true,
+            sort: true,
+            language: {
+                "search": { "placeholder": "Search..." },
+                "pagination": { "previous": "⬅️", "next": "➡️", "results": () => "Records" }
+            }
+        }).render(document.getElementById("wrapper"));
+    </script>
+</body>
+</html>
