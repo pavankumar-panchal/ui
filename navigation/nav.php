@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <base href="./">
+    <!-- <base href="./"> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/examples.css">/
+    <link rel="stylesheet" href="css/examples.css">
     <link rel="stylesheet" href="css/examples.css.map">
     <link rel="stylesheet" href="css/examples.min.css">
     <link rel="stylesheet" href="css/examples.min.css">

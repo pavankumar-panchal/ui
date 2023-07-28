@@ -1,13 +1,8 @@
 <?php
 include("navigation/nav.php");
-
-
 ?>
 
-
-
-
-<div class="card mb-4">
+<div class="card mb-4 mt-4">
   <div class="card-body">
     <div class="d-flex justify-content-between">
       <div>
@@ -35,16 +30,13 @@ include("navigation/nav.php");
     </div>
   </div>
 </div>
-
 <!-- /.row-->
-
 <div class="row">
   <div class="col-md-12">
     <div class="card mb-4">
       <div class="card-header"> Attendance Summary of this Month</div>
       <div class="card-body">
         <div class="row">
-
           <!-- Attendence  -->
         </div>
         <div class="container mt-4">
@@ -61,13 +53,9 @@ include("navigation/nav.php");
           </div>
         </div>
       </div>
-
-
-
       <!-- stops here -->
     </div class="col-md-12">
-
-    <div id="wrapper" class="table-container"></div>
+    <!-- <div id="wrapper" class="table-container"></div> -->
   </div>
 </div>
 </div>
