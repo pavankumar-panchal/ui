@@ -1,9 +1,27 @@
-<?php
-
-include("../navigation/navigation.php");
-
-?>
-<!-- Add the necessary Bootstrap CSS link -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="../css/vendors/simplebar.css">
+    <!-- Main styles for this application-->
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/examples.css">
+    <link rel="stylesheet" href="../css/examples.css.map">
+    <link rel="stylesheet" href="../css/examples.min.css">
+    <link rel="stylesheet" href="../css/examples.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css.map">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="../css/examples.css" rel="stylesheet">
+    <link href="../vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+</head>
+<body>
+  
 
 <div class="container mt-4">
   <div class="card border " class="rounded" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
@@ -308,8 +326,20 @@ include("../navigation/navigation.php");
 </div>
 </div>
 <br>
-<?php
 
-include("../navigation/footer.php");
+<script src="../vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="../vendors/simplebar/js/simplebar.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="../vendors/chart.js/js/chart.min.js"></script>
+    <script src="../vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+    <script src="../vendors/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
 
-?>
+</body>
+</html>

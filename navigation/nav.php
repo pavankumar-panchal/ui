@@ -44,13 +44,13 @@
 
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-        <div class="sidebar-brand d-none d-md-flex">
+        <!-- <div class="sidebar-brand d-none d-md-flex">
 
-            <!-- <img src="ssm-new-logo-removebg-preview.png" alt=""> -->
+            <img src="ssm-new-logo-removebg-preview.png" alt="">
             <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
                 <use xlink:href="assets/brand/coreui.svg#signet"></use>
             </svg>
-        </div>
+        </div> -->
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item"><a class="nav-link" href="index.php">
                     <svg class="nav-icon">
@@ -142,7 +142,7 @@
                             Onsite Report</a></li>
                     <li class="nav-item"><a class="nav-link" href="forms/Onsite.php"><span class="nav-icon"></span>
                             Chart View</a></li>
-                    <li class="nav-item"><a class="nav-link" href="forms/Attedence.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="forms/Attendence.php"><span class="nav-icon"></span>
                             Attendence</a></li>
                     <li class="nav-item"><a class="nav-link" href="forms/dailyreport.php"><span class="nav-icon"></span>
                             Daily Reports</a></li>
@@ -161,9 +161,10 @@
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
                     </svg>
                 </button><a class="header-brand d-md-none" href="#">
-                    <svg width="118" height="46" alt="CoreUI Logo">
+                    <!-- <svg width="118" height="46" alt="CoreUI Logo">
                         <use xlink:href="assets/brand/coreui.svg#full"></use>
-                    </svg></a>
+                    </svg> -->
+                </a>
                 <ul class="header-nav d-none d-md-flex">
                     <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Help</a></li>

@@ -37,6 +37,8 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
     <!-- grid js  -->
+
+
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link href="../css/examples.css" rel="stylesheet">
     <link href="../vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
@@ -45,13 +47,13 @@
 
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-        <div class="sidebar-brand d-none d-md-flex">
+        <!-- <div class="sidebar-brand d-none d-md-flex">
 
-            <!-- <img src="ssm-new-logo-removebg-preview.png" alt=""> -->
+            <img src="ssm-new-logo-removebg-preview.png" alt="">
             <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
                 <use xlink:href="../assets/brand/coreui.svg#signet"></use>
             </svg>
-        </div>
+        </div> -->
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item"><a class="nav-link" href="../index.php">
                     <svg class="nav-icon">
@@ -73,20 +75,17 @@
                             Calls</a></li>
                     <li class="nav-item"><a class="nav-link" href="email.php"><span class="nav-icon"></span>
                             Emails</a></li>
-                    <li class="nav-item"><a class="nav-link" href="error_register.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="error_register.php"><span class="nav-icon"></span>
                             Errors</a></li>
                     <li class="nav-item"><a class="nav-link" href="In-house.php"><span class="nav-icon"></span>
                             In-house</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="Onsite_register.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Onsite_register.php"><span class="nav-icon"></span>
                             Onsite</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="References.php"><span class="nav-icon"></span>
                             References</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Requirements.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Requirements.php"><span class="nav-icon"></span>
                             Requirements</a></li>
                     <li class="nav-item"><a class="nav-link" href="skype.php"><span class="nav-icon"></span>
                             Skype</a></li>
@@ -132,14 +131,11 @@
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
                     </svg> Reports</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="stats&reports.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="stats&reports.php"><span class="nav-icon"></span>
                             Stats & Reports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="error_report.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="error_report.php"><span class="nav-icon"></span>
                             Error Reports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Onsite.php"><span
-                                class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Onsite.php"><span class="nav-icon"></span>
                             Onsite Report</a></li>
                     <li class="nav-item"><a class="nav-link" href="chartview.php"><span class="nav-icon"></span>
                             Chart View</a></li>
@@ -153,7 +149,7 @@
         </ul>
         <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
-    <div class="wrapper d-flex flex-column bg-light">
+    <div class="wrapper d-flex flex-column bg-white">
         <header class="header header-sticky ">
             <div class="container-fluid">
                 <button class="header-toggler px-md-0 me-md-3" type="button"
@@ -215,7 +211,13 @@
                             </div><a class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                                </svg> View profile</a><a class="dropdown-item" href="#">
+                                </svg>
+                                <span class="" data-coreui-toggle="modal" data-coreui-target="#example">
+                                    View profile
+                                </span>
+                                </button>
+
+                            </a><a class="dropdown-item" href="#">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                                 </svg> Edir profile</a><a class="dropdown-item" href="#">
@@ -226,13 +228,15 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">
                                     <svg class="icon me-2">
-                                        <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                                        <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-account-logout">
+                                        </use>
                                     </svg> Logout</a>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="header-divider"></div>
+
             <div class="container-fluid">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb my-0 ms-2">
@@ -243,41 +247,42 @@
                     </ol>
                 </nav>
             </div>
+            <!--  -->
+
+            <!--  -->
         </header>
 
-
-
         <div class="body flex-grow-1 px-3">
-      <div class="container-lg">
-        <div class="row">
-        
-    </div>
-    <script src="../vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-    <script src="../vendors/simplebar/js/simplebar.min.js"></script>
-    <!-- Plugins and scripts required by this view-->
-    <script src="../vendors/chart.js/js/chart.min.js"></script>
-    <script src="../vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
-    <script src="../vendors/@coreui/utils/js/coreui-utils.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-        crossorigin="anonymous"></script>
+            <div class="container-lg">
+                <div class="row">
 
-    <script>
-        document.getElementById('toggleButton').addEventListener('click', function () {
-            var collapseExample = document.getElementById('collapseExample');
-            if (collapseExample.classList.contains('show')) {
-                collapseExample.classList.remove('show');
-            } else {
-                collapseExample.classList.add('hide');
+                </div>
+                <script src="../vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+                <script src="../vendors/simplebar/js/simplebar.min.js"></script>
+                <!-- Plugins and scripts required by this view-->
+                <script src="../vendors/chart.js/js/chart.min.js"></script>
+                <script src="../vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+                <script src="../vendors/@coreui/utils/js/coreui-utils.js"></script>
+                <script src="../js/main.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+                    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+                    crossorigin="anonymous"></script>
+
+                <script>
+                    document.getElementById('toggleButton').addEventListener('click', function () {
+                        var collapseExample = document.getElementById('collapseExample');
+                        if (collapseExample.classList.contains('show')) {
+                            collapseExample.classList.remove('show');
+                        } else {
+                            collapseExample.classList.add('hide');
 
 
-            }
-        });
-    </script>
+                        }
+                    });
+                </script>
 </body>
 
 </html>
