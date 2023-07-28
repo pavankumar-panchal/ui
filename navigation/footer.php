@@ -9,7 +9,7 @@
 
 <body>
 
-  <footer class="footer_area section_padding_130_0 mt-4">
+  <footer class="footer_area section_padding_130_0 mt-4 ">
     <div class="container">
       <div class="row">
         <!-- Single Widget-->
@@ -104,7 +104,7 @@
   </footer>
   </div>
   </div>
-
+  </div>
   <script>
     // Sample data for the table (replace this with your actual data)
     const data = [
