@@ -57,7 +57,7 @@
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
                     </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">NEW</span></a></li>
             <li class="nav-title">Options</li>
-            <li class="nav-item"><a class="nav-link" href="../Authorization_summary.php">
+            <li class="nav-item"><a class="nav-link" href="Authorization_summary.php">
                     <svg class="nav-icon">
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-book"></use>
                     </svg> Record Authorization</a></li>
@@ -68,26 +68,26 @@
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-screen-desktop"></use>
                     </svg> Registers</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="../forms/calls.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="calls.php"><span class="nav-icon"></span>
                             Calls</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/email.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="email.php"><span class="nav-icon"></span>
                             Emails</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/error_register.php"><span
+                    <li class="nav-item"><a class="nav-link" href="error_register.php"><span
                                 class="nav-icon"></span>
                             Errors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/In-house.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="In-house.php"><span class="nav-icon"></span>
                             In-house</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Onsite_register.php"><span
+                    <li class="nav-item"><a class="nav-link" href="Onsite_register.php"><span
                                 class="nav-icon"></span>
                             Onsite</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/References.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="References.php"><span class="nav-icon"></span>
                             References</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Requirements.php"><span
+                    <li class="nav-item"><a class="nav-link" href="Requirements.php"><span
                                 class="nav-icon"></span>
                             Requirements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/skype.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="skype.php"><span class="nav-icon"></span>
                             Skype</a></li>
 
                 </ul>
@@ -98,9 +98,9 @@
                     </svg> Billings</a>
                 <ul class="nav-group-items">
 
-                    <li class="nav-item"><a class="nav-link" href="../forms/invoices.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="invoices.php"><span class="nav-icon"></span>
                             Invoices</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/receipts.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="receipts.php"><span class="nav-icon"></span>
                             Receipts</a></li>
 
                 </ul>
@@ -111,17 +111,17 @@
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
                     </svg> Masters</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="../forms/customers.php"> Customer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Users.php"> Users</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/location.php"> Locations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Products.php"> Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/versions.php">Versions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Out_station.php"> Out Station Employees</a>
+                    <li class="nav-item"><a class="nav-link" href="customers.php"> Customer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Users.php"> Users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="location.php"> Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Products.php"> Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="versions.php">Versions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Out_station.php"> Out Station Employees</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Dealers.php"> Dealers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Categories.php"> Categories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/support.php"> Support Units</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Non-working_days.php"> Non Working Days</a>
+                    <li class="nav-item"><a class="nav-link" href="Dealers.php"> Dealers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Categories.php"> Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.php"> Support Units</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Non-working_days.php"> Non Working Days</a>
                     </li>
                 </ul>
             </li>
@@ -131,20 +131,20 @@
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
                     </svg> Reports</a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="../forms/stats&reports.php"><span
+                    <li class="nav-item"><a class="nav-link" href="stats&reports.php"><span
                                 class="nav-icon"></span>
                             Stats & Reports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/error_report.php"><span
+                    <li class="nav-item"><a class="nav-link" href="error_report.php"><span
                                 class="nav-icon"></span>
                             Error Reports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/requirement_report.php"><span
+                    <li class="nav-item"><a class="nav-link" href="Onsite.php"><span
                                 class="nav-icon"></span>
                             Onsite Report</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Onsite.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="chartview.php"><span class="nav-icon"></span>
                             Chart View</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/Attedence.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="Attendence.php"><span class="nav-icon"></span>
                             Attendence</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../forms/dailyreport.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="dailyreport.php"><span class="nav-icon"></span>
                             Daily Reports</a></li>
                 </ul>
             </li>

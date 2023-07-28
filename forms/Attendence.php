@@ -1,5 +1,5 @@
 <?php
-include("../navigation/nav.php");
+include("../navigation/navigation.php");
 
 
 ?>
@@ -69,7 +69,7 @@ include("../navigation/nav.php");
                                         <button type="button" class="btn btn-primary" id="display"
                                             onclick="attendancedisplay()">Display</button>
                                         &nbsp;&nbsp;&nbsp;
-                                        <a href="./index.php?a_link=attendance_report_adv"
+                                        <a href="../index.php?a_link=attendance_report_adv"
                                             class="btn btn-primary">Advanced</a>
                                     </div>
                                 </div>
@@ -79,8 +79,6 @@ include("../navigation/nav.php");
                 </tr>
             </tbody>
         </table>
-
-
 
         <div class="col-md-12">
             <div id="wrapper" class="table-container"></div>
