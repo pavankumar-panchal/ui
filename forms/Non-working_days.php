@@ -3,7 +3,8 @@
 include("../navigation/navigation.php");
 
 ?>
-                 <div class="container-fluid">
+                 <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">

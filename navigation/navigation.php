@@ -47,7 +47,7 @@
 
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-    
+
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item"><a class="nav-link" href="../index.php">
                     <svg class="nav-icon">
@@ -202,9 +202,21 @@
                     </li>
                 </ul>
             </div>
-            <div class="header-divider"></div>
+            <!-- <div class="header-divider pb-4" >
+                <div class="container-fluid">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb my-0 ms-2">
+                            <li class="breadcrumb-item">
+                                <span>Home</span>
+                            </li>
+                            <li class="breadcrumb-item active"><span>Dashboard</span></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div> -->
+        
+        </header>
 
-      
 
 
 
