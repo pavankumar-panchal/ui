@@ -8,26 +8,23 @@ include("../navigation/navigation.php");
 
 <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Reports</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Error Reports</span></li>
-        </ol>
-    </nav>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb my-0 ms-2">
+      <li class="breadcrumb-item">
+        <span>Reports</span>
+      </li>
+      <li class="breadcrumb-item active"><span>Error Reports</span></li>
+    </ol>
+  </nav>
 </div>
 </header>
-
-
-
 <style>
   .form-group {
     margin-bottom: 5px;
   }
 </style>
 
-<div class="container mt-4">
+<div class="container mt-4 bg-light p-4 rounded-4">
   <div class="form-title" onclick="toggleFormVisibility();">
     Enter the Details <span id="toggleimg" class="float-end">+</span>
   </div>
@@ -47,7 +44,7 @@ include("../navigation/navigation.php");
           </div>
           <div class="form-group">
             <label for="s_productgroup">Product group:</label>
-            <select name="s_productgroup" class="form-control" id="s_productgroup" onchange="">
+            <select name="s_productgroup" class="form-control form-select" id="s_productgroup" onchange="">
               <option value="" selected="selected">Make a Selection</option>
               <option value="null">null</option>
               <option value="pro">pro</option>
@@ -55,7 +52,7 @@ include("../navigation/navigation.php");
           </div>
           <div class="form-group">
             <label for="productname">Product Name:</label>
-            <select name="productname" id="productname" class="form-control">
+            <select name="productname" id="productname" class="form-control form-select">
               <option value="">Make A Selection</option>
               <option value="2">null</option>
               <option value="1">products</option>
@@ -63,14 +60,14 @@ include("../navigation/navigation.php");
           </div>
           <div class="form-group">
             <label for="errorreported">Error Description:</label>
-            <input name="errorreported" type="text" class="form-control" id="errorreported" size="30" autocomplete="off"
+            <input name="errorreported" type="text" class="form-control form-select" id="errorreported" size="30" autocomplete="off"
               isdatepicker="true">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
             <label for="status">Status:</label>
-            <select name="status" id="status" class="form-control">
+            <select name="status" id="status" class="form-control form-select">
               <option value="">Make A Selection</option>
               <option value="solved">Solved</option>
               <option value="unsolved">Un Solved</option>
@@ -78,7 +75,7 @@ include("../navigation/navigation.php");
           </div>
           <div class="form-group">
             <label for="userid">Entered By:</label>
-            <select name="userid" id="userid" class="form-control">
+            <select name="userid" id="userid" class="form-control form-select">
               <option value="">ALL</option>
             </select>
           </div>
@@ -102,9 +99,13 @@ include("../navigation/navigation.php");
       </div>
     </form>
 
-</div>
-<div class="col-md-12">
-</div>
+
+
+
+
+  </div>
+  <div class="col-md-12">
+  </div>
 </div>
 </div>
 <?php

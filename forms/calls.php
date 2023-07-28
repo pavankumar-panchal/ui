@@ -37,6 +37,7 @@ include("../navigation/navigation.php");
                                 <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
                                     <td class="bg-light">&nbsp;&nbsp;Enter the Details</td>
                                     <td align="right" class="bg-light">
+
                                         <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg"
                                                 name="toggleimg" align="absmiddle"></div>
                                     </td>
@@ -49,7 +50,7 @@ include("../navigation/navigation.php");
                                                 <div class="display">
                                                     <table class="table table-bordered table1">
                                                         <tbody>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Call Type:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -68,7 +69,7 @@ include("../navigation/navigation.php");
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Anonymous:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -88,7 +89,7 @@ include("../navigation/navigation.php");
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Registered Name:</td>
                                                                 <td valign="top">
                                                                     <input name="customername" type="text"
@@ -96,7 +97,7 @@ include("../navigation/navigation.php");
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Customer ID :</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="text"
@@ -104,7 +105,7 @@ include("../navigation/navigation.php");
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Date:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="date"
@@ -112,7 +113,7 @@ include("../navigation/navigation.php");
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Time:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="date"
@@ -120,7 +121,7 @@ include("../navigation/navigation.php");
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Category:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="text"
@@ -128,7 +129,7 @@ include("../navigation/navigation.php");
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">State:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -144,7 +145,7 @@ include("../navigation/navigation.php");
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Caller Type:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="text"
@@ -152,7 +153,7 @@ include("../navigation/navigation.php");
                                                                         autocomplete="off" isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Product group:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -168,7 +169,7 @@ include("../navigation/navigation.php");
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Product Name(Optional):</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -184,7 +185,7 @@ include("../navigation/navigation.php");
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Product version:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -200,7 +201,7 @@ include("../navigation/navigation.php");
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Person Name:</td>
                                                                 <td valign="top">
                                                                     <input name="customerid" type="text"
@@ -216,7 +217,7 @@ include("../navigation/navigation.php");
 
                                                     <table class="table table-bordered table2">
                                                         <tbody>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Problem:</td>
                                                                 <td valign="top">
                                                                     <textarea name="teamleaderremarks" cols="45"
@@ -225,7 +226,7 @@ include("../navigation/navigation.php");
                                                                         wt-ignore-input="true"></textarea>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Status:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -241,7 +242,7 @@ include("../navigation/navigation.php");
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Call Category:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -251,7 +252,7 @@ include("../navigation/navigation.php");
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Solved Through:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -264,7 +265,7 @@ include("../navigation/navigation.php");
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Transferred to :</td>
                                                                 <td valign="top">
                                                                     <select name="userid" id="userid"
@@ -273,7 +274,7 @@ include("../navigation/navigation.php");
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Remarks:</td>
                                                                 <td valign="top">
                                                                     <textarea name="teamleaderremarks" cols="45"
@@ -282,7 +283,7 @@ include("../navigation/navigation.php");
                                                                         wt-ignore-input="true"></textarea>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Complaint ID:</td>
                                                                 <td valign="top">
                                                                     <input name="complaintid" type="text"
@@ -291,7 +292,7 @@ include("../navigation/navigation.php");
                                                                         isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Team Leader Remarks:</td>
                                                                 <td valign="top">
 
@@ -343,7 +344,7 @@ include("../navigation/navigation.php");
                                                 <div class="display">
                                                     <table class="table table-bordered  table1">
                                                         <tbody>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">From Date:</td>
                                                                 <td valign="top">
                                                                     <div class="d-flex">
@@ -356,7 +357,7 @@ include("../navigation/navigation.php");
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">To Date:</td>
                                                                 <td valign="top">
                                                                     <div class="d-flex">
@@ -370,7 +371,7 @@ include("../navigation/navigation.php");
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Call Type:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -396,7 +397,7 @@ include("../navigation/navigation.php");
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Anonymous:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -422,7 +423,7 @@ include("../navigation/navigation.php");
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Customer Name:</td>
                                                                 <td valign="top">
                                                                     <input name="complaintid" type="text"
@@ -431,7 +432,7 @@ include("../navigation/navigation.php");
                                                                         isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Customer ID:</td>
                                                                 <td valign="top">
                                                                     <input name="complaintid" type="text"
@@ -440,7 +441,7 @@ include("../navigation/navigation.php");
                                                                         isdatepicker="true">
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Category:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -467,7 +468,7 @@ include("../navigation/navigation.php");
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Status:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -478,7 +479,7 @@ include("../navigation/navigation.php");
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Call Type:</td>
                                                                 <td valign="top">
                                                                     <input name="s_customer" type="checkbox"
@@ -501,7 +502,7 @@ include("../navigation/navigation.php");
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Product group:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -511,7 +512,7 @@ include("../navigation/navigation.php");
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Product Name:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -528,7 +529,7 @@ include("../navigation/navigation.php");
 
                                                     <table class="table table-bordered table2">
                                                         <tbody>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Problem:</td>
                                                                 <td valign="top">
                                                                     <textarea name="teamleaderremarks" cols="45"
@@ -537,7 +538,7 @@ include("../navigation/navigation.php");
                                                                         wt-ignore-input="true"></textarea>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Status:</td>
                                                                 <td valign="top">
                                                                     <span id="filterprdgroupdisplay">
@@ -553,7 +554,7 @@ include("../navigation/navigation.php");
                                                                     </span>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Call Category:</td>
                                                                 <td valign="top">
                                                                     <select name="productname" id="productname"
@@ -563,7 +564,7 @@ include("../navigation/navigation.php");
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Transferred To:</td>
                                                                 <td valign="top">
                                                                     <select name="status"
@@ -574,7 +575,7 @@ include("../navigation/navigation.php");
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Entered By:</td>
                                                                 <td valign="top">
                                                                     <select name="userid" id="userid"
@@ -583,7 +584,7 @@ include("../navigation/navigation.php");
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Compliant ID:</td>
                                                                 <td valign="top">
                                                                     <select name="supportunit"
@@ -594,7 +595,7 @@ include("../navigation/navigation.php");
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Flags:</td>
                                                                 <td valign="top">
                                                                     <div class="form-check">
@@ -620,7 +621,7 @@ include("../navigation/navigation.php");
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Support Unit:</td>
                                                                 <td valign="top">
                                                                     <select name="status"
@@ -631,7 +632,7 @@ include("../navigation/navigation.php");
                                                                     </select>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="bg-light">
+                                                            <tr class="bg-white">
                                                                 <td valign="top">Order By:</td>
                                                                 <td valign="top">
                                                                     <select name="status"
