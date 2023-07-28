@@ -680,7 +680,7 @@ include("../navigation/navigation.php");
                         </table>
                             <div class="col-md-12">
 
-           
+                            <div id="wrapper" class="table-container"></div> 
                 </div>
             </div>
             <?php
