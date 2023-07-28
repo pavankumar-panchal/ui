@@ -188,43 +188,15 @@
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end pt-0">
-                            <div class="dropdown-header bg-light py-2">
-                                <div class="fw-semibold">Account</div>
-                            </div><a class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-                                </svg> Updates<span class="badge badge-sm bg-info ms-2">42</span></a><a
-                                class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-                                </svg> Messages<span class="badge badge-sm bg-success ms-2">42</span></a><a
-                                class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-task"></use>
-                                </svg> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a><a
-                                class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-comment-square"></use>
-                                </svg> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
+
                             <div class="dropdown-header bg-light py-2">
                                 <div class="fw-semibold">Profile</div>
-                            </div><a class="dropdown-item" href="Profile.php">
-                                <svg class="icon me-2">
-                                    <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                                </svg>
-                                <span class="" data-coreui-toggle="modal" data-coreui-target="#example">
-                                    View profile
-                                </span>
-                                </button>
-
-                            </a><a class="dropdown-item" href="#">
+                            </div>
+                            <a class="dropdown-item" href="Profile.php">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-                                </svg> Edir profile</a><a class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
-                                </svg> Change password<span class="badge badge-sm bg-secondary ms-2">42</span></a><a
-                                class="dropdown-item" href="#">
+                                </svg> Edit profile</a>
+                            <a class="dropdown-item" href="#">
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">
                                     <svg class="icon me-2">
@@ -253,7 +225,7 @@
         </header>
 
 
-        
+
         <div class="body flex-grow-1 px-3">
             <div class="container-lg">
                 <div class="row">
