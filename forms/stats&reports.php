@@ -155,7 +155,7 @@ include("../navigation/navigation.php");
   </tbody>
   </table>
 </div>
-</div>
+
 
 <div class="col-md-12">
 </div>

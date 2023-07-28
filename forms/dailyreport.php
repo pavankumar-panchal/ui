@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include("../navigation/navigation.php");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <title>Enter the Details</title>
-</head>
 
-<body>
+?>
     <div class="container mt-4">
         <table class="table table-bordered" style="border:1px solid #cacaca;  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.126);">
             <thead>
@@ -76,8 +69,9 @@
                                         <input name="view" type="submit" class="btn btn-primary" id="view" value="View"
                                             onclick="formsubmit('view');" fdprocessedid="mnaln6">
                                         &nbsp;&nbsp;&nbsp;
-                                        <img src="../images/toexcel.png" border="0" align="absmiddle"
-                                            onclick="formsubmit('toexcel');" style="cursor:pointer">
+                                        <input name="excel" type="submit" class="btn btn-warning" id="excel" value="excel"
+                                            onclick="formsubmit('excel');" fdprocessedid="mnaln6">
+                                      
                                     </div>
                                 </div>
                             </form>
@@ -88,8 +82,8 @@
         </table>
     </div>
 
-    <!-- Bootstrap JS (Optional for some components) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+<?php
 
-</html>
+include("../navigation/footer.php");
+
+?>

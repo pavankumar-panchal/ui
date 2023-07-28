@@ -159,8 +159,7 @@ include("../navigation/navigation.php");
                 </div>
             </form>
         </div>
-    </div>
-</div>
+
 
 
 <!--  -->

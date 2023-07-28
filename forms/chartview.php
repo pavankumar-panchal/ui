@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html>
+<?php
+include("../navigation/navigation.php");
 
-<head>
-    <!-- Add your meta tags, title, and other headers here if needed -->
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- Additional CSS if required -->
-    <style>
-        /* Add any additional custom CSS here */
-    </style>
-</head>
-
-<body>
+?>
     <div class="container mt-4">
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
@@ -32,7 +20,7 @@
                             <div id="maindiv" style="display: block;">
                                 <form action="" method="post" name="submitform" id="submitform"
                                     onsubmit="return false;">
-                                    <table class="table table-bordered table-striped ">
+                                    <table class="table table-bordered  ">
                                         <tbody>
                                             <tr class="bg-light">
                                                 <td>Registers:</td>
@@ -166,16 +154,8 @@
         </table>
     </div>
     </div>
+<?php
 
-    <!-- Bootstrap JS and any additional scripts if required -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+include("../navigation/footer.php");
 
-    <!-- Your JavaScript code and any additional scripts if required -->
-    <script>
-    // Your JavaScript functions and code here
-    </script>
-</body>
-
-</html>
+?>

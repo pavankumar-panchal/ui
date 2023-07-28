@@ -542,7 +542,7 @@ include("../navigation/navigation.php");
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
+                   
 
                         <div class="col-md-12">
                         </div>

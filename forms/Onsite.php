@@ -229,7 +229,7 @@ include("../navigation/navigation.php");
       </tr>
     </tbody>
   </table>
-</div>
+
 
 
 <!-- stop -->

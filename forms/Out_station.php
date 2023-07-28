@@ -196,7 +196,7 @@ include("../navigation/navigation.php");
           <input name="view" type="submit" class="btn btn-warning" id="view" value="Excel" onclick="formfilter('view')">
         </div>
       </form>
-    </div>
+
   </div>
 </div>
 

@@ -589,7 +589,7 @@ include("../navigation/navigation.php");
                     </script>
                     <!--  -->
                     <div class="col-md-12">
-                    </div>
+                    
                 </div>
             </div>
             <?php

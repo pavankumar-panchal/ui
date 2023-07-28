@@ -148,7 +148,7 @@ include("../navigation/navigation.php");
             </div>
         </div>
     </div>
-</div>
+
 
 
 

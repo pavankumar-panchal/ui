@@ -183,7 +183,7 @@ include("../navigation/navigation.php");
                         onclick="formfilter('view')">
                 </div>
             </form>
-        </div>
+   
     </div>
 </div>
 

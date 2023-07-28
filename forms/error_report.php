@@ -90,7 +90,7 @@ include("../navigation/navigation.php");
         <button name="view" type="submit" class="btn btn-primary" id="view" onclick="formsubmit();">View</button>
       </div>
     </form>
-  </div>
+
 </div>
 <div class="col-md-12">
 </div>
