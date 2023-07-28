@@ -3,6 +3,17 @@
 include("../navigation/navigation.php");
 
 ?>
+                 <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-0 ms-2">
+            <li class="breadcrumb-item">
+                <span>Masters</span>
+            </li>
+            <li class="breadcrumb-item active"><span>Products</span></li>
+        </ol>
+    </nav>
+</div>
+</header>
 <div class="container mt-4">
     <div class="card ">
         <div class="card-header bg-light" style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">

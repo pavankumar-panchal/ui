@@ -2,9 +2,20 @@
 include("../navigation/navigation.php");
 ?>
 <!-- content -->
+<div class="container-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-0 ms-2">
+            <li class="breadcrumb-item">
+                <span>Reports</span>
+            </li>
+            <li class="breadcrumb-item active"><span>Attendence</span></li>
+        </ol>
+    </nav>
+</div>
+</header>
 
 <div class="container mt-4 ">
-    <div class="table-responsive "  >
+    <div class="table-responsive ">
         <table class="table table-bordered  rounded-3"
             style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); overflow: hidden; ">
             <thead>
