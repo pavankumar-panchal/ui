@@ -44,18 +44,13 @@
 
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-        <!-- <div class="sidebar-brand d-none d-md-flex">
 
-            <img src="ssm-new-logo-removebg-preview.png" alt="">
-            <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
-                <use xlink:href="assets/brand/coreui.svg#signet"></use>
-            </svg>
-        </div> -->
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item"><a class="nav-link" href="index.php">
                     <svg class="nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
-                    </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">NEW</span></a></li>
+                    </svg> Dashboard
+                </a></li>
             <li class="nav-title">Options</li>
             <li class="nav-item"><a class="nav-link" href="forms/Authorization_summary.php">
                     <svg class="nav-icon">
@@ -142,7 +137,7 @@
                             Onsite Report</a></li>
                     <li class="nav-item"><a class="nav-link" href="forms/Onsite.php"><span class="nav-icon"></span>
                             Chart View</a></li>
-                    <li class="nav-item"><a class="nav-link" href="forms/Attendence.php"><span class="nav-icon"></span>
+                    <li class="nav-item"><a class="nav-link" href="forms/Attedence.php"><span class="nav-icon"></span>
                             Attendence</a></li>
                     <li class="nav-item"><a class="nav-link" href="forms/dailyreport.php"><span class="nav-icon"></span>
                             Daily Reports</a></li>
@@ -160,11 +155,8 @@
                     <svg class="icon icon-lg">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
                     </svg>
-                </button><a class="header-brand d-md-none" href="#">
-                    <!-- <svg width="118" height="46" alt="CoreUI Logo">
-                        <use xlink:href="assets/brand/coreui.svg#full"></use>
-                    </svg> -->
-                </a>
+                </button>
+
                 <ul class="header-nav d-none d-md-flex">
                     <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
@@ -192,38 +184,21 @@
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end pt-0">
-                            <div class="dropdown-header bg-light py-2">
-                                <div class="fw-semibold">Account</div>
-                            </div><a class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-                                </svg> Updates<span class="badge badge-sm bg-info ms-2">42</span></a><a
-                                class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-                                </svg> Messages<span class="badge badge-sm bg-success ms-2">42</span></a><a
-                                class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-task"></use>
-                                </svg> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a><a
-                                class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-comment-square"></use>
-                                </svg> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
+
                             <div class="dropdown-header bg-light py-2">
                                 <div class="fw-semibold">Profile</div>
-                            </div><a class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                                </svg> View profile</a><a class="dropdown-item" href="#">
+                            </div>
+
+
+                            <a class="dropdown-item" href="forms/Profile.php">
                                 <svg class="icon me-2">
                                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-                                </svg> Edir profile</a><a class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
-                                </svg> Change password<span class="badge badge-sm bg-secondary ms-2">42</span></a><a
-                                class="dropdown-item" href="#">
+                                </svg> Edir profile</a>
+
+
+                            <a class="dropdown-item" href="#">
                                 <div class="dropdown-divider"></div>
+
                                 <a class="dropdown-item" href="#">
                                     <svg class="icon me-2">
                                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
@@ -248,36 +223,36 @@
 
 
         <div class="body flex-grow-1 px-3">
-      <div class="container-lg">
-        <div class="row">
-        
-    </div>
-    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-    <script src="vendors/simplebar/js/simplebar.min.js"></script>
-    <!-- Plugins and scripts required by this view-->
-    <script src="vendors/chart.js/js/chart.min.js"></script>
-    <script src="vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
-    <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-        crossorigin="anonymous"></script>
+            <div class="container-lg">
+                <div class="row">
 
-    <script>
-        document.getElementById('toggleButton').addEventListener('click', function () {
-            var collapseExample = document.getElementById('collapseExample');
-            if (collapseExample.classList.contains('show')) {
-                collapseExample.classList.remove('show');
-            } else {
-                collapseExample.classList.add('hide');
+                </div>
+                <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+                <script src="vendors/simplebar/js/simplebar.min.js"></script>
+                <!-- Plugins and scripts required by this view-->
+                <script src="vendors/chart.js/js/chart.min.js"></script>
+                <script src="vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+                <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+                <script src="js/main.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+                    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+                    crossorigin="anonymous"></script>
+
+                <script>
+                    document.getElementById('toggleButton').addEventListener('click', function () {
+                        var collapseExample = document.getElementById('collapseExample');
+                        if (collapseExample.classList.contains('show')) {
+                            collapseExample.classList.remove('show');
+                        } else {
+                            collapseExample.classList.add('hide');
 
 
-            }
-        });
-    </script>
+                        }
+                    });
+                </script>
 </body>
 
 </html>
