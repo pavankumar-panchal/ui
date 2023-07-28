@@ -208,7 +208,7 @@
                                 </svg> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
                             <div class="dropdown-header bg-light py-2">
                                 <div class="fw-semibold">Profile</div>
-                            </div><a class="dropdown-item" href="#">
+                            </div><a class="dropdown-item" href="Profile.php">
                                 <svg class="icon me-2">
                                     <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-user"></use>
                                 </svg>
@@ -252,6 +252,8 @@
             <!--  -->
         </header>
 
+
+        
         <div class="body flex-grow-1 px-3">
             <div class="container-lg">
                 <div class="row">
