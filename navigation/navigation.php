@@ -193,7 +193,7 @@
                                 </svg> Edit profile</a>
                             <a class="dropdown-item" href="#">
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="logout.php">
                                     <svg class="icon me-2">
                                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-account-logout">
                                         </use>
