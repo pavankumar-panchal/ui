@@ -37,7 +37,7 @@ include("../navigation/navigation.php");
               <div class="display">
                 <table class="table table-bordered table1">
                   <tbody>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">From Date:</td>
                       <td valign="top">
                         <div class="d-flex">
@@ -47,7 +47,7 @@ include("../navigation/navigation.php");
                         </div>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">To Date:</td>
                       <td valign="top">
                         <div class="d-flex">
@@ -58,7 +58,7 @@ include("../navigation/navigation.php");
                         </div>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Service Charge:</td>
                       <td valign="top">
                         <div class="form-check">
@@ -68,7 +68,7 @@ include("../navigation/navigation.php");
                         </div>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Solved By:</td>
                       <td valign="top">
                         <select name="solvedby" id="solvedby" class="form-select form-control">
@@ -77,7 +77,7 @@ include("../navigation/navigation.php");
                         </select>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Solved Through:</td>
                       <td valign="top">
                         <div class="form-check">
@@ -105,7 +105,7 @@ include("../navigation/navigation.php");
                         </div>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Anonymous:</td>
                       <td valign="top">
                         <div class="form-check">
@@ -124,7 +124,7 @@ include("../navigation/navigation.php");
                         </div>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Reports on:</td>
                       <td valign="top">
                         <div class="form-check">
@@ -150,14 +150,14 @@ include("../navigation/navigation.php");
 
                 <table class="table table-bordered table2">
                   <tbody>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Customer Name:</td>
                       <td valign="top">
                         <input name="customername" type="text" class="form-control" id="customername" size="20"
                           autocomplete="off" isdatepicker="true">
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Product group:</td>
                       <td valign="top">
                         <span id="filterprdgroupdisplay">
@@ -170,7 +170,7 @@ include("../navigation/navigation.php");
                         </span>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Product Name:</td>
                       <td valign="top">
                         <select name="productname" id="productname" class="form-select form-control swiftselect">
@@ -179,7 +179,7 @@ include("../navigation/navigation.php");
                         </select>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Status:</td>
                       <td valign="top">
                         <select name="status" class="form-select form-control swiftselect" id="status">
@@ -193,24 +193,24 @@ include("../navigation/navigation.php");
                         </select>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Registered By:</td>
                       <td valign="top">
-                        <select name="userid" id="userid" class="form-control swiftselect">
+                        <select name="userid" id="userid" class="form-control form-select swiftselect">
                           <option value="">ALL</option>
                         </select>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Support Unit:</td>
                       <td valign="top">
-                        <select name="supportunit" class="form-control swiftselect" id="supportunit">
+                        <select name="supportunit" class="form-control form-select swiftselect" id="supportunit">
                           <option value="">ALL</option>
 
                         </select>
                       </td>
                     </tr>
-                    <tr class="bg-light">
+                    <tr class="bg-white">
                       <td valign="top">Complaint Id:</td>
                       <td valign="top">
                         <input name="complaintid" type="text" class="form-control swifttext" id="complaintid" size="30"
