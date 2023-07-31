@@ -136,7 +136,8 @@
       "Authorized Group",
       "Team Leader Remarks",
       "Authorized Person",
-      "Authorized Date&amp;Time",
+      "Authorized Date&amp",
+      "Time",
       "Call Category",
     ];
 
