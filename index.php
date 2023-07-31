@@ -14,6 +14,7 @@
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
+  session_start();
 
   // include('./inc/dbconfig.php');
   include('functions/phpfunctions.php');
@@ -49,8 +50,7 @@
         $locationname = $fetch['locationname'];
         $type = $fetch['type'];
         $logintype = 'IN';
-        // $remark = $fetch['energencyremarks'];
-  
+           
         if ($existinguser == 'no')
           $message = '<span class="error-message"> This User id not allowed to login </span>';
         elseif ($password <> $passwd)

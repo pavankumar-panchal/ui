@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 include("connections.php");
@@ -7,7 +8,7 @@ $dbuser = "root";
 $dbpwd = "";
 $dbname = "relyon_imax";
 
-$newconnection=mysqli_connect("localhost","root","","relyon_imax") or die("Connection error");
+$newconnection = mysqli_connect("localhost", "root", "", "relyon_imax") or die("Connection error");
 
 function encodevalue($input)
 {
@@ -192,7 +193,8 @@ function changedateformat($date)
     }
     return $date;
 }
-function logoutUser() {
+function logoutUser()
+{
     // Remove the user-specific cookies by setting their expiration time in the past
     imaxdeletecookie('ssmuserid'); // Replace 'ssmuserid' with the name of your user-specific cookie
     // Other cookies if needed...

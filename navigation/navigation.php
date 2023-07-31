@@ -165,6 +165,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">
                             <svg class="icon icon-lg">
                                 <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+                        <?php  echo("alert('working');");?>
                             </svg></a></li>
                     <li class="nav-item"><a class="nav-link" href="#">
                             <svg class="icon icon-lg">

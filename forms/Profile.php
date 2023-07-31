@@ -1,6 +1,78 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set("display_errors",1);
 include("../navigation/navigation.php");
+include("../functions/phpfunctions.php");
+
+if (!isset($_POST['fullname'])) {
+  $_POST['fullname'] = null;
+}
+if (!isset($_POST['presentaddress'])) {
+  $_POST['presentaddress'] = null;
+}
+if (!isset($_POST['permanentaddress'])) {
+  $_POST['permanentaddress'] = null;
+}
+if (!isset($_POST['emergencynumber'])) {
+  $_POST['emergencynumber'] = null;
+}
+if (!isset($_POST['emergencyremarks'])) {
+  $_POST['emergencyremarks'] = null;
+}
+if (!isset($_POST['dob'])) {
+  $_POST['dob'] = null;
+}
+if (!isset($_POST['doj'])) {
+  $_POST['doj'] = null;
+}
+if (!isset($_POST['designation'])) {
+  $_POST['designation'] = null;
+}
+if (!isset($_POST['personalemail'])) {
+  $_POST['personalemail'] = null;
+}
+if (!isset($_POST['officialemail'])) {
+  $_POST['officialemail'] = null;
+}
+if (!isset($_POST['mobile'])) {
+  $_POST['mobile'] = null;
+}
+if (!isset($_POST['gender'])) {
+  $_POST['gender'] = null;
+}
+if (!isset($message)) {
+  $message = null;
+}
+
+$fullname = $_POST['fullname'];
+$gender = $_POST['gender'];
+$presentaddress = $_POST['presentaddress'];
+$permanentaddress = $_POST['permanentaddress'];
+$mobile = $_POST['mobile'];
+$emergencynumber = $_POST['emergencynumber'];
+$emergencyremarks = $_POST['emergencyremarks'];
+$dob = $_POST['dob'];
+$doj = $_POST['doj'];
+$designation = $_POST['designation'];
+$personalemail = $_POST['personalemail'];
+$officialemail = $_POST['officialemail'];
+
+$query = "SELECT * FROM ssm_users where slno = '" . $user . "'";
+$fetch = runmysqlqueryfetch($query);
+
+$d_fullname = $fetch['fullname'];
+$d_gender = $fetch['gender'];
+$d_presentaddress = $fetch['presentaddress'];
+$d_permanentaddress = $fetch['permanentaddress'];
+$d_mobile = $fetch['mobile'];
+$d_emergencynumber = $fetch['emergencynumber'];
+$d_emergencyremarks = $fetch['emergencyremarks'];
+$d_dob = changedateformat($fetch['dob']);
+$d_doj = changedateformat($fetch['doj']);
+$d_designation = $fetch['designation'];
+$d_personalemail = $fetch['personalemail'];
+$d_officialemail = $fetch['officialemail'];
+
 ?>
 
 <div class="container mt-4">
@@ -20,7 +92,7 @@ include("../navigation/navigation.php");
                 <tr>
                   <td><strong>User Name:</strong></td>
                   <td>
-                    <font color="#FF6200">-</font>
+                    <font color="#FF6200">  <?php  echo ($d_fullname); ?> </font>
                   </td>
                 </tr>
                 <tr>
