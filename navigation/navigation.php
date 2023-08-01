@@ -1,3 +1,44 @@
+
+<?php
+// include("../index.php");
+include("../functions/phpfunctions.php");
+session_start();
+
+
+// Check if the user is logged in. If not, redirect to the login page.
+// if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
+//     header('Location: index.php');
+//     exit();
+// }
+
+// Establish a connection to the MySQL database (Assuming you have a valid $connection variable)
+
+// Retrieve the user's details from the database based on the user ID
+$user_name = $_SESSION['username'];
+
+// Prepare and execute a SELECT query
+$sql = "SELECT * FROM ssm_users WHERE username = $user_name";
+$result = mysqli_query($newconnection, $sql);
+
+if ($result) {
+    // Fetch the user's details as an associative array
+    $user_details = mysqli_fetch_assoc($result);
+
+    // Now you can access the user's details like name, email, etc.
+    $user_name = $user_details['username'];
+    $usertype = $user_details['type'];
+
+    // Display the user's name in the dashboard or any other page
+    echo "Welcome, $user_name! ";
+} else {
+    // Error handling if the query fails
+    echo "Error fetching user details: " . mysqli_error($connection);
+}
+
+// Close the database connection
+mysqli_close($connection);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,10 +230,10 @@
                             Logged in as :
                         </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">
-                            Admin
+                          <?php echo $user_name;  ?>
                         </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">
-                            [ admin ]
+                            [    <?php  echo $usertype;  ?> ]
                         </a></li>
                 </ul>
                 <ul class="header-nav ms-3">

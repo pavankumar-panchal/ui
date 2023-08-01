@@ -1,7 +1,7 @@
 <?php
-
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
+include("index.php");
 include("connections.php");
 $dbhost = "localhost";
 $dbuser = "root";
@@ -9,6 +9,39 @@ $dbpwd = "";
 $dbname = "relyon_imax";
 
 $newconnection = mysqli_connect("localhost", "root", "", "relyon_imax") or die("Connection error");
+// session_start();
+
+// Check if the user is logged in. If not, redirect to the login page.
+// if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
+//     header('Location: index.php');
+//     exit();
+// }
+
+// Establish a connection to the MySQL database (Assuming you have a valid $connection variable)
+
+// Retrieve the user's details from the database based on the user ID
+$user_name = $_SESSION['username'];
+
+// Prepare and execute a SELECT query
+$sql = "SELECT * FROM users WHERE id = $user_name";
+$result = mysqli_query($newconnection, $sql);
+
+if ($result) {
+    // Fetch the user's details as an associative array
+    $user_details = mysqli_fetch_assoc($result);
+
+    // Now you can access the user's details like name, email, etc.
+    $user_name = $user_details['username'];
+    $user_type = $user_details['type'];
+
+    // Display the user's name in the dashboard or any other page
+    echo "Welcome, $user_name!";
+} else {
+    // Error handling if the query fails
+    echo "Error fetching user details: " . mysqli_error($connection);
+}
+
+// mysqli_close($connection);
 function encodevalue($input)
 {
     $length = strlen($input);
