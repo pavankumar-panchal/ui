@@ -1,5 +1,7 @@
 <?php
 include("navigation/nav.php");
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 ?>
 
 <div class="card mb-4 mt-4">
@@ -38,6 +40,11 @@ include("navigation/nav.php");
       <div class="card-body">
         <div class="row">
           <!-- Attendence  -->
+          <div class="container">
+            <div class="content">
+              <div id='calendar'></div>
+            </div>
+          </div>
         </div>
         <div class="container mt-4">
           <p>
@@ -61,8 +68,5 @@ include("navigation/nav.php");
 </div>
 
 <?php
-
 include("navigation/footer.php");
-
-
 ?>
