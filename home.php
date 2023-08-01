@@ -3,33 +3,100 @@ include("navigation/nav.php");
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 ?>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <div class="card mb-4 mt-4">
   <div class="card-body">
     <div class="d-flex justify-content-between">
       <div>
-        <h4 class="card-title mb-0"> Chart on count of Calls and emails</h4>
-        <div class="small text-medium-emphasis">January - July 2022</div>
+        <h4 class="card-title mb-0 "> Chart on count of Calls and emails</h4>
       </div>
-      <div class="btn-toolbar d-none d-md-block" role="toolbar" aria-label="Toolbar with buttons">
-        <div class="btn-group btn-group-toggle mx-3" data-coreui-toggle="buttons">
-          <input class="btn-check" id="option1" type="radio" name="options" autocomplete="off">
-          <label class="btn btn-outline-secondary"> Day</label>
-          <input class="btn-check" id="option2" type="radio" name="options" autocomplete="off" checked="">
-          <label class="btn btn-outline-secondary active"> Month</label>
-          <input class="btn-check" id="option3" type="radio" name="options" autocomplete="off">
-          <label class="btn btn-outline-secondary"> Year</label>
-        </div>
-        <button class="btn btn-primary" type="button">
-          <svg class="icon">
-            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cloud-download"></use>
-          </svg>
-        </button>
-      </div>
+
     </div>
-    <div class="c-chart-wrapper" style="height:300px;margin-top:40px;">
-      <canvas class="chart" id="main-chart" height="300"></canvas>
-    </div>
+
+<!--  -->
+
+<div id="lineChart"></div>
+
+<script>
+  // Sample data for emails and calls
+  const emailData = [
+    { month: 'January', count: 50 },
+    { month: 'February', count: 80 },
+    { month: 'March', count: 100 },
+    { month: 'April', count: 70 },
+    { month: 'May', count: 90 },
+    { month: 'June', count: 120 },
+  ];
+
+  const callData = [
+    { month: 'January', count: 30 },
+    { month: 'February', count: 40 },
+    { month: 'March', count: 50 },
+    { month: 'April', count: 60 },
+    { month: 'May', count: 35 },
+    { month: 'June', count: 45 },
+  ];
+
+  // Extract the months and counts for emails and calls
+  const emailMonths = emailData.map(d => d.month);
+  const emailCounts = emailData.map(d => d.count);
+
+  const callMonths = callData.map(d => d.month);
+  const callCounts = callData.map(d => d.count);
+
+  // Define the traces for the line chart
+  const emailTrace = {
+    x: emailMonths,
+    y: emailCounts,
+    type: 'scatter', // Use 'scatter' for line charts
+    mode: 'lines+markers', // Show both lines and markers
+    name: 'Emails',
+    line: {
+      color: 'blue', // Line color
+      width: 2, // Line width
+    },
+    marker: {
+      size: 8, // Marker size
+      color: 'blue', // Marker color
+    },
+  };
+
+  const callTrace = {
+    x: callMonths,
+    y: callCounts,
+    type: 'scatter', // Use 'scatter' for line charts
+    mode: 'lines+markers', // Show both lines and markers
+    name: 'Calls',
+    line: {
+      color: 'green', // Line color
+      width: 2, // Line width
+    },
+    marker: {
+      size: 8, // Marker size
+      color: 'green', // Marker color
+    },
+  };
+
+  // Define the layout for the line chart
+  const layout = {
+    title: 'Emails and Calls Line Chart',
+    xaxis: {
+      title: 'Month',
+    },
+    yaxis: {
+      title: 'Count',
+    },
+  };
+
+  // Combine the traces and layout and create the plot
+  const data = [emailTrace, callTrace];
+  Plotly.newPlot('lineChart', data, layout);
+
+      // Function to remove the "Calls" trace from the chart
+</script>
+<!--  -->
+  
   </div>
 </div>
 <!-- /.row-->

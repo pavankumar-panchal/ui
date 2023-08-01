@@ -44,27 +44,27 @@
     <link href="../vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 
 
-<!-- calendar -->
+    <!-- calendar -->
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet" href="calendar/fonts/icomoon/style.css">
-
-<link href='calendar/fullcalendar/packages/core/main.css' rel='stylesheet' />
-<link href='calendar/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="calendar/css/bootstrap.min.css">
+    <link rel="stylesheet" href="calendar/fonts/icomoon/style.css">
 
-<!-- Style -->
-<link rel="stylesheet" href="calendar/css/style.css">
+    <link href='calendar/fullcalendar/packages/core/main.css' rel='stylesheet' />
+    <link href='calendar/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
 
 
-<!-- calendar -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="calendar/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="calendar/css/style.css">
+
+
+    <!-- calendar -->
 
 </head>
 
@@ -186,18 +186,14 @@
                 </ul>
                 <ul class="header-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">
-                            <svg class="icon icon-lg">
-                                <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-                        <?php  echo("alert('working');");?>
-                            </svg></a></li>
+                            Logged in as :
+                        </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">
-                            <svg class="icon icon-lg">
-                                <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-list-rich"></use>
-                            </svg></a></li>
+                            Admin
+                        </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">
-                            <svg class="icon icon-lg">
-                                <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-                            </svg></a></li>
+                            [ admin ]
+                        </a></li>
                 </ul>
                 <ul class="header-nav ms-3">
                     <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#"
@@ -238,7 +234,7 @@
                     </nav>
                 </div>
             </div> -->
-        
+
         </header>
 
 
