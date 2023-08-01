@@ -14,8 +14,9 @@
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
-  // session_start();
+  session_start();
 
+  // include('./inc/dbconfig.php');
   include('functions/phpfunctions.php');
   if (imaxgetcookie('ssmuserid') != false) {
     $url = 'home.php';
