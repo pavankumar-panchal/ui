@@ -9,7 +9,6 @@ $dbpwd = "";
 $dbname = "relyon_imax";
 
 $newconnection = mysqli_connect("localhost", "root", "", "relyon_imax") or die("Connection error");
-
 function encodevalue($input)
 {
     $length = strlen($input);
@@ -198,7 +197,6 @@ function logoutUser()
     // Remove the user-specific cookies by setting their expiration time in the past
     imaxdeletecookie('ssmuserid'); // Replace 'ssmuserid' with the name of your user-specific cookie
     // Other cookies if needed...
-
     // Perform any other logout-related actions, such as clearing session data or redirecting to the login page.
     // For example, you can clear session data:
     session_start();
