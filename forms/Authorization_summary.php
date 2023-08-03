@@ -9,7 +9,7 @@ include("../navigation/navigation.php");
         flex-direction: row;
     }
 </style>
-<div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
+<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb my-0 ms-2">
             <li class="breadcrumb-item">
@@ -18,12 +18,12 @@ include("../navigation/navigation.php");
             <li class="breadcrumb-item active"><span>Record Authorization</span></li>
         </ol>
     </nav>
-</div>
+</div> -->
 <!-- </header>  -->
 
 <!-- content -->
 <div class="container mt-4 ">
-    <table class="table table-bordered table-striped" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+    <table class="table table-bordered table-striped" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top:50px;">
         <thead>
             <tr style="cursor:pointer" onclick="showhide('pendingauthorization','toggleimg');">
                 <th class="header-line bg-light" colspan="2">

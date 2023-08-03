@@ -2,7 +2,7 @@
 include("../navigation/navigation.php");
 ?>
 <!-- content -->
-<div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
+<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb my-0 ms-2">
@@ -12,13 +12,13 @@ include("../navigation/navigation.php");
             <li class="breadcrumb-item active"><span>Attendence</span></li>
         </ol>
     </nav>
-</div>
+</div> -->
 <!-- </header> -->
 
 <div class="container mt-4 ">
     <div class="table-responsive ">
         <table class="table table-bordered  rounded-3"
-            style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); overflow: hidden; ">
+            style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); overflow: hidden; margin-top: 50px;"> ">
             <thead>
                 <tr style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
                     <th class="header-line pl-3 bg-light">Enter Details </th>

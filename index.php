@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <!-- Custom styles for login page -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/mainindex.css">
 
   <?php
   ini_set('display_errors', 1);
@@ -19,7 +21,8 @@
   // include('./inc/dbconfig.php');
   include('functions/phpfunctions.php');
   if (imaxgetcookie('ssmuserid') != false) {
-    $url = 'home.php';
+    $url = './home.php';
+
     header("location:" . $url);
   } else {
     imaxdeletecookie('ssmuserid');
@@ -50,7 +53,7 @@
         $locationname = $fetch['locationname'];
         $type = $fetch['type'];
         $logintype = 'IN';
-           
+
         if ($existinguser == 'no')
           $message = '<span class="error-message"> This User id not allowed to login </span>';
         elseif ($password <> $passwd)
@@ -64,7 +67,8 @@
           $query = "INSERT INTO ssm_usertime(userid,logindate,logintime,type,locationname,logintype) values('" . $userid . "','" . changedateformat($date) . "','" . datetimelocal('H:i') . "','" . $type . "','" . $locationname . "','" . $logintype . "')";
           $result = runmysqlquery($query);
 
-          $url = 'index.php';
+          $url = './home.php';
+
           header("location:" . $url);
 
         }
@@ -167,8 +171,35 @@
       </div>
     </div>
   </div>
-  </form>
 
+<style>
+  .footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+ 
+}
+
+/* If you want to center the text content in the footer, you can add the following styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* Use calc() to set the height of the footer, adjusting it as per your needs */
+  height: calc(50px + 20px);
+}
+</style>
+
+  <div class="footer">
+        A product of Relyon Web Management | Copyright © 2012
+        Relyon Softech Ltd. All rights reserved.
+    </div>
   <!-- Bootstrap JS (Make sure to include jQuery and Popper.js before this) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

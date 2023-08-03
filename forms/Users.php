@@ -5,305 +5,160 @@ include("../navigation/navigation.php");
 ?>
 <!-- content -->
 
-<div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
+<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Masters</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Users</span></li>
-        </ol>
-    </nav>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb my-0 ms-2">
+      <li class="breadcrumb-item">
+        <span>Masters</span>
+      </li>
+      <li class="breadcrumb-item active"><span>Users</span></li>
+    </ol>
+  </nav>
 </div>
-</header>
+</header> -->
 
 <style>
-  /* Add any additional custom CSS here */
-
-
-  .display {
-    display: flex;
-    flex-direction: row;
-  }
+    label {
+      margin: 10px 0px 10px 0px;
+    }
+  </style>
 </style>
 </head>
 
-<body>
-  <div class="container mt-4">
-    <table class="table table-bordered" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-      <tbody>
-        <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
-          <td class="bg-light">&nbsp;&nbsp;Enter/Edit/View Details</td>
-          <td align="right" class="bg-light">
-            <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
-                align="absmiddle"></div>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" valign="top" class="bg-light">
+<div class="container users_la" style="margin-top: 50px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+          <div class="card-header bg-light">
+            Enter/Edit/View Details
+          </div>
+          <div class="card-body">
             <div id="maindiv" style="display: block;">
               <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                <div class="display">
-                  <table class="table table-bordered table1">
-                    <tbody>
-                      <!--  -->
+                <!-- Your form content goes here -->
+                <div class="display" style="display: flex; flex-direction: row; width:100%;">
+                  <!-- first div -->
 
+                  <div class="mb-3" style="width: 50%; margin:20px;">
+                    <label for="customername" class="form-label">User ID:</label>
+                    <input name="customername" type="text" class="form-control" id="customername" autocomplete="off"
+                      isdatepicker="true">
 
-                      <tr class="bg-white">
-                        <td valign="top">User ID:</td>
-                        <td valign="top">
-                          <input name="customername" type="text" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">password:</td>
-                        <td valign="top">
-                          <input name="customerid" type="password" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Type:</td>
-                        <td valign="top">
-                          <span id="filterprdgroupdisplay">
-                            <select name="s_productgroup" class="form-select swiftselect form-control"
-                              id="s_productgroup" onchange="">
-                              <option value="" selected="selected">
-                                Make a Selection
-                              </option>
+                    <label for="customername" class="form-label">Password:</label>
 
-                            </select>
-                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                          </span>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Location:</td>
-                        <td valign="top">
-                          <span id="filterprdgroupdisplay">
-                            <select name="s_productgroup" class="form-select swiftselect form-control"
-                              id="s_productgroup" onchange="">
-                              <option value="" selected="selected">
-                                Make a Selection
-                              </option>
+                    <input name="customername" type="password" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Type:</label>
+                    <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
+                      onchange="">
+                      <option value="" selected="selected">
+                        Make a Selection
+                      </option>
 
-                            </select>
-                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                          </span>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Reporting Authority:</td>
-                        <td valign="top">
-                          <span id="filterprdgroupdisplay">
-                            <select name="s_productgroup" class="form-select swiftselect form-control"
-                              id="s_productgroup" onchange="">
-                              <option value="" selected="selected">
-                                Make a Selection
-                              </option>
+                    </select>
+                    <label for="customername" class="form-label">Location:</label>
+                    <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
+                      onchange="">
+                      <option value="" selected="selected">
+                        Make a Selection
+                      </option>
 
-                            </select>
-                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                          </span>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Support unit:</td>
-                        <td valign="top">
-                          <span id="filterprdgroupdisplay">
-                            <select name="s_productgroup" class="form-select swiftselect form-control"
-                              id="s_productgroup" onchange="">
-                              <option value="" selected="selected">
-                                Make a Selection
-                              </option>
+                    </select>
+                    <label for="customername" class="form-label">Reporting Authority:</label>
+                    <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
+                      onchange="">
+                      <option value="" selected="selected">
+                        Make a Selection
+                      </option>
 
-                            </select>
-                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                          </span>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Existing User:</td>
-                        <td valign="top">
-                          <span id="filterprdgroupdisplay">
-                            <select name="s_productgroup" class="form-select swiftselect form-control"
-                              id="s_productgroup" onchange="">
-                              <option value="" selected="selected">
-                                Make a Selection
-                              </option>
+                    </select>
+                    <label for="customername" class="form-label">Reporting Authority:</label>
+                    <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
+                      onchange="">
+                      <option value="" selected="selected">
+                        Make a Selection
+                      </option>
 
-                            </select>
-                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                          </span>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">User name</td>
-                        <td valign="top">
-                          <input name="customerid" type="text" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Gender:</td>
-                        <td valign="top">
-                          <span id="filterprdgroupdisplay">
-                            <select name="s_productgroup" class="form-select swiftselect form-control"
-                              id="s_productgroup" onchange="">
-                              <option value="" selected="selected">
-                                Make a Selection
-                              </option>
-                              <option value="">
-                                Male
-                              </option>
-                              <option value="">
-                                Female
-                              </option>
+                    </select>
+                    <label for="customername" class="form-label">Existing User:</label>
+                    <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
+                      onchange="">
+                      <option value="" selected="selected">
+                        Make a Selection
+                      </option>
 
-                            </select>
-                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                          </span>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Mobile:</td>
-                        <td valign="top">
-                          <input name="customerid" type="tel" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Designation:</td>
-                        <td valign="top">
-                          <input name="customerid" type="text" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Date of Birth:</td>
-                        <td valign="top">
-                          <input name="customerid" type="date" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
+                    </select>
+                    <label for="customername" class="form-label">User name:</label>
+                    <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Gender:</label>
+                    <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
+                      onchange="">
+                      <option value="" selected="selected">
+                        Make a Selection
+                      </option>
 
-
-                    </tbody>
-                  </table>
-
-
-
-                  <table class="table table-bordered table2">
-                    <tbody>
-                      <tr class="bg-white">
-                        <td valign="top">Present Address:</td>
-                        <td valign="top">
-                          <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks"
-                            data-gramm="false" wt-ignore-input="true"></textarea>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Permanent Address:</td>
-                        <td valign="top">
-                          <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks"
-                            data-gramm="false" wt-ignore-input="true"></textarea>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Date of joining:</td>
-                        <td valign="top">
-                          <input name="customerid" type="date" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Personal Email:</td>
-                        <td valign="top">
-                          <input name="customerid" type="email" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-
-
-                      <tr class="bg-white">
-                        <td valign="top">Official Email:</td>
-                        <td valign="top">
-                          <input name="customerid" type="email" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Date of Leaving:</td>
-                        <td valign="top">
-                          <input name="complaintid" type="date" class="form-control swifttext" id="complaintid"
-                            size="30" autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Contact Number[In case of
-                          Emergency]:</td>
-                        <td valign="top">
-                          <input name="complaintid" type="text" class="form-control swifttext" id="complaintid"
-                            size="30" autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Emergency Remarks:</td>
-                        <td valign="top">
-                          <input name="complaintid" type="text" class="form-control swifttext" id="complaintid"
-                            size="30" autocomplete="off" isdatepicker="true">
-
-                        </td>
-                      </tr>
-
-                      <tr class="bg-white">
-                        <td valign="top">Disable Login:</td>
-                        <td valign="top">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-
-                            </label>
-                          </div>
-                        </td>
-                      </tr>
-
-
-
-
-
-                      <!--  -->
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="container bg-light">
-                  <div class="row">
-                    <div class="col-md-8">
-                      <div id="form-error"></div>
-                    </div>
-                    <div class="col-md-4 float-right bg-light " align="right">
-                      <input name="new" type="submit" class="btn btn-secondary " id="view" value="New"
-                        onclick="formsubmit('toview');">
-                      <input name="save" type="submit" class="btn btn-primary " id="view" value="Save"
-                        onclick="formsubmit('toview');">
-                      <input name="delete" type="submit" class="btn btn-danger" id="toexcel" value="Delete"
-                        onclick="formsubmit('toexcel');">
-                    </div>
+                    </select>
+                    <label for="customername" class="form-label">Mobile:</label>
+                    <input name="customerid" type="tel" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Disable Login: &nbsp; &nbsp; &nbsp;
+                      <input class="form-check-input" type="checkbox" name="existingUser" id="existingUser">
                   </div>
-                </div>
 
+                  <!-- second -->
+                  <div class="mb-3 " style="width: 50%; margin:20px;">
+                    <label for="customername" class="form-label">Designation:</label>
+                    <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Date of Birth:</label>
+                    <input name="customerid" type="date" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="teamleaderremarks" class="form-label">Present Address:</label>
+                    <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <!-- second div -->
+                    <label for="customername" class="form-label">Reporting Authority:</label>
+                    <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Date of joining:</label>
+                    <input name="customerid" type="date" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Personal Email: </label>
+                    <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Official Email:</label>
+                    <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Date of Leaving: </label>
+                    <input name="customerid" type="date" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    <label for="customername" class="form-label">Contact Number:</label>
+                    <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true" placeholder="In case of Emergency">
+                    <label for="customername" class="form-label">Emergency Remarks:</label>
+                    <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                      autocomplete="off" isdatepicker="true">
+                    </label>
+                  </div>
+                  <!-- Add more textarea fields as needed -->
+                </div>
+                <div class="text-end float-right">
+                  <button name="new" type="submit" class="btn btn-secondary">New</button>
+                  <button name="save" type="submit" class="btn btn-primary">Save</button>
+                  <button name="delete" type="submit" class="btn btn-danger">Delete</button>
+                </div>
               </form>
             </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!--  -->
+
+
 
   <div class="container mt-4">
     <div class="card " style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
@@ -375,7 +230,7 @@ include("../navigation/navigation.php");
               </div>
             </div>
           </div>
-          <div class="text-center float-end mt-3">
+          <div class="text-center float-end mt-3 float-right">
             <div id="filter-form-error"></div>
             <input name="view" type="submit" class="btn btn-primary swiftchoicebutton" id="view" value="View"
               onclick="formfilter('view');">
@@ -388,23 +243,13 @@ include("../navigation/navigation.php");
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
   <!--  -->
   <div class="col-md-12">
   </div>
-  </div>
-  </div>
-  <?php
+</div>
+</div>
+<?php
 
-  include("../navigation/footer.php");
+include("../navigation/footer.php");
 
-  ?>
+?>

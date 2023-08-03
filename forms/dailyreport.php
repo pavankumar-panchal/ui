@@ -4,7 +4,7 @@ include("../navigation/navigation.php");
 
 ?>
 
-<div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
+<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb my-0 ms-2">
@@ -15,7 +15,7 @@ include("../navigation/navigation.php");
         </ol>
     </nav>
 </div>
-</header>
+</header> -->
 <div class="container mt-4">
     <table class="table table-bordered"
         style="border:1px solid #cacaca;  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.126);">

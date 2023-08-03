@@ -67,6 +67,7 @@
 
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+    <ul class="h-4 p-4"> logo </ul>
 
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item"><a class="nav-link" href="index.php">
@@ -228,16 +229,18 @@
                 </ul>
             </div>
             <div class="header-divider"></div>
+
             <div class="container-fluid">
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb my-0 ms-2">
+                    <ul class=" breadcrumb-item mt-2">
                         <li class="breadcrumb-item">
                             <span>Home</span>
                         </li>
                         <li class="breadcrumb-item active"><span>Dashboard</span></li>
-                    </ol>
+                    </ul>
                 </nav>
             </div>
+            
         </header>
 
         <div class="body flex-grow-1 px-3">

@@ -65,12 +65,20 @@
 
 
     <!-- calendar -->
+    <style>
+
+
+
+
+
+
+    </style>
 
 </head>
 
-<body>
+<body class="bg-white;">
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-
+        <ul class="h-4 p-4"> logo </ul>
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item"><a class="nav-link" href="../index.php">
                     <svg class="nav-icon">
@@ -167,18 +175,15 @@
         </ul>
         <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
-    <div class="wrapper d-flex flex-column bg-white">
+    <div class="wrapper d-flex flex-column bg-light" style="margin-top:-50px;">
         <header class="header header-sticky ">
             <div class="container-fluid">
-                <button class="header-toggler px-md-0 me-md-3" type="button"
+                <button class="header-toggler " type="button"
                     onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
                     <svg class="icon icon-lg">
                         <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
                     </svg>
-                </button><a class="header-brand d-md-none" href="#">
-                    <svg width="118" height="46" alt="CoreUI Logo">
-                        <use xlink:href="../assets/brand/coreui.svg#full"></use>
-                    </svg></a>
+                </button>
                 <ul class="header-nav d-none d-md-flex">
                     <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
@@ -222,7 +227,7 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="header-divider pb-4" >
+            <div class="header-divider p-4">
                 <div class="container-fluid">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb my-0 ms-2">
@@ -233,15 +238,11 @@
                         </ol>
                     </nav>
                 </div>
-            </div> -->
+            </div>
 
         </header>
-
-
-
-
-        <div class="body flex-grow-1 px-3">
-            <div class="container-lg">
+        <div class="body flex-grow-1 px-3 bg-white">
+            <div class="container-lg ">
                 <div class="row">
 
                 </div>

@@ -4,7 +4,7 @@ include("../navigation/navigation.php");
 
 ?>
                     <!-- content -->
-
+<!-- 
                     <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
     <nav aria-label="breadcrumb">
@@ -16,7 +16,7 @@ include("../navigation/navigation.php");
         </ol>
     </nav>
 </div>
-</header>
+</header> -->
 
                     <style>
                         /* Add any additional custom CSS here */
