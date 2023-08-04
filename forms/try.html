@@ -22,216 +22,60 @@
 
 <body>
 
-
-
-    <div class="container users_la mt-4">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-                    <div class="card-header bg-light">
-                        Filter the Data:
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header bg-light" style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
+                <span>&nbsp;&nbsp;Enter the Details</span>
+                <div class="float-end">
+                    <img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg" align="absmiddle">
+                </div>
+            </div>
+            <div class="card-body" id="maindiv" style="display: block;">
+                <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                    <div class="row mb-3">
+                        <label for="DPC_fromdate" class="col-sm-4 col-form-label">From Date:</label>
+                 
+                                <input name="fromdate" type="date" class="form-control" id="DPC_fromdate"
+                                    autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
+                                    maxlength="10" isdatepicker="true" fdprocessedid="unv8x9">
+                            <input name="username" type="hidden" class="form-control" id="username" value="1">
                     </div>
-                    <div class="card-body">
-                        <div id="maindiv" style="display: block;">
-                            <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                                <!-- Your form content goes here -->
-                                <div class="display" style="display: flex; flex-direction: row; width:100%;">
-                                    <!-- first div -->
-
-                                    <div class="mb-3" style="width: 50%; margin:20px;">
-                                        <label for="customername" class="form-label">From Date:</label>
-                                        <input name="customerid" type="date" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">To Date:</label>
-                                        <input name="customerid" type="date" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Call Type:</label>
-                                        <div class="opt d-flex flex-row ">
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield11" value="yes"> Incoming</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">Outgoing</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">Both</label>
-                                            </div>
-                                        </div>
-                                        <label for="customername" class="form-label">Anonymous:</label>
-                                        <div class="opt d-flex flex-row ">
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield11" value="yes"> Yes</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">No</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">Both</label>
-                                            </div>
-                                        </div>
-                                        <label for="customername" class="form-label">Customer Name:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Customer ID:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Category:</label>
-                                        <br>
-
-                                        <label class="form-check-label" for="stremoteconnection"> <input
-                                                class="form-check-input" type="checkbox" name="stremoteconnection"
-                                                id="stremoteconnection" value=""> BLR</label>
-
-                                        <label class="form-check-label" for="marketingperson"> <input
-                                                class="form-check-input" type="checkbox" name="marketingperson"
-                                                id="marketingperson" value=""> CSD</label>
-
-                                        <label class="form-check-label" for="onsitevisit"> <input
-                                                class="form-check-input" type="checkbox" name="onsitevisit"
-                                                id="onsitevisit" value="" checked> KKG</label>
-
-                                        <br>
-                                        <label for="customername" class="form-label">Status:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="customername" class="form-label">Call Type:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="customername" class="form-label">Product group:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-
-                                    </div>
-
-                                    <!-- second -->
-
-                                    <div class="mb-3 " style="width: 50%; margin:20px;">
-                                        <label for="customername" class="form-label">Product Name:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="customername" class="form-label">Problem</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Status:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="customername" class="form-label">Call Category:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="customername" class="form-label">Transferred To:</label>
-
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="teamleaderremarks" class="form-label">Entered By:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <!-- second div -->
-                                        <label for="customername" class="form-label">Compliant ID:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="customername" class="form-label">Flags:</label>
-                                        <div class="opt d-flex flex-row ">
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield11" value="yes"> Yes</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">No</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">Both</label>
-                                            </div>
-                                        </div>
-                                        <label for="customername" class="form-label">Support Unit: </label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="customername" class="form-label">Order By:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <!-- <label for=""> Team Leader Remarks:</label> -->
-                                    </div>
-                                    <!-- Add more textarea fields as needed -->
-                                </div>
-                                <div class="text-end float-right flex">
-                                    <button name="new" type="submit" class="btn btn-secondary">New</button>
-                                    <button name="save" type="submit" class="btn btn-primary">View</button>
-                                    <button name="delete" type="submit" class="btn btn-warning">To Excel</button>
-                                </div>
-                            </form>
+                    <div class="row mb-3">
+                        <label for="DPC_todate" class="col-sm-4 col-form-label">To Date:</label>
+            
+                                <input name="todate" type="date" class="form-control" id="DPC_todate"
+                                    autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
+                                    maxlength="10" isdatepicker="true" fdprocessedid="6pecbh">
+                            <input name="usertype" type="hidden" class="form-control" id="usertype" value="ADMIN">
+                    </div>
+                    <div class="row mb-3">
+                        <label for="userid" class="col-sm-4 col-form-label">User Name:</label>
+                            <select name="userid" id="userid" class="form-select" fdprocessedid="9mlttf">
+                                <option value="">Make a selection</option>
+                                <!-- Add options here -->
+                            </select>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div id="form-error"></div>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <input name="view" type="submit" class="btn btn-primary" id="view" value="View"
+                                onclick="formsubmit('view');" fdprocessedid="mnaln6">
+                            &nbsp;&nbsp;&nbsp;
+                            <input name="excel" type="submit" class="btn btn-warning" id="excel" value="excel"
+                                onclick="formsubmit('excel');" fdprocessedid="mnaln6">
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+    
+    
+
+
+
 
 </body>
 
