@@ -4,7 +4,7 @@ include("../navigation/navigation.php");
 
 ?>
 <style>
-    .display{
+    .display {
         display: flex;
         flex-direction: row;
     }
@@ -22,11 +22,14 @@ include("../navigation/navigation.php");
 <!-- </header>  -->
 
 <!-- content -->
-<div class="container mt-4 ">
-    <table class="table table-bordered table-striped" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top:50px;">
-        <thead>
-            <tr style="cursor:pointer" onclick="showhide('pendingauthorization','toggleimg');">
-                <th class="header-line bg-light" colspan="2">
+<div class="container">
+
+
+    <table class="table table-bordered "
+        style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top:50px; border-radius:10px; width: 99%; margin-left: 5px; ">
+        <thead style="border-radius:10px;">
+            <tr style="cursor:pointer; border-radius:10px;" onclick="showhide('pendingauthorization','toggleimg');">
+                <th class="header-line card-header bg-light" colspan="2">
                     &nbsp;&nbsp;Authorization Summary - You have <strong>0</strong> Records Pending
                     for
                     Authorization
@@ -38,7 +41,7 @@ include("../navigation/navigation.php");
         <tbody>
             <tr>
                 <td width="50%">
-                    <table class="table table-bordered">
+                    <table class="table ">
                         <tbody>
                             <tr class="bg-white">
 
@@ -73,7 +76,7 @@ include("../navigation/navigation.php");
                     </table>
                 </td>
                 <td width="50%">
-                    <table class="table table-bordered">
+                    <table class="table">
                         <tbody>
                             <tr class="bg-white">
                                 <td valign="top">Reference:</td>
@@ -102,503 +105,399 @@ include("../navigation/navigation.php");
         </tbody>
     </table>
 
+
+
     <!-- second form  -->
-    <div class="container mt-4">
-        <table class="table table-bordered table-striped" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-            <thead>
-                <tr style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
-                    <th class="header-line bg-light" colspan="2">
-                        &nbsp;&nbsp;Enter / Edit / View Details
-                        <div class="float-end"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
-                                align="absmiddle"></div>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="2" valign="top">
+
+
+    <div class="container">
+        <div class="card mt-4"
+            style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius: 10px; margin:0px -0px 0px -0px;">
+            <div class="card-header bg-light" style="cursor:pointer; height: 45px;">
+                <h6 class="m-0">Enter / Edit / View Details</h6>
+            </div>
+            <div class="card-body">
+                <div id="maindiv" style="display: block;">
+                    <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                        <div class="form-group text-center" style="width: 100%; height: 150px;">
+                            <div id="displayregisters">
+                                <h6 class="" style="margin: auto;">Make A Selection of record from the grid below</h6>
+                            </div>
+                        </div>
+                        <hr class="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="authorizedgroup">Category:</label>
+                                    <select name="solvedby" id="solvedby" class="form-select form-control">
+                                        <option value="">Make a selection</option>
+                                        <!-- Add other options here -->
+                                    </select>
+                                </div>
+
+                                <br>
+
+                                <div class="form-group">
+                                    <!-- <label>Flag the Entry: -->
+                                    <div class="opt d-flex flex-row ">
+
+                                        Authorized: &nbsp;
+                                        <div class="form-check me-3 align-items-center">
+                                            <label class="form-check-label" for="databasefield11">&nbsp; <input
+                                                    class="form-check-input" type="radio" name="anonymou"
+                                                    id="databasefield11" value="yes"> Yes</label>
+                                        </div>
+                                        <div class="form-check me-3 align-items-center">
+                                            <label class="form-check-label" for="databasefield12"><input
+                                                    class="form-check-input" type="radio" name="anonymou"
+                                                    id="databasefield12" value="no">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-6" style="margin-top:20px;">
+                                <div class="form-group">
+                                    <!-- <label>Flag the Entry: -->
+                                    <div class="opt d-flex flex-row ">
+
+                                        Flag the Entry: &nbsp;
+                                        <div class="form-check me-3 align-items-center">
+                                            <label class="form-check-label" for="databasefield11">&nbsp; <input
+                                                    class="form-check-input" type="radio" name="anonymous"
+                                                    id="databasefield11" value="yes"> Yes</label>
+                                        </div>
+                                        <div class="form-check me-3 align-items-center">
+                                            <label class="form-check-label" for="databasefield12"><input
+                                                    class="form-check-input" type="radio" name="anonymous"
+                                                    id="databasefield12" value="no">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <!-- <label>Flag the Entry: -->
+                                    <div class="opt d-flex flex-row mt-2">
+
+                                        Publish: &nbsp;
+                                        <div class="form-check me-3 align-items-center">
+                                            <label class="form-check-label" for="databasefield11">&nbsp; <input
+                                                    class="form-check-input" type="radio" name="anonymou"
+                                                    id="databasefield11" value="yes"> Yes</label>
+                                        </div>
+                                        <div class="form-check me-3 align-items-center">
+                                            <label class="form-check-label" for="databasefield12"><input
+                                                    class="form-check-input" type="radio" name="anonymou"
+                                                    id="databasefield12" value="no">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="teamleaderremarks" class="float-start">Remarks:</label>
+                            <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks"
+                                data-gramm="false" wt-ignore-input="true"></textarea>
+                            <input type="hidden" name="lastslno" id="lastslno" value="">
+                            <input type="hidden" name="registervalue" id="registervalue" value="">
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="loggedusertype" id="loggedusertype" value="ADMIN">
+                            <input type="hidden" name="loggeduser" id="loggeduser" value="1">
+                            <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority" value="">
+                        </div>
+                        <div class="form-group text-end mt-4">
+                            <div id="form-error"></div>
+                            <input name="save" type="submit" class="btn btn-primary" id="save" value="Save"
+                                onclick="formsubmit('save')">
+                            <input name="new" type="reset" class="btn btn-secondary" id="new" value="Clear"
+                                onclick="clearinnerhtml();">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  third table-->
+
+
+    <div class="container users_la mt-4 ">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+                    <div class="card-header bg-light">
+                        Enter/Edit/View Details
+                    </div>
+                    <div class="card-body">
                         <div id="maindiv" style="display: block;">
                             <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                                <table class="table table-bordered bg-white">
-                                    <tbody>
-                                        <tr>
-                                            <td valign="middle" align="center"
-                                                style="border-bottom:1px solid #d1dceb; padding:0" height="170">
-                                                <div id="displayregisters"><img src="../images/warn.gif" border="0"
-                                                        align="absmiddle">&nbsp;
-                                                    <strong>Make A Selection of record from the grid
-                                                        below</strong>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="authorizedgroup">Category:</label>
-                                                            <select name="solvedby" id="solvedby"
-                                                                class="form-select form-control">
-                                                                <option value="">Make a selection
-                                                                </option>
-                                                                <!-- Add other options here -->
-                                                            </select>
-                                                        </div>
-                                                        <br>
-                                                        <div class="form-group"
-                                                            style="display: flex; flex-direction: row;">
-                                                            <label>Authorized:</label>&nbsp;&nbsp;&nbsp;
-                                                            <div class="form-check">
-                                                                <input type="radio" name="authorizedatabasefield"
-                                                                    id="authorizedatabasefield0" value="yes"
-                                                                    checked="checked" class="form-check-input">
-                                                                <label for="authorizedatabasefield0"
-                                                                    class="form-check-label">Yes</label>
-                                                            </div>&nbsp;&nbsp;
-                                                            <div class="form-check">
-                                                                <input type="radio" name="authorizedatabasefield"
-                                                                    id="authorizedatabasefield1" value="no"
-                                                                    class="form-check-input">
-                                                                <label for="authorizedatabasefield1"
-                                                                    class="form-check-label">No</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                <!-- Your form content goes here -->
+                                <div class="display" style="display: flex; flex-direction: row; width:100%;">
+                                    <!-- first div -->
 
-                                                    <div class="col-md-6" style="margin-top:20px;">
-                                                        <div class="form-group "
-                                                            style="display: flex; flex-direction: row;">
-                                                            <label>Flag the Entry:</label>
-                                                            &nbsp;&nbsp;&nbsp;
+                                    <div class="mb-3" style="width: 50%; margin:20px;">
+                                        <label for="customername" class="form-label">From Date:</label>
+                                        <input name="customername" type="date" class="form-control" id="customername"
+                                            autocomplete="off" isdatepicker="true">
 
-                                                            <div class="form-check">
-                                                                <input type="radio" name="flagdatabasefield"
-                                                                    id="flagdatabasefield0" value="yes"
-                                                                    class="form-check-input">
-                                                                <label for="flagdatabasefield0"
-                                                                    class="form-check-label">Yes</label>
-                                                            </div>&nbsp;&nbsp;
-                                                            <div class="form-check">
-                                                                <input type="radio" name="flagdatabasefield"
-                                                                    id="flagdatabasefield1" value="no" checked="checked"
-                                                                    class="form-check-input">
-                                                                <label for="flagdatabasefield1"
-                                                                    class="form-check-label">No</label>
-                                                            </div>
-                                                        </div>
-                                                        <br>
+                                        <label for="customername" class="form-label">To Date:</label>
 
-                                                        <div class="form-group"
-                                                            style="display: flex; flex-direction: row; word-spacing: 10px; margin-top: 10px ;">
-                                                            <label>Publish:</label> &nbsp;
-                                                            <div class="form-check">
-                                                                <input type="radio" name="publishdatabasefield"
-                                                                    id="publishdatabasefield0" value="yes"
-                                                                    class="form-check-input">
-                                                                <label for="publishdatabasefield0"
-                                                                    class="form-check-label">Yes</label>
-                                                            </div>&nbsp;
-                                                            <div class="form-check">
-                                                                <input type="radio" name="publishdatabasefield"
-                                                                    id="publishdatabasefield2" value="no"
-                                                                    checked="checked" class="form-check-input">
-                                                                <label for="publishdatabasefield2"
-                                                                    class="form-check-label">No</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right" valign="middle"
-                                                style="padding-right:15px; border-top:1px solid #d1dceb;">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="teamleaderremarks"
-                                                                class="float-start">Remarks:</label>
-                                                            <textarea name="teamleaderremarks" cols="45"
-                                                                class="form-control" id="teamleaderremarks"
-                                                                data-gramm="false" wt-ignore-input="true"></textarea>
-                                                            <input type="hidden" name="lastslno" id="lastslno" value="">
-                                                            <input type="hidden" name="registervalue" id="registervalue"
-                                                                value="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="hidden" name="loggedusertype" id="loggedusertype"
-                                                            value="ADMIN">
-                                                        <input type="hidden" name="loggeduser" id="loggeduser"
-                                                            value="1">
-                                                        <input type="hidden" name="loggedreportingauthority"
-                                                            id="loggedreportingauthority" value="">
-                                                    </div>
-                                                    <div class="col-md-6 text-end" style="margin-top: 10px;">
-                                                        <div id="form-error"></div>
-                                                        <input name="save" type="submit" class="btn btn-primary"
-                                                            id="save" value="Save" onclick="formsubmit('save')">
-                                                        <input name="new" type="reset" class="btn btn-secondary"
-                                                            id="new" value="Clear" onclick="clearinnerhtml();">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </form>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<!--  -->
+                                        <input name="customername" type="date" class="form-control" id="customername"
+                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <label for="customername" class="form-label">Customer Name:</label>
+                                        <input name="customerid" type="text" class="form-control" id="customername"
+                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <label for="customername" class="form-label">Customer ID:</label>
+                                        <input name="customerid" type="text" class="form-control" id="customername"
+                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <label for="customername" class="form-label">Category:</label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup" onchange="">
+                                            <option value="" selected="selected">
+                                                Make a Selection
+                                            </option>
 
+                                        </select>
+                                        <label for="customername" class="form-label">Flag:</label>
 
-        
-<div class="container mt-4">
-            <table class="table table-bordered" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-                <tbody>
-                    <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
-                        <td class="bg-light">&nbsp;&nbsp;Filter the Data:
-                        <td align="right" class="bg-light">
-                            <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
-                                    align="absmiddle"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" valign="top " class="bg-light">
-                            <div id="maindiv" style="display: block;">
-                                <form action="" method="post" name="submitform" id="submitform"
-                                    onsubmit="return false;">
-                                    <div class="display">
-                                        <table class="table table-bordered  table1">
-                                            <tbody>
-                                                <tr class="bg-white">
-                                                    <td valign="top">From Date:</td>
-                                                    <td valign="top">
-                                                        <div class="d-flex">
-                                                            <input name="fromdate" type="date" class="form-control"
-                                                                id="DPC_fromdate" size="30" autocomplete="off"
-                                                                value="21-07-2023" datepicker_format="DD-MM-YYYY"
-                                                                maxlength="10" isdatepicker="true">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">To Date:</td>
-                                                    <td valign="top">
-                                                        <div class="d-flex">
-                                                            <input name="todate" type="date" class="form-control"
-                                                                id="DPC_todate" size="30" autocomplete="off"
-                                                                value="21-07-2023" datepicker_format="DD-MM-YYYY"
-                                                                maxlength="10" isdatepicker="true">
+                                        <div class="opt d-flex flex-row ">
+                                            <div class="form-check me-3 align-items-center">
 
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Customer Name:</td>
-                                                    <td valign="top">
-                                                        <input name="complaintid" type="text"
-                                                            class="form-control swifttext" id="complaintid" size="30"
-                                                            autocomplete="off" isdatepicker="true">
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Customer ID:</td>
-                                                    <td valign="top">
-                                                        <input name="complaintid" type="text"
-                                                            class="form-control swifttext" id="complaintid" size="30"
-                                                            autocomplete="off" isdatepicker="true">
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Category:</td>
-                                                    <td valign="top">
-                                                        <select name="productname" id="productname"
-                                                            class="form-select form-control swiftselect">
-                                                            <option value="">ALL</option>
-
-                                                        </select>
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Flag:</td>
-                                                    <td valign="top">
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield11" value="yes">
-                                                            <label class="form-check-label"
-                                                                for="databasefield11">Yes</label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield12" value="no">
-                                                            <label class="form-check-label"
-                                                                for="databasefield12">No</label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield12" value="no">
-                                                            <label class="form-check-label"
-                                                                for="databasefield12">Both</label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Publish Record:</td>
-                                                    <td valign="top">
-
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield11" value="yes">
-                                                            <label class="form-check-label"
-                                                                for="databasefield11">Yes</label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield12" value="no">
-                                                            <label class="form-check-label"
-                                                                for="databasefield12">No</label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield12" value="no">
-                                                            <label class="form-check-label"
-                                                                for="databasefield12">Both</label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Problem:</td>
-                                                    <td valign="top">
-
-                                                        <textarea name="teamleaderremarks" cols="45"
-                                                            class="form-control" id="teamleaderremarks"
-                                                            data-gramm="false" wt-ignore-input="true"></textarea>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-
-
-
-                                        <table class="table table-bordered table2">
-                                            <tbody>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Transferred To:</td>
-                                                    <td valign="top">
-                                                        <span id="filterprdgroupdisplay">
-                                                            <select name="s_productgroup"
-                                                                class="form-select swiftselect form-control"
-                                                                id="s_productgroup" onchange="">
-                                                                <option value="" selected="selected">Make a
-                                                                    Selection
-                                                                </option>
-
-                                                            </select>
-                                                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Authorized:</td>
-                                                    <td valign="top">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield11" value="yes">
-                                                            <label class="form-check-label"
-                                                                for="databasefield11">Yes</label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield12" value="no">
-                                                            <label class="form-check-label"
-                                                                for="databasefield12">No</label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="anonymous" id="databasefield12" value="no">
-                                                            <label class="form-check-label"
-                                                                for="databasefield12">Both</label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Status:</td>
-                                                    <td valign="top">
-                                                        <input name="complaintid" type="text"
-                                                            class="form-control swifttext" id="complaintid" size="30"
-                                                            autocomplete="off" isdatepicker="true">
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Entered By:</td>
-                                                    <td valign="top">
-                                                        <select name="productname" id="productname"
-                                                            class="form-select form-control swiftselect">
-                                                            <option value="">ALL</option>
-
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Product group:</td>
-                                                    <td valign="top">
-                                                        <select name="status"
-                                                            class="form-select form-control swiftselect" id="status">
-                                                            <option value="">ALL</option>
-
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Product Name:</td>
-                                                    <td valign="top">
-                                                        <select name="userid" id="userid"
-                                                            class="form-control swiftselect form-select">
-                                                            <option value="">ALL</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Compliant ID(Register ID, etc):</td>
-                                                    <td valign="top">
-                                                        <input name="complaintid" type="text"
-                                                            class="form-control swifttext" id="complaintid" size="30"
-                                                            autocomplete="off" isdatepicker="true">
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Support Unit:</td>
-                                                    <td valign="top">
-                                                        <select name="status"
-                                                            class="form-select form-control swiftselect" id="status">
-                                                            <option value="">ALL</option>
-
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white">
-                                                    <td valign="top">Order By:</td>
-                                                    <td valign="top">
-                                                        <select name="status"
-                                                            class="form-select form-control swiftselect" id="status">
-                                                            <option value="callertype">Caller Type</option>
-                                                            <option value="category">Category</option>
-                                                            <option value="compliantid" selected="selected">
-                                                                Compliant ID
-                                                            </option>
-                                                            <option value="customerid">Customer ID</option>
-                                                            <option value="customername">Registered Name
-                                                            </option>
-                                                            <option value="date">Date</option>
-                                                            <option value="userid">Entered By</option>
-                                                            <option value="problem">Problem</option>
-                                                            <option value="productgroup">Product Group
-                                                            </option>
-                                                            <option value="productname">Product Name
-                                                            </option>
-                                                            <option value="status">Status</option>
-                                                            <option value="callcategory">Call Category
-                                                            </option>
-                                                            <option value="transferredto">Transferred To
-                                                            </option>
-                                                            <option value="time">Time</option>
-                                                        </select>
-
-                                                    </td>
-
-                                                </tr>
-
-                                                <td colspan="2" valign="middle"
-                                                    style="padding-right:15px; border-top:1px solid #d1dceb;"
-                                                    height="35" class="bg-white">In:
-                                                    <label>
-                                                        <input name="databasefield" type="radio" id="databasefield0"
-                                                            value="call" checked="checked">
-                                                        Call</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="email">
-                                                        Email</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="error">
-                                                        Error</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="inhouse">
-                                                        Inhouse</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="onsite">
-                                                        Onsite</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="reference">
-                                                        Reference</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="requirement">
-                                                        Requirement</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="skype">
-                                                        Skype</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="invoice">
-                                                        Invoice</label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" id="databasefield0"
-                                                            value="receipt">
-                                                        Receipts</label>
-                                                </td>
-                                            </tbody>
-                                        </table>
-
-                                    </div>
-
-                                    <div class="container bg-light">
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div id="form-error"></div>
+                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
+                                                        class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield11" value="yes"> Yes</label>
                                             </div>
-                                            <div class="col-md-4 float-right bg-light " align="right">
+                                            <div class="form-check me-3 align-items-center">
 
-                                                <input name="view" type="submit" class="btn btn-primary " id="view"
-                                                    value="View" onclick="formsubmit('toview');">
-                                                <input name="toexcel" type="submit" class="btn btn-warning" id="toexcel"
-                                                    value="To Excel" onclick="formsubmit('toexcel');">
+                                                <label class="form-check-label" for="databasefield12"><input
+                                                        class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield12" value="no">No</label>
+                                            </div>
+
+                                            <div class="form-check me-3 align-items-center">
+                                                <label class="form-check-label" for="databasefield13">
+                                                    <input class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield13" value="both">Both</span>
                                             </div>
                                         </div>
+
+
+
+
+
+                                        <label for="customername" class="form-label">Publish Record:</label>
+
+                                        <div class="opt d-flex flex-row ">
+                                            <div class="form-check me-3 align-items-center">
+
+                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
+                                                        class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield11" value="yes"> Yes</label>
+                                            </div>
+                                            <div class="form-check me-3 align-items-center">
+
+                                                <label class="form-check-label" for="databasefield12"><input
+                                                        class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield12" value="no">No</label>
+                                            </div>
+
+                                            <div class="form-check me-3 align-items-center">
+                                                <label class="form-check-label" for="databasefield13">
+                                                    <input class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield13" value="both">Both</span>
+                                            </div>
+                                        </div>
+
+
+                                        <label for="customername" class="form-label">problem:</label>
+                                        <input name="customerid" type="text" class="form-control" id="customername"
+                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <label for="customername" class="form-label">Transferred To:</label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup" onchange="">
+                                            <option value="" selected="selected">
+                                                Make a Selection
+                                            </option>
+
+
+                                        </select>
                                     </div>
 
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="col-md-12">
+                                    <!-- second -->
+                                    <div class="mb-3 " style="width: 50%; margin:20px;">
 
-                <div id="wrapper" class="table-container"></div>
+                                        <label for="customername" class="form-label">Authorized:</label>
+
+                                        <div class="opt d-flex flex-row ">
+                                            <div class="form-check me-3 align-items-center">
+
+                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
+                                                        class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield11" value="yes"> Yes</label>
+                                            </div>
+                                            <div class="form-check me-3 align-items-center">
+
+                                                <label class="form-check-label" for="databasefield12"><input
+                                                        class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield12" value="no">No</label>
+                                            </div>
+
+                                            <div class="form-check me-3 align-items-center">
+                                                <label class="form-check-label" for="databasefield13">
+                                                    <input class="form-check-input" type="radio" name="anonymous"
+                                                        id="databasefield13" value="both">Both</span>
+                                            </div>
+                                        </div>
+
+
+
+                                        <label for="teamleaderremarks" class="form-label">Status:</label>
+                                        <input name="customerid" type="text" class="form-control" id="customername"
+                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <!-- second div -->
+                                        <label for="customername" class="form-label">Entered By:</label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup" onchange="">
+                                            <option value="" selected="selected">
+                                                Make a Selection
+                                            </option>
+
+                                        </select>
+                                        <label for="customername" class="form-label">Product group:</label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup" onchange="">
+                                            <option value="" selected="selected">
+                                                Make a Selection
+                                            </option>
+
+                                        </select>
+                                        <label for="customername" class="form-label">Product Name: </label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup" onchange="">
+                                            <option value="" selected="selected">
+                                                Make a Selection
+                                            </option>
+
+                                        </select>
+                                        <label for="customername" class="form-label">Compliant ID(Register ID
+                                            ,etc):</label>
+                                        <input name="customerid" type="text" class="form-control" id="customername"
+                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <label for="customername" class="form-label">Support Unit: </label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup" onchange="">
+                                            <option value="" selected="selected">
+                                                Make a Selection
+                                            </option>
+
+                                        </select>
+                                        <label for=""> Order By</label>
+                                        <select name="status" class="form-select form-control swiftselect" id="status">
+                                            <option value="callertype">Caller Type</option>
+                                            <option value="category">Category</option>
+                                            <option value="compliantid" selected="selected">Compliant ID</option>
+                                            <option value="customerid">Customer ID</option>
+                                            <option value="customername">Registered Name</option>
+                                            <option value="date">Date</option>
+                                            <option value="userid">Entered By</option>
+                                            <option value="problem">Problem</option>
+                                            <option value="productgroup">Product Group</option>
+                                            <option value="productname">Product Name</option>
+                                            <option value="status">Status</option>
+                                            <option value="callcategory">Call Category</option>
+                                            <option value="transferredto">Transferred To</option>
+                                            <option value="time">Time</option>
+                                        </select>
+
+                                        <div class="bg-white p-3" style="border-top:1px solid #d1dceb;">
+                                            <div class="row">
+                                                <div class="col-md-2">In:</div>
+                                                <div class="col-md-10">
+                                                    <label class="me-3">
+                                                        <input name="databasefield" type="radio" value="call"
+                                                            checked="checked">
+                                                        Call
+                                                    </label>
+                                                    <label class="me-3">
+                                                        <input type="radio" name="databasefield" value="email">
+                                                        Email
+                                                    </label>
+                                                    <label class="me-3">
+                                                        <input type="radio" name="databasefield" value="error">
+                                                        Error
+                                                    </label>
+                                                    <label class="me-3">
+                                                        <input type="radio" name="databasefield" value="inhouse">
+                                                        Inhouse
+                                                    </label>
+                                                    <label class="me-3">
+                                                        <input type="radio" name="databasefield" value="onsite">
+                                                        Onsite
+                                                    </label>
+                                                    <label class="me-3">
+                                                        <input type="radio" name="databasefield" value="reference">
+                                                        Reference
+                                                    </label>
+                                                    <label class="me-3">
+                                                        <input type="radio" name="databasefield" value="requirement">
+                                                        Requirement
+                                                    </label>
+                                                    <label class="me-3">
+                                                        <input type="radio" name="databasefield" value="skype">
+                                                        Skype
+                                                    </label>
+                                                    <label class="me-3">
+                                                        <input type="radio" name="databasefield" value="invoice">
+                                                        Invoice
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="databasefield" value="receipt">
+                                                        Receipts
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <!-- Add more textarea fields as needed -->
+                                </div>
+                                <div class="text-end float-right">
+                                    <button name="new" type="submit" class="btn btn-secondary">New</button>
+                                    <button name="save" type="submit" class="btn btn-primary">View</button>
+                                    <button name="delete" type="submit" class="btn btn-warning">To Excel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-<!--  -->
-    <div class="col-md-12">
-        <div id="wrapper" class="table-container"></div>
 
+
+
+
+
+        <div class="col-md-12 mt-4">
+            <div id="wrapper" class="table-container"
+                style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); padding:10px; border-radius:10px"></div>
+        </div>
+
+
+        <!--  -->
+        <div class="col-md-12">
+            <div id="wrapper" class="table-container"></div>
+
+        </div>
     </div>
-</div>
 </div>
 
 <?php
