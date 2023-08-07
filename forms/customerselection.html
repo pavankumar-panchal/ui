@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,15 +29,12 @@
             color: #333;
             transition: color 0.2s ease-in-out;
         }
-
         .close-icon:hover {
             color: #ff0000;
         }
     </style>
 </head>
-
 <body>
-
     <div class="container-fluid ">
         <div class="row">
             <div class="col-12">
@@ -46,7 +42,6 @@
                 <div id="slider" class="slider">
                     <span id="closeSlider" class="close-icon">X</span>
                     <!-- Your advanced settings content here -->
-
                     <div class="div1 mt-5"> <!-- 1 -->
                         <div class="container mt-12">
                             <div class="row">
@@ -54,8 +49,6 @@
                                     <div class="header-line pl-2">Customer Selection</div>
                                 </div>
                             </div>
-
-
                             <div class="row mt-3">
                                 <div class="col">
                                     <form id="filterform" name="filterform" method="post" action=""
@@ -72,23 +65,18 @@
                                                         name="customerlist" size="5" class="form-control"
                                                         id="customerlist" style="width:100%; height:400px"
                                                         onclick="selectfromlist();" onchange="selectfromlist();">
-                                                        <!-- Add options dynamically here --> </select> </div>
+                                                       <!-- Add options dynamically here --> </select> </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-
-
                             <div class="row mt-3">
                                 <div class="col-6"> <strong>Total Count:</strong> </div>
                                 <div class="col-6" id="totalcount"> </div>
                             </div>
                         </div> <!--  -->
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -103,10 +91,5 @@
             document.getElementById("slider").classList.remove("show-slider");
         });
     </script>
-
-
-
-
 </body>
-
 </html>

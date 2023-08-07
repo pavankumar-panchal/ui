@@ -12,7 +12,7 @@
             position: fixed;
             top: 0;
             right: -100%;
-            width: 30%;
+            width: 50%;
             height: 100%;
             background-color: #f2f2f2;
             transition: right 0.3s ease-in-out;
@@ -113,10 +113,234 @@
     <div class="slider" id="advancedSlider">
         <div class="close-icon" id="closeAdvancedSlider">X</div>
         <!-- Advanced Selection Content goes here -->
+        <div class="container mt-5 ">
+            <div class="row">
+                <div class="col-lg-12 overflow-auto " style="overflow-y: scroll;">
+                    <div class="border rounded p-4">
+                        <h4 class="mb-4">Search Option</h4>
+                        <form id="search-form">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <label for="searchcriteria">
+                                        Text:<input type="text" class="form-control" id="searchcriteria"
+                                            name="searchcriteria" placeholder="Leave empty for all">
+                                    </label>
+                                </div>
+                                <div class="whole"
+                                    style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                                    <div class="first" style="  width: 70%;">
+                                        <div class="container mt-4">
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <div class=" rounded p-4">
+                                                        <h4 class="mb-4">Look in:</h4>
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield0"
+                                                                        value="slno">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield0">Customer
+                                                                        ID</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield1"
+                                                                        value="businessname" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield1">Business
+                                                                        Name</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield3"
+                                                                        value="contactperson">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield3">Contact
+                                                                        Person</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield5"
+                                                                        value="place">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield5">Place</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield4"
+                                                                        value="phone">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield4">Phone /
+                                                                        Cell</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield6"
+                                                                        value="emailid">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield6">Email</label>
+                                                                </div>
+                                                                <div class="divider mt-3"></div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield9"
+                                                                        value="cardid">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield9">Card
+                                                                        ID</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield7"
+                                                                        value="scratchnumber">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield7">Pin
+                                                                        No</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield11"
+                                                                        value="billno">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield11">Bill
+                                                                        No</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield8"
+                                                                        value="computerid">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield8">Computer
+                                                                        ID</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="databasefield" id="databasefield10"
+                                                                        value="softkey">
+                                                                    <label class="form-check-label"
+                                                                        for="databasefield10">Softkey</label>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <!-- Add more radio buttons here -->
 
 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- second -->
+                                    <div class="second " style=" width: 100%;">
 
-section b
+                                        <div class="container mt-5">
+                                            <div class="row">
+                                                <div class=" float-right" style="width:100%;">
+                                                    <div class="border rounded p-4">
+                                                        <h4 class="mb-4">Selections:</h4>
+                                                        <form>
+                                                            <div class="border-left border-bottom border-top p-3">
+                                                                <div class="row mb-3">
+                                                                    <div class="col-md-3">
+                                                                        <label for="region2"
+                                                                            class="form-label">Region:</label>
+                                                                    </div>
+                                                                    <div class="col-md-9">
+                                                                        <select class="form-select" id="region2"
+                                                                            name="region2">
+                                                                            <option value="">ALL</option>
+                                                                            <option value="1">BKG</option>
+                                                                            <option value="2">CSD</option>
+                                                                            <option value="3">BKM</option>
+                                                                            <option value="4">Others</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mb-3">
+                                                                    <div class="col-md-3">
+                                                                        <label for="state2"
+                                                                            class="form-label">State:</label>
+                                                                    </div>
+                                                                    <div class="col-md-9">
+                                                                        <select class="form-select" id="state2"
+                                                                            name="state2"
+                                                                            onchange="getdistrictfilter('districtcodedisplaysearch',this.value);"
+                                                                            onkeyup="getdistrictfilter('districtcodedisplaysearch',this.value);">
+                                                                            <option value="">ALL</option>
+                                                                            <option value="" selected="selected"
+                                                                                id="data">
+                                                                                ALL
+                                                                            </option>
+                                                                            <!-- Add more state options here -->
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- Add more rows for other options -->
+
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4>Products:</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 bg-light border">
+                                        <div style="height: 230px; overflow: auto;">
+                                            <!-- Content for the product list goes here -->
+                                            <div style="height:230px; overflow:scroll" align="left">
+                                                <label><input type="checkbox" checked="checked" name="productarray[]"
+                                                        id="Accounting Software" value="224">&nbsp;Accounting Software
+                                                    <font color="#999999">&nbsp;(224)</font>
+                                                </label><br><label><input type="checkbox" checked="checked"
+                                                        name="productarray[]" id="Bug Tracer" value="765">&nbsp;Bug
+                                                    Tracer<font color="#999999">
+                                                        &nbsp;(765)</font></label><br><label><input type="checkbox"
+                                                        checked="checked" name="productarray[]" id="Comptax"
+                                                        value="182">&nbsp;Comptax<font color="#999999">&nbsp;(182)
+                                                    </font>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-1">
+                                        <input type="checkbox" checked="checked" name="selectall" id="selectall"
+                                            value="selectall" onclick="selectdeselectall();">
+                                    </div>
+                                    <div class="col-md-11">
+                                        <strong>
+                                            <label for="selectall">Select All</label>
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-danger" id="filter"
+                                            onclick="searchcustomerarray();">Search</button>
+                                        <button type="button" class="btn btn-secondary" name="reset_form"
+                                            onclick="resetDefaultValues(this.form);">Reset</button>
+                                        <button type="button" class="btn btn-secondary" id="close"
+                                            onclick="document.getElementById('filterdiv').style.display='none';">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 

@@ -279,9 +279,9 @@
 
     </div>
 </div> <!--  -->
-<div class="container mt-4 p-4 rounded-2" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); width: 98%;">
+<div class="container mt-4 p-2 h-8 rounded-2" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); width: 98%; height: 300px; overflow:auto;">
     <table class="table table-bordered">
-        <thead class="bg-light text-white">
+        <thead class="bg-light">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Type</th>

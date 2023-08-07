@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Styled Form</title>
 </head>
+
 <body>
-
-<div class="container mt-4">
-    <form class="card">
-        <div class="card-header">
-            Business Information
-        </div>
-        <div class="card-body">
-            <div class="form-group">
-                <label for="businessName">Business Name[Company]:</label>
-                <input name="businessName" type="text" class="form-control" id="businessName" maxlength="200" autocomplete="off">
+  
+  
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="businessName">Business Name[Company]:</label>
+                            <input name="businessName" type="text" class="form-control" id="businessName"
+                                maxlength="200" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input name="address" type="text" class="form-control" id="address" maxlength="200"
+                                autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional form groups can be added here -->
+                <!-- Place, State, District, and other fields can be added here -->
+                <div class="card mt-3">
+                    <div class="" style="border:none;">
+                        <input name="view" type="submit" class="btn btn-primary float-right w-8" id="view" value="Save">
+                    </div>
+                </div>
             </div>
-            <!-- Add more form groups here for other fields -->
         </div>
-    </form>
+    </div>
 
-    <form class="card mt-3">
-        <div class="card-header">
-            Address Information
-        </div>
-        <div class="card-body">
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <input name="address" type="text" class="form-control" id="address" maxlength="200" autocomplete="off">
-            </div>
-            <!-- Add more form groups here for other fields -->
-        </div>
-    </form>
-
-    <!-- Continue adding card sections for other parts of the form -->
-</div>
-
-<!-- Add Bootstrap JavaScript and jQuery links here if needed -->
-
+    <!-- Add Bootstrap JavaScript and jQuery links here if needed -->
 </body>
+
 </html>
