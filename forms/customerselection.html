@@ -62,16 +62,19 @@
 
                             <div class="row mt-3">
                                 <div class="col">
-                                    <form id="filterform" name="filterform" method="post" action="" onsubmit="return false;">
+                                    <form id="filterform" name="filterform" method="post" action=""
+                                        onsubmit="return false;">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="input-group"> <input name="detailsearchtext" type="text"
-                                                        class="form-control" id="detailsearchtext" onkeyup="customersearch(event);"
-                                                        autocomplete="off" isdatepicker="true" placeholder="search.."> <span
-                                                        style="display:none"> <input name="searchtextid" type="hidden" id="searchtextid"
-                                                            disabled="disabled"> </span> </div>
-                                                <div id="detailloadcustomerlist" class="mt-2"> <select name="customerlist" size="5"
-                                                        class="form-control" id="customerlist" style="width:100%; height:400px"
+                                                        class="form-control" id="detailsearchtext"
+                                                        onkeyup="customersearch(event);" autocomplete="off"
+                                                        isdatepicker="true" placeholder="search.."> <span
+                                                        style="display:none"> <input name="searchtextid" type="hidden"
+                                                            id="searchtextid" disabled="disabled"> </span> </div>
+                                                <div id="detailloadcustomerlist" class="mt-2"> <select
+                                                        name="customerlist" size="5" class="form-control"
+                                                        id="customerlist" style="width:100%; height:400px"
                                                         onclick="selectfromlist();" onchange="selectfromlist();">
                                                         <!-- Add options dynamically here --> </select> </div>
                                             </div>
@@ -80,14 +83,14 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="row mt-3">
                                 <div class="col-6"> <strong>Total Count:</strong> </div>
                                 <div class="col-6" id="totalcount"> </div>
                             </div>
                         </div> <!--  -->
                     </div>
-                   
+
 
 
                 </div>
