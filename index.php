@@ -192,7 +192,7 @@
   bottom: 0;
   width: 100%;
   /* Use calc() to set the height of the footer, adjusting it as per your needs */
-  height: calc(50px + 20px);
+  height: calc(40px + 20px);
 }
 </style>
 

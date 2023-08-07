@@ -4,22 +4,7 @@ include("../navigation/navigation.php");
 
 ?>
 
-
-<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
-
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Masters</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Customer</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
-
-
-                    <div class="container">
+                    <div class="container mt-5" >
                         <div class="parent container d-flex flex-row p-4 rounded-2"  style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); ">
                             <div class="div1">
                                 <!-- 1 -->

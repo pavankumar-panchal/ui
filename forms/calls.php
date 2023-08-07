@@ -3,19 +3,6 @@
 include("../navigation/navigation.php");
 
 ?>
-<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
-
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Registers</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Calls</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
-<!-- content -->
 <style>
     body {
         background-color: white;
@@ -26,8 +13,6 @@ include("../navigation/navigation.php");
         flex-direction: row;
     }
 </style>
-
-
 
 <div class="container users_la mt-5">
     <div class="row">
