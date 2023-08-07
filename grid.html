@@ -1,64 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Grid.js Table Example</title>
-    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Page with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .slider {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 30%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: right 0.3s ease-in-out;
+        }
+
+        .show-slider {
+            right: 0;
+        }
+
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .close-icon:hover {
+            color: #ff0000;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="wrapper" class="table-container"></div>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-12">
+                <button id="showAdvanced" class="btn btn-primary mt-3">Customer Selection</button>
+                <div id="slider" class="slider">
+                    <span id="closeSlider" class="close-icon">X</span>
+                    <!-- Your advanced settings content here -->
+
+                   
+
+
+                    
+                   
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Sample data for the table (replace this with your actual data)
-        const data = [
-            ["1", "John Doe", "Address 1", "123456789", "john@example.com", "Contact 1", /* ... */],
-            ["2", "Jane Smith", "Address 2", "987654321", "jane@example.com", "Contact 2", /* ... */],
-            // Add more rows here...
-        ];
+        document.getElementById("showAdvanced").addEventListener("click", function () {
+            document.getElementById("slider").classList.add("show-slider");
+        });
 
-        // Column definitions (replace this with your column names)
-        const columns = [
-            "ID",
-            "Customer Name",
-            "Address",
-            "Mobile Number",
-            "Email",
-            "Contact Person",
-            // Add more column names here...
-            "Column 7",
-            "Column 8",
-            "Column 9",
-            "Column 10",
-            "Column 11",
-            "Column 12",
-            "Column 13",
-            "Column 14",
-            "Column 15",
-            "Column 16",
-            "Column 17",
-            "Column 18",
-            "Column 19",
-            "Column 20",
-            "Column 21",
-            "Column 22",
-            "Column 23",
-            "Column 24",
-            "Column 25",
-        ];
-
-        new gridjs.Grid({
-            columns: columns.map((col) => ({ name: col })),
-            data: data,
-            pagination: { limit: 5 },
-            search: true,
-            sort: true,
-            language: {
-                "search": { "placeholder": "Search..." },
-                "pagination": { "previous": "⬅️", "next": "➡️", "results": () => "Records" }
-            }
-        }).render(document.getElementById("wrapper"));
+        document.getElementById("closeSlider").addEventListener("click", function () {
+            document.getElementById("slider").classList.remove("show-slider");
+        });
     </script>
+
+
+
+
 </body>
 
 </html>

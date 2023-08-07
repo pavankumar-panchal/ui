@@ -2,10 +2,38 @@
 <div class="container mt-5">
     <div class="parent container d-flex flex-row p-4 rounded-2"
         style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); ">
-        
-
-
-
+        <div class="div1"> <!-- 1 -->
+            <div class="container mt-12">
+                <div class="row">
+                    <div class="col">
+                        <div class="header-line pl-2">Customer Selection</div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <form id="filterform" name="filterform" method="post" action="" onsubmit="return false;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group"> <input name="detailsearchtext" type="text"
+                                            class="form-control" id="detailsearchtext" onkeyup="customersearch(event);"
+                                            autocomplete="off" isdatepicker="true" placeholder="search.."> <span
+                                            style="display:none"> <input name="searchtextid" type="hidden"
+                                                id="searchtextid" disabled="disabled"> </span> </div>
+                                    <div id="detailloadcustomerlist" class="mt-2"> <select name="customerlist" size="5"
+                                            class="form-control" id="customerlist" style="width:100%; height:400px"
+                                            onclick="selectfromlist();" onchange="selectfromlist();">
+                                            <!-- Add options dynamically here --> </select> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6"> <strong>Total Count:</strong> </div>
+                    <div class="col-6" id="totalcount"> </div>
+                </div>
+            </div> <!--  -->
+        </div>
         <div class="div2"> <!-- 2 -->
             <div class="container mt-4">
                 <table class="table table-bordered productcontent">
@@ -274,9 +302,6 @@
                 </table>
             </div> <!-- 2 -->
         </div>
-
-
-
     </div>
 </div> <!--  -->
 <div class="container mt-4 p-4 rounded-2" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); width: 98%;">

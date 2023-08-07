@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .slider {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 30%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: right 0.3s ease-in-out;
+        }
+
+        .show-slider {
+            right: 0;
+        }
+
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .close-icon:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>Header Content</div>
+                <div class="d-flex">
+                    <button class="btn btn-sm btn-secondary me-2" id="showCustomer">Customer selections</button>
+                    <button class="btn btn-sm btn-success" id="showAdvanced">Advanced selections</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <!-- Your table content here -->
+            </div>
+            <div class="card-footer">
+                <div class="row mt-3">
+                    <div class="col-md-10">
+                        <div id="form-error"></div>
+                    </div>
+                    <div class="text-end">
+                        <input name="view" type="submit" class="btn btn-primary" id="view" value="Save"
+                            onclick="formsubmit('view');" fdprocessedid="mnaln6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider" id="customerSlider">
+        <div class="close-icon" id="closeCustomerSlider">X</div>
+        <!-- Customer Selection Content goes here -->
+        <div class="div1 mt-5"> <!-- 1 -->
+            <div class="container mt-12">
+                <div class="row">
+                    <div class="col">
+                        <div class="header-line pl-2">Customer Selection</div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <form id="filterform" name="filterform" method="post" action="" onsubmit="return false;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group"> <input name="detailsearchtext" type="text"
+                                            class="form-control" id="detailsearchtext" onkeyup="customersearch(event);"
+                                            autocomplete="off" isdatepicker="true" placeholder="search.."> <span
+                                            style="display:none"> <input name="searchtextid" type="hidden"
+                                                id="searchtextid" disabled="disabled"> </span> </div>
+                                    <div id="detailloadcustomerlist" class="mt-2"> <select name="customerlist" size="5"
+                                            class="form-control" id="customerlist" style="width:100%; height:400px"
+                                            onclick="selectfromlist();" onchange="selectfromlist();">
+                                            <!-- Add options dynamically here --> </select> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="row mt-3">
+                    <div class="col-6"> <strong>Total Count:</strong> </div>
+                    <div class="col-6" id="totalcount"> </div>
+                </div>
+            </div> <!--  -->
+        </div>
+
+
+
+
+    </div>
+
+    <div class="slider" id="advancedSlider">
+        <div class="close-icon" id="closeAdvancedSlider">X</div>
+        <!-- Advanced Selection Content goes here -->
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("showCustomer").addEventListener("click", function () {
+            document.getElementById("customerSlider").classList.add("show-slider");
+        });
+
+        document.getElementById("closeCustomerSlider").addEventListener("click", function () {
+            document.getElementById("customerSlider").classList.remove("show-slider");
+        });
+
+        document.getElementById("showAdvanced").addEventListener("click", function () {
+            document.getElementById("advancedSlider").classList.add("show-slider");
+        });
+
+        document.getElementById("closeAdvancedSlider").addEventListener("click", function () {
+            document.getElementById("advancedSlider").classList.remove("show-slider");
+        });
+    </script>
+</body>
+
+</html>
