@@ -18,7 +18,7 @@ include("../navigation/navigation.php");
 </header> -->
 
 <div class="container mt-4 ">
-  <div class="card border-light" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">">
+  <div class="card border-light shadow" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">
     <div class="card-header bg-light " style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
       <div class="d-flex justify-content-between align-items-center">
         <span class="header-line pl-3">Enter / Edit / View Details</span>

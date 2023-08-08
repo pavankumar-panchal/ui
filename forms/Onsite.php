@@ -22,7 +22,7 @@ include("../navigation/navigation.php");
   }
 </style>
 <div class="container mt-4 rounded ">
-  <table class="table table-bordered bg-light" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">">
+  <table class="table table-bordered bg-light" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">
     <tbody>
       <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
         <td class="bg-light">&nbsp;&nbsp;Enter the Details</td>

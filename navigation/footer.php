@@ -8,9 +8,9 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container ">
   <footer class="footer_area section_padding_130_0 mt-4 " style="width:98.2%; margin-left:10px; border-radius:10px 10px 0px 0px; box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-    <div class="container">
+    <div class="container ">
       <div class="row">
         <!-- Single Widget-->
         <div class="col-12 col-sm-6 col-lg-4">

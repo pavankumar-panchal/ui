@@ -17,7 +17,7 @@ include("../navigation/navigation.php");
 </header> -->
 <!-- content -->
 <div class="container mt-4">
-    <div class="card border" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);margin-top: 50px;">">
+    <div class="card border" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);margin-top: 50px;">
         <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv', 'toggleimg');">
             Enter / Edit / View Details
             <span class="float-right">

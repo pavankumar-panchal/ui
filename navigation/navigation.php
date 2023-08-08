@@ -76,7 +76,7 @@
 
 </head>
 
-<body class="bg-white;">
+<body class="bg-white;" style="z-index:2;">
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
         <ul class="h-4 p-4"> logo </ul>
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
@@ -176,7 +176,7 @@
         <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>
     <div class="wrapper d-flex flex-column bg-light" style="margin-top:-50px;">
-        <header class="header header-sticky ">
+        <header class="header header-sticky " style="z-index:0;">
             <div class="container-fluid">
                 <button class="header-toggler " type="button"
                     onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
