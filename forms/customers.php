@@ -6,7 +6,6 @@
         right: -100%;
         width: 50%;
         height: 100%;
-
         /* margin-top: 120px; */
         z-index: 9999;
         background-color: #f2f2f2;
@@ -32,17 +31,12 @@
     }
 </style>
 
-
 <div class="container mt-5" style="z-index:0;">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <div>Header Content</div>
-
         </div>
         <div class="card-body">
-
-
-
             <div class="container" style="z-index:9999;">
                 <div class="row">
                     <div class="col-md-13">
@@ -167,8 +161,6 @@
 
                                     <!-- Add other form groups here -->
 
-
-
                                     <div class="container mt-4">
                                         <div class="row" style="background-color: rgba(156, 156, 247, 0.377);">
                                             <div class="col-md-3 border-end">
@@ -257,6 +249,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row mt-3">
                                 <div class="col-md-12 float-right text-end">
                                     <button type="button" class="btn btn-primary float-right" id="save"
