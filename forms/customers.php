@@ -30,7 +30,7 @@
     </style>
 
  
-<div class="container mt-5" >
+<div class="container mt-5"  style="z-index:0;">
         <div class="card" >
             <div class="card-header d-flex justify-content-between align-items-center">
                 <div>Header Content</div>
@@ -325,7 +325,7 @@
             <div class="close-icon" id="closeAdvancedSlider">X</div>
             <!-- Advanced Selection Content goes here -->
 
-            <div class="container mt-5" style="overflow-y: auto;  height: 100vh;">
+            <div class="container " style="overflow-y: auto;  height: 100vh;" >
                 <div class="row">
                     <div class=" ">
                         <div class="border rounded p-4 " style="width: 100%;">
