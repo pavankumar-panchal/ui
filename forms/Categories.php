@@ -17,11 +17,8 @@ include("../navigation/navigation.php");
     </nav>
 </div>
 </header> -->
-
-
-<!-- content -->
 <div class="container mt-4">
-    <div class="card border" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">">
+    <div class="card border" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">
         <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv', 'toggleimg');">
             Enter / Edit / View Details
             <span class="float-end">
@@ -33,49 +30,36 @@ include("../navigation/navigation.php");
                 <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
                     <div class="row">
                         <div class="col-md">
-                            <table class="table table-bordered ">
-                                <tbody>
-                                    <tr>
-                                        <td>Category Heading:</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <input name="" type="text" class="form-control" id="DPC_date"
-                                                    datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
-                                                <div class="input-group-append">
-
-                                                </div>
-                                            </div>
-                                            <input type="hidden" name="lastslno" id="lastslno" value="">
-                                            <input type="hidden" name="loggeduser" id="loggeduser" value="1">
-                                            <input type="hidden" name="loggedusertype" id="loggedusertype"
-                                                value="ADMIN">
-                                            <input type="hidden" name="loggedreportingauthority"
-                                                id="loggedreportingauthority"
-                                                value="<br /><b>Warning</b>:  Undefined variable $reportingauthority in <b>/opt/lampp/htdocs/mywork/redesign/masters/non-workingdays.php</b> on line <b>37</b><br />">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Remarks:</td>
-                                        <td>
-                                            <textarea name="remarks" cols="45" class="form-control" id="remarks"
-                                                data-gramm="false" wt-ignore-input="true"></textarea>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="form-group">
+                                <label for="DPC_date">Category Heading:</label>
+                                <div class="input-group">
+                                    <input name="" type="text" class="form-control" id="DPC_date"
+                                        datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                                    <div class="input-group-append">
+                                        <!-- Additional elements here if needed -->
+                                    </div>
+                                </div>
+                                <!-- Hidden input fields here -->
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group text-end">
-                                <div id="form-error"></div>
-                                <button type="button" class="btn btn-secondary mr-2"
-                                    onclick="newentry();clearinnerhtml();">New</button>
-                                <button type="button" class="btn btn-primary" onclick="formsubmit('save')">Save</button>
-                                <button type="button" class="btn btn-danger" onclick="formsubmit('delete')"
-                                    disabled="disabled">Delete</button>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="remarks">Remarks:</label>
+                                <textarea name="remarks" cols="45" class="form-control" id="remarks" data-gramm="false"
+                                    wt-ignore-input="true"></textarea>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-end mt-3">
+                            <div id="form-error"></div>
+                            <button type="button" class="btn btn-secondary mr-2"
+                                onclick="newentry();clearinnerhtml();">New</button>
+                            <button type="button" class="btn btn-primary" onclick="formsubmit('save')">Save</button>
+                            <button type="button" class="btn btn-danger" onclick="formsubmit('delete')"
+                                disabled="disabled">Delete</button>
                         </div>
                     </div>
                 </form>
@@ -83,6 +67,8 @@ include("../navigation/navigation.php");
         </div>
     </div>
 </div>
+
+
 <!--  -->
 
 
@@ -160,15 +146,6 @@ include("../navigation/navigation.php");
         </div>
     </div>
 
-
-
-
-
-
-<!--  -->
-<div class="col-md-12">
-</div>
-</div>
 </div>
 <?php
 

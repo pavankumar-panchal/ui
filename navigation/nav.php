@@ -49,7 +49,6 @@
     <link rel="stylesheet" href="calendar/css/style.css">
     <!-- calendar -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <style>
         <style>
 
         /* Customizing the scrollbar */
@@ -70,7 +69,6 @@
             background-color: #f2f2f2;
             /* Lighter background color for the track */
         }
-    </style>
     </style>
 </head>
 
