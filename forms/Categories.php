@@ -68,11 +68,7 @@ include("../navigation/navigation.php");
     </div>
 </div>
 
-
 <!--  -->
-
-
-
 <!-- Add the necessary Bootstrap CSS link -->
 
 <div class="container mt-4">
