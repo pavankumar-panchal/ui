@@ -70,7 +70,6 @@ include("../navigation/navigation.php");
 
 <!--  -->
 <!-- Add the necessary Bootstrap CSS link -->
-
 <div class="container mt-4">
     <div class="card border" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
         <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('filterdiv', 'toggleimg1');">
@@ -84,56 +83,42 @@ include("../navigation/navigation.php");
                 <form action="" method="post" name="filterform" id="filterform" onsubmit="return false;">
                     <div class="row">
                         <div class="col-md-6">
-                            <table class="table table-bordered">
-                                <tbody>
-                                    <tr>
-                                        <td>Search Text:</td>
-                                        <td>
-                                            <input name="searchcriteria" type="text" class="form-control"
-                                                id="searchcriteria" size="40" isdatepicker="true">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="mb-3">
+                                <label for="searchcriteria" class="form-label">Search Text:</label>
+                                <input name="searchcriteria" type="text" class="form-control" id="searchcriteria"
+                                    size="40" isdatepicker="true">
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <table class="table table-bordered">
-                                <tbody>
-                                    <tr>
-                                        <td>Order By:</td>
-                                        <td>
-                                            <select name="orderby" class="form-control form-select" id="orderby">
-                                                <option value="date" selected="selected">Remarks
-                                                </option>
-                                                <option value="occassion">Category Heading
-                                                </option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="mb-3">
+                                <label for="orderby" class="form-label">Order By:</label>
+                                <select name="orderby" class="form-control form-select" id="orderby">
+                                    <option value="date" selected="selected">Remarks</option>
+                                    <option value="occassion">Category Heading</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 In:
-                                <label class="mr-3">
-                                    <input type="radio" name="databasefield" id="databasefield0" value="date"
-                                        checked="checked">
-                                    Remarks
-                                </label>
-                                <label>
-                                    <input type="radio" name="databasefield" id="databasefield1" value="occassion">
-                                    Category Heading
-                                </label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="databasefield"
+                                        id="databasefield0" value="date" checked="checked">
+                                    <label class="form-check-label" for="databasefield0">Remarks</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="databasefield"
+                                        id="databasefield1" value="occassion">
+                                    <label class="form-check-label" for="databasefield1">Category Heading</label>
+                                </div>
                             </div>
                             <div class="form-group text-end">
                                 <div id="filter-form-error"></div>
                                 <button type="button" class="btn btn-primary" onclick="formfilter('view')">View</button>
                                 <button type="button" class="btn btn-warning"
                                     onclick="formfilter('view')">Excel</button>
-
                             </div>
                         </div>
                     </div>
@@ -141,8 +126,8 @@ include("../navigation/navigation.php");
             </div>
         </div>
     </div>
-
 </div>
+
 <?php
 
 include("../navigation/footer.php");

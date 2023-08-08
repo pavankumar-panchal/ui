@@ -37,10 +37,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <div>Header Content</div>
-            <div class="d-flex">
-                <button class="btn btn-sm btn-secondary me-2" id="showCustomer">Customer selections</button>
-                <button class="btn btn-sm btn-success" id="showAdvanced">Advanced selections</button>
-            </div>
+
         </div>
         <div class="card-body">
 
@@ -264,7 +261,12 @@
                                 <div class="col-md-12 float-right text-end">
                                     <button type="button" class="btn btn-primary float-right" id="save"
                                         onclick="formsubmit('save');">Save</button>
-                                    <!-- Add other buttons here -->
+                                    <button class="btn  bg-secondary" id="showCustomer">Customer
+                                        selections</button>
+
+                                    <button class="btn btn-warning" id="showAdvanced">Advanced
+                                        selections</button>
+
                                 </div>
                             </div>
                         </div>
@@ -284,8 +286,6 @@
                         <div class="header-line pl-2">Customer Selection</div>
                     </div>
                 </div>
-
-
                 <div class="row mt-3">
                     <div class="col">
                         <form id="filterform" name="filterform" method="post" action="" onsubmit="return false;">
