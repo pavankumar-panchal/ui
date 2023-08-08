@@ -31,43 +31,52 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- grid js -->
-
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-
     <!-- grid js  -->
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link href="css/examples.css" rel="stylesheet">
     <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
-
     <!-- calendar -->
-
-
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
-
-
     <link rel="stylesheet" href="calendar/fonts/icomoon/style.css">
-
     <link href='calendar/fullcalendar/packages/core/main.css' rel='stylesheet' />
     <link href='calendar/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
-
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="calendar/css/bootstrap.min.css">
-
     <!-- Style -->
     <link rel="stylesheet" href="calendar/css/style.css">
-
     <!-- calendar -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        <style>
+
+        /* Customizing the scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+            /* Width of the scrollbar */
+        }
+
+        /* Styling the thumb (the draggable part of the scrollbar) */
+        ::-webkit-scrollbar-thumb {
+            background-color: gray;
+            /* Blue color for the thumb */
+            /* Rounded edges for the thumb */
+        }
+
+        /* Styling the track (the area the thumb moves along) */
+        ::-webkit-scrollbar-track {
+            background-color: #f2f2f2;
+            /* Lighter background color for the track */
+        }
+    </style>
+    </style>
 </head>
 
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-    <ul class="h-4 p-4"> logo </ul>
+        <ul class="h-4 p-4"> logo </ul>
 
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item"><a class="nav-link" href="index.php">
@@ -240,7 +249,7 @@
                     </ul>
                 </nav>
             </div>
-            
+
         </header>
 
         <div class="body flex-grow-1 px-3">

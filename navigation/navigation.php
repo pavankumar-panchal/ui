@@ -68,10 +68,21 @@
     <style>
 
 
+/* Customizing the scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+ }
 
+/* Styling the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: gray; /* Blue color for the thumb */
+  /* Rounded edges for the thumb */
+}
 
-
-
+/* Styling the track (the area the thumb moves along) */
+::-webkit-scrollbar-track {
+  background-color: #f2f2f2; /* Lighter background color for the track */
+}
     </style>
 
 </head>

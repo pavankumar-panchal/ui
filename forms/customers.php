@@ -326,10 +326,10 @@
         <div class="close-icon" id="closeAdvancedSlider">X</div>
         <!-- Advanced Selection Content goes here -->
 
-        <div class="container " style="overflow-y: auto;  height: 100vh;">
+        <div class="container " style="overflow-y: auto;height: 100vh;">
             <div class="row">
                 <div class=" ">
-                    <div class="border rounded p-4 " style="width: 100%;">
+                    <div class="rounded p-4 " style="width: 100%;">
                         <h4 class="">Search Option</h4>
                         <form id="search-form">
                             <div class="row">
