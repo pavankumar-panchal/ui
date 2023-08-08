@@ -29,6 +29,10 @@
     .close-icon:hover {
         color: #ff0000;
     }
+
+    label {
+        margin: 10px 0px 10px 0px;
+    }
 </style>
 
 <div class="container mt-5" style="z-index:0;">
@@ -66,13 +70,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="state">State:</label>
-                                        <select name="state" class="form-control" id="state">
+                                        <select name="state" class="form-control form-select" id="state">
                                             <option value="">Select A State</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="place">District:</label>
-                                        <select name="state" class="form-control" id="state">
+                                        <select name="state" class="form-control form-select" id="state">
                                             <option value="">Select A State</option>
                                         </select>
                                     </div>
@@ -98,13 +102,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="place">Type:</label>
-                                        <select name="state" class="form-control" id="state">
+                                        <select name="state" class="form-control form-select" id="state">
                                             <option value="">Select A State</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="place">Category:</label>
-                                        <select name="state" class="form-control" id="state">
+                                        <select name="state" class="form-control form-select" id="state">
                                             <option value="">Select A State</option>
                                         </select>
                                     </div>
@@ -143,19 +147,22 @@
                                             maxlength="100" autocomplete="off">
                                     </div>
                                     <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="servicecharge"
-                                            id="servicecharge">
-                                        <label class="form-check-label" for="servicecharge">Company Closed</label>
+                                        <label class="form-check-label" for="servicecharge">
+                                            <input class="form-check-input" type="checkbox" name="servicecharge"
+                                                id="servicecharge">
+                                            Company Closed</label>
                                     </div>
                                     <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="promotionalSMS"
-                                            id="promotionalSMS">
-                                        <label class="form-check-label" for="promotionalSMS">Promotional SMS</label>
+                                        <label class="form-check-label" for="promotionalSMS">
+                                            <input class="form-check-input" type="checkbox" name="promotionalSMS"
+                                                id="promotionalSMS">
+                                            Promotional SMS</label>
                                     </div>
                                     <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="promotionalEmail"
-                                            id="promotionalEmail">
-                                        <label class="form-check-label" for="promotionalEmail">Promotional
+                                        <label class="form-check-label" for="promotionalEmail">
+                                            <input class="form-check-input" type="checkbox" name="promotionalEmail"
+                                                id="promotionalEmail">
+                                            Promotional
                                             Email</label>
                                     </div>
 
@@ -443,8 +450,8 @@
                                                                             class="form-label">Region:</label>
                                                                     </div>
                                                                     <div class="col-md-9">
-                                                                        <select class="form-select" id="region2"
-                                                                            name="region2">
+                                                                        <select class="form-select form-control"
+                                                                            id="region2" name="region2">
                                                                             <option value="">ALL</option>
                                                                             <option value="1">BKG</option>
                                                                             <option value="2">CSD</option>
@@ -459,8 +466,8 @@
                                                                             class="form-label">State:</label>
                                                                     </div>
                                                                     <div class="col-md-9">
-                                                                        <select class="form-select" id="state2"
-                                                                            name="state2"
+                                                                        <select class=" form-select form-control"
+                                                                            id="state2" name="state2"
                                                                             onchange="getdistrictfilter('districtcodedisplaysearch',this.value);"
                                                                             onkeyup="getdistrictfilter('districtcodedisplaysearch',this.value);">
                                                                             <option value="">ALL</option>
@@ -478,8 +485,8 @@
                                                                             class="form-label">District:</label>
                                                                     </div>
                                                                     <div class="col-md-9">
-                                                                        <select class="form-select" id="region2"
-                                                                            name="region2">
+                                                                        <select class="form-select form-control"
+                                                                            id="region2" name="region2">
                                                                             <option value="">ALL</option>
                                                                             <option value="1">BKG</option>
                                                                             <option value="2">CSD</option>
