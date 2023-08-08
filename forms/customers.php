@@ -266,7 +266,6 @@
 
                                     <button class="btn btn-warning" id="showAdvanced">Advanced
                                         selections</button>
-
                                 </div>
                             </div>
                         </div>
@@ -313,19 +312,10 @@
                 </div>
             </div> <!--  -->
         </div>
-
-
-
-
     </div>
-
-
-
-
     <div class="slider" id="advancedSlider">
         <div class="close-icon" id="closeAdvancedSlider">X</div>
         <!-- Advanced Selection Content goes here -->
-
         <div class="container " style="overflow-y: auto;height: 100vh;">
             <div class="row">
                 <div class=" ">
@@ -440,15 +430,12 @@
                                                         </form>
                                                     </div>
                                                     <!-- Add more radio buttons here -->
-
-
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- second -->
                                     <div class="second mt-5" style=" width: 100%; ">
-
                                         <div class="container " style="position: relative; bottom: 95px;">
                                             <div class="row">
                                                 <div class="border float-right"
