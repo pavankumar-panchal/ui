@@ -316,7 +316,7 @@
     <div class="slider" id="advancedSlider">
         <div class="close-icon" id="closeAdvancedSlider">X</div>
         <!-- Advanced Selection Content goes here -->
-        <div class="container " style="overflow-y: auto;height: 100vh;">
+        <div class="container " style="overflow-y:auto;height: 100vh;">
             <div class="row">
                 <div class=" ">
                     <div class="rounded p-4 " style="width: 100%;">
@@ -570,7 +570,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container " style="position: relative; bottom: 80px;">
+                            <div class="container " style="position: relative; bottom:;">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h4>Products:</h4>

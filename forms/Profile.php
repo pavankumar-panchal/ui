@@ -5,8 +5,27 @@ include("../navigation/navigation.php");
 
 ?>
 
+<style>
+      .form-group label{
+        margin: 10px 0px 10px 0px;
+    }
+
+    .display {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .up {
+      display: flex;
+      flex-direction: row;
+      float: right;
+      margin-right: 5px;
+    }
+  </style>
+
+
 <div class="container mt-4">
-  <div class="card border " class="rounded" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);margin-top: 50px;">">
+  <div class="card border " class="rounded" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);margin-top: 50px;">
     <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv', 'toggleimg');">
       View Profile
       <span class="float-right">
@@ -22,7 +41,9 @@ include("../navigation/navigation.php");
                 <tr>
                   <td><strong>User Name:</strong></td>
                   <td>
-                    <font color="#FF6200">  <?php  echo ($d_fullname); ?> </font>
+                    <font color="#FF6200">
+                      <?php echo ($d_fullname); ?>
+                    </font>
                   </td>
                 </tr>
                 <tr>
@@ -105,158 +126,103 @@ include("../navigation/navigation.php");
     </div>
   </div>
   <!--  -->
-  <style>
-    .display {
-      display: flex;
-      flex-direction: row;
-    }
 
-    .up {
-      display: flex;
-      flex-direction: row;
-      float: right;
-      margin-right: 5px;
-    }
-  </style>
-  <div class="container mt-4 rounded-1">
-    <table class="table table-bordered" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-      <tbody>
-        <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
-          <td class="bg-light">&nbsp;&nbsp;Enter/Edit/View Details</td>
-          <td align="right" class="bg-light">
-            <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
-                align="absmiddle"></div>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" valign="top" class="bg-light">
-            <div id="maindiv" style="display: block;">
-              <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                <div class="display">
-                  <table class="table table-bordered table1">
-                    <tbody>
-                      <tr class="bg-white">
-                        <td valign="top">Full Name:</td>
-                        <td valign="top">
-                          <input name="customername" type="text" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
+  <div class="container mt-4 col-lg-12">
+    <div class="card rounded-1">
+      <div class="card-header header-line" onclick="showhide('maindiv','toggleimg');">
+        <div class="row">
+          <div class="col-md-14">
+            Enter/Edit/View Details
+          </div>
 
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Gender:</td>
-                        <td valign="top">
-                          <span id="filterprdgroupdisplay">
-                            <select name="s_productgroup" class="form-select swiftselect form-control"
-                              id="s_productgroup" onchange="">
-                              <option value="" selected="selected">
-                                ALL
-                              </option>
+        </div>
+      </div>
+      <div class="card-body" id="maindiv">
+        <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="customername">Full Name:</label>
+                <input name="customername" type="text" class="form-control" id="customername" autocomplete="off">
+              </div>
 
-                            </select>
-                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                          </span>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">mobile:</td>
-                        <td valign="top">
-                          <input name="customername" type="tel" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
+              <div class="form-group">
+                <label for="s_productgroup">Gender:</label>
+                <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup">
+                  <option value="" selected="selected">ALL</option>
+                </select>
+                <!-- Details are in javascript.js page as a function prdgroup();-->
+              </div>
 
-                      <tr class="bg-white">
-                        <td valign="top">Designation:</td>
-                        <td valign="top">
-                          <input name="customerid" type="text" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Date of Birth:</td>
-                        <td valign="top">
-                          <input name="customerid" type="date" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
+              <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input name="mobile" type="tel" class="form-control" id="mobile" autocomplete="off">
+              </div>
 
-                      <tr class="bg-white">
-                        <td valign="top">Present Address:</td>
-                        <td valign="top">
-                          <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks"
-                            data-gramm="false" wt-ignore-input="true"></textarea>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <table class="table table-bordered table2">
-                    <tbody>
-                      <tr class="bg-white">
-                        <td valign="top">Permanent Address:</td>
-                        <td valign="top">
-                          <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks"
-                            data-gramm="false" wt-ignore-input="true"></textarea>
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Date of joining :</td>
-                        <td valign="top">
-                          <input name="customerid" type="date" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Personal Email:</td>
-                        <td valign="top">
-                          <input name="customerid" type="email" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Official Email:</td>
-                        <td valign="top">
-                          <input name="customerid" type="email" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Contact Number[In case of Emergency]:</td>
-                        <td valign="top">
-                          <input name="customerid" type="tel" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                      <tr class="bg-white">
-                        <td valign="top">Remarks[Details of Person in case of Emergency]:</td>
-                        <td valign="top">
-                          <input name="customerid" type="tel" class="form-control" id="customername" size="20"
-                            autocomplete="off" isdatepicker="true">
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="container bg-light">
-                  <div class="row">
-                    <div class="col-md-8">
-                      <div id="form-error"></div>
-                    </div>
-                    <div class="col-md-4 float-right bg-light " align="right">
-                      <input name="new" type="submit" class="btn btn-secondary " id="view" value="New"
-                        onclick="formsubmit('toview');">
-                      <input name="save" type="submit" class="btn btn-primary " id="view" value="Save"
-                        onclick="formsubmit('toview');">
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <div class="form-group">
+                <label for="mobile">Designation:</label>
+                <input name="mobile" type="text" class="form-control" id="mobile" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="mobile">Date of Birth:</label>
+                <input name="mobile" type="date" class="form-control" id="mobile" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="mobile">Present Address:</label>
+                <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks"
+                  data-gramm="false" wt-ignore-input="true"></textarea>
+              </div>
+              <!-- Repeat similar pattern for other form inputs -->
             </div>
-          </td>
-        </tr>
-    </table>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="teamleaderremarks">Present Address:</label>
+                <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks"
+                  data-gramm="false" wt-ignore-input="true"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="mobile">Date of Joining:</label>
+                <input name="mobile" type="date" class="form-control" id="mobile" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="mobile">Personal Email:</label>
+                <input name="mobile" type="email" class="form-control" id="mobile" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="mobile">Official Email:</label>
+                <input name="mobile" type="email" class="form-control" id="mobile" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="mobile">Contatc Number[In case of Emergency]:</label>
+                <input name="mobile" type="text" class="form-control" id="mobile" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="mobile">Remarks[Details of person in case of Emergency]:</label>
+                <input name="mobile" type="text" class="form-control" id="mobile" autocomplete="off">
+              </div>
+              <!-- Repeat similar pattern for other form inputs -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-8">
+                <div id="form-error"></div>
+              </div>
+              <div class="col-md-4 text-end mt-3">
+                <input name="new" type="submit" class="btn btn-secondary" id="view" value="New"
+                  onclick="formsubmit('toview');">
+                <input name="save" type="submit" class="btn btn-primary" id="view" value="Save"
+                  onclick="formsubmit('toview');">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
   <!--  -->
+
   <div class="container mt-3 ">
     <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
       <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv', 'toggleimg');">
