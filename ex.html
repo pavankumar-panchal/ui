@@ -9,153 +9,145 @@
 </head>
 
 <body>
-
-    <div class="container mt-5 rounded">
-        <div class="card shadow">
-            <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">
-                <h5 class="mb-0 header-line">&nbsp;&nbsp;Enter the Details</h5>
+    
+    <div class="container mt-4">
+        <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+            <div class="card-header header-line bg-light">
+                <div class="row">
+                    <div class="col-md-6">Filter the Data:</div>
+                    <div class="col-md-6 text-end">
+                        <img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg" align="absmiddle">
+                    </div>
+                </div>
             </div>
-            <div class="card-body" id="maindiv" style="display: block;">
+            <div class="card-body">
                 <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="fromdate">From Date:</label>
+                    <div id="maindiv" style="display: block;">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="fromdate" class="form-label">From Date:</label>
                                 <input name="fromdate" type="date" class="form-control" id="DPC_fromdate"
-                                    autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10"
-                                    isdatepicker="true">
-                            </div>
-                            <div class="form-group">
-                                <label for="todate">To Date:</label>
-                                <input name="todate" type="date" class="form-control" id="DPC_todate" autocomplete="off"
                                     value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10"
                                     isdatepicker="true">
                             </div>
-                            <div class="form-group">
-                                <label>Registers:</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Calls</label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Emails Customer</label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection"> Email-NonCustomer</label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Skype</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Errors</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Onsite</label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-
-                                    <label class="form-check-label" for="stremoteconnection">References</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">In-House</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Requirements</label>
-                                </div>
-                                <!-- Add other checkboxes here -->
+                            <div class="col-md-6 mb-3">
+                                <label for="todate" class="form-label">To Date:</label>
+                                <input name="todate" type="date" class="form-control" id="DPC_todate" value="21-07-2023"
+                                    datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
                             </div>
-
-                            <!-- Other input fields for the first column -->
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Category:</label>
-                                <select name="solvedby" id="solvedby" class="form-control form-select">
-                                    <option value="">ALL</option>
-                                    <!-- Add other options here -->
-                                </select>
-                                <!-- Add other checkboxes here -->
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="customername" class="form-label">Customer Name:</label>
+                                <input name="customername" type="text" class="form-control swifttext" id="customername"
+                                    autocomplete="off">
                             </div>
-                            <div class="form-group">
-                                <label>Support Unit:</label>
-                                <select name="solvedby" id="solvedby" class="form-control form-select">
-                                    <option value="">ALL</option>
+                            <div class="col-md-6 mb-3">
+                                <label for="customerid" class="form-label">Customer ID:</label>
+                                <input name="customerid" type="text" class="form-control swifttext" id="customerid"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="billnumber" class="form-label">Bill Number:</label>
+
+                                <input name="billnumber" type="text" class="form-control swifttext" id="billnumber"
+                                    autocomplete="off" data-gramm="false" wt-ignore-input="true">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="billdate" class="form-label">Bill Date:</label>
+                                <input name="billdate" type="date" class="form-control" id="billdate"
+                                    datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="registername" class="form-label">Register Name:</label>
+                                <input name="registername" type="text" class="form-control swifttext" id="registername"
+                                    autocomplete="off">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="receiptdate" class="form-label">Receipt Date:</label>
+                                <input name="receiptdate" type="date" class="form-control swifttext" id="receiptdate"
+                                    datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="chequenumber" class="form-label">Cheque Number:</label>
+                                <input name="chequenumber" type="text" class="form-control swifttext" id="chequenumber"
+                                    autocomplete="off">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="amount" class="form-label">Amount:</label>
+                                <input name="amount" type="text" class="form-control swifttext" id="amount"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="enteredby" class="form-label">Entered By:</label>
+                                <select name="s_productgroup" class="form-select swiftselect form-control"
+                                    id="s_productgroup" onchange="">
+                                    <option value="" selected="selected">Cash</option>
+                                    <option value="">Cheque</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Entered By:</label>
-                                <select name="solvedby" id="solvedby" class="form-control form-select">
-                                    <option value="">ALL</option>
-                                    <!-- Add other options here -->
-                                </select>
-                                <!-- Add other checkboxes here -->
-                            </div>
-                            <div class="form-group">
-                                <label>Caller Type:</label>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Flags:</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Customers</label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Dealers</label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection"> Employees</label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">SSM Users</label> <br>
-
+                                    <input class="form-check-input" type="radio" name="anonymous" id="databasefield11"
+                                        value="yes">
+                                    <label class="form-check-label" for="databasefield11">Yes</label>
                                 </div>
-                                <!-- Add other checkboxes here -->
-                            </div>
-
-                            <div class="form-group">
-                                <label>Anonymous:</label>
-                                <div>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="anonymous" id="databasefield11" value="Yes"> Yes
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="anonymous" id="databasefield11" value="No"> No
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="anonymous" id="databasefield11" value="Both"> Both
-                                    </label>
-                                    <!-- Add other radio buttons here -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anonymous" id="databasefield12"
+                                        value="no">
+                                    <label class="form-check-label" for="databasefield12">No</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anonymous" id="databasefield13"
+                                        value="both">
+                                    <label class="form-check-label" for="databasefield13">Both</label>
                                 </div>
                             </div>
-
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label">Order By:</label>
+                                <select name="status" class="form-select form-control swiftselect" id="status">
+                                    <option value="customerid">Customer ID</option>
+                                    <option value="customername">Registered Name</option>
+                                    <option value="receiptdate">Receipt Date</option>
+                                    <option value="userid">Entered By</option>
+                                    <option value="receiptno" selected="">Receipt Number</option>
+                                    <option value="chequeno">Cheque Number</option>
+                                    <option value="billno">Bill Number</option>
+                                    <option value="billdate">Bill Date</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="container mt-3">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div id="form-error"></div>
-                            </div>
-                            <div class="col-md-4 text-right">
-                                <button name="view" type="submit" class="btn btn-primary" id="view"
-                                    onclick="formsubmit('toview');">View
-                                </button>
-                                <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
-                                    onclick="formsubmit('toexcel');">To Excel
-                                </button>
-                            </div>
+                    <div class="col-md-12">
+                        <div class="text-end float-right">
+                            <div id="form-error"></div>
+                            <button name="view" type="submit" class="btn btn-primary" id="view"
+                                onclick="formsubmit('toview');">View</button>
+                            <button name="toexcel" type="submit" class="btn btn-info" id="toexcel"
+                                onclick="formsubmit('toexcel');">To Excel</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
 
 </body>
 
