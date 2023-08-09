@@ -105,12 +105,6 @@ include("../navigation/navigation.php");
     </div>
 
 
-
-
-
-
-
-
     <div class="container mt-4">
         <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="card-header header-line bg-light">
@@ -240,7 +234,7 @@ include("../navigation/navigation.php");
                             <div id="form-error"></div>
                             <button name="view" type="submit" class="btn btn-primary" id="view"
                                 onclick="formsubmit('toview');">View</button>
-                            <button name="toexcel" type="submit" class="btn btn-info text-white"  id="toexcel"
+                            <button name="toexcel" type="submit" class="btn btn-info text-white" id="toexcel"
                                 onclick="formsubmit('toexcel');">To Excel</button>
                         </div>
                     </div>

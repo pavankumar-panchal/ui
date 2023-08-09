@@ -3,564 +3,351 @@
 include("../navigation/navigation.php");
 
 ?>
-<!-- 
-
-<div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
-
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Billings</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Invoices</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
-
-                    <!-- content -->
-                    <style>
-                        .display {
-                            display: flex;
-                            flex-direction: row;
-                        }
-                    </style>
-                    </head>
-
-                    <body>
-                        <div class="container mt-4">
-                            <table class="table table-bordered"
-                                style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">">
-                                <tbody>
-                                    <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
-                                        <td class="bg-light">&nbsp;&nbsp;Enter/Edit/View Details</td>
-                                        <td align="right" class="bg-light">
-                                            <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg"
-                                                    name="toggleimg" align="absmiddle"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" valign="top" class="bg-light">
-                                            <div id="maindiv" style="display: block;">
-                                                <form action="" method="post" name="submitform" id="submitform"
-                                                    onsubmit="return false;">
-                                                    <div class="display">
-                                                        <table class="table table-bordered table1">
-                                                            <tbody>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Registered Name:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Customer Id:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Product Group:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customerid" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Product Name:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customerid" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">product Version:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">State:</td>
-                                                                    <td valign="top">
-                                                                        <span id="filterprdgroupdisplay">
-                                                                            <select name="s_productgroup"
-                                                                                class="form-select swiftselect form-control"
-                                                                                id="s_productgroup" onchange="">
-                                                                                <option value="" selected="selected">
-                                                                                    ALL
-                                                                                </option>
-
-                                                                            </select>
-                                                                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                                                                        </span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Bill Number:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Bill Date:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Register Name</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Complaint ID:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Date:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="date"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Time:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="time"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-
-                                                            </tbody>
-                                                        </table>
 
 
+<style>
+    .display {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
 
-                                                        <table class="table table-bordered table2">
-                                                            <tbody>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Bill Given To:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="time"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Billed By:</td>
-                                                                    <td valign="top">
-                                                                        <span id="filterprdgroupdisplay">
-                                                                            <select name="s_productgroup"
-                                                                                class="form-select swiftselect form-control"
-                                                                                id="s_productgroup" onchange="">
-                                                                                <option value="" selected="selected">
-                                                                                    Make a Selection
-                                                                                </option>
-
-                                                                            </select>
-                                                                            <!-- Details are in javascript.js page as a function prdgroup();-->
-                                                                        </span>
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Amount:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="time"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Tax Amount:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customername" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Total Amount:</td>
-                                                                    <td valign="top">
-                                                                        <input name="customerid" type="text"
-                                                                            class="form-control" id="customername"
-                                                                            size="20" autocomplete="off"
-                                                                            isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Remarks:</td>
-                                                                    <td valign="top">
-                                                                        <textarea name="teamleaderremarks" cols="45"
-                                                                            class="form-control" id="teamleaderremarks"
-                                                                            data-gramm="false"
-                                                                            wt-ignore-input="true"></textarea>
-                                                                    </td>
-                                                                </tr>
+<body>
 
 
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">User ID:</td>
-                                                                    <td valign="top">
-                                                                        <input name="complaintid" type="text"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-
-                                                    <div class="container bg-light">
-                                                        <div class="row">
-                                                            <div class="col-md-8">
-                                                                <div id="form-error"></div>
-                                                            </div>
-                                                            <div class="col-md-4 float-right bg-light " align="right">
-                                                                <input name="new" type="submit"
-                                                                    class="btn btn-secondary " id="view" value="New"
-                                                                    onclick="formsubmit('toview');">
-                                                                <input name="save" type="submit"
-                                                                    class="btn btn-primary " id="view" value="Save"
-                                                                    onclick="formsubmit('toview');">
-                                                                <input name="delete" type="submit"
-                                                                    class="btn btn-danger" id="toexcel" value="Delete"
-                                                                    onclick="formsubmit('toexcel');">
-                                                                <input name="delete" type="submit"
-                                                                    class="btn btn-warning" id="toexcel"
-                                                                    value="Error Report"
-                                                                    onclick="formsubmit('toexcel');">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </form>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-
-
-
-                        <div class="container mt-4">
-                            <table class="table table-bordered"
-                                style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-                                <tbody>
-                                    <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
-                                        <td class="bg-light">&nbsp;&nbsp;Filter the Data:
-                                        <td align="right" class="bg-light">
-                                            <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg"
-                                                    name="toggleimg" align="absmiddle"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" valign="top" class="bg-light">
-                                            <div id="maindiv" style="display: block;">
-                                                <form action="" method="post" name="submitform" id="submitform"
-                                                    onsubmit="return false;">
-                                                    <div class="display">
-                                                        <table class="table table-bordered table1">
-                                                            <tbody>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">From Date:</td>
-                                                                    <td valign="top">
-                                                                        <div class="d-flex">
-                                                                            <input name="fromdate" type="date"
-                                                                                class="form-control" id="DPC_fromdate"
-                                                                                size="30" autocomplete="off"
-                                                                                value="21-07-2023"
-                                                                                datepicker_format="DD-MM-YYYY"
-                                                                                maxlength="10" isdatepicker="true">
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">To Date:</td>
-                                                                    <td valign="top">
-                                                                        <div class="d-flex">
-                                                                            <input name="fromdate" type="date"
-                                                                                class="form-control" id="DPC_fromdate"
-                                                                                size="30" autocomplete="off"
-                                                                                value="21-07-2023"
-                                                                                datepicker_format="DD-MM-YYYY"
-                                                                                maxlength="10" isdatepicker="true">
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Customer Name:</td>
-                                                                    <td valign="top">
-                                                                        <input name="complaintid" type="text"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Customer ID:</td>
-                                                                    <td valign="top">
-                                                                        <input name="complaintid" type="text"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Product Group:</td>
-                                                                    <td valign="top">
-                                                                        <select name="productname" id="productname"
-                                                                            class="form-select form-control swiftselect">
-                                                                            <option value="">ALL</option>
-
-                                                                        </select>
-
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Product Name</td>
-                                                                    <td valign="top">
-                                                                        <select name="productname" id="productname"
-                                                                            class="form-select form-control swiftselect">
-                                                                            <option value="">ALL</option>
-
-                                                                        </select>
-
-                                                                    </td>
-                                                                </tr>
-
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">State:</td>
-                                                                    <td valign="top">
-                                                                        <select name="productname" id="productname"
-                                                                            class="form-select form-control swiftselect">
-                                                                            <option value="">ALL</option>
-
-                                                                        </select>
-
-                                                                    </td>
-                                                                </tr>
-
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Bill Number:</td>
-                                                                    <td valign="top">
-                                                                        <textarea name="teamleaderremarks" cols="45"
-                                                                            class="form-control" id="teamleaderremarks"
-                                                                            data-gramm="false"
-                                                                            wt-ignore-input="true"></textarea>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Bill Date:</td>
-                                                                    <td valign="top">
-                                                                        <input name="complaintid" type="text"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
-
-                                                                    </td>
-                                                                </tr>
-
-                                                            </tbody>
-                                                        </table>
-
-
-
-                                                        <table class="table table-bordered table2">
-                                                            <tbody>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Register Name:</td>
-                                                                    <td valign="top">
-                                                                        <input name="complaintid" type="text"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Billed By:</td>
-                                                                    <td valign="top">
-                                                                        <select name="productname" id="productname"
-                                                                            class="form-select form-control swiftselect">
-                                                                            <option value="">ALL</option>
-
-                                                                        </select>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Amount:</td>
-                                                                    <td valign="top">
-                                                                        <input name="complaintid" type="date"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Entered By:</td>
-                                                                    <td valign="top">
-                                                                        <select name="productname" id="productname"
-                                                                            class="form-select form-control swiftselect">
-                                                                            <option value="">ALL</option>
-
-                                                                        </select>
-                                                                    </td>
-                                                                </tr>
-
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Compliant ID:</td>
-                                                                    <td valign="top">
-                                                                        <input name="complaintid" type="text"
-                                                                            class="form-control swifttext"
-                                                                            id="complaintid" size="30"
-                                                                            autocomplete="off" isdatepicker="true">
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">Flags:</td>
-                                                                    <td valign="top">
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="anonymous" id="databasefield11"
-                                                                                value="yes">
-                                                                            <label class="form-check-label"
-                                                                                for="databasefield11">Yes</label>
-                                                                        </div>
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="anonymous" id="databasefield12"
-                                                                                value="no">
-                                                                            <label class="form-check-label"
-                                                                                for="databasefield12">No</label>
-                                                                        </div>
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="anonymous" id="databasefield12"
-                                                                                value="no">
-                                                                            <label class="form-check-label"
-                                                                                for="databasefield12">Both</label>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="bg-white">
-                                                                    <td valign="top">order By:</td>
-                                                                    <td valign="top">
-                                                                        <select name="status"
-                                                                            class="form-select form-control swiftselect"
-                                                                            id="status">
-                                                                            <option value="callertype">Caller Type
-                                                                            </option>
-                                                                            <option value="category">Category</option>
-                                                                            <option value="complaintid"
-                                                                                selected="selected">Compliant ID
-                                                                            </option>
-                                                                            <option value="customerid">Customer ID
-                                                                            </option>
-                                                                            <option value="customername">Registered Name
-                                                                            </option>
-                                                                            <option value="date">Date</option>
-                                                                            <option value="userid">Entered By</option>
-                                                                            <option value="problem">Problem</option>
-                                                                            <option value="productname">Product Group
-                                                                            </option>
-                                                                            <option value="productname">Product Name
-                                                                            </option>
-                                                                            <option value="status">Status</option>
-                                                                            <option value="solvedby">Solved BY</option>
-                                                                            <option value="billno">Bill Number</option>
-                                                                            <option value="billdate">Bill Date</option>
-                                                                            <option value="acknowledgementno">
-                                                                                Acknowledgement Number</option>
-
-                                                                        </select>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-
-                                                    <div class="container bg-light">
-                                                        <div class="row">
-                                                            <div class="col-md-8">
-                                                                <div id="form-error"></div>
-                                                            </div>
-                                                            <div class="col-md-4 float-right bg-light " align="right">
-                                                                <input name="view" type="submit"
-                                                                    class="btn btn-primary " id="view" value="View"
-                                                                    onclick="formsubmit('toview');">
-                                                                <input name="toexcel" type="submit" class="btn btn-info"
-                                                                    id="toexcel" value="To Excel"
-                                                                    onclick="formsubmit('toexcel');">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </form>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                   
-
-                        <div class="col-md-12">
-                        </div>
+    <div class="container mt-5">
+        <div class="card " style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+            <div class="card-header bg-light" onclick="showhide('maindiv','toggleimg');">
+                <div class="d-flex justify-content-between">
+                    <div class="py-2">&nbsp;&nbsp;Enter/Edit/View Details</div>
+                    <div class="py-2">
+                        <div><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
+                                align="absmiddle"></div>
+                    </div>
                 </div>
             </div>
-            <?php
+            <div class="card-body">
+                <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                    <div class="row ">
+                        <div class="col-md-6 ">
 
-            include("../navigation/footer.php");
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Registered Name:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Customer Id:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">product Group:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Product Name:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Product Version:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">State:</label>
+                                <select name="s_productgroup" class="form-select swiftselect form-control"
+                                    id="s_productgroup" onchange="">
+                                    <option value="" selected="selected">
+                                        ALL
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Bill Number:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Bill Date:</label>
+                                <input name="customername" type="date" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Register Number:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Complaint ID:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <!-- Add more divs for other fields -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Date:</label>
+                                <input name="customername" type="date" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Time:</label>
+                                <input name="customername" type="time" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
 
-            ?>
+                            <div class="mb-3">
+                                <label for="customergivento" class="form-label">Bill Given To:</label>
+                                <input name="customergivento" type="text" class="form-control" id="customergivento"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Billed By:</label>
+                                <select name="s_productgroup" class="form-select swiftselect form-control"
+                                    id="s_productgroup" onchange="">
+                                    <option value="" selected="selected">
+                                        ALL
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Amount:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Tax Amount:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Total Amount:</label>
+                                <input name="customername" type="date" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">Remarks:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername" class="form-label">User ID:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off" isdatepicker="true">
+                            </div>
+
+                            <!-- Add more divs for other fields -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="form-error"></div>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <button name="new" type="submit" class="btn btn-secondary" id="new"
+                                onclick="formsubmit('new');">New</button>
+                            <button name="save" type="submit" class="btn btn-primary" id="save"
+                                onclick="formsubmit('save');">Save</button>
+                            <button name="delete" type="submit" class="btn btn-danger" id="delete"
+                                onclick="formsubmit('delete');">Delete</button>
+                            <button name="error-report" type="submit" class="btn btn-warning" id="error-report"
+                                onclick="formsubmit('error-report');">Error Report</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container mt-4">
+        <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+            <div class="card-header bg-light" onclick="showhide('maindiv','toggleimg');">
+                <div class="d-flex justify-content-between">
+                    <div class="py-2">&nbsp;&nbsp;Filter the Data:</div>
+                    <div class="py-2">
+                        <div><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
+                                align="absmiddle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="maindiv" style="display: block;">
+                    <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="fromdate" class="form-label">From Date:</label>
+                                    <input name="fromdate" type="date" class="form-control" id="DPC_fromdate"
+                                        autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
+                                        maxlength="10" isdatepicker="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="todate" class="form-label">To Date:</label>
+                                    <input name="todate" type="date" class="form-control" id="DPC_todate"
+                                        autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
+                                        maxlength="10" isdatepicker="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customername" class="form-label">Customer Name:</label>
+                                    <input name="customername" type="text" class="form-control swifttext"
+                                        id="customername" autocomplete="off" isdatepicker="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customerid" class="form-label">Customer ID:</label>
+                                    <input name="customerid" type="text" class="form-control swifttext" id="customerid"
+                                        autocomplete="off" isdatepicker="true">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="productgroup" class="form-label">Product Group:</label>
+                                    <select name="productgroup" id="productgroup"
+                                        class="form-select form-control swiftselect">
+                                        <option value="">ALL</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productname" class="form-label">Product Name:</label>
+                                    <select name="productname" id="productname"
+                                        class="form-select form-control swiftselect">
+                                        <option value="">ALL</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">State:</label>
+                                    <select name="state" id="state" class="form-select form-control swiftselect">
+                                        <option value="">ALL</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="billnumber" class="form-label">Bill Number:</label>
+                                    <textarea name="billnumber" cols="45" class="form-control" id="billnumber"
+                                        data-gramm="false" wt-ignore-input="true"></textarea>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="customerid" class="form-label">Bill Date:</label>
+                                    <input name="customerid" type="date" class="form-control swifttext" id="customerid"
+                                        autocomplete="off" isdatepicker="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productgroup" class="form-label">Register Name:</label>
+                                    <input name="customerid" type="text" class="form-control swifttext" id="customerid"
+                                        autocomplete="off" isdatepicker="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productname" class="form-label">Billed By:</label>
+                                    <select name="productname" id="productname"
+                                        class="form-select form-control swiftselect">
+                                        <option value="">ALL</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">Amount:</label>
+                                    <input name="customerid" type="text" class="form-control swifttext" id="customerid"
+                                        autocomplete="off" isdatepicker="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="billnumber" class="form-label">Entered By:</label>
+                                    <select name="productname" id="productname"
+                                        class="form-select form-control swiftselect">
+                                        <option value="">ALL</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">Compliant ID:</label>
+                                    <input name="customerid" type="text" class="form-control swifttext" id="customerid"
+                                        autocomplete="off" isdatepicker="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">Order By :</label>
+
+
+                                    <select name="order_by" class="form-select form-control swiftselect" id="order_by">
+                                        <option value="callertype">Caller Type</option>
+                                        <option value="category">Category</option>
+                                        <option value="complaintid" selected="selected">Complaint ID</option>
+                                        <option value="customerid">Customer ID</option>
+                                        <option value="customername">Registered Name</option>
+                                        <option value="date">Date</option>
+                                        <option value="userid">Entered By</option>
+                                        <option value="problem">Problem</option>
+                                        <option value="productname">Product Group</option>
+                                        <option value="productname">Product Name</option>
+                                        <option value="status">Status</option>
+                                        <option value="solvedby">Solved By</option>
+                                        <option value="billno">Bill Number</option>
+                                        <option value="billdate">Bill Date</option>
+                                        <option value="acknowledgementno">Acknowledgement Number</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Flags:</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flags" id="flags_yes"
+                                            value="yes">
+                                        <label class="form-check-label" for="flags_yes">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flags" id="flags_no"
+                                            value="no">
+                                        <label class="form-check-label" for="flags_no">No</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flags" id="flags_both"
+                                            value="both">
+                                        <label class="form-check-label" for="flags_both">Both</label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div id="form-error"></div>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <button name="view" type="submit" class="btn btn-primary" id="view"
+                                        onclick="formsubmit('toview');">View</button>
+                                    <button name="toexcel" type="submit" class="btn btn-info" id="toexcel"
+                                        onclick="formsubmit('toexcel');">To Excel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+
+    include("../navigation/footer.php");
+
+    ?>
