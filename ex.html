@@ -4,123 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <title>Your Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
 
-
-    <div class="container mt-4">
-        <div class="card">
+    <div class="container mt-4 rounded">
+        <div class="card shadow">
             <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">
-                <h5 class="mb-0 header-line">Enter the Details</h5>
+                <h5 class="mb-0 header-line">&nbsp;&nbsp;Enter the Details</h5>
             </div>
             <div class="card-body" id="maindiv" style="display: block;">
                 <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                    <div class="row mb-3">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Registers:</label>
-                                <div>
-                                    <label class="checkbox-inline">
-                                        <input name="check[]" type="checkbox" value="Call" checked> Calls
-                                    </label>
-
-                                    <label><input name="check[]" type="checkbox" value="Email" checked="checked">
-                                        Emails</label>
-                                    <label><input name="check[]" type="checkbox" value="Skype" checked="checked">
-                                        Skype</label>
-                                    <label><input name="check[]" type="checkbox" value="Errors" checked="checked">
-                                        Errors</label>
-                                    <label><input name="check[]" type="checkbox" value="Onsite" checked="checked">
-                                        Onsite</label>
-                                    <label><input name="check[]" type="checkbox" value="References" checked="checked">
-                                        References</label>
-                                    <label><input name="check[]" type="checkbox" value="Inhouse" checked="checked">
-                                        Inhouse</label>
-                                    <label><input name="check[]" type="checkbox" value="Requirements" checked="checked">
-                                        Requirements</label>
-                                    <!-- Add other checkboxes here -->
+                                <label for="fromdate">From Date:</label>
+                                <input name="fromdate" type="date" class="form-control" id="DPC_fromdate"
+                                    autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10"
+                                    isdatepicker="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="todate">To Date:</label>
+                                <input name="todate" type="date" class="form-control" id="DPC_todate" autocomplete="off"
+                                    value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10"
+                                    isdatepicker="true">
+                            </div>
+                            <div class="form-group">
+                                <label>Service Charge:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Service Charge</label>
                                 </div>
+                                <!-- Add other checkboxes here -->
                             </div>
-                            <!-- Other input fields -->
-                        </div>
-                        <div class="col-md-6">
                             <div class="form-group">
-                                <label>From Date:</label>
-                                <input name="fromdate" type="date" id="fromdate" value="2021-07-01"
-                                    class="form-control">
-                            </div>
-                            <!-- Other input fields -->
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Caller Type:</label>
-                                <div>
-                                    <label class="checkbox-inline">
-                                        <input name="customer" type="checkbox" id="customer" value="Customer" checked>
-                                        Customers
-                                    </label>
-                                    <label><input name="dealer" type="checkbox" id="dealer" value="Dealer"
-                                            checked="checked">
-                                        Dealers</label>
-                                    <label><input name="employee" type="checkbox" id="employee" value="employee"
-                                            checked="checked">
-                                        Employees</label>
-                                    <label><input name="ssmuser" type="checkbox" id="ssmuser" value="SSMUser"
-                                            checked="checked">
-                                        SSM Users</label>
-                                    <!-- Add other checkboxes here -->
-                                </div>
-                            </div>
-                            <!-- Other input fields -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>To Date:</label>
-                                <input name="todate" type="date" id="todate" value="2021-07-31" class="form-control">
-                            </div>
-                            <!-- Other input fields -->
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Category:</label>
-                                <select name="category" id="category" class="form-control form-select">
-                                    <option value="" selected>ALL</option>
-                                    <!-- Add other options here -->
-                                </select>
-                            </div>
-                            <!-- Other input fields -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Support Unit:</label>
-                                <select name="supportunit" class="form-control form-select" id="supportunit">
+                                <label for="solvedby">Solved By:</label>
+                                <select name="solvedby" id="solvedby" class="form-control">
                                     <option value="">ALL</option>
                                     <!-- Add other options here -->
                                 </select>
                             </div>
-                            <!-- Other input fields -->
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
                             <div class="form-group">
-                                <label>Entered By:</label>
-                                <select name="userid" id="userid" class="form-control form-select">
-                                    <option value="">ALL</option>
-                                    <!-- Add other options here -->
-                                </select>
+                                <label>Solved Throuh:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Remote Conection</label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Marketing Person</label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection"> Onsite Visit</label> <br>
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Over Phone</label> <br>
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Mail</label>
+                                </div>
+                                <!-- Add other checkboxes here -->
                             </div>
-                            <!-- Other input fields -->
-                        </div>
-                        <div class="col-md-6">
                             <div class="form-group">
                                 <label>Anonymous:</label>
                                 <div>
@@ -136,42 +85,92 @@
                                     <!-- Add other radio buttons here -->
                                 </div>
                             </div>
-                            <!-- Other input fields -->
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+
                             <div class="form-group">
-                                <label>Report on:</label>
+                                <label>Reports on:</label>
                                 <div>
                                     <label class="radio-inline">
-                                        <input name="reporton" type="radio" id="reporton0" value="statistics" checked>
+                                        <input type="radio" name="anonymous" id="databasefield11" value="Statistics">
                                         Statistics
                                     </label>
                                     <label class="radio-inline">
-                                        <input name="reporton" type="radio" id="reporton0" value="Details" checked>
+                                        <input type="radio" name="anonymous" id="databasefield11" value="Details">
                                         Details
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="anonymous" id="databasefield11"
+                                            value="Pending Visits"> pending Visits
                                     </label>
                                     <!-- Add other radio buttons here -->
                                 </div>
                             </div>
-                            <!-- Other input fields -->
+                            <!-- Other input fields for the first column -->
                         </div>
                         <div class="col-md-6">
-                            <!-- No additional input fields -->
+                            <div class="form-group">
+                                <label for="solvedby">Customer Name:</label>
+                                <input name="todate" type="text" class="form-control" id="DPC_todate" autocomplete="off"
+                                    datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                            </div>
+                            <div class="form-group">
+                                <label>Product group:</label>
+                                <select name="solvedby" id="solvedby" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                                <!-- Add other checkboxes here -->
+                            </div>
+                            <div class="form-group">
+                                <label>Product name:</label>
+                                <select name="solvedby" id="solvedby" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                                <!-- Add other checkboxes here -->
+                            </div>
+                            <div class="form-group">
+                                <label>Status:</label>
+                                <select name="solvedby" id="solvedby" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                                <!-- Add other checkboxes here -->
+                            </div>
+                            <div class="form-group">
+                                <label>Registered By:</label>
+                                <select name="solvedby" id="solvedby" class="form-control">
+                                    <option value="">ALL</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Support Unit:</label>
+                                <select name="solvedby" id="solvedby" class="form-control">
+                                    <option value="">ALL</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Complaint Id:</label>
+                                <input name="todate" type="text" class="form-control" id="DPC_todate" autocomplete="off"
+                                    isdatepicker="true">
+                                <!-- Add other checkboxes here -->
+                            </div>
+                            <!-- Other input fields for the second column -->
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 text-end float-right">
-                            <div id="form-error"></div>
-                            <button name="view" type="submit" class="btn btn-primary" id="view"
-                                onclick="formsubmit('view');">
-                                View
-                            </button>
-                            <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
-                                onclick="formsubmit('toexcel');">
-                                To Excel
-                            </button>
+
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="form-error"></div>
+                            </div>
+                            <div class="col-md-4 text-right">
+                                <button name="view" type="submit" class="btn btn-primary" id="view"
+                                    onclick="formsubmit('toview');">View
+                                </button>
+                                <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
+                                    onclick="formsubmit('toexcel');">To Excel
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -179,6 +178,9 @@
         </div>
     </div>
 
+    <script>
+    // Your JavaScript code here
+    </script>
 
 </body>
 
