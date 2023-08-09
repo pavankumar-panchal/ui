@@ -63,9 +63,6 @@ include("../navigation/navigation.php");
 
     </div>
     <!--  -->
-
-
-
     <!-- Add the necessary Bootstrap CSS link -->
     <div class="container mt-4">
         <div class="card border" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin:0px -13px 0px -10px;">

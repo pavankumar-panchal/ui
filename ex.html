@@ -5,222 +5,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap');
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #eee;
-            height: 100vh;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to top, #fff 10%, rgba(93, 42, 141, 0.4) 90%) no-repeat;
-        }
-
-        .wrapper {
-            max-width: 500px;
-            border-radius: 10px;
-            margin: 50px auto;
-            padding: 30px 40px;
-            box-shadow: 20px 20px 80px rgb(206, 206, 206);
-        }
-
-        .h2 {
-            font-family: 'Kaushan Script', cursive;
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #400485;
-            font-style: italic;
-        }
-
-        .h4 {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .input-field {
-            /* border: 1px solid #ddd; */
-            border-radius: 5px;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            border: 1px solid #400485;
-            color: #400485;
-        }
-
-        .input-field:hover {
-            color: #7b4ca0;
-            border: 1px solid #7b4ca0;
-        }
-
-        input {
-            border: none;
-            outline: none;
-            box-shadow: none;
-            width: 100%;
-            padding: 0px 2px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .fa-eye-slash.btn {
-            border: none;
-            outline: none;
-            box-shadow: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #400485;
-            font-weight: 700;
-        }
-
-        a:hover {
-            text-decoration: none;
-            color: #7b4ca0;
-        }
-
-        .option {
-            position: relative;
-            padding-left: 30px;
-            cursor: pointer;
-        }
-
-        .option label.text-muted {
-            display: block;
-            cursor: pointer;
-        }
-
-        .option input {
-            display: none;
-        }
-
-        .checkmark {
-            position: absolute;
-            top: 3px;
-            left: 0;
-            height: 20px;
-            width: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .option input:checked~.checkmark:after {
-            display: block;
-        }
-
-        .option .checkmark:after {
-            content: "";
-            width: 13px;
-            height: 13px;
-            display: block;
-            background: #400485;
-            position: absolute;
-            top: 48%;
-            left: 53%;
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: 300ms ease-in-out 0s;
-        }
-
-        .option input[type="radio"]:checked~.checkmark {
-            background: #fff;
-            transition: 300ms ease-in-out 0s;
-            border: 1px solid #400485;
-        }
-
-        .option input[type="radio"]:checked~.checkmark:after {
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        .btn.btn-block {
-            border-radius: 20px;
-            background-color: #400485;
-            color: #fff;
-        }
-
-        .btn.btn-block:hover {
-            background-color: #55268be0;
-        }
-
-        @media(max-width: 575px) {
-            .wrapper {
-                margin: 10px;
-            }
-        }
-
-        @media(max-width:424px) {
-            .wrapper {
-                padding: 30px 10px;
-                margin: 5px;
-            }
-
-            .option {
-                position: relative;
-                padding-left: 22px;
-            }
-
-            .option label.text-muted {
-                font-size: 0.95rem;
-            }
-
-            .checkmark {
-                position: absolute;
-                top: 2px;
-            }
-
-            .option .checkmark:after {
-                top: 50%;
-            }
-
-            #forgot {
-                font-size: 0.95rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <div class="wrapper bg-white">
-        <div class="h2 text-center">Creativity</div>
-        <div class="h4 text-muted text-center pt-2">Enter your login details</div>
-        <form class="pt-3">
-            <div class="form-group py-2">
-                <div class="input-field">
-                    <span class="far fa-user p-2"></span>
-                    <input type="text" placeholder="Username or Email Address" required class="">
-                </div>
+
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">
+                <h5 class="mb-0 header-line">Enter the Details</h5>
             </div>
-            <div class="form-group py-1 pb-2">
-                <div class="input-field">
-                    <span class="fas fa-lock p-2"></span>
-                    <input type="text" placeholder="Enter your Password" required class="">
-                    <button class="btn bg-white text-muted">
-                        <span class="far fa-eye-slash"></span>
-                    </button>
-                </div>
+            <div class="card-body" id="maindiv" style="display: block;">
+                <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Registers:</label>
+                                <div>
+                                    <label class="checkbox-inline">
+                                        <input name="check[]" type="checkbox" value="Call" checked> Calls
+                                    </label>
+
+                                    <label><input name="check[]" type="checkbox" value="Email" checked="checked">
+                                        Emails</label>
+                                    <label><input name="check[]" type="checkbox" value="Skype" checked="checked">
+                                        Skype</label>
+                                    <label><input name="check[]" type="checkbox" value="Errors" checked="checked">
+                                        Errors</label>
+                                    <label><input name="check[]" type="checkbox" value="Onsite" checked="checked">
+                                        Onsite</label>
+                                    <label><input name="check[]" type="checkbox" value="References" checked="checked">
+                                        References</label>
+                                    <label><input name="check[]" type="checkbox" value="Inhouse" checked="checked">
+                                        Inhouse</label>
+                                    <label><input name="check[]" type="checkbox" value="Requirements" checked="checked">
+                                        Requirements</label>
+                                    <!-- Add other checkboxes here -->
+                                </div>
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>From Date:</label>
+                                <input name="fromdate" type="date" id="fromdate" value="2021-07-01"
+                                    class="form-control">
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Caller Type:</label>
+                                <div>
+                                    <label class="checkbox-inline">
+                                        <input name="customer" type="checkbox" id="customer" value="Customer" checked>
+                                        Customers
+                                    </label>
+                                    <label><input name="dealer" type="checkbox" id="dealer" value="Dealer"
+                                            checked="checked">
+                                        Dealers</label>
+                                    <label><input name="employee" type="checkbox" id="employee" value="employee"
+                                            checked="checked">
+                                        Employees</label>
+                                    <label><input name="ssmuser" type="checkbox" id="ssmuser" value="SSMUser"
+                                            checked="checked">
+                                        SSM Users</label>
+                                    <!-- Add other checkboxes here -->
+                                </div>
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>To Date:</label>
+                                <input name="todate" type="date" id="todate" value="2021-07-31" class="form-control">
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Category:</label>
+                                <select name="category" id="category" class="form-control form-select">
+                                    <option value="" selected>ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Support Unit:</label>
+                                <select name="supportunit" class="form-control form-select" id="supportunit">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Entered By:</label>
+                                <select name="userid" id="userid" class="form-control form-select">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Anonymous:</label>
+                                <div>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="anonymous" id="databasefield11" value="Yes"> Yes
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="anonymous" id="databasefield11" value="No"> No
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="anonymous" id="databasefield11" value="Both"> Both
+                                    </label>
+                                    <!-- Add other radio buttons here -->
+                                </div>
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Report on:</label>
+                                <div>
+                                    <label class="radio-inline">
+                                        <input name="reporton" type="radio" id="reporton0" value="statistics" checked>
+                                        Statistics
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input name="reporton" type="radio" id="reporton0" value="Details" checked>
+                                        Details
+                                    </label>
+                                    <!-- Add other radio buttons here -->
+                                </div>
+                            </div>
+                            <!-- Other input fields -->
+                        </div>
+                        <div class="col-md-6">
+                            <!-- No additional input fields -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-end float-right">
+                            <div id="form-error"></div>
+                            <button name="view" type="submit" class="btn btn-primary" id="view"
+                                onclick="formsubmit('view');">
+                                View
+                            </button>
+                            <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
+                                onclick="formsubmit('toexcel');">
+                                To Excel
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="d-flex align-items-start">
-                <div class="remember">
-                    <label class="option text-muted"> Remember me
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="ml-auto">
-                    <a href="#" id="forgot">Forgot Password?</a>
-                </div>
-            </div>
-            <button class="btn btn-block text-center my-3">Log in</button>
-            <div class="text-center pt-3 text-muted">Not a member? <a href="#">Sign up</a></div>
-        </form>
+        </div>
     </div>
+
+
 </body>
 
 </html>

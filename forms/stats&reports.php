@@ -3,175 +3,168 @@
 include("../navigation/navigation.php");
 
 ?>
-<!-- content -->
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">
+      <h5 class="mb-0 header-line">Enter the Details</h5>
+    </div>
+    <div class="card-body" id="maindiv" style="display: block;">
+      <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Registers:</label>
+              <div>
+                <label class="checkbox-inline">
+                  <input name="check[]" type="checkbox" value="Call" checked> Calls
+                </label>
 
-<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;" >
-
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Reports</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Stats & Reports</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
-<div class="container mt-4">
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <tbody>
-        <tr style="cursor:pointer" onclick="showhide('maindiv','toggleimg');" class="bg-light">
-          <td class="header-line">Enter the Details</td>
-          <td align="right" class="header-line">
-            <div class="text-right">
-              <img src="../images/minus.jpg" class="img-fluid" id="toggleimg" name="toggleimg" align="absmiddle">
-            </div>
-          </td>
-
-
-        </tr>
-        <tr>
-          <td colspan="2" valign="top" class="badge-pill bg-light">
-            <div id="maindiv" style="display: block;">
-              <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                <table class="table table-bordered ">
-                  <tbody>
-                    <tr class="bg-white">
-                      <td>Registers:</td>
-                      <td>
-                        <label><input name="check[]" type="checkbox" value="Call" checked="checked">
-                          Calls</label>
-                        <label><input name="check[]" type="checkbox" value="Email" checked="checked">
-                          Emails</label>
-                        <label><input name="check[]" type="checkbox" value="Skype" checked="checked">
-                          Skype</label>
-                        <label><input name="check[]" type="checkbox" value="Errors" checked="checked">
-                          Errors</label>
-                        <label><input name="check[]" type="checkbox" value="Onsite" checked="checked">
-                          Onsite</label>
-                        <label><input name="check[]" type="checkbox" value="References" checked="checked">
-                          References</label>
-                        <label><input name="check[]" type="checkbox" value="Inhouse" checked="checked">
-                          Inhouse</label>
-                        <label><input name="check[]" type="checkbox" value="Requirements" checked="checked">
-                          Requirements</label>
-                      </td>
-                    </tr>
-                    <tr class="bg-white">
-                      <td>From Date:</td>
-                      <td><input name="fromdate" type="date" id="fromdate" value="2021-07-01" class="form-control">
-                      </td>
-
-                    </tr>
-                    <tr class="bg-white">
-                      <td>To Date:</td>
-                      <td><input name="todate" type="date" id="todate" value="2021-07-31" class="form-control"></td>
-                    </tr>
-                    <tr class="bg-white">
-                    </tr>
-                    <tr class="bg-white">
-                      <td valign="top">Entered By:</td>
-                      <td valign="top">
-                        <select name="userid" id="userid" class="form-control">
-                          <option value="">ALL</option>
-                          <!-- Add other options here -->
-                        </select>
-                      </td>
-                    </tr>
-                    <tr class="bg-white">
-                      <td valign="top">Caller Type:</td>
-                      <td valign="top">
-                        <label><input name="customer" type="checkbox" id="customer" value="Customer" checked="checked">
-                          Customers</label>
-                        <label><input name="dealer" type="checkbox" id="dealer" value="Dealer" checked="checked">
-                          Dealers</label>
-                        <label><input name="employee" type="checkbox" id="employee" value="employee" checked="checked">
-                          Employees</label>
-                        <label><input name="ssmuser" type="checkbox" id="ssmuser" value="SSMUser" checked="checked">
-                          SSM Users</label>
-                      </td>
-                    </tr>
-                    <tr class="bg-white">
-                      <td valign="top">Category:</td>
-                      <td valign="top">
-                        <select name="category" id="category" class="form-control">
-                          <option value="" selected="selected">ALL</option>
-                          <option value="BLR">Bangalore</option>
-                          <option value="CSD">CSD</option>
-                          <option value="KKG">KKG</option>
-                          <!-- Add other options here -->
-                        </select>
-                      </td>
-                    </tr>
-                    <tr class="bg-white">
-                      <td valign="top">Support Unit:</td>
-                      <td valign="top">
-                        <select name="supportunit" class="form-control" id="supportunit">
-                          <option value="">ALL</option>
-                          <option value="2">ewrt</option>
-                          <option value="1">support</option>
-                          <!-- Add other options here -->
-                        </select>
-                      </td>
-                    </tr>
-                    <tr class="bg-white">
-                      <td valign="top">Anonymous:</td>
-                      <td valign="top">
-                        <label><input type="radio" name="anonymous" id="databasefield11" value="yes">
-                          Yes</label>
-                        <label><input type="radio" name="anonymous" id="databasefield12" value="no">
-                          No</label>
-                        <label><input type="radio" name="anonymous" id="databasefield13" value="" checked="checked">
-                          Both</label>
-                      </td>
-                    </tr>
-                    <tr class="bg-white">
-                      <td valign="top">Report on:</td>
-                      <td valign="top">
-                        <label><input name="reporton" type="radio" id="reporton0" value="statistics" checked="checked">
-                          Statistics</label>
-                        <label><input type="radio" name="reporton" id="reporton1" value="details">
-                          Details</label>
-                      </td>
-                    </tr>
-
-
-                  </tbody>
-
-                </table>
-        <tr>
-          <td align="right" valign="middle" style="padding-right:15px; border-top:1px solid #d1dceb;" colspan="2"
-            class="bg-light">
-            <div class="row ">
-              <div class="col-8">
-                <div id="form-error"></div>
-              </div>
-              <div class="col-4 text-right ">
-                <input name="view" type="submit" class="btn btn-primary" id="view" value="View"
-                  onclick="formsubmit('view');">
-                <input name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel" value="To Excel"
-                  onclick="formsubmit('toexcel');">
+                <label><input name="check[]" type="checkbox" value="Email" checked="checked">
+                  Emails</label>
+                <label><input name="check[]" type="checkbox" value="Skype" checked="checked">
+                  Skype</label>
+                <label><input name="check[]" type="checkbox" value="Errors" checked="checked">
+                  Errors</label>
+                <label><input name="check[]" type="checkbox" value="Onsite" checked="checked">
+                  Onsite</label>
+                <label><input name="check[]" type="checkbox" value="References" checked="checked">
+                  References</label>
+                <label><input name="check[]" type="checkbox" value="Inhouse" checked="checked">
+                  Inhouse</label>
+                <label><input name="check[]" type="checkbox" value="Requirements" checked="checked">
+                  Requirements</label>
+                <!-- Add other checkboxes here -->
               </div>
             </div>
-          </td>
-        </tr>
-
-        </form>
+            <!-- Other input fields -->
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>From Date:</label>
+              <input name="fromdate" type="date" id="fromdate" value="2021-07-01" class="form-control">
+            </div>
+            <!-- Other input fields -->
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Caller Type:</label>
+              <div>
+                <label class="checkbox-inline">
+                  <input name="customer" type="checkbox" id="customer" value="Customer" checked>
+                  Customers
+                </label>
+                <label><input name="dealer" type="checkbox" id="dealer" value="Dealer" checked="checked">
+                  Dealers</label>
+                <label><input name="employee" type="checkbox" id="employee" value="employee" checked="checked">
+                  Employees</label>
+                <label><input name="ssmuser" type="checkbox" id="ssmuser" value="SSMUser" checked="checked">
+                  SSM Users</label>
+                <!-- Add other checkboxes here -->
+              </div>
+            </div>
+            <!-- Other input fields -->
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>To Date:</label>
+              <input name="todate" type="date" id="todate" value="2021-07-31" class="form-control">
+            </div>
+            <!-- Other input fields -->
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Category:</label>
+              <select name="category" id="category" class="form-control form-select">
+                <option value="" selected>ALL</option>
+                <!-- Add other options here -->
+              </select>
+            </div>
+            <!-- Other input fields -->
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Support Unit:</label>
+              <select name="supportunit" class="form-control form-select" id="supportunit">
+                <option value="">ALL</option>
+                <!-- Add other options here -->
+              </select>
+            </div>
+            <!-- Other input fields -->
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Entered By:</label>
+              <select name="userid" id="userid" class="form-control form-select">
+                <option value="">ALL</option>
+                <!-- Add other options here -->
+              </select>
+            </div>
+            <!-- Other input fields -->
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Anonymous:</label>
+              <div>
+                <label class="radio-inline">
+                  <input type="radio" name="anonymous" id="databasefield11" value="Yes"> Yes
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="anonymous" id="databasefield11" value="No"> No
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="anonymous" id="databasefield11" value="Both"> Both
+                </label>
+                <!-- Add other radio buttons here -->
+              </div>
+            </div>
+            <!-- Other input fields -->
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Report on:</label>
+              <div>
+                <label class="radio-inline">
+                  <input name="reporton" type="radio" id="reporton0" value="statistics" checked>
+                  Statistics
+                </label>
+                <label class="radio-inline">
+                  <input name="reporton" type="radio" id="reporton0" value="Details" checked>
+                  Details
+                </label>
+                <!-- Add other radio buttons here -->
+              </div>
+            </div>
+            <!-- Other input fields -->
+          </div>
+          <div class="col-md-6">
+            <!-- No additional input fields -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-end float-right">
+            <div id="form-error"></div>
+            <button name="view" type="submit" class="btn btn-primary" id="view" onclick="formsubmit('view');">
+              View
+            </button>
+            <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
+              onclick="formsubmit('toexcel');">
+              To Excel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-  </td>
-
-  </tr>
-
-  </tbody>
-  </table>
 </div>
 
-
-<div class="col-md-12">
-</div>
-</div>
-</div>
 <?php
 
 include("../navigation/footer.php");

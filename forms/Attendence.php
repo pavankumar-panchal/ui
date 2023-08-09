@@ -18,7 +18,7 @@ include("../navigation/navigation.php");
 <div class="container mt-4 ">
     <div class="table-responsive ">
         <table class="table table-bordered  rounded-3"
-            style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); overflow: hidden; margin-top: 50px;"> ">
+            style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); overflow: hidden; margin-top: 50px;"> 
             <thead>
                 <tr style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
                     <th class="header-line pl-3 bg-light">Enter Details </th>
