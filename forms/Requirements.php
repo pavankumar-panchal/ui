@@ -3,19 +3,7 @@
 include("../navigation/navigation.php");
 
 ?>
-                    <!-- content -->
-                    <!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Masters</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Requirements</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
 
 
                     <style>
@@ -32,7 +20,7 @@ include("../navigation/navigation.php");
                     <body>
                         <div class="container mt-4">
                             <table class="table table-bordered"
-                                style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">">
+                                style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">
                                 <tbody>
                                     <tr onclick="showhide('maindiv','toggleimg');" class="header-line">
                                         <td class="bg-light">&nbsp;&nbsp;Enter/Edit/View Details</td>

@@ -21,7 +21,7 @@
               <!-- <p>Appland is completely creative, lightweight, clean app landing page.</p> -->
               <!-- Copywrite Text-->
               <div class="copywrite-text mb-5">
-                <p class="mb-0">Connect to Relyonsoft <i class="lni-heart mr-1"></i><a class="ml-1"
+                <p class="mb-0 text-black ">Connect to Relyonsoft <i class="lni-heart mr-1"></i><a class="ml-1"
                     href="https://wrapbootstrap.com/user/DesigningWorld"> </a></p>
               </div>
               <!-- Footer Social Area-->
@@ -93,7 +93,7 @@
           </div>
         </div>
       </div>
-      <div class="foot" style="text-align: center; position: relative; bottom: -50px;">
+      <div class="foot" style="text-align: center; position: relative; bottom: -50px; font-weight:600;">
         <p>A product of Relyon Web Management | Copyright © 2023 Relyon Softech Ltd. All rights reserved</p>
       </div>
     </footer>
