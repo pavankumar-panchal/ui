@@ -11,7 +11,6 @@
 
 <body>
 
-
     <div class="container mt-5">
         <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="card-header bg-light d-flex justify-content-between" onclick="showhide('maindiv','toggleimg');">
@@ -38,12 +37,7 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Registered Name:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Customer Id:</label>
+                                        <label for="registered-name" class="form-label">Reported By:</label>
                                         <input name="customername" type="text" class="form-control" id="customername"
                                             autocomplete="off">
                                     </div>
@@ -57,11 +51,7 @@
                                         <input name="customername" type="time" class="form-control" id="customername"
                                             autocomplete="off">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Category:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
-                                    </div>
+
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">State:</label>
                                         <select name="s_productgroup" class="form-select swiftselect form-control"
@@ -69,13 +59,9 @@
                                             <option value="" selected="selected">ALL</option>
                                         </select>
                                     </div>
+
                                     <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Caller Type:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Product Group[Optional]:</label>
+                                        <label for="registered-name" class="form-label">Product Group:</label>
                                         <select name="s_productgroup" class="form-select swiftselect form-control"
                                             id="s_productgroup">
                                             <option value="" selected="selected">ALL</option>
@@ -89,6 +75,26 @@
                                         </select>
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label for="registered-name" class="form-label">Product version:</label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup">
+                                            <option value="" selected="selected">ALL</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registered-name" class="form-label">Database:</label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup">
+                                            <option value="" selected="selected">ALL</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="registered-name" class="form-label">Requirements:</label>
+                                        <input name="customername" type="text" class="form-control" id="customername"
+                                            autocomplete="off">
+                                    </div>
 
                                     <!-- More input fields -->
                                 </div>
@@ -98,56 +104,63 @@
                             <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
                                 <div class="display">
                                     <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Product Version:</label>
+                                        <label for="registered-name" class="form-label">Reported To:</label>
+                                        <input name="customername" type="text" class="form-control" id="customername"
+                                            autocomplete="off">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registered-name" class="form-label">Reference Through:</label>
                                         <select name="s_productgroup" class="form-select swiftselect form-control"
                                             id="s_productgroup">
                                             <option value="" selected="selected">ALL</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Sender ID:</label>
+                                        <label for="registered-name" class="form-label">Solved Date:</label>
                                         <input name="customername" type="text" class="form-control" id="customername"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Problem:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="state" class="form-label">Skype Conversation:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="caller-type" class="form-label">Attachment:</label>
-                                        <input name="customername" type="file" class="form-control" id="customername"
-                                            autocomplete="off">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="caller-type" class="form-label">Status:</label>
+                                        <label for="registered-name" class="form-label">Solution Given:</label>
                                         <select name="s_productgroup" class="form-select swiftselect form-control"
                                             id="s_productgroup">
                                             <option value="" selected="selected">ALL</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="caller-type" class="form-label">Remarks:</label>
-                                        <input name="customername" type="file" class="form-control" id="customername"
-                                            autocomplete="off">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Entered ID:</label>
+                                        <label for="registered-name" class="form-label">Solution Entered Time:</label>
                                         <input name="customername" type="text" class="form-control" id="customername"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="registered-name" class="form-label">skype ID:</label>
+                                        <label for="registered-name" class="form-label">Remarks:</label>
+                                        <input name="customername" type="email" class="form-control" id="customername"
+                                            autocomplete="off">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registered-name" class="form-label">Order Status:</label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup">
+                                            <option value="" selected="selected">ALL</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="state" class="form-label">Remarks:</label>
+                                        <select name="s_productgroup" class="form-select swiftselect form-control"
+                                            id="s_productgroup">
+                                            <option value="" selected="selected">ALL</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="caller-type" class="form-label">Entered BY:</label> <br>
                                         <input name="customername" type="text" class="form-control" id="customername"
                                             autocomplete="off">
                                     </div>
-
-
+                                    <div class="mb-3">
+                                        <label for="caller-type" class="form-label">Requirement ID:</label>
+                                        <input name="customername" type="text" class="form-control" id="customername"
+                                            autocomplete="off">
+                                    </div>
                                     <!-- More input fields -->
                                 </div>
                             </form>
@@ -175,11 +188,6 @@
 
 
 
-
-
-
-
-
     <div class="container mt-4">
         <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="card-header bg-light d-flex justify-content-between" onclick="showhide('maindiv','toggleimg');">
@@ -200,7 +208,7 @@
                                         maxlength="10" isdatepicker="true">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="from-date" class="form-label">T Date:</label>
+                                    <label for="from-date" class="form-label">To Date:</label>
                                     <input name="fromdate" type="date" class="form-control" id="DPC_fromdate" size="30"
                                         autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
                                         maxlength="10" isdatepicker="true">
@@ -225,32 +233,9 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="customer-name" class="form-label">Customer Name:</label>
+                                    <label for="customer-name" class="form-label">Reported By:</label>
                                     <input name="complaintid" type="text" class="form-control swifttext"
                                         id="complaintid" size="30" autocomplete="off" isdatepicker="true">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="customer-name" class="form-label">Customer ID:</label>
-                                    <input name="complaintid" type="text" class="form-control swifttext"
-                                        id="complaintid" size="30" autocomplete="off" isdatepicker="true">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Category:</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="categoryblr"
-                                            id="categoryblr" value="" checked>
-                                        <label class="form-check-label" for="categoryblr">BLR</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="categorycsd"
-                                            id="categorycsd" value="" checked>
-                                        <label class="form-check-label" for="categorycsd">CSD</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="categorykkg"
-                                            id="categorykkg" value="" checked>
-                                        <label class="form-check-label" for="categorykkg">KKG</label>
-                                    </div>
                                 </div>
 
                                 <div class="mb-3">
@@ -260,29 +245,7 @@
                                         <option value="">ALL</option>
                                     </select>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Caller Type:</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="s_customer"
-                                            id="s_customer" value="Customer" checked="checked">
-                                        <label class="form-check-label" for="s_customer">Customers</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="s_dealer" id="s_dealer"
-                                            value="Dealer" checked="checked">
-                                        <label class="form-check-label" for="s_dealer">Dealers</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="s_employee"
-                                            id="s_employee" value="employee" checked="checked">
-                                        <label class="form-check-label" for="s_employee">Employees</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="s_ssmuser" id="s_ssmuser"
-                                            value="SSMUser" checked="checked">
-                                        <label class="form-check-label" for="s_ssmuser">SSM Users</label>
-                                    </div>
-                                </div>
+
                                 <div class="mb-3">
                                     <label for="state" class="form-label">Product Group:</label>
                                     <select name="productname" id="productname"
@@ -298,49 +261,62 @@
                                     </select>
                                 </div>
 
-
-
-                            </div>
-
-                            <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="state" class="form-label">Problem:</label>
+                                    <label for="state" class="form-label">Requirement:</label>
                                     <input name="fromdate" type="text" class="form-control" id="DPC_fromdate" size="30"
                                         autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
                                         maxlength="10" isdatepicker="true">
 
                                 </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">Reported To:</label>
+                                    <input name="fromdate" type="text" class="form-control" id="DPC_fromdate" size="30"
+                                        autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
+                                        maxlength="10" isdatepicker="true">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="state" class="form-label">Status:</label>
                                     <select name="productname" id="productname"
                                         class="form-select form-control swiftselect">
                                         <option value="">ALL</option>
                                     </select>
-
                                 </div>
                                 <div class="mb-3">
-                                    <label for="state" class="form-label">Attachment:</label>
+                                    <label for="state" class="form-label">Solution Given:</label>
+                                    <select name="productname" id="productname"
+                                        class="form-select form-control swiftselect">
+                                        <option value="">ALL</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">Solved Date:</label>
+                                    <input name="fromdate" type="date" class="form-control" id="DPC_fromdate" size="30"
+                                        autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
+                                        maxlength="10" isdatepicker="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">Remarks : </label>
                                     <input name="fromdate" type="text" class="form-control" id="DPC_fromdate" size="30"
                                         autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
                                         maxlength="10" isdatepicker="true">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="state" class="form-label">Entered By</label>
+                                    <label for="state" class="form-label">Entered By:</label>
+                                    <select name="productname" id="productname"
+                                        class="form-select form-control swiftselect">
+                                        <option value="">ALL</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">Requirement ID :</label>
                                     <input name="fromdate" type="text" class="form-control" id="DPC_fromdate" size="30"
                                         autocomplete="off" value="21-07-2023" datepicker_format="DD-MM-YYYY"
                                         maxlength="10" isdatepicker="true">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="state" class="form-label">Skype Id:</label>
-                                    <input name="fromdate" type="text" class="form-control" id="DPC_fromdate" size="30"
-                                        autocomplete="off" datepicker_format="DD-MM-YYYY" maxlength="10"
-                                        isdatepicker="true">
-                                </div>
-
-
-
-                                <div class="mb-3">
-                                    <label class="form-label">Flags:</label>
+                                    <label class="form-label">Flags:</label> <br>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="Flags" id="anonymous-yes"
                                             value="yes">
@@ -357,8 +333,6 @@
                                         <label class="form-check-label" for="anonymous-both">Both</label>
                                     </div>
                                 </div>
-
-
                                 <div class="mb-3">
                                     <label for="state" class="form-label">Support Unit:</label>
                                     <select name="productname" id="productname"
@@ -370,7 +344,24 @@
                                     <label for="state" class="form-label">Order By:</label>
                                     <select name="productname" id="productname"
                                         class="form-select form-control swiftselect">
-                                        <option value="">ALL</option>
+                                        <option value="category">Category</option>
+                                        <option value="contactno">Contact Number
+                                        </option>
+                                        <option value="contactperson">Contact Person
+                                        </option>
+                                        <option value="userid">Entered By</option>
+                                        <option value="email">Email ID</option>
+                                        <option value="productname">Product Group
+                                        </option>
+                                        <option value="productname">Product Name
+                                        </option>
+                                        <option value="referenceid" selected="">Reference ID</option>
+                                        <option value="customername">Registered Name
+                                        </option>
+                                        <option value="referencethrough">Reference Through</option>
+                                        <option value="status">Status</option>
+                                        <option value="time">Time</option>
+
                                     </select>
                                 </div>
 
