@@ -3,6 +3,7 @@
 include("../navigation/navigation.php");
 
 ?>
+
 <div class="container mt-5">
   <div class="card">
     <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">

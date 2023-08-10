@@ -40,11 +40,10 @@
         <div class="card-header d-flex justify-content-between align-items-center">
             <div>Header Content</div>
         </div>
-        <div class="card-body">
+        <div class="card-body " style="padding:0px -10px 0px -10px;">
             <div class="container" style="z-index:9999;">
-                <div class="row">
+                <div class="row ">
                     <div class="col-md-13">
-
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
