@@ -12,250 +12,171 @@
 <body>
 
 
-
-
-    <div class="container users_la mt-4">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-                    <div class="card-header bg-light">
-                        Enter/Edit/View Details
+    <div class="container mt-5 rounded">
+        <div class="card">
+            <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">
+                <h5 class="mb-0 header-line">&nbsp;&nbsp;Enter the Details</h5>
+            </div>
+            <div class="card-body" id="maindiv" style="display: block;">
+                <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="fromdate">From Date:</label>
+                                <input name="fromdate" type="date" class="form-control" id="DPC_fromdate" autocomplete="off"
+                                    value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="todate">To Date:</label>
+                                <input name="todate" type="date" class="form-control" id="DPC_todate" autocomplete="off"
+                                    value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                            </div>
+                            <div class="form-group">
+                                <label>Service Charge:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Service Charge</label>
+                                </div>
+                                <!-- Add other checkboxes here -->
+                            </div>
+                            <div class="form-group">
+                                <label for="solvedby">Solved By:</label>
+                                <select name="solvedby" id="solvedby" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Solved Through:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Remote Connection</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Marketing Person</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Onsite Visit</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Over Phone</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">
+                                    <label class="form-check-label" for="stremoteconnection">Mail</label>
+                                </div>
+                                <!-- Add other checkboxes here -->
+                            </div>
+                            <div class="form-group">
+                                <label>Anonymous:</label>
+                                <div>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="anonymous" value="Yes"> Yes
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="anonymous" value="No"> No
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="anonymous" value="Both"> Both
+                                    </label>
+                                    <!-- Add other radio buttons here -->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Reports on:</label>
+                                <div>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="reportson" value="Statistics"> Statistics
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="reportson" value="Details"> Details
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="reportson" value="Pending Visits"> Pending Visits
+                                    </label>
+                                    <!-- Add other radio buttons here -->
+                                </div>
+                            </div>
+                            <!-- Other input fields for the first column -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="customername">Customer Name:</label>
+                                <input name="customername" type="text" class="form-control" id="customername"
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label>Product group:</label>
+                                <select name="productgroup" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Product name:</label>
+                                <select name="productname" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Status:</label>
+                                <select name="status" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Registered By:</label>
+                                <select name="registeredby" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Support Unit:</label>
+                                <select name="supportunit" class="form-control">
+                                    <option value="">ALL</option>
+                                    <!-- Add other options here -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Complaint Id:</label>
+                                <input name="complaintid" type="text" class="form-control" id="complaintid"
+                                    autocomplete="off">
+                                <!-- Add other checkboxes here -->
+                            </div>
+                            <!-- Other input fields for the second column -->
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <!-- First column content -->
-                                    <div class="mb-3">
-                                        <!-- Input fields and labels here -->
-                                        <label for="customername" class="form-label">From Date:</label>
-                                        <input name="customername" type="date" class="form-control" id="customername"
-                                            autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">To Date:</label>
-                                        <input name="customername" type="date" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Customer Name:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Customer ID:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Category:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-                                        </select>
-                                        <label for="customername" class="form-label">Flag:</label>
-                                        <div class="opt d-flex flex-row ">
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield11" value="yes"> Yes</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">No</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield13">
-                                                    <input class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield13" value="both">Both</span>
-                                            </div>
-                                        </div>
-                                        <label for="customername" class="form-label">Publish Record:</label>
-                                        <div class="opt d-flex flex-row ">
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield11" value="yes"> Yes</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">No</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield13">
-                                                    <input class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield13" value="both">Both</span>
-                                            </div>
-                                        </div>
-                                        <label for="customername" class="form-label">problem:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Transferred To:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-
-
-                                        </select>
-
-
-
-                                    </div>
-                                    <!-- Additional input fields for the first column -->
-
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- Second column content -->
-                                    <div class="mb-3">
-                                        <!-- Input fields and labels here -->
-                                        <label for="customername" class="form-label">Authorized:</label>
-
-                                        <div class="opt d-flex flex-row ">
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield11" value="yes"> Yes</label>
-                                            </div>
-                                            <div class="form-check me-3 align-items-center">
-
-                                                <label class="form-check-label" for="databasefield12"><input
-                                                        class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield12" value="no">No</label>
-                                            </div>
-
-                                            <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield13">
-                                                    <input class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield13" value="both">Both</span>
-                                            </div>
-                                        </div>
-
-
-
-                                        <label for="teamleaderremarks" class="form-label">Status:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <!-- second div -->
-                                        <label for="customername" class="form-label">Entered By:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-
-                                        </select>
-                                        <label for="customername" class="form-label">Product group:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-
-                                        </select>
-                                        <label for="customername" class="form-label">Product Name: </label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-
-                                        </select>
-                                        <label for="customername" class="form-label">Compliant ID(Register ID
-                                            ,etc):</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
-                                        <label for="customername" class="form-label">Support Unit: </label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup" onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
-
-                                        </select>
-                                        <label for=""> Order By</label>
-                                        <select name="status" class="form-select form-control swiftselect" id="status">
-                                            <option value="callertype">Caller Type</option>
-                                            <option value="category">Category</option>
-                                            <option value="compliantid" selected="selected">Compliant ID</option>
-                                            <option value="customerid">Customer ID</option>
-                                            <option value="customername">Registered Name</option>
-                                            <option value="date">Date</option>
-                                            <option value="userid">Entered By</option>
-                                            <option value="problem">Problem</option>
-                                            <option value="productgroup">Product Group</option>
-                                            <option value="productname">Product Name</option>
-                                            <option value="status">Status</option>
-                                            <option value="callcategory">Call Category</option>
-                                            <option value="transferredto">Transferred To</option>
-                                            <option value="time">Time</option>
-                                        </select>
-
-                                        <div class="bg-white p-3" style="border-top:1px solid #d1dceb;">
-                                            <div class="row">
-                                                <div class="col-md-2">In:</div>
-                                                <div class="col-md-10">
-                                                    <label class="me-3">
-                                                        <input name="databasefield" type="radio" value="call"
-                                                            checked="checked">
-                                                        Call
-                                                    </label>
-                                                    <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="email">
-                                                        Email
-                                                    </label>
-                                                    <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="error">
-                                                        Error
-                                                    </label>
-                                                    <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="inhouse">
-                                                        Inhouse
-                                                    </label>
-                                                    <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="onsite">
-                                                        Onsite
-                                                    </label>
-                                                    <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="reference">
-                                                        Reference
-                                                    </label>
-                                                    <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="requirement">
-                                                        Requirement
-                                                    </label>
-                                                    <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="skype">
-                                                        Skype
-                                                    </label>
-                                                    <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="invoice">
-                                                        Invoice
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="databasefield" value="receipt">
-                                                        Receipts
-                                                    </label>
-                                                </div>
-                                            </div>
-                                       </div>
-                                        <!-- Additional input fields for the second column -->
-
-                                    </div>
-                                </div>
-
-                                <!-- Additional textarea fields go here -->
-
-                                <div class="text-end mt-3">
-                                    <button name="new" type="submit" class="btn btn-secondary">New</button>
-                                    <button name="save" type="submit" class="btn btn-primary">View</button>
-                                    <button name="delete" type="submit" class="btn btn-warning">To Excel</button>
-                                </div>
-                        </form>
+    
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="form-error"></div>
+                            </div>
+                            <div class="col-md-4 text-right">
+                                <button name="view" type="submit" class="btn btn-primary" id="view"
+                                    onclick="formsubmit('toview');">View</button>
+                                <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
+                                    onclick="formsubmit('toexcel');">To Excel</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
-
+    
 
 
 
