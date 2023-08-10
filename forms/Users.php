@@ -3,28 +3,16 @@
 include("../navigation/navigation.php");
 
 ?>
-<!-- content -->
 
-<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
-
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb my-0 ms-2">
-      <li class="breadcrumb-item">
-        <span>Masters</span>
-      </li>
-      <li class="breadcrumb-item active"><span>Users</span></li>
-    </ol>
-  </nav>
-</div>
-</header> -->
 
 <style>
   label {
     margin: 10px 0px 10px 0px;
   }
 </style>
-</style>
+
 </head>
+
 
 <div class="container users_la" style="margin-top: 50px;">
   <div class="row">
@@ -158,8 +146,6 @@ include("../navigation/navigation.php");
 </div>
 
 
-
-
 <div class="container mt-4">
   <div class="card " style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
     <div class="card-header bg-light">
@@ -195,37 +181,38 @@ include("../navigation/navigation.php");
             <div class="form-group">
               In:
               <div class="form-check form-check-inline">
-                <input type="radio" name="databasefield" id="databasefield0" value="username" checked="checked"
-                  class="form-check-input">
-                <label class="form-check-label" for="databasefield0">User Name</label>
+
+                <label class="form-check-label" for="databasefield0"> <input type="radio" name="databasefield"
+                    id="databasefield0" value="username" checked="checked" class="form-check-input"> User Name</label>
+              </div>
+              <div class="form-check-label form-check-inline">
+                <label class="form-check-label" for="databasefield1"> <input type="radio" name="databasefield"
+                    id="databasefield0" value="username" checked="checked" class="form-check-input"> Type</label>
               </div>
               <div class="form-check form-check-inline">
-                <input type="radio" name="databasefield" id="databasefield1" value="type" class="form-check-input">
-                <label class="form-check-label" for="databasefield1">Type</label>
+
+                <label class="form-check-label" for="databasefield2"> <input type="radio" name="databasefield"
+                    value="locationname" id="databasefield2" class="form-check-input"> Location Name</label>
               </div>
               <div class="form-check form-check-inline">
-                <input type="radio" name="databasefield" value="locationname" id="databasefield2"
-                  class="form-check-input">
-                <label class="form-check-label" for="databasefield2">Location Name</label>
+
+                <label class="form-check-label" for="databasefield3"> <input type="radio" name="databasefield"
+                    value="reportingauthority" id="databasefield3" class="form-check-input"> Reporting Authority</label>
               </div>
               <div class="form-check form-check-inline">
-                <input type="radio" name="databasefield" value="reportingauthority" id="databasefield3"
-                  class="form-check-input">
-                <label class="form-check-label" for="databasefield3">Reporting Authority</label>
+
+                <label class="form-check-label" for="databasefield4"> <input type="radio" name="databasefield"
+                    value="supportunit" id="databasefield4" class="form-check-input"> Support Unit</label>
               </div>
               <div class="form-check form-check-inline">
-                <input type="radio" name="databasefield" value="supportunit" id="databasefield4"
-                  class="form-check-input">
-                <label class="form-check-label" for="databasefield4">Support Unit</label>
+
+                <label class="form-check-label" for="databasefield5"> <input type="radio" name="databasefield"
+                    value="existinguser" id="databasefield5" class="form-check-input"> Existing User</label>
               </div>
               <div class="form-check form-check-inline">
-                <input type="radio" name="databasefield" value="existinguser" id="databasefield5"
-                  class="form-check-input">
-                <label class="form-check-label" for="databasefield5">Existing User</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input type="radio" name="databasefield" value="gender" id="databasefield6" class="form-check-input">
-                <label class="form-check-label" for="databasefield6">Gender</label>
+                <label class="form-check-label" for="databasefield6">
+                  <input type="radio" name="databasefield" value="gender" id="databasefield6" class="form-check-input">
+                  Gender</label>
               </div>
             </div>
           </div>
@@ -240,15 +227,11 @@ include("../navigation/navigation.php");
       </form>
     </div>
   </div>
-
-
   <!--  -->
-  <div class="col-md-12">
-  </div>
-</div>
-</div>
-<?php
 
-include("../navigation/footer.php");
 
-?>
+  <?php
+
+  include("../navigation/footer.php");
+
+  ?>
