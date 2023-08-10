@@ -1,7 +1,5 @@
 <?php
-
 include("../navigation/navigation.php");
-
 ?>
 
 <div class="container mt-5">
@@ -178,7 +176,6 @@ include("../navigation/navigation.php");
             </div>
         </div>
     </div>
-
 
 
     <div class="container mt-4">
@@ -379,7 +376,5 @@ include("../navigation/navigation.php");
     </div>
 
 <?php
-
 include("../navigation/footer.php");
-
 ?>
