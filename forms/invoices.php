@@ -346,6 +346,132 @@ include("../navigation/navigation.php");
             </div>
         </div>
     </div>
+
+    <div class="container mt-4">
+        <div class="tab container"
+            style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius: 10px; padding:10px;">
+            <span id="toggleButton" class="btn btn-primary mb-3">Default/Flagged</span>
+            <div class="table-container1">
+                <h2>Default</h2>
+                <div id="tableContainer1"></div>
+            </div>
+            <div class="table-container2" style="display: none;">
+                <h2>Flagged</h2>
+                <div id="tableContainer2"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const data1 = [
+            ["1", "first", "Address 1", "123456789", "john@example.com", "Contact 1", /* ... */],
+            ["2", "Jane Smith", "Address 2", "987654321", "jane@example.com", "Contact 2", /* ... */],
+            // Add more rows here...
+        ];
+
+        const data2 = [
+            ["1", "second", "Address 1", "123456789", "john@example.com", "Contact 1", /* ... */],
+            ["2", "Jane Smith", "Address 2", "987654321", "jane@example.com", "Contact 2", /* ... */],
+            // Add more rows here...
+        ];
+
+        const columns = [
+            "Sl No",
+            "Flag",
+            "Call Type",
+            "Date",
+            "Start Time",
+            "End Time",
+            "Duration",
+            "User Id",
+            "Anonymous",
+            "Customer ID",
+            "Customer Name",
+            "Person Name",
+            "Category",
+            "State",
+            "Caller Type",
+            "Product Group",
+            "Product Name",
+            "Product Version",
+            "Problem",
+            "Remarks",
+            "Status",
+            "Remote Connection",
+            "Compliant ID",
+            "Authorized",
+            "Authorized Group",
+            "Team Leader Remarks",
+            "Authorized Person",
+            "Authorized Date&amp",
+            "Time",
+            "Call Category",
+        ];
+
+        // Create both tables
+        const table1 = new gridjs.Grid({
+            columns: columns.map((col) => ({ name: col })),
+            data: data1,
+            pagination: true,
+            search: true,
+            sort: true,
+            language: {
+                search: {
+                    placeholder: 'Search...'
+                },
+                pagination: {
+                    previous: 'Previous',
+                    next: 'Next',
+                    showing: 'Showing',
+                    results: () => 'Records'
+                }
+            }
+        });
+
+        const table2 = new gridjs.Grid({
+            columns: columns.map((col) => ({ name: col })),
+            data: data2,
+            pagination: true,
+            search: true,
+            sort: true,
+            language: {
+                search: {
+                    placeholder: 'Search...'
+                },
+                pagination: {
+                    previous: 'Previous',
+                    next: 'Next',
+                    showing: 'Showing',
+                    results: () => 'Records'
+                }
+            }
+        });
+
+        // Render the initial table (table1)
+        const tableContainer1 = document.getElementById('tableContainer1');
+        table1.render(tableContainer1);
+
+        // Add event listener to the toggle button
+        document.getElementById('toggleButton').addEventListener('click', function () {
+
+            const tableContainer1 = document.querySelector('.table-container1');
+            const tableContainer2 = document.querySelector('.table-container2');
+
+            // Toggle between tables
+            if (tableContainer1.style.display === 'none') {
+                tableContainer1.style.display = 'block';
+                tableContainer2.style.display = 'none';
+                table2.destroy();
+                table1.render(tableContainer1.querySelector('#tableContainer1'));
+            } else {
+                tableContainer1.style.display = 'none';
+                tableContainer2.style.display = 'block';
+                table1.destroy();
+                table2.render(tableContainer2.querySelector('#tableContainer2'));
+            }
+        });
+    </script>
+
+
     <?php
 
     include("../navigation/footer.php");
