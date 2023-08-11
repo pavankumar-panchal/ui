@@ -89,7 +89,29 @@
 
 <body class="bg-white;" style="z-index:2;">
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-        <ul class="h-4 p-4"> logo </ul>
+
+    
+        <!-- <ul class="h-4 p-4"> logo </ul> -->
+        <style>
+    .navbar {
+        display: flex;
+        align-items: center;
+     
+    }
+
+    .navbar img {
+        max-height: 100%;
+        max-width: 80%;
+        margin-left: 8px;
+        /* Additional styling for the image */
+    }
+</style>
+
+<ul class="navbar">
+    <img src="../assets/img/avatars/logo1.png" alt="">
+</ul>
+
+
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item"><a class="nav-link" href="../index.php">
                     <svg class="nav-icon">
