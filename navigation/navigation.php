@@ -37,33 +37,19 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
     <!-- grid js  -->
-
-
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link href="../css/examples.css" rel="stylesheet">
     <link href="../vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
-
-
     <!-- calendar -->
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
-
-
     <link rel="stylesheet" href="calendar/fonts/icomoon/style.css">
-
     <link href='calendar/fullcalendar/packages/core/main.css' rel='stylesheet' />
     <link href='calendar/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
-
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="calendar/css/bootstrap.min.css">
-
     <!-- Style -->
     <link rel="stylesheet" href="calendar/css/style.css">
-
-
     <!-- calendar -->
     <style>
         /* Customizing the scrollbar */
@@ -71,23 +57,19 @@
             width: 5px;
             /* Width of the scrollbar */
         }
-
         /* Styling the thumb (the draggable part of the scrollbar) */
         ::-webkit-scrollbar-thumb {
             background-color: gray;
             /* Blue color for the thumb */
             /* Rounded edges for the thumb */
         }
-
         /* Styling the track (the area the thumb moves along) */
         ::-webkit-scrollbar-track {
             background-color: #f2f2f2;
             /* Lighter background color for the track */
         }
     </style>
-
 </head>
-
 <body class="bg-white;" style="z-index:2;">
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
         <!-- <ul class="h-4 p-4"> logo </ul> -->
