@@ -228,3 +228,37 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+
+/* Black theme modifications */
+
+/* Change background and text colors */
+[data-simplebar] {
+  background-color: black;
+  color: white;
+}
+
+/* Modify scrollbar styles */
+.simplebar-scrollbar:before {
+  background: white; /* Change scrollbar color */
+}
+
+/* Adjust track color for visibility */
+.simplebar-track.simplebar-vertical,
+.simplebar-track.simplebar-horizontal {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+}
+
+/* Adjust scrollbar size */
+.simplebar-scrollbar {
+  min-height: 6px; /* Adjust scrollbar height */
+  border-radius: 3px; /* Make scrollbar corners rounded */
+}
+
+/* Make scrollbar more visible on hover */
+.simplebar-scrollbar:hover:before,
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+}
