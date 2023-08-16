@@ -10,7 +10,7 @@
   <!-- Custom styles for login page -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style/mainindex.css">
+  <link rel="stylesheet" type="text/css" href="style/mainindex.css">
 
   <?php
   ini_set('display_errors', 1);
@@ -172,34 +172,34 @@
     </div>
   </div>
 
-<style>
-  .footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
- 
-}
+  <style>
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
 
-/* If you want to center the text content in the footer, you can add the following styles */
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  /* Use calc() to set the height of the footer, adjusting it as per your needs */
-  height: calc(40px + 20px);
-}
-</style>
+    }
+
+    /* If you want to center the text content in the footer, you can add the following styles */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      /* Use calc() to set the height of the footer, adjusting it as per your needs */
+      height: calc(40px + 20px);
+    }
+  </style>
 
   <div class="footer">
-        A product of Relyon Web Management | Copyright © 2012
-        Relyon Softech Ltd. All rights reserved.
-    </div>
+    A product of Relyon Web Management | Copyright © 2012
+    Relyon Softech Ltd. All rights reserved.
+  </div>
   <!-- Bootstrap JS (Make sure to include jQuery and Popper.js before this) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

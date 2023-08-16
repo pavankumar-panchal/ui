@@ -5,7 +5,8 @@ ini_set("display_errors", 1);
 ?>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<div class="card mt-4 mb-4 " style=" border-radius:10px;">
+
+<div class="card mt-4 mb-4 " style="border-radius:10px;">
   <div class="card-body" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius:10px;">
     <div class="" style="">
       <div>
@@ -13,7 +14,7 @@ ini_set("display_errors", 1);
           Chart on count of Calls and emails</div>
       </div>
     </div>
-    <!--  -->
+    <!-- Chart container -->
     <div id="lineChart"></div>
 
     <script>
@@ -86,10 +87,13 @@ ini_set("display_errors", 1);
           title: 'Count',
         },
       };
-
+      
       // Combine the traces and layout and create the plot
       const data = [emailTrace, callTrace];
-      Plotly.newPlot('lineChart', data, layout);
+      const config = {
+        responsive: true // Make the chart responsive
+      };
+      Plotly.newPlot('lineChart', data, layout, config);
 
       // Function to remove the "Calls" trace from the chart
     </script>
@@ -97,6 +101,9 @@ ini_set("display_errors", 1);
 
   </div>
 </div>
+
+
+
 <!-- /.row-->
 <div class="row">
   <div class="col-md-12  ">

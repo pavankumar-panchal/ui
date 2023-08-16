@@ -3,12 +3,12 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 include("connections.php");
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpwd = "";
+$dbhost = "localhost:3306";
+$dbuser = "database";
+$dbpwd = "pFs56e29_";
 $dbname = "relyon_imax";
 
-$newconnection = mysqli_connect("localhost", "root", "", "relyon_imax") or die("Connection error");
+$newconnection = mysqli_connect("localhost:3306", "root", "", "relyon_imax") or die("Connection error");
 function encodevalue($input)
 {
     $length = strlen($input);
@@ -127,7 +127,7 @@ function runmysqlqueryfetch($query)
     $dbname = 'relyon_imax';
 
     // Connect to Database using mysqli
-    $newconnection = mysqli_connect("localhost", "root", "", "relyon_imax");
+    $newconnection = mysqli_connect("localhost:3306", "root", "", "relyon_imax");
 
     // Check connection
     if (mysqli_connect_errno()) {

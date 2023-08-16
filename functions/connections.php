@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-$dbhost = "localhost";
+$dbhost = "localhost:3306";
 $dbuser = "root";
 $dbpwd = "";
 $dbname = "relyon_imax";

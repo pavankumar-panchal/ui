@@ -384,19 +384,19 @@ include("../navigation/navigation.php");
 
 
 <div class="container mt-4">
-    <div class="tab container"
-        style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius: 10px; padding:10px;">
-        <span id="toggleButton" class="btn btn-primary mb-3">Default/Flagged</span>
+    <div class="tab container" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius: 10px; padding: 10px;">
+        <span id="toggleButton" class="btn btn-primary btn-sm mb-3 float-end">Default/Flagged</span>
         <div class="table-container1">
-            <h2>Default</h2>
+            <h2 class="mb-3">Default</h2>
             <div id="tableContainer1"></div>
         </div>
         <div class="table-container2" style="display: none;">
-            <h2>Flagged</h2>
+            <h2 class="mb-3">Flagged</h2>
             <div id="tableContainer2"></div>
         </div>
     </div>
 </div>
+
 <script>
     const data1 = [
         ["1", "first", "Address 1", "123456789", "john@example.com", "Contact 1", /* ... */],
