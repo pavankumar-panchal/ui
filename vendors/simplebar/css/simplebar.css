@@ -49,10 +49,13 @@
   box-sizing: border-box !important;
   position: relative;
   display: block;
-  height: 100%; /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
+  height: 100%;
+  /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
   width: auto;
-  max-width: 100%; /* Not required for horizontal scroll to trigger */
-  max-height: 100%; /* Needed for vertical scroll to trigger */
+  max-width: 100%;
+  /* Not required for horizontal scroll to trigger */
+  max-height: 100%;
+  /* Needed for vertical scroll to trigger */
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -214,7 +217,7 @@
   -ms-overflow-style: scrollbar !important;
 }
 
-.simplebar-dummy-scrollbar-size > div {
+.simplebar-dummy-scrollbar-size>div {
   width: 200%;
   height: 200%;
   margin: 10px 0;

@@ -49,8 +49,7 @@
     <link rel="stylesheet" href="calendar/css/style.css">
     <!-- calendar -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <style>
-
+    <style>
         /* Customizing the scrollbar */
         ::-webkit-scrollbar {
             width: 5px;
@@ -79,23 +78,23 @@
 
         </ul> -->
         <style>
-    .navbar {
-        display: flex;
-        align-items: center;
-        /* padding: 10px; */
-        /* Additional styling for the navbar */
-    }
+            .navbar {
+                display: flex;
+                align-items: center;
+                /* padding: 10px; */
+                /* Additional styling for the navbar */
+            }
 
-    .navbar img {
-        max-height: 100%;
-        max-width: 90%;
-        /* Additional styling for the image */
-    }
-</style>
+            .navbar img {
+                max-height: 100%;
+                max-width: 90%;
+                /* Additional styling for the image */
+            }
+        </style>
 
-<ul class="navbar">
-    <img src="assets/img/avatars/logo1.png" alt="">
-</ul>
+        <ul class="navbar">
+            <img src="assets/img/avatars/logo1.png" alt="">
+        </ul>
 
 
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
