@@ -15,6 +15,11 @@ include("../navigation/navigation.php");
     </nav>
 </div>
 </header> -->
+<style>
+    label{
+        margin-top: 10px;
+    }
+</style>
 <div class="container mt-4">
     <div class="card ">
         <div class="card-header bg-light" style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
@@ -138,25 +143,25 @@ include("../navigation/navigation.php");
                 <div class="mt-3">
                     In:
                     <div class="form-check form-check-inline">
-                        <input type="radio" name="databasefield" id="databasefield0" value="productname"
-                            checked="checked" onclick="prdname('textname',databasefield0);" class="form-check-input">
-                        <label class="form-check-label" for="databasefield0">Product Name</label>
+                    
+                        <label class="form-check-label" for="databasefield0"><input type="radio" name="databasefield" id="databasefield0" value="productname"
+                            checked="checked" onclick="prdname('textname',databasefield0);" class="form-check-input">  Product Name</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input type="radio" name="databasefield" id="databasefield0" value="shortform"
-                            onclick="prdname('textname',databasefield2);" class="form-check-input">
-                        <label class="form-check-label" for="databasefield2">Product Short
+                        
+                        <label class="form-check-label" for="databasefield2">   <input type="radio" name="databasefield" id="databasefield2" value="shortform"
+                            onclick="prdname('textname',databasefield2);" class="form-check-input">         Product Short
                             Format</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input type="radio" name="databasefield" id="databasefield0" value="productgroup"
-                            onclick="prdgroup('groupname',databasefield1);" class="form-check-input">
-                        <label class="form-check-label" for="databasefield1">Product Group</label>
+                       
+                        <label class="form-check-label" for="databasefield1">    <input type="radio" name="databasefield" id="databasefield1" value="productgroup"
+                            onclick="prdgroup('groupname',databasefield1);" class="form-check-input">   Product Group</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input type="radio" name="databasefield" id="databasefield0" value="productinuse"
-                            onclick="prdgroup('groupname',databasefield1);" class="form-check-input">
-                        <label class="form-check-label" for="databasefield1">Product in Use</label>
+                     
+                        <label class="form-check-label" for="databasefield3">         <input type="radio" name="databasefield" id="databasefield3" value="productinuse"
+                            onclick="prdgroup('groupname',databasefield1);" class="form-check-input">        Product in Use</label>
                     </div>
                 </div>
                 <div class="text-center mt-3 float-end">

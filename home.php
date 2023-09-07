@@ -6,7 +6,7 @@ ini_set("display_errors", 1);
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 
-<div class="card mt-4 mb-4 " style="border-radius:10px;">
+<div class="card mt-4 mb-4  " style="border-radius:10px;">
   <div class="card-body" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius:10px;">
     <div class="" style="">
       <div>
@@ -87,7 +87,7 @@ ini_set("display_errors", 1);
           title: 'Count',
         },
       };
-      
+
       // Combine the traces and layout and create the plot
       const data = [emailTrace, callTrace];
       const config = {
@@ -101,7 +101,6 @@ ini_set("display_errors", 1);
 
   </div>
 </div>
-
 
 
 <!-- /.row-->

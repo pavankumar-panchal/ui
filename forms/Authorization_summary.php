@@ -3,9 +3,12 @@
 include("../navigation/navigation.php");
 
 ?>
-
-
-<div class="container">
+<style>
+    label {
+        margin-top: 15px;
+    }
+</style>
+<div class="container l-12">
     <table class="table table-bordered"
         style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top:50px; border-radius:10px; width: 98%; margin-left: 10px; ">
         <thead style="border-radius:10px;">
@@ -90,10 +93,6 @@ include("../navigation/navigation.php");
 
     <!-- second form  -->
 
-
-
-
-
     <div class="container">
         <div class="card mt-4" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius: 10px;">
             <div class="card-header bg-light" style="cursor:pointer;">
@@ -101,15 +100,15 @@ include("../navigation/navigation.php");
             </div>
             <div class="card-body">
                 <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
-                    <div class="form-group text-center mb-4">
+                    <div class="form-group text-center mb-4 mt-4 ">
                         <div id="displayregisters">
                             <h6 class="">Make A Selection of record from the grid below</h6>
                         </div>
                     </div>
                     <hr>
-                    <div class="row">
+                    <div class="row mt-4">
                         <div class="col-md-6">
-                            <div class="form-group">
+                            <div class="form-group mt-4">
                                 <label for="authorizedgroup">Category:</label>
                                 <select name="solvedby" id="solvedby" class="form-select">
                                     <option value="">Make a selection</option>
@@ -117,18 +116,20 @@ include("../navigation/navigation.php");
                                 </select>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group mt-4">
                                 <label for="authorizedgroup">Authorized:</label>
                                 <div class="opt d-flex flex-row">
                                     <div class="form-check me-3 align-items-center">
-                                        <input class="form-check-input" type="radio" name="authorized"
-                                            id="databasefield11" value="yes">
-                                        <label class="form-check-label" for="databasefield11">Yes</label>
+
+                                        <label class="form-check-label" for="databasefield11"> <input
+                                                class="form-check-input" type="radio" name="authorized"
+                                                id="databasefield11" value="yes"> Yes</label>
                                     </div>
                                     <div class="form-check me-3 align-items-center">
-                                        <input class="form-check-input" type="radio" name="authorized"
-                                            id="databasefield12" value="no">
-                                        <label class="form-check-label" for="databasefield12">No</label>
+
+                                        <label class="form-check-label" for="databasefield12"> <input
+                                                class="form-check-input" type="radio" name="authorized"
+                                                id="databasefield12" value="no"> No</label>
                                     </div>
                                 </div>
                             </div>
@@ -138,36 +139,40 @@ include("../navigation/navigation.php");
                                 <label>Flag the Entry:</label>
                                 <div class="opt d-flex flex-row">
                                     <div class="form-check me-3 align-items-center">
-                                        <input class="form-check-input" type="radio" name="flagged" id="databasefield21"
-                                            value="yes">
-                                        <label class="form-check-label" for="databasefield21">Yes</label>
+
+                                        <label class="form-check-label" for="databasefield21"> <input
+                                                class="form-check-input" type="radio" name="flagged"
+                                                id="databasefield21" value="yes">Yes</label>
                                     </div>
                                     <div class="form-check me-3 align-items-center">
-                                        <input class="form-check-input" type="radio" name="flagged" id="databasefield22"
-                                            value="no">
-                                        <label class="form-check-label" for="databasefield22">No</label>
+
+                                        <label class="form-check-label" for="databasefield22"> <input
+                                                class="form-check-input" type="radio" name="flagged"
+                                                id="databasefield22" value="no"> No</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group mt-4">
                                 <label>Publish:</label>
                                 <div class="opt d-flex flex-row mt-2">
                                     <div class="form-check me-3 align-items-center">
-                                        <input class="form-check-input" type="radio" name="publish" id="databasefield31"
-                                            value="yes">
-                                        <label class="form-check-label" for="databasefield31">Yes</label>
+
+                                        <label class="form-check-label" for="databasefield31"> <input
+                                                class="form-check-input" type="radio" name="publish"
+                                                id="databasefield31" value="yes"> Yes</label>
                                     </div>
                                     <div class="form-check me-3 align-items-center">
-                                        <input class="form-check-input" type="radio" name="publish" id="databasefield32"
-                                            value="no">
-                                        <label class="form-check-label" for="databasefield32">No</label>
+
+                                        <label class="form-check-label" for="databasefield32"> <input
+                                                class="form-check-input" type="radio" name="publish"
+                                                id="databasefield32" value="no"> No</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group mt-2">
+                    <div class="form-group mt-4">
                         <label for="teamleaderremarks" class="float-start">Remarks:</label>
                         <textarea name="teamleaderremarks" cols="45" class="form-control" id="teamleaderremarks"
                             data-gramm="false" wt-ignore-input="true"></textarea>
@@ -368,47 +373,56 @@ include("../navigation/navigation.php");
 
                                         <div class="bg-white p-3" style="border-top:1px solid #d1dceb;">
                                             <div class="row">
-                                                <div class="col-md-2">In:</div>
+                                                <!-- <div class="col-md-2">In:</div> -->
                                                 <div class="col-md-10">
-                                                    <label class="me-3">
+                                                    <label class="me-3"> In:
                                                         <input name="databasefield" type="radio" value="call"
-                                                            checked="checked">
+                                                            checked="checked" class="form-check-input">
                                                         Call
                                                     </label>
                                                     <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="email">
+                                                        <input type="radio" name="databasefield" value="email"
+                                                            class="form-check-input">
                                                         Email
                                                     </label>
                                                     <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="error">
+                                                        <input type="radio" name="databasefield" value="error"
+                                                            class="form-check-input">
                                                         Error
                                                     </label>
                                                     <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="inhouse">
+                                                        <input type="radio" name="databasefield" value="inhouse"
+                                                            class="form-check-input">
                                                         Inhouse
                                                     </label>
                                                     <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="onsite">
+                                                        <input type="radio" name="databasefield" value="onsite"
+                                                            class="form-check-input">
                                                         Onsite
                                                     </label>
                                                     <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="reference">
+                                                        <input type="radio" name="databasefield" value="reference"
+                                                            class="form-check-input">
                                                         Reference
                                                     </label>
                                                     <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="requirement">
+                                                        <input type="radio" name="databasefield" value="requirement"
+                                                            class="form-check-input">
                                                         Requirement
                                                     </label>
                                                     <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="skype">
+                                                        <input type="radio" name="databasefield" value="skype"
+                                                            class="form-check-input">
                                                         Skype
                                                     </label>
                                                     <label class="me-3">
-                                                        <input type="radio" name="databasefield" value="invoice">
+                                                        <input type="radio" name="databasefield" value="invoice"
+                                                            class="form-check-input">
                                                         Invoice
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="databasefield" value="receipt">
+                                                        <input type="radio" name="databasefield" value="receipt"
+                                                            class="form-check-input">
                                                         Receipts
                                                     </label>
                                                 </div>

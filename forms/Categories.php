@@ -3,7 +3,11 @@
 include("../navigation/navigation.php");
 
 ?>
-
+<style>
+    label{
+        margin-top: 10px;
+    }
+</style>
 
 <!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
@@ -104,14 +108,14 @@ include("../navigation/navigation.php");
                             <div class="form-group">
                                 In:
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="databasefield"
-                                        id="databasefield0" value="date" checked="checked">
-                                    <label class="form-check-label" for="databasefield0">Remarks</label>
+                                    
+                                    <label class="form-check-label" for="databasefield0">     <input class="form-check-input" type="radio" name="databasefield"
+                                        id="databasefield0" value="date" checked="checked">Remarks</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="databasefield"
-                                        id="databasefield1" value="occassion">
-                                    <label class="form-check-label" for="databasefield1">Category Heading</label>
+                                 
+                                    <label class="form-check-label" for="databasefield1">      <input class="form-check-input" type="radio" name="databasefield"
+                                        id="databasefield1" value="occassion">  Category Heading</label>
                                 </div>
                             </div>
                             <div class="form-group text-end">

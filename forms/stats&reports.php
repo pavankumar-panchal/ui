@@ -12,33 +12,44 @@ include("../navigation/navigation.php");
     <div class="card-body" id="maindiv" style="display: block;">
       <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
         <div class="row mb-3">
+
           <div class="col-md-6">
             <div class="form-group">
               <label>Registers:</label>
-              <div>
+              <div class="checkbox-group">
                 <label class="checkbox-inline">
                   <input name="check[]" type="checkbox" value="Call" checked> Calls
                 </label>
-
-                <label><input name="check[]" type="checkbox" value="Email" checked="checked">
-                  Emails</label>
-                <label><input name="check[]" type="checkbox" value="Skype" checked="checked">
-                  Skype</label>
-                <label><input name="check[]" type="checkbox" value="Errors" checked="checked">
-                  Errors</label>
-                <label><input name="check[]" type="checkbox" value="Onsite" checked="checked">
-                  Onsite</label>
-                <label><input name="check[]" type="checkbox" value="References" checked="checked">
-                  References</label>
-                <label><input name="check[]" type="checkbox" value="Inhouse" checked="checked">
-                  Inhouse</label>
-                <label><input name="check[]" type="checkbox" value="Requirements" checked="checked">
-                  Requirements</label>
+                <label class="checkbox-inline">
+                  <input name="check[]" type="checkbox" value="Email" checked="checked"> Emails
+                </label>
+                <label class="checkbox-inline">
+                  <input name="check[]" type="checkbox" value="Skype" checked="checked"> Skype
+                </label>
+                <label class="checkbox-inline">
+                  <input name="check[]" type="checkbox" value="Errors" checked="checked"> Errors
+                </label>
+                <label class="checkbox-inline">
+                  <input name="check[]" type="checkbox" value="Onsite" checked="checked"> Onsite
+                </label>
+                <label class="checkbox-inline">
+                  <input name="check[]" type="checkbox" value="References" checked="checked"> References
+                </label>
+                <label class="checkbox-inline">
+                  <input name="check[]" type="checkbox" value="Inhouse" checked="checked"> Inhouse
+                </label>
+                <label class="checkbox-inline">
+                  <input name="check[]" type="checkbox" value="Requirements" checked="checked"> Requirements
+                </label>
                 <!-- Add other checkboxes here -->
               </div>
             </div>
             <!-- Other input fields -->
           </div>
+
+
+
+
           <div class="col-md-6">
             <div class="form-group">
               <label>From Date:</label>
@@ -46,7 +57,10 @@ include("../navigation/navigation.php");
             </div>
             <!-- Other input fields -->
           </div>
+
         </div>
+
+
         <div class="row mb-3">
           <div class="col-md-6">
             <div class="form-group">
@@ -67,6 +81,9 @@ include("../navigation/navigation.php");
             </div>
             <!-- Other input fields -->
           </div>
+
+
+
           <div class="col-md-6">
             <div class="form-group">
               <label>To Date:</label>
@@ -166,9 +183,8 @@ include("../navigation/navigation.php");
   </div>
 </div>
 
-<div class="col-md-12 mt-4">
-  <div id="wrapper" class="table-container"
-    ></div>
+<div class="col-md-12 mt-4 shadow p-2" style="border-radius:10px;">
+  <div id="wrapper" class="table-container w-12"></div>
 </div>
 
 

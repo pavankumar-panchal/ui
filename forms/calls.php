@@ -12,6 +12,9 @@ include("../navigation/navigation.php");
         display: flex;
         flex-direction: row;
     }
+    label{
+        margin-top: 15px;
+    }
 </style>
 
 <div class="container users_la mt-5">

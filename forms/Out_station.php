@@ -16,7 +16,11 @@ include("../navigation/navigation.php");
     </nav>
 </div>
 </header> -->
-
+<style>
+  label {
+    margin-top: 15px;
+  }
+</style>
 <div class="container mt-4 ">
   <div class="card border-light shadow" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">
     <div class="card-header bg-light " style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
@@ -135,66 +139,67 @@ include("../navigation/navigation.php");
             <div class="form-group">
               <label for="databasefield">Sort By:</label>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="databasefield" id="databasefield0" value="slno"
-                  checked>
-                <label class="form-check-label" for="databasefield0">Sl No</label>
+
+                <label class="form-check-label" for="databasefield0"> <input class="form-check-input" type="radio"
+                    name="databasefield" id="databasefield0" value="slno" checked>Sl No</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="databasefield" id="databasefield1"
-                  value="oscompanyname">
-                <label class="form-check-label" for="databasefield1">OS Company</label>
+
+                <label class="form-check-label" for="databasefield1"> <input class="form-check-input" type="radio"
+                    name="databasefield" id="databasefield1" value="oscompanyname"> OS Company</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="databasefield" id="databasefield2" value="osname">
-                <label class="form-check-label" for="databasefield2">OS Name</label>
+
+                <label class="form-check-label" for="databasefield2"> <input class="form-check-input" type="radio"
+                    name="databasefield" id="databasefield2" value="osname"> OS Name</label>
               </div>
               <div class="form-check form-check-inline">
 
                 <label>
-                  <input type="radio" name="databasefield" id="databasefield0" value="osname">
+                  <input  class="form-check-input"  type="radio" name="databasefield" id="databasefield0" value="osname">
                   OS Name</label>
               </div>
               <div class="form-check form-check-inline">
 
                 <label>
-                  <input type="radio" name="databasefield" id="databasefield0" value="contactnumber">
+                  <input type="radio" class="form-check-input"  name="databasefield" id="databasefield0" value="contactnumber">
                   Contact Number</label>
 
               </div>
               <div class="form-check form-check-inline">
 
                 <label>
-                  <input type="radio" name="databasefield" id="databasefield0" value="emailid">
+                  <input type="radio" class="form-check-input"  name="databasefield" id="databasefield0" value="emailid">
                   EmailID</label>
               </div>
               <div class="form-check form-check-inline">
 
                 <label>
-                  <input type="radio" name="databasefield" id="databasefield0" value="category">
+                  <input type="radio" class="form-check-input"  name="databasefield" id="databasefield0" value="category">
                   Category</label>
               </div>
               <div class="form-check form-check-inline">
 
                 <label>
-                  <input type="radio" name="databasefield" id="databasefield0" value="place">
+                  <input type="radio" class="form-check-input"  name="databasefield" id="databasefield0" value="place">
                   Place</label>
               </div>
               <div class="form-check form-check-inline">
 
                 <label>
-                  <input type="radio" name="databasefield" id="databasefield0" value="district">
+                  <input type="radio" class="form-check-input" name="databasefield" id="databasefield0" value="district">
                   District</label>
               </div>
               <div class="form-check form-check-inline">
 
                 <label>
-                  <input type="radio" name="databasefield" id="databasefield0" value="state">
+                  <input type="radio" class="form-check-input"  name="databasefield" id="databasefield0" value="state">
                   State</label>
               </div>
               <div class="form-check form-check-inline">
 
                 <label>
-                  <input type="radio" name="databasefield" id="databasefield0" value="skypeid">
+                  <input type="radio" class="form-check-input"  name="databasefield" id="databasefield0" value="skypeid">
                   Skype ID</label>
               </div>
               <!-- Add other radio options similarly -->
@@ -208,11 +213,11 @@ include("../navigation/navigation.php");
         </div>
       </form>
 
+    </div>
   </div>
-</div>
 
-<div class="col-md-12">
-</div>
+  <div class="col-md-12">
+  </div>
 </div>
 </div>
 <?php

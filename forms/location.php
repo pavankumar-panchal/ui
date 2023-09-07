@@ -16,6 +16,12 @@ include("../navigation/navigation.php");
 </div>
 </header> -->
 
+<style>
+    label{
+        margin-top: 10px;
+    }
+</style>
+
 <div class="container mt-4 ">
     <div class="card border-light" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">
         <div class="card-header bg-light " style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">

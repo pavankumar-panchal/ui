@@ -4,9 +4,9 @@ include("../navigation/navigation.php");
 
 ?>
 <style>
-    input{
-        margin-top: 10px;
-    }
+label{
+    margin-top: 10px;
+}
 </style>
 
     <div class="container mt-5 rounded ">
@@ -31,9 +31,9 @@ include("../navigation/navigation.php");
                             <div class="form-group">
                                 <label>Service Charge:</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Service Charge</label>
+                                   
+                                    <label class="form-check-label" for="stremoteconnection">    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">   Service Charge</label>
                                 </div>
                                 <!-- Add other checkboxes here -->
                             </div>
@@ -47,29 +47,29 @@ include("../navigation/navigation.php");
                             <div class="form-group">
                                 <label>Solved Through:</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Remote Connection</label>
+                                    
+                                    <label class="form-check-label" for="stremoteconnection">   <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">    Remote Connection</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Marketing Person</label>
+                                  
+                                    <label class="form-check-label" for="stremoteconnection">   <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">    Marketing Person</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Onsite Visit</label>
+                                  
+                                    <label class="form-check-label" for="stremoteconnection">    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">  Onsite Visit</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Over Phone</label>
+                                   
+                                    <label class="form-check-label" for="stremoteconnection">  <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">   Over Phone</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                        id="stremoteconnection" value="">
-                                    <label class="form-check-label" for="stremoteconnection">Mail</label>
+                                   
+                                    <label class="form-check-label" for="stremoteconnection">    <input class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value="">   Mail</label>
                                 </div>
                                 <!-- Add other checkboxes here -->
                             </div>
@@ -77,13 +77,13 @@ include("../navigation/navigation.php");
                                 <label>Anonymous:</label>
                                 <div>
                                     <label class="radio-inline">
-                                        <input type="radio" name="anonymous" value="Yes"> Yes
+                                        <input type="radio" name="anonymous" value="Yes" class="form-check-input"> Yes
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="anonymous" value="No"> No
+                                        <input type="radio" name="anonymous" value="No" class="form-check-input"> No
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="anonymous" value="Both"> Both
+                                        <input type="radio" name="anonymous" value="Both" class="form-check-input"> Both
                                     </label>
                                     <!-- Add other radio buttons here -->
                                 </div>
@@ -92,13 +92,13 @@ include("../navigation/navigation.php");
                                 <label>Reports on:</label>
                                 <div>
                                     <label class="radio-inline">
-                                        <input type="radio" name="reportson" value="Statistics"> Statistics
+                                        <input type="radio" name="reportson" value="Statistics" class="form-check-input"> Statistics
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="reportson" value="Details"> Details
+                                        <input type="radio" name="reportson" value="Details"   class="form-check-input"> Details
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="reportson" value="Pending Visits"> Pending Visits
+                                        <input type="radio" name="reportson" value="Pending Visits"  class="form-check-input"> Pending Visits
                                     </label>
                                     <!-- Add other radio buttons here -->
                                 </div>
