@@ -12,7 +12,8 @@ include("../navigation/navigation.php");
         display: flex;
         flex-direction: row;
     }
-    label{
+
+    label {
         margin-top: 15px;
     }
 </style>
@@ -36,64 +37,81 @@ include("../navigation/navigation.php");
                                     <div class="opt d-flex flex-row ">
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield11" value="yes"> Incoming</label>
+                                            <label class="form-check-label" for="databasefield11">&nbsp;
+                                                <input class="form-check-input" type="radio" name="calltype"
+                                                    id="incoming" value="incoming"> Incoming</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield12"><input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield12" value="no">Outgoing</label>
+                                            <label class="form-check-label" for="databasefield12">
+                                                <input class="form-check-input" type="radio" name="calltype"
+                                                    id="incoming" value="outgoing">Outgoing</label>
                                         </div>
                                     </div>
                                     <label for="customername" class="form-label">Anonymous:</label>
                                     <div class="opt d-flex flex-row ">
                                         <div class="form-check me-3 align-items-center">
-                                            <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield11" value="yes"> Yes</label>
+                                            <label class="form-check-label" for="databasefield11">&nbsp;
+                                                <input class="form-check-input" type="radio" name="anonymous"
+                                                    id="databasefield9" value="yes" onclick="formsubmitcustomer();">
+                                                Yes</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield12"><input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield12" value="no">No</label>
+                                            <label class="form-check-label" for="databasefield12">
+                                                <input class="form-check-input" type="radio" name="anonymous"
+                                                    id="databasefield10" onclick="formsubmitcustomer();" value="no"
+                                                    checked="checked">No</label>
                                         </div>
                                     </div>
                                     <label for="customername" class="form-label">Registered Name:</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
+                                    <input name="customername" type="text" class="form-control" id="customername"
                                         size="20" autocomplete="off" isdatepicker="true">
+
+                                    <input type="hidden" name="lastslno" id="lastslno" value="" />
+                                    <input type="hidden" name="cusid" id="cusid" value="" />
+                                    <input type="hidden" name="loggeduser" id="loggeduser"
+                                        value="<?php echo ($user); ?>" />
+                                    <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                        value="<?php echo ($usertype); ?>" />
+                                    <input type="hidden" name="endtime" id="endtime" value="" />
+                                    <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                                        value="<?php echo ($reportingauthoritytype); ?>" />
+                                    <input type="hidden" name="hiddenserverdate" id="hiddenserverdate"
+                                        value="<?php echo (datetimelocal('d-m-Y')); ?>" />
+
+
+
                                     <label for="customername" class="form-label">Customer ID:</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="customerid" type="text" class="form-control" id="customerid" size="20"
+                                        autocomplete="off" isdatepicker="true">
+
                                     <label for="customername" class="form-label">Date:</label>
-                                    <input name="customerid" type="date" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="date" type="date" class="form-control" id="date" size="20"
+                                        autocomplete="off" isdatepicker="true">
+
                                     <label for="customername" class="form-label">Time:</label>
-                                    <input name="customerid" type="time" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="time" type="time" class="form-control" id="time" size="20"
+                                        autocomplete="off" isdatepicker="true">
+
                                     <label for="customername" class="form-label">Category:</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="category" type="text" class="form-control" id="category" size="20"
+                                        autocomplete="off" isdatepicker="true">
+
                                     <label for="customername" class="form-label">State:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="state" class="form-select swiftselect form-control" id="state"
+                                        onchange="">
+                                        <?php include('../inc/state.php'); ?>
+
                                     </select>
                                     <label for="customername" class="form-label">Caller Type:</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="callertype" type="text" class="form-control" id="callertype" size="20"
+                                        autocomplete="off" isdatepicker="true">
                                     <label for="customername" class="form-label">Product Group:</label>
 
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
-                                    </select>
+                                    <?php include('../inc/productgroup.php');
+                                    productname('productgroup', '');
+                                    ?>
 
                                 </div>
 
@@ -101,69 +119,80 @@ include("../navigation/navigation.php");
 
                                 <div class="mb-3 " style="width: 50%; margin:20px;">
                                     <label for="customername" class="form-label">Product Name(optional):</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
+                                    <select name="productname" class="form-select swiftselect form-control"
+                                        id="productname" onchange="">
                                         <option value="" selected="selected">
                                             Make a Selection
                                         </option>
                                     </select>
                                     <label for="customername" class="form-label">Person version:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
+                                    <select name="productversion" class="form-select swiftselect form-control"
+                                        id="productversion" onchange="">
                                         <option value="" selected="selected">
-                                            Make a Selection
+                                            Select a Product
                                         </option>
                                     </select>
                                     <label for="customername" class="form-label">Person Name:</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
-                                    <label for="customername" class="form-label">Problem:</label>
+                                    <input name="personname" type="text" class="form-control" id="personname" size="20"
+                                        autocomplete="off" isdatepicker="true">
 
-                                    <input name="customerid" type="text" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <label for="customername" class="form-label">Problem:</label>
+                                    <input name="problem" type="text" class="form-control" id="problem" size="20"
+                                        autocomplete="off" isdatepicker="true">
+
                                     <label for="teamleaderremarks" class="form-label">Status:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
+                                    <select name="status" class="form-select swiftselect form-control" id="status"
+                                        onchange="">
                                         <option value="" selected="selected">
                                             Make a Selection
                                         </option>
+                                        <option value="solved">Solved</option>
+                                        <option value="unsolved">Un Solved</option>
+                                        <option value="transferred">Transferred</option>
+                                        <option value="registration given">Registration Given</option>
                                     </select>
                                     <!-- second div -->
                                     <label for="customername" class="form-label">Call Category:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="callcategory" class="form-select swiftselect form-control"
+                                        id="callcategory" onchange="">
+                                        <?php include('../inc/callcategory.php'); ?>
+
                                     </select>
                                     <label for="customername" class="form-label">Solved Through:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
-                                    </select>
+                                    <input name="stremoteconnection" type="text" class="form-control"
+                                        id="stremoteconnection" size="20" autocomplete="off" isdatepicker="true">Remote
+                                    Connection
+
                                     <label for="customername" class="form-label">Transferred To: </label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="transferredto" class="form-select swiftselect form-control"
+                                        id="transferredto" onchange="" selected="selected">
+                                        <option value="none" selected="selected">None</option>
+                                        <?php include('../inc/useridselection.php'); ?>
+                                        <option value="registration">Registration Department</option>
+                                        <option value="others">Others</option>
                                     </select>
+
                                     <label for="customername" class="form-label">Remarks:</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="remarks" type="text" class="form-control" id="remarks" size="20"
+                                        autocomplete="off" isdatepicker="true">
+                                    <label for="customername" class="form-label">Entered By:</label>
+                                    <input name="userid" type="text" class="form-control" id="userid" size="20"
+                                        autocomplete="off" isdatepicker="true" value="<?php echo ($loggedusername); ?>">
+
+
                                     <label for="customername" class="form-label">Complaint ID: </label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
+                                    <input name="compliantid" type="text" class="form-control" id="compliantid"
                                         size="20" autocomplete="off" isdatepicker="true">
                                     <!-- <label for=""> Team Leader Remarks:</label> -->
                                 </div>
                                 <!-- Add more textarea fields as needed -->
                             </div>
                             <div class="text-end float-right flex">
-                                <button name="new" type="submit" class="btn btn-secondary">New</button>
-                                <button name="save" type="submit" class="btn btn-primary">View</button>
-                                <button name="delete" type="submit" class="btn btn-warning">To Excel</button>
+                                <button name="new" type="reset" class="btn btn-secondary">New</button>
+                                <button name="save" type="submit" class="btn btn-primary" id="save" value="Save"
+                                    onclick="formsubmit('save')">View</button>
+                                <button name="delete" type="submit" class="btn btn-warning" id="delete" value="Delete"
+                                    onclick="formsubmit('delete')" disabled="disabled">To Excel</button>
                             </div>
                         </form>
                     </div>
@@ -184,102 +213,111 @@ include("../navigation/navigation.php");
                 </div>
                 <div class="card-body">
                     <div id="maindiv" style="display: block;">
-                        <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                        <form action="" method="post" name="filterform" id="filterform" onsubmit="return false;">
                             <!-- Your form content goes here -->
                             <div class="display" style="display: flex; flex-direction: row; width:100%;">
                                 <!-- first div -->
 
                                 <div class="mb-3" style="width: 50%; margin:20px;">
                                     <label for="customername" class="form-label">From Date:</label>
-                                    <input name="customerid" type="date" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="fromdate" type="date" class="form-control" id="DPC_fromdate" size="20"
+                                        autocomplete="off" isdatepicker="true">
+
                                     <label for="customername" class="form-label">To Date:</label>
-                                    <input name="customerid" type="date" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="todate" type="date" class="form-control" id="DPC_todate" size="20"
+                                        autocomplete="off" isdatepicker="true">
                                     <label for="customername" class="form-label">Call Type:</label>
                                     <div class="opt d-flex flex-row ">
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield11" value="yes"> Incoming</label>
+                                            <label class="form-check-label" for="databasefield11">&nbsp;
+                                                <input class="form-check-input" type="radio" name="s_calltype"
+                                                    id="s_incoming" value="yes"> Incoming</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield12"><input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield12" value="no">Outgoing</label>
+                                            <label class="form-check-label" for="databasefield12">
+                                                <input class="form-check-input" type="radio" name="s_calltype"
+                                                    id="s_outgoing" value="no">Outgoing</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield12"><input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield12" value="no">Both</label>
+                                            <label class="form-check-label" for="databasefield12">
+                                                <input class="form-check-input" type="radio" name="s_calltype"
+                                                    id="s_calltypeboth" value="" checked="checked">Both</label>
                                         </div>
                                     </div>
                                     <label for="customername" class="form-label">Anonymous:</label>
                                     <div class="opt d-flex flex-row ">
                                         <div class="form-check me-3 align-items-center">
-                                            <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                    class="form-check-input" type="radio" name="anonymous"
+                                            <label class="form-check-label" for="databasefield11">&nbsp;
+                                                <input class="form-check-input" type="radio" name="s_anonymous"
                                                     id="databasefield11" value="yes"> Yes</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield12"><input
-                                                    class="form-check-input" type="radio" name="anonymous"
+                                            <label class="form-check-label" for="databasefield12">
+                                                <input class="form-check-input" type="radio" name="s_anonymous"
                                                     id="databasefield12" value="no">No</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield12"><input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield12" value="no">Both</label>
+                                            <label class="form-check-label" for="databasefield12">
+                                                <input class="form-check-input" type="radio" name="s_anonymous"
+                                                    id="databasefield13" value="">Both</label>
                                         </div>
                                     </div>
                                     <label for="customername" class="form-label">Customer Name:</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
+                                    <input name="s_customername" type="text" class="form-control" id="s_customername"
                                         size="20" autocomplete="off" isdatepicker="true">
                                     <label for="customername" class="form-label">Customer ID:</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
+                                    <input name="s_customerid" type="text" class="form-control" id="s_customerid"
                                         size="20" autocomplete="off" isdatepicker="true">
                                     <label for="customername" class="form-label">Category:</label>
                                     <br>
+                                    <label class="form-check-label" for="stremoteconnection">
+                                        <input class="form-check-input" type="checkbox" name="categoryblr"
+                                            id="categoryblr" value=""> BLR</label>
 
-                                    <label class="form-check-label" for="stremoteconnection"> <input
-                                            class="form-check-input" type="checkbox" name="stremoteconnection"
-                                            id="stremoteconnection" value=""> BLR</label>
+                                    <label class="form-check-label" for="marketingperson">
+                                        <input class="form-check-input" type="checkbox" name="categorycsd"
+                                            id="categorycsd" value=""> CSD</label>
 
-                                    <label class="form-check-label" for="marketingperson"> <input
-                                            class="form-check-input" type="checkbox" name="marketingperson"
-                                            id="marketingperson" value=""> CSD</label>
-
-                                    <label class="form-check-label" for="onsitevisit"> <input class="form-check-input"
-                                            type="checkbox" name="onsitevisit" id="onsitevisit" value="" checked>
+                                    <label class="form-check-label" for="onsitevisit">
+                                        <input class="form-check-input" type="checkbox" name="categorykkg"
+                                            id="categorykkg" value="" checked>
                                         KKG</label>
 
                                     <br>
                                     <label for="customername" class="form-label">Status:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="s_state" class="form-select swiftselect form-control" id="s_state"
+                                        onchange="">
+                                        <?php include('../inc/state.php'); ?>
+
                                     </select>
-                                    <label for="customername" class="form-label">Call Type:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
-                                    </select>
+
+                                    <label for="customername" class="form-label">Caller Type:</label>
+                                    <label class="form-check-label" for="stremoteconnection">
+                                        <input class="form-check-input" type="checkbox" name="s_customer"
+                                            id="s_customer" value=""> Customers</label>
+
+                                    <label class="form-check-label" for="marketingperson">
+                                        <input class="form-check-input" type="checkbox" name="s_dealer" id="s_dealer"
+                                            value=""> Dealers</label>
+
+                                    <label class="form-check-label" for="onsitevisit">
+                                        <input class="form-check-input" type="checkbox" name="s_employee"
+                                            id="s_employee" value="" checked>
+                                        Employees</label>
+                                    <label class="form-check-label" for="onsitevisit">
+                                        <input class="form-check-input" type="checkbox" name="s_ssmuser" id="s_ssmuser"
+                                            value="" checked>
+                                        SSM Users</label>
                                     <label for="customername" class="form-label">Product group:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
-                                    </select>
+                                    <span id="filterprdgroupdisplay">
+                                        <?php productname('s_productgroup', ''); ?>
+                                        <!-- Details are in javascript.js page as a function prdgroup();-->
+                                    </span>
 
                                 </div>
 
@@ -287,94 +325,112 @@ include("../navigation/navigation.php");
 
                                 <div class="mb-3 " style="width: 50%; margin:20px;">
                                     <label for="customername" class="form-label">Product Name:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
+                                    <select name="s_productname" class="form-select swiftselect form-control"
+                                        id="s_productname" onchange="">
                                         <option value="" selected="selected">
-                                            Make a Selection
+                                            ALL
                                         </option>
+                                        <?php include('../inc/productfilter.php'); ?>
+
                                     </select>
                                     <label for="customername" class="form-label">Problem</label>
-                                    <input name="customerid" type="text" class="form-control" id="customername"
-                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <input name="s_problem" type="text" class="form-control" id="s_problem" size="20"
+                                        autocomplete="off" isdatepicker="true">
                                     <label for="customername" class="form-label">Status:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="s_status" class="form-select swiftselect form-control" id="s_status"
+                                        onchange="">
+                                        <option value="" selected="selected">All</option>
+                                        <option value="solved">Solved</option>
+                                        <option value="unsolved">Un Solved</option>
+                                        <option value="transferred">Transferred</option>
+                                        <option value="registration given">Registration Given</option>
                                     </select>
                                     <label for="customername" class="form-label">Call Category:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="s_callcategory" class="form-select swiftselect form-control"
+                                        id="s_callcategory" onchange="">
+                                        <option value="" selected="selected">All</option>
+                                        <?php include('../inc/callcategory.php'); ?>
                                     </select>
                                     <label for="customername" class="form-label">Transferred To:</label>
-
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="s_transferredto" class="form-select swiftselect form-control"
+                                        id="s_transferredto" onchange="">
+                                        <option value="" selected="selected">All</option>
+                                        <option value="none" selected="selected">None</option>
+                                        <?php include('../inc/useridselection.php'); ?>
+                                        <option value="registration">Registration Department</option>
+                                        <option value="others">Others</option>
                                     </select>
                                     <label for="teamleaderremarks" class="form-label">Entered By:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="s_userid" class="form-select swiftselect form-control" id="s_userid"
+                                        onchange="">
+                                        <option value="" selected="selected">All</option>
+                                        <?php include('../inc/useridselection.php'); ?>
                                     </select>
                                     <!-- second div -->
                                     <label for="customername" class="form-label">Compliant ID:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
-                                    </select>
+                                    <input name="s_compliantid" type="date" class="form-control" id="s_compliantid"
+                                        size="20" autocomplete="off" isdatepicker="true">
+                                    <!-- <label for="customername" class="form-label">From Date:</label>
+                                    <input name="fromdate" type="date" class="form-control" id="DPC_fromdate" size="20"
+                                        autocomplete="off" isdatepicker="true">
+
+
+                                    <label for="customername" class="form-label">From Date:</label>
+                                    <input name="fromdate" type="date" class="form-control" id="DPC_fromdate" size="20"
+                                        autocomplete="off" isdatepicker="true"> -->
                                     <label for="customername" class="form-label">Flags:</label>
                                     <div class="opt d-flex flex-row ">
                                         <div class="form-check me-3 align-items-center">
-                                            <label class="form-check-label" for="databasefield11">&nbsp; <input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield11" value="yes"> Yes</label>
+                                            <label class="form-check-label" for="databasefield11">&nbsp;
+                                                <input class="form-check-input" type="radio" name="flagdatabasefield"
+                                                    id="flagdatabasefield0" value="yes"> Yes</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
                                             <label class="form-check-label" for="databasefield12"><input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield12" value="no">No</label>
+                                                    class="form-check-input" type="radio" name="flagdatabasefield"
+                                                    id="flagdatabasefield1" value="no">No</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
                                             <label class="form-check-label" for="databasefield12"><input
-                                                    class="form-check-input" type="radio" name="anonymous"
-                                                    id="databasefield12" value="no">Both</label>
+                                                    class="form-check-input" type="radio" name="flagdatabasefield"
+                                                    id="flagdatabasefield2" value="no">Both</label>
                                         </div>
                                     </div>
                                     <label for="customername" class="form-label">Support Unit: </label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="s_supportunit" class="form-select swiftselect form-control"
+                                        id="s_supportunit" onchange="">
+                                        <option value="">ALL</option>
+                                        <?php include('../inc/supportunit.php'); ?>
                                     </select>
                                     <label for="customername" class="form-label">Order By:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup" onchange="">
-                                        <option value="" selected="selected">
-                                            Make a Selection
-                                        </option>
+                                    <select name="orderby" class="form-select swiftselect form-control" id="orderby"
+                                        onchange="">
+                                        <option value="callertype">Caller Type</option>
+                                        <option value="category">Category</option>
+                                        <option value="compliantid" selected="selected">Compliant ID</option>
+                                        <option value="customerid">Customer ID</option>
+                                        <option value="customername">Registered Name</option>
+                                        <option value="date">Date</option>
+                                        <option value="userid">Entered By</option>
+                                        <option value="problem">Problem</option>
+                                        <option value="productgroup">Product Group</option>
+                                        <option value="productname">Product Name</option>
+                                        <option value="status">Status</option>
+                                        <option value="callcategory">Call Category</option>
+                                        <option value="transferredto">Transferred To</option>
+                                        <option value="time">Time</option>
                                     </select>
                                     <!-- <label for=""> Team Leader Remarks:</label> -->
                                 </div>
                                 <!-- Add more textarea fields as needed -->
                             </div>
                             <div class="text-end float-right flex">
-                                <button name="new" type="submit" class="btn btn-secondary">New</button>
-                                <button name="save" type="submit" class="btn btn-primary">View</button>
-                                <button name="delete" type="submit" class="btn btn-warning">To Excel</button>
+                                <button name="new" type="reset" class="btn btn-secondary">New</button>
+                                <button name="view" type="submit" class="btn btn-primary" id="view">View</button>
+                                <button name="" type="submit" class="btn btn-warning"
+                                    onclick="formfilter('toexcel');">To Excel</button>
                             </div>
                         </form>
                     </div>
@@ -387,7 +443,8 @@ include("../navigation/navigation.php");
 
 
 <div class="container mt-4">
-    <div class="tab container" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius: 10px; padding: 10px;">
+    <div class="tab container"
+        style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); border-radius: 10px; padding: 10px;">
         <span id="toggleButton" class="btn btn-primary btn-sm mb-3 float-end">Default/Flagged</span>
         <div class="table-container1">
             <h2 class="mb-3">Default</h2>

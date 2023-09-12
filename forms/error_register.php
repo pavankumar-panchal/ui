@@ -26,19 +26,34 @@ include("../navigation/navigation.php");
                                     <label for="anonymous">Anonymous:</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="anonymous"
-                                            id="databasefield11" value="yes">
+                                            id="databasefield12" value="yes">
                                         <label class="form-check-label" for="databasefield11">Yes</label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="anonymous"
-                                            id="databasefield12" value="no">
+                                            id="databasefield13" value="no">
                                         <label class="form-check-label" for="databasefield12">No</label>
                                     </div>
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="reported-by">Reported By:</label>
-                                    <input name="reported-by" type="text" class="form-control" id="reported-by"
+                                    <input name="customername" type="text" class="form-control" id="customername"
                                         autocomplete="off">
+                                    <span id="getcustomerlink" style="visibility:visible;"><a href="javascript:void(0);"
+                                            onClick="getcustomer(); getcustomerfunc();registernameload('error')"
+                                            style="cursor:pointer"><img src="../images/userid-bg.gif" width="14"
+                                                height="16" border="0" align="absmiddle" /></a></span>
+                                    <input type="hidden" name="lastslno" id="lastslno" value="" />
+                                    <input type="hidden" name="loggeduser" id="loggeduser"
+                                        value="<?php echo ($user); ?>" />
+                                    <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                        value="<?php echo ($usertype); ?>" />
+                                    <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                                        value="<?php echo ($reportingauthority); ?>" />
+                                    <input type="hidden" name="hiddenserverdate" id="hiddenserverdate"
+                                        value="<?php echo (datetimelocal('d-m-Y')); ?>" />
+                                    <input type="hidden" name="customerid" id="customerid" value="" />
+                                    <input type="hidden" name="errorreportgrid" id="errorreportgrid" value="" />
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="date">Date:</label>
@@ -58,24 +73,22 @@ include("../navigation/navigation.php");
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="product-group">Product Group:</label>
-                                    <select name="product-group" class="form-select swiftselect form-control"
-                                        id="product-group" onchange="">
-                                        <option value="" selected="selected">Make a Selection</option>
-                                        <!-- Add product group options here -->
-                                    </select>
+                                    <?php include('../inc/productgroup.php');
+                                    productname('productgroup', '');
+                                    ?>
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="product-name">Product Name (Optional):</label>
-                                    <select name="product-name" class="form-select swiftselect form-control"
-                                        id="product-name" onchange="">
+                                    <select name="productname" class="form-select swiftselect form-control"
+                                        id="productname" onchange="">
                                         <option value="" selected="selected">Make a Selection</option>
                                         <!-- Add product name options here -->
                                     </select>
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="product-version">Product Version:</label>
-                                    <select name="product-version" class="form-select swiftselect form-control"
-                                        id="product-version" onchange="">
+                                    <select name="productversiondisplay" class="form-select swiftselect form-control"
+                                        id="productversiondisplay" onchange="">
                                         <option value="" selected="selected">Make a Selection</option>
                                         <!-- Add product version options here -->
                                     </select>
@@ -86,39 +99,65 @@ include("../navigation/navigation.php");
                                         onchange="">
                                         <option value="" selected="selected">Make a Selection</option>
                                         <!-- Add database options here -->
+                                        <option value="access">MS Access</option>
+                                        <option value="sql">MS SQL</option>
+                                        <option value="mysql">MySQL</option>
                                     </select>
                                 </div>
                                 <div class="bg-white p-2 ">
-                                    <label for="status">Status:</label>
-                                    <select name="status" class="form-select swiftselect form-control" id="status"
-                                        onchange="">
-                                        <option value="" selected="selected">Make a Selection</option>
-                                        <!-- Add status options here -->
-                                    </select>
+                                    <label for="status">Error Reported:</label>
+                                    <input name="errorreported" type="date" class="form-control" id="errorreported"
+                                        autocomplete="off">
+                                </div>
+                                <div class="bg-white p-2 ">
+                                    <label for="status">Error understood by you:</label>
+                                    <input name="errorunderstood" type="date" class="form-control" id="errorunderstood"
+                                        autocomplete="off">
+                                </div>
+                                <div class="bg-white p-2 ">
+                                    <label for="status">Reported To:</label>
+                                    <input name="reportedto" type="date" class="form-control" id="reportedto"
+                                        autocomplete="off">
+                                </div>
+                                <div class="bg-white p-2 ">
+                                    <label for="status">Error File:</label>
+                                    <input name="errorfile" type="date" class="form-control" id="errorfile"
+                                        autocomplete="off">
                                 </div>
 
                             </div>
                             <div class="col-md-6">
-
+                                <div class="bg-white p-2 ">
+                                    <label for="database">Status:</label>
+                                    <select name="status" class="form-select swiftselect form-control" id="status"
+                                        onchange="">
+                                        <option value="solved">Solved</option>
+                                        <option value="unsolved" selected="selected">Un Solved</option>
+                                        <option value="rejected">Rejected</option>
+                                    </select>
+                                </div>
                                 <div class="bg-white p-2 ">
                                     <label for="solved-date">Solved Date:</label>
-                                    <input name="solved-date" type="date" class="form-control" id="solved-date"
+                                    <input name="solveddate" type="date" class="form-control" id="DPC_solveddate"
                                         autocomplete="off">
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="solution-given">Solution Given:</label>
-                                    <textarea name="solution-given" cols="45" class="form-control" id="solution-given"
+                                    <textarea name="solutiongiven" cols="45" class="form-control" id="solutiongiven"
                                         data-gramm="false" wt-ignore-input="true"></textarea>
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="solution-entered-time">Solution Entered Time:</label>
-                                    <input name="solution-entered-time" type="text" class="form-control"
-                                        id="solution-entered-time" autocomplete="off">
+                                    <input name="solutionenteredtime" type="text" class="form-control"
+                                        id="solutionenteredtime" autocomplete="off">
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="solution-file">Solution File:</label>
-                                    <input name="solution-file" type="file" class="form-control" id="solution-file"
-                                        autocomplete="off">
+                                    <input name="solutionfile" type="file" class="form-control" id="solutionfile"
+                                        autocomplete="off"> <img src="../images/fileattach.jpg"
+                                        name="myfileuploadimage1" border="0" align="absmiddle" id="myfileuploadimage1"
+                                        onclick="fileuploaddivid('downloadlinkfile1','solutionfile','fileuploaddiv','330px','65%')" />
+                                    <span id="downloadlinkfile1"></span>
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="remarks">Remarks:</label>
@@ -127,32 +166,33 @@ include("../navigation/navigation.php");
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="entered-by">Entered By:</label>
-                                    <input name="entered-by" type="text" class="form-control swifttext" id="entered-by"
+                                    <input name="userid" type="text" class="form-control swifttext" id="userid"
                                         autocomplete="off">
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="email-id">Email ID:</label>
-                                    <input name="email-id" type="email" class="form-control swifttext" id="email-id"
+                                    <input name="errorid" type="email" class="form-control swifttext" id="errorid"
                                         autocomplete="off">
                                 </div>
                                 <div class="bg-white p-2 ">
-                                    <label for="error-reported">Error Reported:</label>
+                                    <!-- <label for="error-reported">Error Reported:</label>
                                     <textarea name="error-reported" cols="45" class="form-control" id="error-reported"
-                                        data-gramm="false" wt-ignore-input="true"></textarea>
+                                        data-gramm="false" wt-ignore-input="true"></textarea> -->
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 text-end">
-                                <button name="new" type="submit" class="btn btn-secondary m-2" id="new"
+                                <button name="new" type="reset" class="btn btn-secondary m-2" id="new"
                                     onclick="formsubmit('new');">New</button>
                                 <button name="save" type="submit" class="btn btn-primary m-2" id="save"
-                                    onclick="formsubmit('save');">Save</button>
+                                    onclick="formsubmit('save');" id="save" value="Save"
+                                    onclick="formsubmit('save')">Save</button>
                                 <button name="delete" type="submit" class="btn btn-danger m-2" id="delete"
-                                    onclick="formsubmit('delete');">Delete</button>
-                                <button name="error-report" type="submit" class="btn btn-warning m-2" id="error-report"
-                                    onclick="formsubmit('error-report');">Error Report</button>
+                                    onclick="formsubmit('delete');" disabled="disaled">Delete</button>
+                                <button name="errorreport" type="submit" class="btn btn-warning m-2" id="errorreport"
+                                    onclick="formsubmit('errorreport')">Error Report</button>
                             </div>
                         </div>
                     </div>
@@ -169,78 +209,82 @@ include("../navigation/navigation.php");
             </div>
             <div class="card-body">
                 <div id="maindiv" style="display: block;">
-                    <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                    <form action="" method="post" name="filterform" id="filterform" onsubmit="return false;">
                         <div class="display">
                             <div class="row">
                                 <div class="col-md-6">
 
                                     <div class="bg-white p-2">
-                                        <label for="date">Date:</label>
-                                        <input name="customerid" type="date" class="form-control" id="customername"
+                                        <label for="date">From Date:</label>
+                                        <input name="fromdate" type="date" class="form-control" id="DPC_fromdate"
                                             size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
-                                        <label for="date">Time:</label>
-                                        <input name="customerid" type="time" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <label for="date">To Date:</label>
+                                        <input name="todate" type="time" class="form-control" id="DPC_todate" size="20"
+                                            autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="anonymous">Anonymous:</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="anonymous"
-                                                id="databasefield11" value="yes">
-                                            <label class="form-check-label" for="databasefield11">Yes</label>
+                                            <input class="form-check-input" type="radio" name="s_anonymous"
+                                                id="databasefield9" value="yes">
+                                            <label class="form-check-label" for="databasefield9">Yes</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="anonymous"
-                                                id="databasefield12" value="no">
-                                            <label class="form-check-label" for="databasefield12">No</label>
+                                            <input class="form-check-input" type="radio" name="s_anonymous"
+                                                id="databasefield10" value="no">
+                                            <label class="form-check-label" for="databasefield10">No</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="anonymous"
-                                                id="databasefield13" value="both">
-                                            <label class="form-check-label" for="databasefield13">Both</label>
+                                            <input class="form-check-input" type="radio" name="s_anonymous"
+                                                id="databasefield11" value="">
+                                            <label class="form-check-label" for="databasefield11">Both</label>
                                         </div>
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="reported-by">State:</label>
-                                        <select name="solvedby" id="solvedby" class="form-control form-select">
-                                            <option value="">ALL</option>
+                                        <select name="s_state" id="s_state" class="form-control form-select">
                                             <!-- Add other options here -->
+                                            <?php include('../inc/state.php'); ?>
+
                                         </select>
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="reported-by"> Reported By:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <input name="s_customername" type="text" class="form-control"
+                                            id="s_customername" size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="reported-by">Product Group:</label>
-                                        <select name="solvedby" id="solvedby" class="form-control form-select">
-                                            <option value="">ALL</option>
-                                            <!-- Add other options here -->
-                                        </select>
+                                        <span id="filterprdgroupdisplay">
+                                            <?php productname('s_productgroup', ''); ?>
+                                            <!-- Details are in javascript.js page as a function prdgroup();-->
+                                        </span>
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="reported-by">Product Name:</label>
-                                        <select name="solvedby" id="solvedby" class="form-control form-select">
+                                        <select name="s_productname" id="s_productname"
+                                            class="form-control form-select">
                                             <option value="">ALL</option>
                                             <!-- Add other options here -->
+                                            <?php include('../inc/productfilter.php'); ?>
+
                                         </select>
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="reported-by"> Error Reported :</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <input name="s_errorreported" type="text" class="form-control"
+                                            id="s_errorreported" size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="reported-by"> Reported To:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
+                                        <input name="s_reportedto" type="text" class="form-control" id="s_reportedto"
                                             size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="reported-by">Error File:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
+                                        <input name="s_errorfile" type="text" class="form-control" id="s_errorfile"
                                             size="20" autocomplete="off" isdatepicker="true">
                                     </div>
 
@@ -249,63 +293,67 @@ include("../navigation/navigation.php");
                                 <div class="col-md-6">
                                     <div class="bg-white p-2">
                                         <label for="reported-by">Status:</label>
-                                        <select name="solvedby" id="solvedby" class="form-control form-select">
+                                        <select name="s_status" id="s_status" class="form-control form-select">
                                             <option value="">ALL</option>
-                                            <!-- Add other options here -->
+                                            <option value="solved">Solved</option>
+                                            <option value="unsolved">Un Solved</option>
                                         </select>
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="date">Solved Date:</label>
-                                        <input name="customerid" type="date" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <input name="s_solveddate" type="date" class="form-control"
+                                            id="DPC_s_solveddate" size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="time">Solution Given:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <input name="s_solutiongiven" type="text" class="form-control"
+                                            id="s_solutiongiven" size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="time">Solution File:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <input name="s_solutionfile" type="text" class="form-control"
+                                            id="s_solutionfile" size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="time">Remarks:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
+                                        <input name="s_remarks" type="text" class="form-control" id="s_remarks"
                                             size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="time">Entered By:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
-                                            size="20" autocomplete="off" isdatepicker="true">
+                                        <input name="s_userid" type="text" class="form-control" id="s_userid" size="20"
+                                            autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="time">Error ID:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customername"
+                                        <input name="s_errorid" type="text" class="form-control" id="s_errorid"
                                             size="20" autocomplete="off" isdatepicker="true">
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="anonymous">Flags:</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="anonymous"
-                                                id="databasefield11" value="yes">
+                                            <input class="form-check-input" type="radio" name="flagdatabasefield"
+                                                id="flagdatabasefield0" value="yes">
                                             <label class="form-check-label" for="databasefield11">Yes</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="anonymous"
-                                                id="databasefield12" value="no">
+                                            <input class="form-check-input" type="radio" name="flagdatabasefield"
+                                                id="flagdatabasefield1" value="no">
                                             <label class="form-check-label" for="databasefield12">No</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="anonymous"
-                                                id="databasefield13" value="both">
+                                            <input class="form-check-input" type="radio" name="flagdatabasefield"
+                                                id="flagdatabasefield2" value="" checked="checked">
                                             <label class="form-check-label" for="databasefield13">Both</label>
                                         </div>
                                     </div>
                                     <div class="bg-white p-2">
                                         <label for="reported-by">Support Unit:</label>
-                                        <select name="solvedby" id="solvedby" class="form-control form-select">
+                                        <select name="s_supportunit" id="s_supportunit"
+                                            class="form-control form-select">
                                             <option value="">ALL</option>
+                                            <?php include('../inc/supportunit.php'); ?>
+
                                             <!-- Add other options here -->
                                         </select>
                                     </div>
@@ -343,16 +391,11 @@ include("../navigation/navigation.php");
                         </div>
                         <div class="container ">
                             <div class="row">
-
                                 <div class="col-md-12 float-right" align="right">
-                                    <button name="new" type="submit" class="btn btn-secondary m-2" id="view"
-                                        onclick="formsubmit('toview');">New</button>
-                                    <button name="save" type="submit" class="btn btn-primary m-2" id="view"
-                                        onclick="formsubmit('toview');">Save</button>
-                                    <button name="delete" type="submit" class="btn btn-danger m-2" id="toexcel"
-                                        onclick="formsubmit('toexcel');">Delete</button>
+                                    <button name="view" type="submit" class="btn btn-primary m-2" id="view"
+                                        onclick="formsubmit('toview');">View</button>
                                     <button name="error-report" type="submit" class="btn btn-warning m-2" id="toexcel"
-                                        onclick="formsubmit('toexcel');">Error Report</button>
+                                        onclick="formsubmit('toexcel');">To excel</button>
                                 </div>
                             </div>
                         </div>
