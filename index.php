@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head>s
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Login System</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <!-- Custom styles for login page -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet"> -->
+  <!-- Include Tailwind CSS from unpkg -->
+  <link href="https://unpkg.com/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="style/mainindex.css">
 
   <?php
@@ -19,7 +19,7 @@
   session_start();
 
   // include('./inc/dbconfig.php');
-  include('functions/phpfunctions.php');
+  include('./functions/phpfunctions.php');
   if (imaxgetcookie('ssmuserid') != false) {
     $url = './home.php';
 
@@ -67,8 +67,8 @@
           $query = "INSERT INTO ssm_usertime(userid,logindate,logintime,type,locationname,logintype) values('" . $userid . "','" . changedateformat($date) . "','" . datetimelocal('H:i') . "','" . $type . "','" . $locationname . "','" . $logintype . "')";
           $result = runmysqlquery($query);
 
+          // $url = './home/index.php?a_link=home_dashboard';
           $url = './home.php';
-
           header("location:" . $url);
 
         }

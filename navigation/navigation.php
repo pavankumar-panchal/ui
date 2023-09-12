@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- <base href="./">
  -->
@@ -32,31 +31,18 @@
     <link rel="stylesheet" href="../css/style.min.css">
     <link rel="stylesheet" href="../style.css">
     <!-- grid js -->
-
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-
     <!-- grid js  -->
-
-
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link href="../css/examples.css" rel="stylesheet">
     <link href="../vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
-
-
     <!-- calendar -->
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
-
-
     <link rel="stylesheet" href="calendar/fonts/icomoon/style.css">
-
     <link href='calendar/fullcalendar/packages/core/main.css' rel='stylesheet' />
     <link href='calendar/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
-
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="calendar/css/bootstrap.min.css">
 

@@ -1,14 +1,8 @@
 <?php
-
 include("../navigation/navigation.php");
-
 ?>
 
-
 <body>
-
-
-
     <div class="container mt-5">
         <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="card-header bg-light d-flex justify-content-between" onclick="showhide('maindiv','toggleimg');">
@@ -195,8 +189,6 @@ include("../navigation/navigation.php");
                                         <input name="customername" type="text" class="form-control" id="customername"
                                             autocomplete="off">
                                     </div>
-
-
                                     <!-- More input fields -->
                                 </div>
                             </form>
@@ -221,13 +213,6 @@ include("../navigation/navigation.php");
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
 
     <div class="container mt-4">
         <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">

@@ -3,7 +3,7 @@ include("../navigation/navigation.php");
 
 ?>
 <style>
-    label{
+    label {
         margin-top: 10px;
     }
 </style>
@@ -29,38 +29,47 @@ include("../navigation/navigation.php");
                         <div class="form-group">
                             <label>Registers:</label>
                             <div class="form-check">
-                               
-                                <label class="form-check-label" for="stremoteconnection">  <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">   Calls</label>
-                                <br>
-                              
-                                <label class="form-check-label" for="stremoteconnection">    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">   Emails Customer</label>
-                                <br>
-                                
-                                <label class="form-check-label" for="stremoteconnection"> <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">  Email-NonCustomer</label>
-                                <br>
-                              
-                                <label class="form-check-label" for="stremoteconnection">      <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value=""> Skype</label> <br>
-                               
-                                <label class="form-check-label" for="stremoteconnection">   <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">   Errors</label> <br>
-                               
-                                <label class="form-check-label" for="stremoteconnection">   <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value=""> Onsite</label>
-                                <br>
-                              
 
-                                <label class="form-check-label" for="stremoteconnection">   <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">    References</label> <br>
-                               
-                                <label class="form-check-label" for="stremoteconnection">   <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">   In-House</label> <br>
-                              
-                                <label class="form-check-label" for="stremoteconnection">    <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">  Requirements</label>
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> Calls</label>
+                                <br>
+
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> Emails Customer</label>
+                                <br>
+
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> Email-NonCustomer</label>
+                                <br>
+
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> Skype</label> <br>
+
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> Errors</label> <br>
+
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> Onsite</label>
+                                <br>
+
+
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> References</label> <br>
+
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> In-House</label> <br>
+
+                                <label class="form-check-label" for="stremoteconnection"> <input
+                                        class="form-check-input" type="checkbox" name="stremoteconnection"
+                                        id="stremoteconnection" value=""> Requirements</label>
                             </div>
                             <!-- Add other checkboxes here -->
                         </div>
@@ -91,23 +100,34 @@ include("../navigation/navigation.php");
                             <!-- Add other checkboxes here -->
                         </div>
                         <div class="form-group">
+                            <label for="todate">Status:</label>
+                            <input name="status" type="text" class="form-control" id="status" autocomplete="off"
+                                value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                        </div>
+                        <div class="form-group">
                             <label>Caller Type:</label>
                             <div class="form-check">
-                               
-                                <label class="form-check-label" for="stremoteconnection">   <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">  Customers</label>
+
+                                <label class="form-check-label" for="stremoteconnection">
+                                    <input class="form-check-input" type="checkbox" name="customer" id="customer"
+                                        value="Customer"> Customers</label>
                                 <br>
-                                
-                                <label class="form-check-label" for="stremoteconnection">  <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">  Dealers</label>
+
+                                <label class="form-check-label" for="stremoteconnection">
+                                    <input class="form-check-input" type="checkbox" name="dealer" id="dealer"
+                                        value="Dealer"> Dealers</label>
                                 <br>
-                                
-                                <label class="form-check-label" for="stremoteconnection">  <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value=""> Employees</label>
+
+                                <label class="form-check-label" for="stremoteconnection">
+                                    <input class="form-check-input" type="checkbox" name="employee" id="employee"
+                                        value="employee"> Employees</label>
                                 <br>
-                             
-                                <label class="form-check-label" for="stremoteconnection">   <input class="form-check-input" type="checkbox" name="stremoteconnection"
-                                    id="stremoteconnection" value="">     SSM Users</label> <br>
+
+                                <label class="form-check-label" for="stremoteconnection">
+                                    <input class="form-check-input" type="checkbox" name="ssmuser" id="ssmuser"
+                                        value="SSMUser"> SSM Users</label> <br>[Not Available for Email Non Customers,
+                                Errors, References,
+                                Requirements]
 
                             </div>
                             <!-- Add other checkboxes here -->
@@ -117,13 +137,16 @@ include("../navigation/navigation.php");
                             <label>Anonymous:</label>
                             <div>
                                 <label class="radio-inline">
-                                    <input type="radio" name="anonymous" id="databasefield11" value="Yes"  class="form-check-input"> Yes
+                                    <input type="radio" name="anonymous" id="anonymousdatabasefield11" value="Yes"
+                                        class="form-check-input"> Yes
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="anonymous" id="databasefield11" value="No"  class="form-check-input"> No
+                                    <input type="radio" name="anonymous" id="anonymousdatabasefield12" value="No"
+                                        class="form-check-input"> No
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="anonymous" id="databasefield11" value="Both" class="form-check-input"> Both
+                                    <input type="radio" name="anonymous" id="anonymousdatabasefield13" value="Both"
+                                        class="form-check-input" checked="checked"> Both
                                 </label>
                                 <!-- Add other radio buttons here -->
                             </div>
@@ -141,9 +164,9 @@ include("../navigation/navigation.php");
                             <button name="view" type="submit" class="btn btn-primary" id="view"
                                 onclick="formsubmit('toview');">View
                             </button>
-                            <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
+                            <!-- <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
                                 onclick="formsubmit('toexcel');">To Excel
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>

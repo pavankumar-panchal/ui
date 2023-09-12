@@ -1,9 +1,6 @@
 <?php
 include("../navigation/navigation.php");
-
-
 ?>
-
 <div class="container mt-5">
     <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); width:98%; margin-left:10px;">
         <div class="card-header bg-light d-flex justify-content-between align-items-center" style="cursor:pointer;"
@@ -30,8 +27,21 @@ include("../navigation/navigation.php");
                 <div class="mb-3">
                     <label for="userid" class="form-label">User Name:</label>
                     <select name="userid" id="userid" class="form-select" fdprocessedid="9mlttf">
-                        <option value="">Make a selection</option>
                         <!-- Add options here -->
+                        <?php if ($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') {
+                            ?>
+                            <select name="userid" id="userid" class="swiftselect">
+                                <?php include('../inc/useridselectionreports.php'); ?>
+                            </select>
+                            <?php
+                        } else {
+                            ?>
+                            <span style="width:45%">
+                                <input type="hidden" name="userid" id="userid" />
+                                <?php
+                                echo $loggedusername;
+                        }
+                        ?>
                     </select>
                 </div>
                 <div class="row mt-3">
@@ -42,7 +52,7 @@ include("../navigation/navigation.php");
                         <input name="view" type="submit" class="btn btn-primary" id="view" value="View"
                             onclick="formsubmit('view');" fdprocessedid="mnaln6">
                         <input name="excel" type="submit" class="btn btn-warning ms-2" id="excel" value="Excel"
-                            onclick="formsubmit('excel');" fdprocessedid="mnaln6">
+                            onclick="formsubmit('toexcel');" fdprocessedid="mnaln6">
                     </div>
                 </div>
             </form>
