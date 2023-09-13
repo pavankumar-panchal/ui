@@ -22,12 +22,14 @@ include("../navigation/navigation.php");
                         <div class="form-group">
                             <label for="fromdate">From Date:</label>
                             <input name="fromdate" type="date" class="form-control" id="DPC_fromdate" autocomplete="off"
-                                value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                                value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                            <input type="hidden" id="hiddenlastslno" name="hiddenlastslno" value="" /> <br />
+
                         </div>
                         <div class="form-group">
                             <label for="todate">To Date:</label>
                             <input name="todate" type="date" class="form-control" id="DPC_todate" autocomplete="off"
-                                value="21-07-2023" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                                value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
                         </div>
                         <div class="form-group">
                             <label>Service Charge:</label>
@@ -35,7 +37,8 @@ include("../navigation/navigation.php");
 
                                 <label class="form-check-label" for="servicecharge">
                                     <input class="form-check-input" type="checkbox" name="servicecharge"
-                                        id="servicecharge" value=""> Service Charge</label>
+                                        id="servicecharge" value="" onClick="javascript:enableoutstandingbills();">
+                                    Service Charge</label>
                             </div>
                             <!-- Add other checkboxes here -->
                         </div>
@@ -197,9 +200,9 @@ include("../navigation/navigation.php");
                         </div>
                         <div class="col-md-12 text-end float-right">
                             <button name="view" type="submit" class="btn btn-primary" id="view"
-                                onclick="formsubmit('toview');">View</button>
+                                onCick="formsubmit('toview');">View</button>
                             <button name="toexcel" type="submit" class="btn btn-warning ml-2" id="toexcel"
-                                onclick="formsubmit('toexcel');">To Excel</button>
+                                onClick="formsubmit('toexcel');">To Excel</button>
                         </div>
                     </div>
                 </div>
