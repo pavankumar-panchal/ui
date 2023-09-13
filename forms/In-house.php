@@ -1,14 +1,16 @@
 <?php
 
 include("../navigation/navigation.php");
-
+$month = date('m');
+if ($month >= '04')
+    $date = '01-04-' . date('Y');
+else {
+    $year = date('Y') - '1';
+    $date = '01-04-' . $year; //echo($date);
+}
 ?>
 
-
 <body>
-
-
-
     <div class="container mt-5">
         <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="card-header bg-light d-flex justify-content-between" onclick="showhide('maindiv','toggleimg');">
@@ -24,12 +26,12 @@ include("../navigation/navigation.php");
                                         <label class="form-label mt-2">Anonymous:</label> <br>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="anonymous"
-                                                id="anonymous-yes" value="yes">
+                                                id="databasefield12" value="yes" onclick="formsubmitcustomer();">
                                             <label class="form-check-label" for="anonymous-yes">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="anonymous"
-                                                id="anonymous-no" value="no">
+                                                id="databasefield13" value="no" onclick="formsubmitcustomer();">
                                             <label class="form-check-label" for="anonymous-no">No</label>
                                         </div>
                                     </div>
@@ -38,57 +40,72 @@ include("../navigation/navigation.php");
                                         <label for="registered-name" class="form-label">Registered Name:</label>
                                         <input name="customername" type="text" class="form-control" id="customername"
                                             autocomplete="off">
+                                        <span id="getcustomerlink" style="visibility:visible;"> <a
+                                                href="javascript:void(0);"
+                                                onClick="getcustomer(); getcustomerfunc(); registernameload('inhouse')"
+                                                style="cursor:pointer"> <img src="../images/userid-bg.gif" width="14"
+                                                    height="16" border="0" align="absmiddle" /></a></span>
+                                        <input type="hidden" name="lastslno" id="lastslno" value="" />
+                                        <input type="hidden" name="loggeduser" id="loggeduser"
+                                            value="<?php echo ($user); ?>" />
+                                        <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                            value="<?php echo ($usertype); ?>" />
+                                        <input type="hidden" name="loggedreportingauthority"
+                                            id="loggedreportingauthority"
+                                            value="<?php echo ($reportingauthority); ?>" />
+                                        <input type="hidden" name="hiddenserverdate" id="hiddenserverdate"
+                                            value="<?php echo (datetimelocal('d-m-Y')); ?>" />
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Customer Id:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
+                                        <input name="customerid" type="text" class="form-control" id="customerid"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Date:</label>
-                                        <input name="customername" type="date" class="form-control" id="customername"
+                                        <input name="date" type="date" class="form-control" id="date"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Time:</label>
-                                        <input name="customername" type="time" class="form-control" id="customername"
+                                        <input name="time" type="time" class="form-control" id="time"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Category:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
+                                        <input name="category" type="text" class="form-control" id="category"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">State:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup">
+                                        <select name="state" class="form-select swiftselect form-control" id="state">
                                             <option value="" selected="selected">ALL</option>
+                                            <?php include('../inc/state.php'); ?>
+
                                         </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Caller Type:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
+                                        <input name="callertype" type="text" class="form-control" id="callertype"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Product Group[Optional]:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup">
-                                            <option value="" selected="selected">ALL</option>
-                                        </select>
+                                        <?php include('../inc/productgroup.php');
+                                        productname('productgroup', '');
+                                        ?>
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Product Name:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup">
+                                        <select name="productname" class="form-select swiftselect form-control"
+                                            id="productname">
                                             <option value="" selected="selected">ALL</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Product Version:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup">
+                                        <select name="productversion" class="form-select swiftselect form-control"
+                                            id="productversion">
                                             <option value="" selected="selected">ALL</option>
                                         </select>
                                     </div>
@@ -102,49 +119,64 @@ include("../navigation/navigation.php");
                                 <div class="display">
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Contact Person:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
+                                        <input name="contactperson" type="text" class="form-control" id="contactperson"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Problem:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
+                                        <input name="problem" type="text" class="form-control" id="problem"
                                             autocomplete="off">
+                                        <a href="javascript:void(0);" style="cursor:pointer"
+                                            onClick="getquestionfunc(); getquestion();"><img
+                                                src="../images/get-problem.gif" width="22" height="22" border="0"
+                                                align="top" /></a>
                                     </div>
                                     <div class="mb-3">
                                         <label for="state" class="form-label">Service Charge:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
+                                        <input name="servicecharge" type="text" class="form-control" id="servicecharge"
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
                                         <label for="caller-type" class="form-label">Status:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup">
-                                            <option value="" selected="selected">ALL</option>
+                                        <select name="status" class="form-select swiftselect form-control" id="status">
+                                            <option value="notyetattended" selected="selected">Un Attended</option>
+                                            <?php if ($usertype <> 'GUEST') { ?>
+                                                <option value="postponed">Postponed</option>
+                                                <option value="inprocess">In Process</option>
+                                                <option value="solved">Solved</option>
+                                                <option value="skipped">Skipped</option>
+                                                <option value="unsolved">Un Solved</option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="caller-type" class="form-label">Assigned To:</label>
-                                        <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup">
+                                        <select name="assignedto" class="form-select swiftselect form-control" id="assignedto"  <?php if ($usertype == 'GUEST' || $usertype == 'HR') { ?> disabled="disabled" <?php } ?>>
+                                            
                                             <option value="" selected="selected">ALL</option>
+                                            <?php include('../inc/useridselection.php'); ?>
+
                                         </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="caller-type" class="form-label">Solved By:</label>
                                         <select name="s_productgroup" class="form-select swiftselect form-control"
-                                            id="s_productgroup">
+                                            id="s_productgroup"   <?php if ($usertype == 'GUEST' || $usertype == 'HR') { ?> disabled="disabled" <?php } ?>>
                                             <option value="" selected="selected">ALL</option>
+                                  <?php include('../inc/useridselection.php'); ?>
+
                                         </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Bill Number:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
+                                        <input name="billno" type="text" class="form-control" id="billno"
+                                            autocomplete="off" <?php if ($usertype == 'GUEST' || $usertype == 'HR') { ?>
+                                    disabled="disabled" <?php } ?> /></td>
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Acknowledgement Number:</label>
                                         <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
+                                            autocomplete="off" <?php if ($usertype == 'GUEST' || $usertype == 'HR') { ?> disabled="disabled" <?php } ?> />
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Remarks:</label>

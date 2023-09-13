@@ -29,19 +29,19 @@ include("../navigation/navigation.php");
                   <input name="check[]" type="checkbox" value="Skype" checked="checked"> Skype
                 </label>
                 <label class="checkbox-inline">
-                  <input name="check[]" type="checkbox" value="Errors" checked="checked"> Errors
+                  <input name="check[]" type="checkbox" value="Errors"> Errors
                 </label>
                 <label class="checkbox-inline">
-                  <input name="check[]" type="checkbox" value="Onsite" checked="checked"> Onsite
+                  <input name="check[]" type="checkbox" value="Onsite"> Onsite
                 </label>
                 <label class="checkbox-inline">
-                  <input name="check[]" type="checkbox" value="References" checked="checked"> References
+                  <input name="check[]" type="checkbox" value="References"> References
                 </label>
                 <label class="checkbox-inline">
-                  <input name="check[]" type="checkbox" value="Inhouse" checked="checked"> Inhouse
+                  <input name="check[]" type="checkbox" value="Inhouse"> Inhouse
                 </label>
                 <label class="checkbox-inline">
-                  <input name="check[]" type="checkbox" value="Requirements" checked="checked"> Requirements
+                  <input name="check[]" type="checkbox" value="Requirements"> Requirements
                 </label>
                 <!-- Add other checkboxes here -->
                 <input type="hidden" name="lastslno" id="lastslno" value="" />
@@ -56,13 +56,11 @@ include("../navigation/navigation.php");
             <!-- Other input fields -->
           </div>
 
-
-
-
           <div class="col-md-6">
             <div class="form-group">
               <label>From Date:</label>
-              <input name="fromdate" type="date" id="DPC_fromdate" value="2021-07-01" class="form-control">
+              <input name="fromdate" type="date" id="DPC_fromdate" value="<?php echo (datetimelocal('d-m-y')); ?>"
+                class="form-control">
             </div>
             <!-- Other input fields -->
 
@@ -70,7 +68,7 @@ include("../navigation/navigation.php");
           <div class="col-md-6">
             <div class="form-group">
               <label>To Date:</label>
-              <input name="fromdate" type="date" id="DPC_fromdate" value="2021-07-01" class="form-control">
+              <input name="todate" type="date" id="DPC_todate" value="2021-07-01" class="form-control">
             </div>
             <!-- Other input fields -->
 
@@ -81,7 +79,7 @@ include("../navigation/navigation.php");
               <!-- <input name="fromdate" type="date" id="DPC_fromdate" value="2021-07-01" class="form-control"> -->
             </div>
             <!-- Other input fields -->
-            <select name="userid" id="userid" class="form-control form-select swiftselect">
+            <select name="userid" id="userid" class="form-control form-select ">
               <!-- Add other options here -->
               <?php if ($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') { ?>
                 <option value="">ALL</option>
@@ -144,73 +142,62 @@ include("../navigation/navigation.php");
             <!-- Other input fields -->
           </div>
         </div>
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label>Entered By:</label>
-              <select name="userid" id="userid" class="form-control form-select">
-                <option value="">ALL</option>
-                <!-- Add other options here -->
-              </select>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Anonymous:</label>
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="anonymous" id="databasefield11" value="Yes"> Yes
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="anonymous" id="databasefield12" value="No"> No
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="anonymous" id="databasefield13" value="Both" checked="checked"> Both
+              </label>
+              <!-- Add other radio buttons here -->
             </div>
-            <!-- Other input fields -->
           </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label>Anonymous:</label>
-              <div>
-                <label class="radio-inline">
-                  <input type="radio" name="anonymous" id="databasefield11" value="Yes"> Yes
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="anonymous" id="databasefield12" value="No"> No
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="anonymous" id="databasefield13" value="Both" checked="checked"> Both
-                </label>
-                <!-- Add other radio buttons here -->
-              </div>
-            </div>
-            <!-- Other input fields -->
-          </div>
+          <!-- Other input fields -->
         </div>
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label>Report on:</label>
-              <div>
-                <label class="radio-inline">
-                  <input name="reporton" type="radio" id="reporton0" value="statistics" checked>
-                  Statistics
-                </label>
-                <label class="radio-inline">
-                  <input name="reporton" type="radio" id="reporton1" value="details" >
-                  Details
-                </label>
-                <!-- Add other radio buttons here -->
-              </div>
-            </div>
-            <!-- Other input fields -->
-          </div>
-          <div class="col-md-6">
-            <!-- No additional input fields -->
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 text-end float-right">
-            <div id="form-error"></div>
-            <button name="view" type="submit" class="btn btn-primary swiftchoicebutton" id="view" onclick="formsubmit('view');">
-              View
-            </button>
-            <button name="toexcel" type="submit" class="btn btn-warning ml-2 swiftchoicebutton-orange" id="toexcel"
-              onclick="formsubmit('toexcel');">
-              To Excel
-            </button>
-          </div>
-        </div>
-      </form>
     </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Report on:</label>
+          <div>
+            <label class="radio-inline">
+              <input name="reporton" type="radio" id="reporton0" value="statistics" checked>
+              Statistics
+            </label>
+            <label class="radio-inline">
+              <input name="reporton" type="radio" id="reporton1" value="details">
+              Details
+            </label>
+            <!-- Add other radio buttons here -->
+          </div>
+        </div>
+        <!-- Other input fields -->
+      </div>
+      <div class="col-md-6">
+        <!-- No additional input fields -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-end float-right">
+        <div id="form-error"></div>
+        <button name="view" type="submit" class="btn btn-primary " id="view" onclick="formsubmit('view');">
+          View
+        </button>
+        <button name="toexcel" type="submit" class="btn btn-warning ml-2 " id="toexcel"
+          onclick="formsubmit('toexcel');">
+          To Excel
+        </button>
+      </div>
+    </div>
+    </form>
   </div>
+</div>
 </div>
 
 <div class="col-md-12 mt-4 shadow p-2" style="border-radius:10px;">

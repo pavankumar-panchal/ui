@@ -16,23 +16,23 @@ include("../navigation/navigation.php");
                         <div class="mb-3">
                             <label for="fromdate" class="form-label">From Date:</label>
                             <input name="fromdate" type="date" class="form-control swifttext" id="DPC_fromdate"
-                                size="30" autocomplete="off" value="" datepicker_format="DD-MM-YYYY" maxlength="10"
-                                isdatepicker="true">
+                                size="30" autocomplete="off" value="<?php datetimelocal('d-m-Y'); ?>"
+                                datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
                         </div>
                         <div class="mb-3">
                             <label for="todate" class="form-label">To Date:</label>
                             <input name="todate" type="date" class="form-control" id="DPC_todate" size="30"
-                                autocomplete="off" value="" datepicker_format="DD-MM-YYYY" maxlength="10"
-                                isdatepicker="true">
+                                autocomplete="off" value="<?php datetimelocal('d-m-Y'); ?>"
+                                datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
                         </div>
                         <div class="mb-3">
                             <label for="productgroup" class="form-label">Product group:</label>
-                            <select name="productgroup" id="filterprdgroupdisplay" class="form-control form-select">
+                            <span name="productgroup" id="filterprdgroupdisplay" class="form-control form-select">
                                 <?php include('../inc/productgroup.php');
                                 productname('s_productgroup', 'color');
                                 ?>
                                 <!-- Other options -->
-                            </select>
+                            </span>
                         </div>
                         <div class="mb-3">
                             <label for="productname" class="form-label">Product Name:</label>

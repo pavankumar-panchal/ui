@@ -3,21 +3,9 @@
 include("../navigation/navigation.php");
 
 ?>
-            <!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
-
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Masters</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Locations</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
 
 <style>
-    label{
+    label {
         margin-top: 10px;
     }
 </style>
@@ -200,12 +188,12 @@ include("../navigation/navigation.php");
                         onclick="formfilter('view')">
                 </div>
             </form>
-   
-    </div>
-</div>
 
-<div class="col-md-12">
-</div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+    </div>
 </div>
 </div>
 <?php
