@@ -15,6 +15,7 @@ include("../navigation/navigation.php");
 <body>
 
 
+
     <div class="container mt-5">
         <div class="card " style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="card-header bg-light" onclick="showhide('maindiv','toggleimg');">
@@ -35,108 +36,124 @@ include("../navigation/navigation.php");
                                 <label for="customername" class="form-label">Registered Name:</label>
                                 <input name="customername" type="text" class="form-control" id="customername"
                                     autocomplete="off" isdatepicker="true">
+                                <span id="getcustomerlink" style="visibility:visible;"> <a href="javascript:void(0);"
+                                        onClick="getregisterdata(); getcustomerfunc();registernameload('invoice');"
+                                        style="cursor:pointer">
+                                        <img src="../images/userid-bg.gif" width="14" height="16" border="0"
+                                            align="absmiddle" /></a></span>
+                                <input type="hidden" name="lastslno" id="lastslno" value="" />
+                                <input type="hidden" name="cusid" id="cusid" value="" />
+                                <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
+                                <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                    value="<?php echo ($usertype); ?>" />
+                                <input type="hidden" name="endtime" id="endtime" value="" />
+                                <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                                    value="<?php echo ($reportingauthority); ?>" />
+                                <input type="hidden" name="hiddenserverdate" id="hiddenserverdate"
+                                    value="<?php echo (datetimelocal('d-m-Y')); ?>" />
+
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Customer Id:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
+                                <label for="customerid" class="form-label">Customer Id:</label>
+                                <input name="customerid" type="text" class="form-control" id="customerid"
                                     autocomplete="off" isdatepicker="true">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">product Group:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
+                                <label for="productgroup" class="form-label">product Group:</label>
+                                <input name="productgroup" type="text" class="form-control" id="productgroup"
                                     autocomplete="off" isdatepicker="true">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Product Name:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
+                                <label for="productname" class="form-label">Product Name:</label>
+                                <input name="productname" type="text" class="form-control" id="productname"
                                     autocomplete="off" isdatepicker="true">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Product Version:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
+                                <label for="productversion" class="form-label">Product Version:</label>
+                                <input name="productversion" type="text" class="form-control" id="productversion"
                                     autocomplete="off" isdatepicker="true">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">State:</label>
-                                <select name="s_productgroup" class="form-select swiftselect form-control"
-                                    id="s_productgroup" onchange="">
-                                    <option value="" selected="selected">
-                                        ALL
-                                    </option>
+                                <label for="state" class="form-label">State:</label>
+                                <select name="state" class="form-select swiftselect form-control" id="state"
+                                    onchange="">
+                                    <?php include('../inc/state.php'); ?>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Bill Number:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
+                                <label for="billno" class="form-label">Bill Number:</label>
+                                <input name="billno" type="text" class="form-control" id="billno" autocomplete="off"
+                                    isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="billdate" class="form-label">Bill Date:</label>
+                                <input name="billdate" type="date" class="form-control" id="billdate" autocomplete="off"
+                                    isdatepicker="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registername" class="form-label">Register Number:</label>
+                                <input name="registername" type="text" class="form-control" id="registername"
                                     autocomplete="off" isdatepicker="true">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Bill Date:</label>
-                                <input name="customername" type="date" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
-                            </div>
-                            <div class="mb-3">
-                                <label for="customername" class="form-label">Register Number:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
-                            </div>
-                            <div class="mb-3">
-                                <label for="customername" class="form-label">Complaint ID:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
+                                <label for="complaintid" class="form-label">Complaint ID:</label>
+                                <input name="complaintid" type="text" class="form-control" id="complaintid"
                                     autocomplete="off" isdatepicker="true">
                             </div>
                             <!-- Add more divs for other fields -->
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Date:</label>
-                                <input name="customername" type="date" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
+                                <label for="date" class="form-label">Date:</label>
+                                <input name="date" type="text" class="form-control" id="date" autocomplete="off"
+                                    isdatepicker="true" value="<?php echo ($localdate); ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Time:</label>
-                                <input name="customername" type="time" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
+                                <label for="time" class="form-label">Time:</label>
+                                <input name="time" type="text" class="form-control" id="time" autocomplete="off"
+                                    isdatepicker="true" value="<?php echo ($localtime); ?>">
                             </div>
 
                             <div class="mb-3">
-                                <label for="customergivento" class="form-label">Bill Given To:</label>
-                                <input name="customergivento" type="text" class="form-control" id="customergivento"
-                                    autocomplete="off" isdatepicker="true">
+                                <label for="billto" class="form-label">Bill Given To:</label>
+                                <input name="billto" type="text" class="form-control" id="billto" autocomplete="off"
+                                    isdatepicker="true">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Billed By:</label>
-                                <select name="s_productgroup" class="form-select swiftselect form-control"
-                                    id="s_productgroup" onchange="">
-                                    <option value="" selected="selected">
-                                        ALL
-                                    </option>
+                                <label for="billedby" class="form-label">Billed By:</label>
+                                <select name="billedby" class="form-select swiftselect form-control" id="billedby"
+                                    onchange="">
+                                    <option value="" selected="selected"> ALL</option>
+                                    <?php include('../inc/useridselection.php'); ?>
+
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Amount:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
+                                <label for="amount" class="form-label">Amount:</label>
+                                <input name="amount" type="text" class="form-control" id="amount" autocomplete="off"
+                                    isdatepicker="true" onKeyPress="javascript:invoicetotalamount();"
+                                    onChange="javascript:invoicetotalamount();">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Tax Amount:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
+                                <label for="tax" class="form-label">Tax Amount:</label>
+                                <input name="tax" type="text" class="form-control" id="tax" autocomplete="off"
+                                    isdatepicker="true" onKeyPress="javascript:invoicetotalamount();"
+                                    onChange="javascript:invoicetotalamount();">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Total Amount:</label>
-                                <input name="customername" type="date" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
+                                <label for="tamount" class="form-label">Total Amount:</label>
+                                <input name="tamount" type="date" class="form-control" id="tamount" autocomplete="off"
+                                    isdatepicker="true">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">Remarks:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
+                                <label for="remarks" class="form-label">Remarks:</label>
+                                <input name="remarks" type="text" class="form-control" id="remarks" autocomplete="off"
+                                    isdatepicker="true">
                             </div>
                             <div class="mb-3">
-                                <label for="customername" class="form-label">User ID:</label>
-                                <input name="customername" type="text" class="form-control" id="customername"
-                                    autocomplete="off" isdatepicker="true">
+                                <label for="userid" class="form-label">User ID:</label>
+                                <input name="userid" type="text" class="form-control" id="userid" autocomplete="off"
+                                    isdatepicker="true" value="<?php echo ($loggedusername); ?>">
                             </div>
 
                             <!-- Add more divs for other fields -->
@@ -148,13 +165,12 @@ include("../navigation/navigation.php");
                         </div>
                         <div class="col-md-4 text-end">
                             <button name="new" type="submit" class="btn btn-secondary" id="new"
-                                onclick="formsubmit('new');">New</button>
+                                onclick="newentry();clearinnerhtml();gettime(); ">New</button>
                             <button name="save" type="submit" class="btn btn-primary" id="save"
                                 onclick="formsubmit('save');">Save</button>
                             <button name="delete" type="submit" class="btn btn-danger" id="delete"
                                 onclick="formsubmit('delete');">Delete</button>
-                            <button name="error-report" type="submit" class="btn btn-warning" id="error-report"
-                                onclick="formsubmit('error-report');">Error Report</button>
+
                         </div>
                     </div>
                 </form>

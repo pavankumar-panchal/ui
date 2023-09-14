@@ -21,15 +21,17 @@ include("../navigation/navigation.php");
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="fromdate">From Date:</label>
-                            <input name="fromdate" type="date" class="form-control" id="DPC_fromdate" autocomplete="off"
-                                value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                            <input name="fromdate" type="text" class="form-control" id="DPC_fromdate" autocomplete="off"
+                                datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true"
+                                value="<?php echo (datetimelocal('d-m-Y')); ?>">
                             <input type="hidden" id="hiddenlastslno" name="hiddenlastslno" value="" /> <br />
 
                         </div>
                         <div class="form-group">
                             <label for="todate">To Date:</label>
-                            <input name="todate" type="date" class="form-control" id="DPC_todate" autocomplete="off"
-                                value="" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                            <input name="todate" type="text" class="form-control" id="DPC_todate" autocomplete="off"
+                                datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true"
+                                value="<?php echo (datetimelocal('d-m-Y')); ?>">
                         </div>
                         <div class="form-group">
                             <label>Service Charge:</label>
@@ -37,8 +39,8 @@ include("../navigation/navigation.php");
 
                                 <label class="form-check-label" for="servicecharge">
                                     <input class="form-check-input" type="checkbox" name="servicecharge"
-                                        id="servicecharge" value="" onClick="javascript:enableoutstandingbills();">
-                                    Service Charge</label>
+                                        id="servicecharge" onClick="javascript:enableoutstandingbills();">
+                                </label>
                             </div>
                             <!-- Add other checkboxes here -->
                         </div>
@@ -63,25 +65,25 @@ include("../navigation/navigation.php");
                             </div>
                             <div class="form-check">
 
-                                <label class="form-check-label" for="stremoteconnection">
+                                <label class="form-check-label" for="marketingperson">
                                     <input class="form-check-input" type="checkbox" name="marketingperson"
                                         id="marketingperson" value=""> Marketing Person</label>
                             </div>
                             <div class="form-check">
 
-                                <label class="form-check-label" for="stremoteconnection">
+                                <label class="form-check-label" for="onsitevisit">
                                     <input class="form-check-input" type="checkbox" name="onsitevisit" id="onsitevisit"
-                                        value=""> Onsite Visit</label>
+                                        value="" checked="checked"> Onsite Visit</label>
                             </div>
                             <div class="form-check">
 
-                                <label class="form-check-label" for="stremoteconnection">
+                                <label class="form-check-label" for="overphone">
                                     <input class="form-check-input" type="checkbox" name="overphone" id="overphone"
                                         value=""> Over Phone</label>
                             </div>
                             <div class="form-check">
 
-                                <label class="form-check-label" for="stremoteconnection">
+                                <label class="form-check-label" for="mail">
                                     <input class="form-check-input" type="checkbox" name="mail" id="mail" value="">
                                     Mail</label>
                             </div>
@@ -119,8 +121,8 @@ include("../navigation/navigation.php");
                                     Details
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="reporton" id="reporton3" value="Pending Visits"
-                                        class="form-check-input"> Pending Visits
+                                    <input type="radio" name="reporton" id="reporton3" value="pendingvisits"
+                                        class="form-check-input" checked="checked"> Pending Visits
                                 </label>
                                 <!-- Add other radio buttons here -->
                             </div>
@@ -135,12 +137,12 @@ include("../navigation/navigation.php");
                         </div>
                         <div class="form-group">
                             <label>Product group:</label>
-                            <select name="productgroup" class="form-control form-select" id="filterprdgroupdisplay">
+                            <span name="" class="form-control form-select" id="filterprdgroupdisplay">
                                 <?php include('../inc/productgroup.php');
                                 productname('s_productgroup', '');
                                 ?>
                                 <!-- Add other options here -->
-                            </select>
+                            </span>
                         </div>
                         <div class="form-group">
                             <label>Product name:</label>
@@ -155,7 +157,6 @@ include("../navigation/navigation.php");
                             <label>Status:</label>
                             <select name="status" class="form-control form-select" id="status">
                                 <option value="">ALL</option>
-                                <!-- Add other options here -->
                                 <option value="notyetattended" selected="selected">Un Attended</option>
                                 <option value="postponed">Postponed</option>
                                 <option value="inprocess">In Process</option>
@@ -167,7 +168,7 @@ include("../navigation/navigation.php");
                         </div>
                         <div class="form-group">
                             <label>Registered By:</label>
-                            <select name="userid" id="userid" class="form-control form-select swiftselect">
+                            <select name="userid" id="userid" class="form-control form-select ">
                                 <?php if ($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') { ?>
                                     <option value="">ALL</option>
                                     <?php include('../inc/useridselectionreports.php');
@@ -178,7 +179,7 @@ include("../navigation/navigation.php");
                         </div>
                         <div class="form-group">
                             <label>Support Unit:</label>
-                            <select name="supportunit" class="form-control form-select swiftselect" id="supportunit">
+                            <select name="supportunit" class="form-control form-select " id="supportunit">
                                 <option value="">ALL</option>
                                 <?php include('../inc/supportunit.php'); ?>
                             </select>
@@ -206,10 +207,13 @@ include("../navigation/navigation.php");
                         </div>
                     </div>
                 </div>
+
+
             </form>
         </div>
     </div>
 </div>
+
 
 <?php
 

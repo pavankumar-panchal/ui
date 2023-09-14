@@ -36,6 +36,11 @@ include("../navigation/navigation.php");
         margin-top: 15px;
     }
 </style>
+
+
+
+
+
 <div class="container l-12">
     <table class="table table-bordered"
         style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top:50px; border-radius:10px; width: 98%; margin-left: 10px; ">
@@ -44,9 +49,7 @@ include("../navigation/navigation.php");
                 <th class="header-line card-header bg-light" colspan="2">
                     &nbsp;&nbsp;Authorization Summary - You have <strong>
                         <?php echo ($total); ?>
-                    </strong> Records Pending
-                    for
-                    Authorization
+                    </strong> Records Pending for Authorization
                     <div class="float-end"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
                             align="absmiddle"></div>
                 </th>
@@ -168,7 +171,6 @@ include("../navigation/navigation.php");
                                 <label for="authorizedgroup">Category:</label>
                                 <select name="authorizedgroup" id="authorizedgroup" class="form-select swiftselect">
                                     <option value="">Make a selection</option>
-                                    <!-- Add other options here -->
                                     <?php
                                     include('../inc/authorizinggroup.php');
                                     ?>
@@ -254,13 +256,18 @@ include("../navigation/navigation.php");
             </div>
         </div>
     </div>
+
+
+
+
+
     <!--  third table-->
     <div class="container users_la mt-4">
         <div class="row">
             <div class="col-md-12">
                 <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
                     <div class="card-header bg-light">
-                        Enter/Edit/View Details
+                        Filter data
                     </div>
                     <div class="card-body">
                         <form action="" method="post" name="filterform" id="filterform" onsubmit="return false;">

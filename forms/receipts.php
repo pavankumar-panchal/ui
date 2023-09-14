@@ -5,6 +5,7 @@ include("../navigation/navigation.php");
 ?>
 
 <body>
+    
     <div class="container mt-5">
         <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">
@@ -16,55 +17,73 @@ include("../navigation/navigation.php");
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="registered-name" class="form-label">Registered Name:</label>
-                            <input name="registeredname" type="text" class="form-control" id="registered-name"
+                            <input name="customername" type="text" class="form-control" id="customername"
                                 autocomplete="off">
+                            <a href="javascript:void(0);"
+                                onClick="getinvoiceregister(); getcustomerfunc();registernameload('receipt')"
+                                style="cursor:pointer">
+                                <img src="../images/userid-bg.gif" width="14" height="16" border="0"
+                                    align="absmiddle" /></a>
+                            <input type="hidden" name="lastslno" id="lastslno" value="" />
+                            <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
+                            <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                value="<?php echo ($usertype); ?>" />
+                            <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                                value="<?php echo ($reportingauthority); ?>" />
+                            <input type="hidden" name="hiddenserverdate" id="hiddenserverdate"
+                                value="<?php echo (datetimelocal('d-m-Y')); ?>" />
                         </div>
                         <div class="col-md-6">
-                            <label for="customer-id" class="form-label">Customer Id:</label>
-                            <input name="customerid" type="text" class="form-control" id="customer-id"
+                            <label for="customerid" class="form-label">Customer Id:</label>
+                            <input name="customerid" type="text" class="form-control" id="customerid"
                                 autocomplete="off">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="bill-number" class="form-label">Bill Number:</label>
-                            <input name="billnumber" type="text" class="form-control" id="bill-number"
-                                autocomplete="off">
+                            <label for="billno" class="form-label">Bill Number:</label>
+                            <input name="billno" type="text" class="form-control" id="billno" autocomplete="off">
                         </div>
                         <div class="col-md-6">
-                            <label for="bill-date" class="form-label">Bill Date:</label>
-                            <input name="billdate" type="date" class="form-control" id="bill-date">
+                            <label for="billdate" class="form-label">Bill Date:</label>
+                            <input name="billdate" type="date" class="form-control" id="billdate">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="date" class="form-label">Date:</label>
-                            <input name="date" type="date" class="form-control" id="date">
+                            <input name="date" type="text" class="form-control" id="date"
+                                value="<?php echo ($localdate); ?>">
                         </div>
                         <div class="col-md-6">
                             <label for="time" class="form-label">Time:</label>
-                            <input name="time" type="time" class="form-control" id="time">
+                            <input name="time" type="text" class="form-control" id="time"
+                                value="<?php echo ($localtime); ?>">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="receipt-number" class="form-label">Receipt Number:</label>
-                            <input name="receiptnumber" type="text" class="form-control" id="receipt-number"
-                                autocomplete="off">
+                            <label for="receiptno" class="form-label">Receipt Number:</label>
+                            <input name="receiptno" type="text" class="form-control" id="receiptno" autocomplete="off">
                         </div>
                         <div class="col-md-6">
-                            <label for="receipt-date" class="form-label">Receipt Date:</label>
-                            <input name="receiptdate" type="date" class="form-control" id="receipt-date">
+                            <label for="receiptdate" class="form-label">Receipt Date:</label>
+                            <input name="receiptdate" type="date" class="form-control" id="DPC_receiptdate">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="baid-by" class="form-label">Baid By:</label>
-                            <select name="baidby" class="form-select form-control">
+                            <label for="baid-by" class="form-label">Paid By:</label>
+                            <select name="cheque_cash" class="form-select form-control" id="cheque_cash">
                                 <option value="Cash" selected>Cash</option>
                                 <option value="Cheque">Cheque</option>
                                 <!-- Add other options here -->
                             </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="chequeno" class="form-label">Cheque Number:</label>
+                            <input name="chequeno" type="text" class="form-control" id="chequeno" autocomplete="off">
                         </div>
                         <div class="col-md-6">
                             <label for="amount" class="form-label">Amount:</label>
@@ -78,9 +97,9 @@ include("../navigation/navigation.php");
                                 wt-ignore-input="true"></textarea>
                         </div>
                         <div class="col-md-6">
-                            <label for="user-id" class="form-label">User ID:</label>
-                            <input name="userid" type="text" class="form-control swifttext" id="user-id"
-                                autocomplete="off">
+                            <label for="userid" class="form-label">User ID:</label>
+                            <input name="userid" type="text" class="form-control swifttext" id="userid"
+                                autocomplete="off" value="<?php echo ($loggedusername); ?>">
                         </div>
                     </div>
 
@@ -88,17 +107,16 @@ include("../navigation/navigation.php");
                         <div class="col-md-12">
                             <div class="text-end float-right">
                                 <div id="form-error"></div>
-                                <button name="new" type="submit" class="btn btn-secondary" id="new"
-                                    onclick="formsubmit('new');">New</button>
+                                <button name="new" type="reset" class="btn btn-secondary" id="new"
+                                onclick="newentry();clearinnerhtml();gettime(); " >New</button>
                                 <button name="save" type="submit" class="btn btn-primary" id="save"
                                     onclick="formsubmit('save');">Save</button>
                                 <button name="delete" type="submit" class="btn btn-danger" id="delete"
                                     onclick="formsubmit('delete');">Delete</button>
-                                <button name="error-report" type="submit" class="btn btn-warning" id="error-report"
-                                    onclick="formsubmit('error-report');">Error Report</button>
+
                             </div>
                         </div>
-                    </div>
+                    </div>  
                 </form>
             </div>
         </div>
