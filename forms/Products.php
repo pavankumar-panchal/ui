@@ -3,23 +3,16 @@
 include("../navigation/navigation.php");
 
 ?>
-               <!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Masters</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Products</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
 <style>
-    label{
+    label {
         margin-top: 10px;
     }
 </style>
+
+
+
+
 <div class="container mt-4">
     <div class="card ">
         <div class="card-header bg-light" style="cursor:pointer" onclick="showhide('maindiv','toggleimg');">
@@ -35,31 +28,31 @@ include("../navigation/navigation.php");
                     <div class="col-md-6 border-right">
                         <div class="form-group">
                             <label for="productname">Product Name:</label>
-                            <input name="productname" type="text" class="form-control swifttext" id="productname"
-                                size="30" isdatepicker="true">
+                            <input name="productname" type="text" class="form-control " id="productname" size="30"
+                                isdatepicker="true">
                             <input type="hidden" name="lastslno" id="lastslno" value="">
-                            <input type="hidden" name="loggeduser" id="loggeduser" value="1">
-                            <input type="hidden" name="loggedusertype" id="loggedusertype" value="ADMIN">
+                            <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>">
+                            <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                value="<?php echo ($usertype); ?>">
                             <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
-                                value="<br />
-                                    <b>Warning</b>:  Undefined variable $reportingauthority in <b>/opt/lampp/htdocs/mywork/redesign/masters/products.php</b> on line <b>34</b><br />">
+                                value="<?php echo ($reportingauthority); ?>" />
                         </div>
                         <div class="form-group">
                             <label for="shortformat">Product Short Format:</label>
-                            <input name="shortformat" type="text" class="form-control swifttext" id="shortformat"
-                                size="30" isdatepicker="true">
+                            <input name="shortformat" type="text" class="form-control " id="shortformat" size="30"
+                                isdatepicker="true">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="productgroup">Product Group:</label>
+                            <label for="prdgroupspan">Product Group:</label>
                             <span id="prdgroupspan">
-                                <select name="productgroup" class="form-control swiftselect form-select"
-                                    id="productgroup" onchange="productnamefunction();">
-                                    <option value="" selected="selected">Make a Selection</option>
-                                    <option value="null">null</option>
-                                    <option value="pro">pro</option>
-                                </select>
+                                <span id="prdgroupspan">
+                                    <?php include('../inc/productgroup.php');
+                                    productname('productgroup', '');
+                                    ?>
+                                    <!-- Details are in javascript.js page as a  function prdgroup();-->
+                                </span>
                                 <!-- Details are in javascript.js page as a function prdgroup(); -->
                             </span>
                         </div>
@@ -74,12 +67,14 @@ include("../navigation/navigation.php");
                 </div>
                 <div class="text-center float-end mt-3">
                     <div id="form-error"></div>
-                    <input name="new" type="reset" class="btn btn-secondary swiftchoicebutton" id="new" value="New"
-                        onclick="newentry();clearinnerhtml();">
-                    <input name="save" type="submit" id="save" class="btn btn-primary swiftchoicebutton" value="Save"
+                    <input name="new" type="reset" class="btn btn-secondary " id="new" value="New">
+                    <input name="save" type="submit" id="save" class="btn btn-primary " value="Save"
+                        onclick="formsubmit('save')" <?php if ($usertype <> 'ADMIN' && $usertype <> 'MANAGEMENT' && $usertype <> 'TEAMLEADER') {
+                            $class = 'swiftchoicebuttondisabled'; ?> disabled="disabled" <?php } else {
+                            $class = 'swiftchoicebutton'; ?> <?php } ?> class="<?php echo ($class); ?>"
                         onclick="formsubmit('save')">
-                    <input name="delete" type="submit" class="btn btn-danger swiftchoicebuttondisabled" id="delete"
-                        value="Delete" onclick="formsubmit('delete')" disabled="disabled">
+                    <input name="delete" type="submit" class="btn btn-danger " id="delete" value="Delete"
+                        onclick="formsubmit('delete')" disabled="disabled">
                 </div>
             </form>
         </div>
@@ -143,25 +138,30 @@ include("../navigation/navigation.php");
                 <div class="mt-3">
                     In:
                     <div class="form-check form-check-inline">
-                    
-                        <label class="form-check-label" for="databasefield0"><input type="radio" name="databasefield" id="databasefield0" value="productname"
-                            checked="checked" onclick="prdname('textname',databasefield0);" class="form-check-input">  Product Name</label>
+
+                        <label class="form-check-label" for="databasefield0"><input type="radio" name="databasefield"
+                                id="databasefield0" value="productname" checked="checked"
+                                onclick="prdname('textname',databasefield0);" class="form-check-input"> Product
+                            Name</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        
-                        <label class="form-check-label" for="databasefield2">   <input type="radio" name="databasefield" id="databasefield2" value="shortform"
-                            onclick="prdname('textname',databasefield2);" class="form-check-input">         Product Short
+
+                        <label class="form-check-label" for="databasefield2"> <input type="radio" name="databasefield"
+                                id="databasefield2" value="shortform" onclick="prdname('textname',databasefield2);"
+                                class="form-check-input"> Product Short
                             Format</label>
                     </div>
                     <div class="form-check form-check-inline">
-                       
-                        <label class="form-check-label" for="databasefield1">    <input type="radio" name="databasefield" id="databasefield1" value="productgroup"
-                            onclick="prdgroup('groupname',databasefield1);" class="form-check-input">   Product Group</label>
+
+                        <label class="form-check-label" for="databasefield1"> <input type="radio" name="databasefield"
+                                id="databasefield1" value="productgroup" onclick="prdgroup('groupname',databasefield1);"
+                                class="form-check-input"> Product Group</label>
                     </div>
                     <div class="form-check form-check-inline">
-                     
-                        <label class="form-check-label" for="databasefield3">         <input type="radio" name="databasefield" id="databasefield3" value="productinuse"
-                            onclick="prdgroup('groupname',databasefield1);" class="form-check-input">        Product in Use</label>
+
+                        <label class="form-check-label" for="databasefield3"> <input type="radio" name="databasefield"
+                                id="databasefield3" value="productinuse" onclick="prdgroup('groupname',databasefield1);"
+                                class="form-check-input"> Product in Use</label>
                     </div>
                 </div>
                 <div class="text-center mt-3 float-end">
@@ -179,10 +179,10 @@ include("../navigation/navigation.php");
 
 
 
-<!--  -->
-<div class="col-md-12">
-</div>
-</div>
+        <!--  -->
+        <div class="col-md-12">
+        </div>
+    </div>
 </div>
 <?php
 

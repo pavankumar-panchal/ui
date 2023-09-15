@@ -3,19 +3,7 @@
 include("../navigation/navigation.php");
 
 ?>
-<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Masters</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Non Working Days</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
-<!-- content -->
 
 
 <div class="container mt-4">
@@ -34,21 +22,24 @@ include("../navigation/navigation.php");
                             <div class="mb-3">
                                 <label for="DPC_date" class="form-label">Date:</label>
                                 <div class="input-group">
-                                    <input name="date" type="date" class="form-control" id="DPC_date" datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
+                                    <input name="date" type="date" class="form-control" id="DPC_date"
+                                        datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
                                     <div class="input-group-append"></div>
                                 </div>
                             </div>
                             <input type="hidden" name="lastslno" id="lastslno" value="">
                             <input type="hidden" name="loggeduser" id="loggeduser" value="1">
                             <input type="hidden" name="loggedusertype" id="loggedusertype" value="ADMIN">
-                            <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority" value="<br/><b>Warning</b>:  Undefined variable $reportingauthority in <b>/opt/lampp/htdocs/mywork/redesign/masters/non-workingdays.php</b> on line <b>37</b><br />">
+                            <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                                value="<br/><b>Warning</b>:  Undefined variable $reportingauthority in <b>/opt/lampp/htdocs/mywork/redesign/masters/non-workingdays.php</b> on line <b>37</b><br />">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md">
                             <div class="mb-3">
                                 <label for="occassion" class="form-label">Occasion:</label>
-                                <input name="occassion" type="text" class="form-control" id="occassion" size="60" isdatepicker="true">
+                                <input name="occassion" type="text" class="form-control" id="occassion" size="60"
+                                    isdatepicker="true">
                             </div>
                         </div>
                     </div>
@@ -56,7 +47,8 @@ include("../navigation/navigation.php");
                         <div class="col-md">
                             <div class="mb-3">
                                 <label for="remarks" class="form-label">Remarks:</label>
-                                <textarea name="remarks" class="form-control" id="remarks" data-gramm="false" wt-ignore-input="true"></textarea>
+                                <textarea name="remarks" class="form-control" id="remarks" data-gramm="false"
+                                    wt-ignore-input="true"></textarea>
                             </div>
                         </div>
                     </div>
@@ -64,9 +56,11 @@ include("../navigation/navigation.php");
                         <div class="col-md-12">
                             <div class="form-group text-end">
                                 <div id="form-error"></div>
-                                <button type="button" class="btn btn-secondary mr-2" onclick="newentry(); clearinnerhtml();">New</button>
+                                <button type="button" class="btn btn-secondary mr-2"
+                                    onclick="newentry(); clearinnerhtml();">New</button>
                                 <button type="button" class="btn btn-primary" onclick="formsubmit('save')">Save</button>
-                                <button type="button" class="btn btn-danger" onclick="formsubmit('delete')" disabled="disabled">Delete</button>
+                                <button type="button" class="btn btn-danger" onclick="formsubmit('delete')"
+                                    disabled="disabled">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -140,15 +134,10 @@ include("../navigation/navigation.php");
 
 
 
-
-
-
-
-
-<!--  -->
-<div class="col-md-12">
-</div>
-</div>
+        <!--  -->
+        <div class="col-md-12">
+        </div>
+    </div>
 </div>
 <?php
 

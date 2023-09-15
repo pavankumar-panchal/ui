@@ -3,19 +3,7 @@
 include("../navigation/navigation.php");
 
 ?>
-<!-- content -->
-<!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Masters</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Versions</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
 
 <div class="container mt-4">
   <div class="card">
@@ -31,26 +19,30 @@ include("../navigation/navigation.php");
         <div class="row">
           <div class="col-md-6 border-right">
             <div class="form-group">
-              <label for="s_productgroup">Product group:</label>
-              <select name="s_productgroup" class="form-control swiftselect" id="s_productgroup" onchange="">
-                <option value="" selected="selected">Make a Selection</option>
-                <option value="null">null</option>
-                <option value="pro">pro</option>
-              </select>
+              <label for="">Product group:</label>
+
+
+              <span id="filterprdgroupdisplay">
+                <?php include('../inc/productgroup.php');
+                productname('s_productgroup', ''); ?>
+                <!-- Details are in javascript.js page as a function prdgroup();-->
+              </span>
+
               <!-- Details are in javascript.js page as a function prdgroup(); -->
             </div>
             <div class="form-group">
               <label for="productname">Product Name:</label>
               <select name="productname" class="form-control swiftselect" id="productname">
                 <option value="" selected="">Make A Selection</option>
-                <option value="2">null</option>
-                <option value="1">products</option>
+                <?php include('../inc/productfilter.php'); ?>
+
               </select>
               <input type="hidden" name="lastslno" id="lastslno" value="">
               <input type="hidden" name="loggeduser" id="loggeduser" value="1">
-              <input type="hidden" name="loggedusertype" id="loggedusertype" value="ADMIN">
-              <!-- Replace the following line with the actual value from the backend -->
-              <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority" value="">
+              <input type="hidden" name="loggedusertype" id="loggedusertype" value="<?php echo ($usertype); ?>" />
+
+              <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                value="<?php echo ($reportingauthority); ?>">
             </div>
           </div>
           <div class="col-md-6">
@@ -71,9 +63,11 @@ include("../navigation/navigation.php");
         </div>
         <div class="text-center mt-3 float-end">
           <div id="form-error"></div>
-          <input name="new" type="reset" class="btn btn-secondary" id="new" value="New"
-            onclick="newentry();clearinnerhtml();">
+          <input name="new" type="reset" class="btn btn-secondary" id="new" value="New">
           <input name="save" type="submit" class="btn btn-primary" users="" id="save" value="Save"
+            onclick="formsubmit('save')" <?php if ($usertype <> 'ADMIN' && $usertype <> 'MANAGEMENT' && $usertype <> 'TEAMLEADER') {
+              $class = ''; ?> disabled="disabled" <?php } else {
+              $class = ''; ?> <?php } ?> class="<?php echo ($class); ?>" users id="save" value="Save"
             onclick="formsubmit('save')">
           <input name="delete" type="submit" class="btn btn-danger" id="delete" value="Delete"
             onclick="formsubmit('delete')" disabled>
@@ -82,6 +76,11 @@ include("../navigation/navigation.php");
     </div>
   </div>
 </div>
+
+
+
+
+
 
 <!--  -->
 <div class="container mt-4">

@@ -3,21 +3,10 @@
 include("../navigation/navigation.php");
 
 ?>
-            <!-- <div class="container-fluid header " style="position:sticky; top:60px; z-index:10;">
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-0 ms-2">
-            <li class="breadcrumb-item">
-                <span>Masters</span>
-            </li>
-            <li class="breadcrumb-item active"><span>Locations</span></li>
-        </ol>
-    </nav>
-</div>
-</header> -->
 
 <style>
-    label{
+    label {
         margin-top: 10px;
     }
 </style>
@@ -37,55 +26,59 @@ include("../navigation/navigation.php");
                     <div class="col-md-6 border-right">
                         <div class="form-group">
                             <label for="dealername">location Name:</label>
-                            <input name="dealername" type="text" class="form-control" id="dealername" size="30"
+                            <input name="locationname" type="text" class="form-control" id="locationname" size="30"
                                 isdatepicker="true">
+                            <input type="hidden" name="lastslno" id="lastslno" value="" />
+                            <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
+                            <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                value="<?php echo ($usertype); ?>" />
+                            <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                                value="<?php echo ($reportingauthority); ?>" />
+
+
                         </div>
                         <div class="form-group">
-                            <label for="dealercompanyname">Business Name:</label>
-                            <input name="dealercompanyname" type="text" class="form-control" id="dealercompanyname"
+                            <label for="businessname">Business Name:</label>
+                            <input name="businessname" type="text" class="form-control" id="businessname"
                                 size="30" isdatepicker="true">
-                            <input type="hidden" name="lastslno" id="lastslno" value="1">
-                            <input type="hidden" name="loggeduser" id="loggeduser" value="1">
-                            <input type="hidden" name="loggedusertype" id="loggedusertype" value="ADMIN">
-                            <!-- Replace the following line with the actual value from the backend -->
-                            <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority" value="">
+                            
                         </div>
 
                         <div class="form-group">
-                            <label for="contactnumber">Address:</label>
-                            <input name="contactnumber" type="text" class="form-control" id="contactnumber" size="30"
+                            <label for="address">Address:</label>
+                            <input name="address" type="text" class="form-control" id="address" size="30"
                                 isdatepicker="true">
                         </div>
                         <div class="form-group">
-                            <label for="emailid">Place:</label>
-                            <input name="emailid" type="text" class="form-control" id="emailid" size="30"
+                            <label for="place">Place:</label>
+                            <input name="place" type="text" class="form-control" id="place" size="30"
                                 isdatepicker="true">
                         </div>
                         <div class="form-group">
-                            <label for="category">District:</label>
+                            <label for="district">District:</label>
                             <input name="district" type="text" class="form-control" id="district" size="30"
                                 isdatepicker="true">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="skypeid">State:</label>
-                            <input name="skypeid" type="text" class="form-control" id="skypeid" size="30"
-                                isdatepicker="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="district">phone:</label>
-                            <input name="district" type="text" class="form-control" id="district" size="30"
-                                isdatepicker="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="place">Email ID:</label>
-                            <input name="place" type="text" class="form-control" id="place" size="30"
-                                isdatepicker="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="state">Location Incharge:</label>
+                            <label for="state">State:</label>
                             <input name="state" type="text" class="form-control" id="state" size="30"
+                                isdatepicker="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">phone:</label>
+                            <input name="phone" type="text" class="form-control" id="phone" size="30"
+                                isdatepicker="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailid">Email ID:</label>
+                            <input name="emailid" type="text" class="form-control" id="emailid" size="30"
+                                isdatepicker="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="locationincharge">Location Incharge:</label>
+                            <input name="locationincharge" type="text" class="form-control" id="locationincharge" size="30"
                                 isdatepicker="true">
                         </div>
 
@@ -93,12 +86,11 @@ include("../navigation/navigation.php");
                 </div>
                 <div class="text-center mt-3 float-end">
                     <div id="form-error"></div>
-                    <input name="new" type="reset" class="btn btn-secondary" id="new" value="New"
-                        onclick="newentry();clearinnerhtml();">
+                    <input name="new" type="reset" class="btn btn-secondary" id="new" value="New">
                     <input name="save" type="submit" class="btn btn-primary" id="save" value="Save"
                         onclick="formsubmit('save')">
                     <input name="delete" type="submit" class="btn btn-danger" id="delete" value="Delete"
-                        onclick="formsubmit('delete')">
+                        onclick="formsubmit('delete')" disabled>
                 </div>
             </form>
         </div>
@@ -200,12 +192,12 @@ include("../navigation/navigation.php");
                         onclick="formfilter('view')">
                 </div>
             </form>
-   
-    </div>
-</div>
 
-<div class="col-md-12">
-</div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+    </div>
 </div>
 </div>
 <?php

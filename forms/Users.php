@@ -29,113 +29,129 @@ include("../navigation/navigation.php");
                 <!-- first div -->
 
                 <div class="mb-3" style="width: 50%; margin:20px;">
-                  <label for="customername" class="form-label">User ID:</label>
-                  <input name="customername" type="text" class="form-control" id="customername" autocomplete="off"
+                  <label for="username" class="form-label">User ID:</label>
+                  <input name="username" type="text" class="form-control" id="username" autocomplete="off"
                     isdatepicker="true">
+                  <input type="hidden" name="lastslno" id="lastslno" value="" />
+                  <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
+                  <input type="hidden" name="loggedusertype" id="loggedusertype" value="<?php echo ($usertype); ?>" />
+                  <input type="hidden" name="time" id="time" value="" />
+                  <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                    value="<?php echo ($reportingauthority); ?>" />
 
-                  <label for="customername" class="form-label">Password:</label>
+                  <label for="password" class="form-label">Password:</label>
 
-                  <input name="customername" type="password" class="form-control" id="customername" size="20"
-                    autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Type:</label>
-                  <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
+                  <input name="password" type="password" class="form-control" id="password" size="20" autocomplete="off"
+                    isdatepicker="true">
+                  <label for="type" class="form-label">Type:</label>
+                  <select name="type" class="form-select swiftselect form-control" id="type" onchange="">
+                    <option selected="selected" value="">Make A Selection</option>
+                    <option value="ADMIN">Administrator</option>
+                    <option value="EXECUTIVE-ONSITE">Executive - Onsite</option>
+                    <option value="EXECUTIVE-OTHERS">Executive - Others</option>
+                    <option value="GUEST">Guest</option>
+                    <option value="HR">HR</option>
+                    <option value="MANAGEMENT">Management</option>
+                    <option value="TEAMLEADER">Team Leader</option>
+
+                  </select>
+                  <label for="locationname" class="form-label">Location:</label>
+                  <select name="locationname" class="form-select  form-control" id="locationname" onchange="">
+                    <option value="" selected="selected">
+                      Make a Selection
+                    </option>
+                    <?php include('../inc/selectlocation.php'); ?>
+
+
+                  </select>
+                  <label for="reportingauthority" class="form-label">Reporting Authority:</label>
+                  <select name="reportingauthority" class="form-select swiftselect form-control" id="reportingauthority"
                     onchange="">
                     <option value="" selected="selected">
                       Make a Selection
                     </option>
+                    <?php include('../inc/reportingauthority.php'); ?>
+
 
                   </select>
-                  <label for="customername" class="form-label">Location:</label>
-                  <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
-                    onchange="">
+                  <label for="supportunit" class="form-label">Support Unit:</label>
+                  <select name="supportunit" class="form-select  form-control" id="supportunit" onchange="">
                     <option value="" selected="selected">
                       Make a Selection
                     </option>
-
+                    <?php include('../inc/supportunit.php'); ?>
                   </select>
-                  <label for="customername" class="form-label">Reporting Authority:</label>
-                  <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
-                    onchange="">
+                  <label for="existinguser" class="form-label">Existing User:</label>
+                  <select name="existinguser" class="form-select form-control" id="existinguser" onchange="">
                     <option value="" selected="selected">
                       Make a Selection
                     </option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                  <label for="fullname" class="form-label">User name:</label>
+                  <input name="fullname" type="text" class="form-control" id="fullname" size="20" autocomplete="off"
+                    isdatepicker="true">
+                  <label for="gender" class="form-label">Gender:</label>
+                  <select name="gender" class="form-select swiftselect form-control" id="gender" onchange="">
+                    <option value="">Make A Selection</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
 
                   </select>
-                  <label for="customername" class="form-label">Reporting Authority:</label>
-                  <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
-                    onchange="">
-                    <option value="" selected="selected">
-                      Make a Selection
-                    </option>
-
-                  </select>
-                  <label for="customername" class="form-label">Existing User:</label>
-                  <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
-                    onchange="">
-                    <option value="" selected="selected">
-                      Make a Selection
-                    </option>
-
-                  </select>
-                  <label for="customername" class="form-label">User name:</label>
-                  <input name="customerid" type="text" class="form-control" id="customername" size="20"
-                    autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Gender:</label>
-                  <select name="s_productgroup" class="form-select swiftselect form-control" id="s_productgroup"
-                    onchange="">
-                    <option value="" selected="selected">
-                      Make a Selection
-                    </option>
-
-                  </select>
-                  <label for="customername" class="form-label">Mobile:</label>
-                  <input name="customerid" type="tel" class="form-control" id="customername" size="20"
-                    autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Disable Login: &nbsp; &nbsp; &nbsp;
-                    <input class="form-check-input" type="checkbox" name="existingUser" id="existingUser">
+                  <label for="mobile" class="form-label">Mobile:</label>
+                  <input name="mobile" type="tel" class="form-control" id="mobile" size="20" autocomplete="off"
+                    isdatepicker="true">
+                  <label for="disablelogin" class="form-label">Disable Login: &nbsp; &nbsp; &nbsp;
+                    <input class="form-check-input" type="checkbox" name="disablelogin" id="disablelogin">
                 </div>
 
                 <!-- second -->
                 <div class="mb-3 " style="width: 50%; margin:20px;">
-                  <label for="customername" class="form-label">Designation:</label>
-                  <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                  <label for="designation" class="form-label">Designation:</label>
+                  <input name="designation" type="text" class="form-control" id="designation" size="20"
                     autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Date of Birth:</label>
-                  <input name="customerid" type="date" class="form-control" id="customername" size="20"
-                    autocomplete="off" isdatepicker="true">
-                  <label for="teamleaderremarks" class="form-label">Present Address:</label>
-                  <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                  <label for="dob" class="form-label">Date of Birth:</label>
+                  <input name="dob" type="date" class="form-control" id="dob" size="20" autocomplete="off"
+                    isdatepicker="true">
+                  <label for="presentaddress" class="form-label">Present Address:</label>
+                  <input name="presentaddress" type="text" class="form-control" id="presentaddress" size="20"
                     autocomplete="off" isdatepicker="true">
                   <!-- second div -->
-                  <label for="customername" class="form-label">Reporting Authority:</label>
-                  <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                  <label for="permanentaddress" class="form-label">Permanent Address:</label>
+                  <input name="permanentaddress" type="text" class="form-control" id="permanentaddress" size="20"
                     autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Date of joining:</label>
-                  <input name="customerid" type="date" class="form-control" id="customername" size="20"
+
+
+
+                  <label for="doj" class="form-label">Date of joining:</label>
+                  <input name="doj" type="date" class="form-control" id="doj" size="20" autocomplete="off"
+                    isdatepicker="true">
+                  <label for="personalemail" class="form-label">Personal Email: </label>
+                  <input name="personalemail" type="text" class="form-control" id="personalemail" size="20"
                     autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Personal Email: </label>
-                  <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                  <label for="officialemail" class="form-label">Official Email:</label>
+                  <input name="officialemail" type="text" class="form-control" id="officialemail" size="20"
                     autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Official Email:</label>
-                  <input name="customerid" type="text" class="form-control" id="customername" size="20"
-                    autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Date of Leaving: </label>
-                  <input name="customerid" type="date" class="form-control" id="customername" size="20"
-                    autocomplete="off" isdatepicker="true">
-                  <label for="customername" class="form-label">Contact Number:</label>
-                  <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                  <label for="dol" class="form-label">Date of Leaving: </label>
+                  <input name="dol" type="date" class="form-control" id="dol" size="20" autocomplete="off"
+                    isdatepicker="true">
+                  <label for="emergencynumber" class="form-label">Contact Number:</label>
+                  <input name="emergencynumber" type="text" class="form-control" id="emergencynumber" size="20"
                     autocomplete="off" isdatepicker="true" placeholder="In case of Emergency">
-                  <label for="customername" class="form-label">Emergency Remarks:</label>
-                  <input name="customerid" type="text" class="form-control" id="customername" size="20"
+                  <label for="emergencyremarks" class="form-label">Emergency Remarks:</label>
+                  <input name="emergencyremarks" type="text" class="form-control" id="emergencyremarks" size="20"
                     autocomplete="off" isdatepicker="true">
                   </label>
                 </div>
                 <!-- Add more textarea fields as needed -->
               </div>
               <div class="text-end float-right">
-                <button name="new" type="submit" class="btn btn-secondary">New</button>
-                <button name="save" type="submit" class="btn btn-primary">Save</button>
-                <button name="delete" type="submit" class="btn btn-danger">Delete</button>
+                <button name="new" type="reset" class="btn btn-secondary">New</button>
+                <button name="save" type="submit" id="save" value="Save" class="btn btn-primary"
+                  onclick="formsubmit('save');">Save</button>
+                <button name="delete" type="submit" class="btn btn-danger" value="Delete" onclick="formsubmit('delete')"
+                  disabled="disabled" id="delete">Delete</button>
               </div>
             </form>
           </div>
