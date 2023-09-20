@@ -23,7 +23,7 @@ include("../navigation/navigation.php");
         <div class="col-md-12">
             <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
                 <div class="card-header bg-light">
-                    Enter the Details
+                    Enter / Edit / view Details
                 </div>
                 <div class="card-body">
                     <div id="maindiv" style="display: block;">
@@ -51,14 +51,14 @@ include("../navigation/navigation.php");
                                     <label for="customername" class="form-label">Anonymous:</label>
                                     <div class="opt d-flex flex-row ">
                                         <div class="form-check me-3 align-items-center">
-                                            <label class="form-check-label" for="databasefield11">&nbsp;
+                                            <label class="form-check-label" for="databasefield9">&nbsp;
                                                 <input class="form-check-input" type="radio" name="anonymous"
                                                     id="databasefield9" value="yes" onclick="formsubmitcustomer();">
                                                 Yes</label>
                                         </div>
                                         <div class="form-check me-3 align-items-center">
 
-                                            <label class="form-check-label" for="databasefield12">
+                                            <label class="form-check-label" for="databasefield10">
                                                 <input class="form-check-input" type="radio" name="anonymous"
                                                     id="databasefield10" onclick="formsubmitcustomer();" value="no"
                                                     checked="checked">No</label>
@@ -87,12 +87,14 @@ include("../navigation/navigation.php");
                                         autocomplete="off" isdatepicker="true">
 
                                     <label for="customername" class="form-label">Date:</label>
-                                    <input name="date" type="date" class="form-control" id="date" size="20"
-                                        autocomplete="off" isdatepicker="true">
+                                    <input name="date" type="text" class="form-control" id="date" size="20"
+                                        autocomplete="off" isdatepicker="true"
+                                        value="<?php echo (datetimelocal('d-m-Y')); ?>">
 
                                     <label for="customername" class="form-label">Time:</label>
-                                    <input name="time" type="time" class="form-control" id="time" size="20"
-                                        autocomplete="off" isdatepicker="true">
+                                    <input name="time" type="text" class="form-control" id="time" size="20"
+                                        autocomplete="off" isdatepicker="true"
+                                        value="<?php echo (datetimelocal('H:i:s')); ?>">
 
                                     <label for="customername" class="form-label">Category:</label>
                                     <input name="category" type="text" class="form-control" id="category" size="20"
@@ -118,20 +120,24 @@ include("../navigation/navigation.php");
                                 <!-- second -->
 
                                 <div class="mb-3 " style="width: 50%; margin:20px;">
-                                    <label for="customername" class="form-label">Product Name(optional):</label>
-                                    <select name="productname" class="form-select swiftselect form-control"
-                                        id="productname" onchange="">
+                                    <label for="customername" class="form-label">Product Name(<font color="#FF0000">
+                                            Optional</font>)</label>
+                                    <select name="productname" class="form-select form-control" id="productname"
+                                        onchange="">
                                         <option value="" selected="selected">
                                             Make a Selection
                                         </option>
                                     </select>
                                     <label for="customername" class="form-label">Person version:</label>
-                                    <select name="productversion" class="form-select swiftselect form-control"
-                                        id="productversion" onchange="">
-                                        <option value="" selected="selected">
-                                            Select a Product
-                                        </option>
-                                    </select>
+                                    <span id="productversiondisplay">
+
+                                        <select name="productversion" class="form-select form-control"
+                                            id="productversion" onchange="">
+                                            <option value="" selected="selected">
+                                                Select a Product
+                                            </option>
+                                        </select>
+                                    </span>
                                     <label for="customername" class="form-label">Person Name:</label>
                                     <input name="personname" type="text" class="form-control" id="personname" size="20"
                                         autocomplete="off" isdatepicker="true">
@@ -139,10 +145,12 @@ include("../navigation/navigation.php");
                                     <label for="customername" class="form-label">Problem:</label>
                                     <input name="problem" type="text" class="form-control" id="problem" size="20"
                                         autocomplete="off" isdatepicker="true">
+                                    <a href="javascript:void(0);" style="cursor:pointer"
+                                        onclick="getquestionfunc(); getquestion();"><img src="../images/get-problem.gif"
+                                            width="22" height="22" border="0" align="top" /></a>
 
                                     <label for="teamleaderremarks" class="form-label">Status:</label>
-                                    <select name="status" class="form-select swiftselect form-control" id="status"
-                                        onchange="">
+                                    <select name="status" class="form-select  form-control" id="status" onchange="">
                                         <option value="" selected="selected">
                                             Make a Selection
                                         </option>
@@ -172,15 +180,14 @@ include("../navigation/navigation.php");
                                         <option value="others">Others</option>
                                     </select>
 
-                                    <label for="customername" class="form-label">Remarks:</label>
+                                    <label for="remarks" class="form-label">Remarks:</label>
                                     <input name="remarks" type="text" class="form-control" id="remarks" size="20"
                                         autocomplete="off" isdatepicker="true">
-                                    <label for="customername" class="form-label">Entered By:</label>
+                                    <label for="userid" class="form-label">Entered By:</label>
                                     <input name="userid" type="text" class="form-control" id="userid" size="20"
                                         autocomplete="off" isdatepicker="true" value="<?php echo ($loggedusername); ?>">
 
-
-                                    <label for="customername" class="form-label">Complaint ID: </label>
+                                    <label for="compliantid" class="form-label">Complaint ID: </label>
                                     <input name="compliantid" type="text" class="form-control" id="compliantid"
                                         size="20" autocomplete="off" isdatepicker="true">
                                     <!-- <label for=""> Team Leader Remarks:</label> -->

@@ -12,9 +12,15 @@ else {
 
 <body>
     <div class="container mt-5">
+
+    
         <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="card-header bg-light d-flex justify-content-between" onclick="showhide('maindiv','toggleimg');">
                 <div>&nbsp;&nbsp;Enter/Edit/View Details</div>
+                <div align="right">
+                <img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
+                  align="absmiddle" />
+                </div>
             </div>
             <div class="card-body">
                 <div id="maindiv" style="display: block;">
@@ -63,13 +69,13 @@ else {
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Date:</label>
-                                        <input name="date" type="date" class="form-control" id="date"
-                                            autocomplete="off">
+                                        <input name="date" type="text" class="form-control" id="date"
+                                            autocomplete="off" value="<?php echo (datetimelocal('d-m-Y')); ?>" >
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Time:</label>
-                                        <input name="time" type="time" class="form-control" id="time"
-                                            autocomplete="off">
+                                        <input name="time" type="text" class="form-control" id="time"
+                                            autocomplete="off"  value="<?php echo (datetimelocal('H:i:s')); ?>">
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Category:</label>
@@ -78,10 +84,9 @@ else {
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">State:</label>
-                                        <select name="state" class="form-select swiftselect form-control" id="state">
+                                        <select name="state" class="form-select form-control" id="state">
                                             <option value="" selected="selected">ALL</option>
                                             <?php include('../inc/state.php'); ?>
-
                                         </select>
                                     </div>
                                     <div class="mb-3">
@@ -90,7 +95,7 @@ else {
                                             autocomplete="off">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="registered-name" class="form-label">Product Group[Optional]:</label>
+                                        <label for="registered-name" class="form-label">Product Group(<font color="#FF0000">Optional</font>)</label>
                                         <?php include('../inc/productgroup.php');
                                         productname('productgroup', '');
                                         ?>
@@ -104,12 +109,13 @@ else {
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Product Version:</label>
-                                        <select name="productversion" class="form-select swiftselect form-control"
+                                      <span id="productnamedisplay">
+                                        <select name="productversion" class="form-select form-control"
                                             id="productversion">
-                                            <option value="" selected="selected">ALL</option>
+                                            <option value="" selected="selected">Select The Product</option>
                                         </select>
+                                         </span>
                                     </div>
-
                                     <!-- More input fields -->
                                 </div>
                             </form>
@@ -181,17 +187,20 @@ else {
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Remarks:</label>
                                         <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
+                                  <?php if ($usertype == 'GUEST' || $usertype == 'HR') { ?> disabled="disabled" <?php } ?>>
+                                        
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Entered By:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
+                                        <input name="userid" type="text" class="form-label" id="userid" size="30"
+                                  readonly="readonly" value="<?php echo ($loggedusername); ?>" autocomplete="off"
+                                  style="background:#FEFFE6;" />
                                     </div>
                                     <div class="mb-3">
                                         <label for="registered-name" class="form-label">Compliant ID:</label>
-                                        <input name="customername" type="text" class="form-control" id="customername"
-                                            autocomplete="off">
+                                        <input name="complaintid" type="text" class="form-label" id="complaintid"
+                                  size="30" maxlength="40" readonly="readonly" autocomplete="off"
+                                  style="background:#FEFFE6;" />
                                     </div>
 
                                     <!-- More input fields -->
@@ -203,14 +212,13 @@ else {
                     <div class="container mt-3">
                         <div class="row">
                             <div class="col-md-12 float-right text-end">
-                                <button name="new" type="submit" class="btn btn-secondary m-2" id="view"
-                                    onclick="formsubmit('toview');">New</button>
+                                <button name="new" type="reset" class="btn btn-secondary m-2" id="new"
+                                >New</button>
                                 <button name="save" type="submit" class="btn btn-primary m-2" id="view"
-                                    onclick="formsubmit('toview');">Save</button>
-                                <button name="delete" type="submit" class="btn btn-danger m-2" id="toexcel"
-                                    onclick="formsubmit('toexcel');">Delete</button>
-                                <button name="error-report" type="submit" class="btn btn-warning m-2" id="toexcel"
-                                    onclick="formsubmit('toexcel');">Error Report</button>
+                                    onclick="formsubmit('save');" value="save">Save</button>
+                                <button name="delete" type="submit" class="btn btn-danger m-2" id="delete"
+                                    onclick="formsubmit('delete');" disabled>Delete</button>
+                                
                             </div>
                         </div>
                     </div>

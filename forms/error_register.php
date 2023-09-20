@@ -27,12 +27,12 @@ include("../navigation/navigation.php");
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="anonymous"
                                             id="databasefield12" value="yes">
-                                        <label class="form-check-label" for="databasefield11">Yes</label>
+                                        <label class="form-check-label" for="databasefield12">Yes</label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="anonymous"
                                             id="databasefield13" value="no">
-                                        <label class="form-check-label" for="databasefield12">No</label>
+                                        <label class="form-check-label" for="databasefield13">No</label>
                                     </div>
                                 </div>
                                 <div class="bg-white p-2 ">
@@ -57,11 +57,11 @@ include("../navigation/navigation.php");
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="date">Date:</label>
-                                    <input name="date" type="date" class="form-control" id="date" autocomplete="off">
+                                    <input name="date" type="text" class="form-control" id="date" autocomplete="off">
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="time">Time:</label>
-                                    <input name="time" type="time" class="form-control" id="time" autocomplete="off">
+                                    <input name="time" type="text" class="form-control" id="time" autocomplete="off">
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="state">State:</label>
@@ -78,7 +78,8 @@ include("../navigation/navigation.php");
                                     ?>
                                 </div>
                                 <div class="bg-white p-2 ">
-                                    <label for="product-name">Product Name (Optional):</label>
+                                    <label for="product-name">Product Name(<font color="#FF0000">Optional</font>
+                                        )</label>
                                     <select name="productname" class="form-select swiftselect form-control"
                                         id="productname" onchange="">
                                         <option value="" selected="selected">Make a Selection</option>
@@ -123,14 +124,17 @@ include("../navigation/navigation.php");
                                     <label for="status">Error File:</label>
                                     <input name="errorfile" type="date" class="form-control" id="errorfile"
                                         autocomplete="off">
+                                    <img id="myfileuploadimage" src="../images/fileattach.jpg" border="0"
+                                        align="absmiddle"
+                                        onclick="fileuploaddivid('downloadlinkfile','errorfile','fileuploaddiv','430px','20%')" />
+                                    <span id="downloadlinkfile"></span>
                                 </div>
 
                             </div>
                             <div class="col-md-6">
                                 <div class="bg-white p-2 ">
                                     <label for="database">Status:</label>
-                                    <select name="status" class="form-select swiftselect form-control" id="status"
-                                        onchange="">
+                                    <select name="status" class="form-select form-control" id="status" onchange="">
                                         <option value="solved">Solved</option>
                                         <option value="unsolved" selected="selected">Un Solved</option>
                                         <option value="rejected">Rejected</option>
@@ -147,7 +151,7 @@ include("../navigation/navigation.php");
                                         data-gramm="false" wt-ignore-input="true"></textarea>
                                 </div>
                                 <div class="bg-white p-2 ">
-                                    <label for="solution-entered-time">Solution Entered Time:</label>
+                                    <label for="solutionenteredtime">Solution Entered Time:</label>
                                     <input name="solutionenteredtime" type="text" class="form-control"
                                         id="solutionenteredtime" autocomplete="off">
                                 </div>
@@ -166,12 +170,12 @@ include("../navigation/navigation.php");
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="entered-by">Entered By:</label>
-                                    <input name="userid" type="text" class="form-control swifttext" id="userid"
+                                    <input name="userid" type="text" class="form-control " id="userid"
                                         autocomplete="off">
                                 </div>
                                 <div class="bg-white p-2 ">
                                     <label for="email-id">Email ID:</label>
-                                    <input name="errorid" type="email" class="form-control swifttext" id="errorid"
+                                    <input name="errorid" type="email" class="form-control " id="errorid"
                                         autocomplete="off">
                                 </div>
                                 <div class="bg-white p-2 ">
@@ -184,11 +188,9 @@ include("../navigation/navigation.php");
 
                         <div class="row">
                             <div class="col-md-12 text-end">
-                                <button name="new" type="reset" class="btn btn-secondary m-2" id="new"
-                                    onclick="formsubmit('new');">New</button>
-                                <button name="save" type="submit" class="btn btn-primary m-2" id="save"
-                                    onclick="formsubmit('save');" id="save" value="Save"
-                                    onclick="formsubmit('save')">Save</button>
+                                <button name="new" type="reset" class="btn btn-secondary m-2" id="new">New</button>
+                                <button name="save" type="submit" class="btn btn-primary m-2" id="save" id="save"
+                                    value="Save" onclick="formsubmit('save')">Save</button>
                                 <button name="delete" type="submit" class="btn btn-danger m-2" id="delete"
                                     onclick="formsubmit('delete');" disabled="disaled">Delete</button>
                                 <button name="errorreport" type="submit" class="btn btn-warning m-2" id="errorreport"

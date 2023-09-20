@@ -18,13 +18,13 @@ include("../navigation/navigation.php");
                                 <div class="mb-3">
                                     <label class="form-label mt-2">Anonymous:</label> <br>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="anonymous" id="anonymous-yes"
-                                            value="yes">
+                                        <input class="form-check-input" type="radio" name="anonymous"
+                                            id="databasefield12" value="yes" onclick="formsubmitcustomer();">
                                         <label class="form-check-label" for="anonymous-yes">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="anonymous" id="anonymous-no"
-                                            value="no">
+                                        <input class="form-check-input" type="radio" name="anonymous"
+                                            id="databasefield13" value="no" onclick="formsubmitcustomer();">
                                         <label class="form-check-label" for="anonymous-no">No</label>
                                     </div>
                                 </div>
@@ -33,48 +33,68 @@ include("../navigation/navigation.php");
                                     <label for="registered-name" class="form-label">Reported By:</label>
                                     <input name="customername" type="text" class="form-control" id="customername"
                                         autocomplete="off">
+                                    <span id="getcustomerlink" style="visibility:visible;"> <a
+                                            href="javascript:void(0);"
+                                            onClick="getcustomer(); getcustomerfunc();registernameload('reference')"
+                                            style="cursor:pointer"> <img src="../images/userid-bg.gif" width="14"
+                                                height="16" border="0" align="absmiddle" /></a></span>
+                                    <input type="hidden" name="lastslno" id="lastslno" value="" />
+                                    <input type="hidden" name="loggeduser" id="loggeduser"
+                                        value="<?php echo ($user); ?>" />
+                                    <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                        value="<?php echo ($usertype); ?>" />
+                                    <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                                        value="<?php echo ($reportingauthority); ?>" />
+                                    <input type="hidden" name="hiddenserverdate" id="hiddenserverdate"
+                                        value="<?php echo (datetimelocal('d-m-Y')); ?>" />
+                                    <input type="hidden" name="customerid" id="customerid"
+                                        value="<?php echo (datetimelocal('d-m-Y')); ?>" />
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Category:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <input name="category" type="text" class="form-control" id="category"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">State:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
+                                    <select name="state" class="form-select  form-control" id="state">
+                                        <?php include('../inc/state.php'); ?>
+
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Date:</label>
-                                    <input name="customername" type="date" class="form-control" id="customername"
-                                        autocomplete="off">
+                                    <input name="date" type="text" class="form-control" id="date" autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Time:</label>
-                                    <input name="customername" type="time" class="form-control" id="customername"
-                                        autocomplete="off">
+                                    <input name="time" type="time" class="form-control" id="time" autocomplete="off"
+                                        value="<?php echo ($localtime); ?>" />
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Product Group:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
-                                    </select>
+                                    <?php include('../inc/productgroup.php');
+                                    productname('productgroup', '');
+                                    ?>
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Product Name:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
-                                    </select>
+                                    <span id="productnamedisplay">
+
+                                        <select name="productname" class="form-select form-control" id="productname">
+                                            <option value="" selected="selected">Make A Selection</option>
+                                        </select>
+
+                                    </span>
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Reference Through:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
+                                    <select name="referencethrough" class="form-select form-control"
+                                        id="referencethrough">
+                                        <option value="">Make A Selection</option>
+                                        <option value="call">Call</option>
+                                        <option value="email">Email</option>
+
                                     </select>
                                 </div>
 
@@ -87,46 +107,49 @@ include("../navigation/navigation.php");
                             <div class="display">
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Contact Person:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <input name="contactperson" type="text" class="form-control" id="contactperson"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Contact Number:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <input name="contactno" type="text" class="form-control" id="contactno"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Contact Address:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <input name="contactaddress" type="text" class="form-control" id="contactaddress"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Email Id:</label>
-                                    <input name="customername" type="email" class="form-control" id="customername"
-                                        autocomplete="off">
+                                    <input name="email" type="email" class="form-control" id="email" autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Order Status:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
+                                    <select name="status" class="form-select form-control" id="status">
+                                        <option value="">Make A Selection</option>
+                                        <option value="freshlead">Fresh Lead</option>
+                                        <option value="fake">Fake</option>
+                                        <option value="demo given">Demo Given</option>
+                                        <option value="rejected">Rejected</option>
+                                        <option value="sold">Sold</option>
+                                        <option value="underprocess">Under Process</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="state" class="form-label">Remarks:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
+                                    <select name="remarks" class="form-select form-control" id="remarks">
                                         <option value="" selected="selected">ALL</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="caller-type" class="form-label">Entered BY:</label> <br>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <input name="userid" type="text" class="form-control" id="userid"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="caller-type" class="form-label">Reference ID:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <input name="referenceid" type="text" class="form-control" id="referenceid"
                                         autocomplete="off">
                                 </div>
                                 <!-- More input fields -->
@@ -138,14 +161,12 @@ include("../navigation/navigation.php");
                 <div class="container mt-3">
                     <div class="row">
                         <div class="col-md-12 float-right text-end">
-                            <button name="new" type="submit" class="btn btn-secondary m-2" id="view"
-                                onclick="formsubmit('toview');">New</button>
-                            <button name="save" type="submit" class="btn btn-primary m-2" id="view"
-                                onclick="formsubmit('toview');">Save</button>
-                            <button name="delete" type="submit" class="btn btn-danger m-2" id="toexcel"
-                                onclick="formsubmit('toexcel');">Delete</button>
-                            <button name="error-report" type="submit" class="btn btn-warning m-2" id="toexcel"
-                                onclick="formsubmit('toexcel');">Error Report</button>
+                            <button name="new" type="reset" class="btn btn-secondary m-2" id="new">New</button>
+                            <button name="save" type="submit" class="btn btn-primary m-2" id="save"
+                                onclick="formsubmit('save');">Save</button>
+                            <button name="delete" type="submit" class="btn btn-danger m-2" id="delete"
+                                onclick="formsubmit('delete');" value="Delete" disabled>Delete</button>
+
                         </div>
                     </div>
                 </div>

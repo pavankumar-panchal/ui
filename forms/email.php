@@ -16,6 +16,7 @@ include("../navigation/navigation.php");
 </head>
 
 <body>
+
     <div class="container users_la mt-5">
         <div class="row">
             <div class="col-md-12">
@@ -33,7 +34,7 @@ include("../navigation/navigation.php");
                                         <label for="customername" class="form-label">Anonymous:</label>
                                         <div class="opt d-flex flex-row ">
                                             <div class="form-check me-3 align-items-center">
-                                                <label class="form-check-label" for="databasefield11">&nbsp;
+                                                <label class="form-check-label" for="databasefield0">&nbsp;
                                                     <input class="form-check-input" type="radio" name="anonymous"
                                                         id="databasefield0" value="yes"> Yes</label>
                                             </div>
@@ -41,7 +42,7 @@ include("../navigation/navigation.php");
 
                                                 <label class="form-check-label" for="databasefield12"><input
                                                         class="form-check-input" type="radio" name="anonymous"
-                                                        id="databasefield1" value="no">No</label>
+                                                        id="databasefield1" value="no" checked>No</label>
                                             </div>
                                         </div>
                                         <label for="customername" class="form-label">Registered Name:</label>
@@ -65,22 +66,20 @@ include("../navigation/navigation.php");
                                         <input name="customerid" type="text" class="form-control" id="customerid"
                                             size="20" autocomplete="off" isdatepicker="true">
                                         <label for="customername" class="form-label">Date:</label>
-                                        <input name="date" type="date" class="form-control" id="date" size="20"
+                                        <input name="date" type="text" class="form-control" id="date" size="20"
                                             autocomplete="off" isdatepicker="true">
                                         <label for="customername" class="form-label">Time:</label>
-                                        <input name="time" type="time" class="form-control" id="time" size="20"
+                                        <input name="time" type="text" class="form-control" id="time" size="20"
                                             autocomplete="off" isdatepicker="true">
                                         <label for="customername" class="form-label">Category:</label>
                                         <input name="category" type="text" class="form-control" id="category" size="20"
                                             autocomplete="off" isdatepicker="true">
                                         <label for="customername" class="form-label">State:</label>
-                                        <select name="state" class="form-select swiftselect form-control" id="state"
-                                            onchange="">
-                                            <option value="" selected="selected">
-                                                Make a Selection
-                                            </option>
+                                        <select name="state" class="form-select form-control" id="state" onchange="">
+                                            <?php include('../inc/state.php'); ?>
+
                                         </select>
-                                        <label for="customername" class="form-label">Caller Type:</label>
+                                        <label for="callertype" class="form-label">Caller Type:</label>
                                         <input name="callertype" type="text" class="form-control" id="callertype"
                                             size="20" autocomplete="off" isdatepicker="true">
                                         <label for="customername" class="form-label">Person Name[if any]:</label>
@@ -121,6 +120,11 @@ include("../navigation/navigation.php");
                                         <label for="customername" class="form-label">Problem:</label>
                                         <input name="content" type="text" class="form-control" id="content" size="20"
                                             autocomplete="off" isdatepicker="true">
+                                        <a href="javascript:void(0);" style="cursor:pointer"
+                                            onclick="getquestionfunc(); getquestion();"><img
+                                                src="../images/get-problem.gif" width="22" height="22" border="0"
+                                                align="top" /></a>
+
                                         <label for="customername" class="form-label">Error File:</label>
                                         <input name="errorfile" type="file" class="form-control" id="errorfile"
                                             size="20" autocomplete="off" isdatepicker="true">

@@ -11,80 +11,105 @@ include("../navigation/navigation.php");
             <div id="maindiv" style="display: block;">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+                        <form action="" method="post" name="submitform" id="submitform" onSubmit="return false;">
                             <div class="display">
                                 <div class="mb-3">
                                     <label class="form-label mt-2">Anonymous:</label> <br>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="anonymous" id="anonymous-yes"
-                                            value="yes">
-                                        <label class="form-check-label" for="anonymous-yes">Yes</label>
+                                        <input class="form-check-input" type="radio" name="anonymous"
+                                            id="databasefield12" value="yes" onclick="formsubmitcustomer();">
+                                        <label class="form-check-label" for="databasefield12">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="anonymous" id="anonymous-no"
-                                            value="no">
-                                        <label class="form-check-label" for="anonymous-no">No</label>
+                                        <input class="form-check-input" type="radio" name="anonymous"
+                                            id="databasefield13" value="no" onclick="formsubmitcustomer();">
+                                        <label class="form-check-label" for="databasefield13">No</label>
                                     </div>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Reported By:</label>
+                                    <label for="customername" class="form-label">Reported By:</label>
                                     <input name="customername" type="text" class="form-control" id="customername"
                                         autocomplete="off">
+                                    <span id="getcustomerlink" style="visibility:visible;"> <a
+                                            href="javascript:void(0);"
+                                            onClick="getcustomer(); getcustomerfunc();registernameload('requirement')"
+                                            style="cursor:pointer"><img src="../images/userid-bg.gif" width="14"
+                                                height="16" border="0" align="absmiddle" /></a></span>
+                                    <input type="hidden" name="lastslno" id="lastslno" value="" />
+                                    <input type="hidden" name="loggeduser" id="loggeduser"
+                                        value="<?php echo ($user); ?>" />
+                                    <input type="hidden" name="loggedusertype" id="loggedusertype"
+                                        value="<?php echo ($usertype); ?>" />
+                                    <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                                        value="<?php echo ($reportingauthority); ?>" />
+                                    <input type="hidden" name="hiddenserverdate" id="hiddenserverdate"
+                                        value="<?php echo (datetimelocal('d-m-Y')); ?>" />
+                                    <input type="hidden" name="customerid" id="customerid" value="" />
+                                    <input type="hidden" name="requirementreportgrid" id="requirementreportgrid"
+                                        value="" />
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Date:</label>
-                                    <input name="customername" type="date" class="form-control" id="customername"
-                                        autocomplete="off">
+                                    <label for="date" class="form-label">Date:</label>
+                                    <input name="date" type="date" class="form-control" id="date" autocomplete="off">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Time:</label>
-                                    <input name="customername" type="time" class="form-control" id="customername"
-                                        autocomplete="off">
+                                    <label for="time" class="form-label">Time:</label>
+                                    <input name="time" type="time" class="form-control" id="time" autocomplete="off"
+                                        value="<?php echo ($localtime); ?>">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">State:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
+                                    <label for="state" class="form-label">State:</label>
+                                    <select name="state" class="form-select  form-control" id="state">
+                                        <?php include('../inc/state.php'); ?>
+
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Product Group:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
-                                    </select>
+                                    <?php include('../inc/productgroup.php');
+                                    productname('productgroup', '');
+                                    ?>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Product Name:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
-                                    </select>
+                                    <label for="registered-name" class="form-label">Product Name(<font color="#FF0000">
+                                            Optional</font>)</label>
+                                    <span id="productnamedisplay">
+                                        <select name="productname" class="form-select  form-control" id="productname">
+                                            <option value="" selected="selected">ALL</option>
+                                        </select>
+                                    </span>
+
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="registered-name" class="form-label">Product version:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
-                                    </select>
+                                    <span id="productversiondisplay">
+                                        <select name="productversion" class="form-select  form-control"
+                                            id="productversion">
+                                            <option value="" selected="selected">ALL</option>
+                                        </select>
+                                    </span>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Database:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
+                                    <label for="database" class="form-label">Database:</label>
+                                    <select name="database2" class="form-select  form-control" id="database2">
                                         <option value="" selected="selected">ALL</option>
+                                        <option value="access">MS Access</option>
+                                        <option value="sql">MS SQL</option>
+                                        <option value="mysql">MySQL</option>
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Requirements:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <label for="requirement" class="form-label">Requirements:</label>
+                                    <input name="requirement" type="text" class="form-control" id="requirement"
                                         autocomplete="off">
+                                    <a href="javascript:void(0);" style="cursor:pointer"
+                                        onclick="getquestionfunc(); getquestion();"><img src="../images/get-problem.gif"
+                                            width="22" height="22" border="0" align="top" /></a>
                                 </div>
 
                                 <!-- More input fields -->
@@ -95,61 +120,48 @@ include("../navigation/navigation.php");
                         <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
                             <div class="display">
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Reported To:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <label for="reportedto" class="form-label">Reported To:</label>
+                                    <input name="reportedto" type="text" class="form-control" id="reportedto"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Reference Through:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
+                                    <label for="status" class="form-label">Status:</label>
+                                    <select name="status" class="form-select swiftselect form-control" id="status">
+                                        <option value="" selected="selected">Make A Selection</option>
+                                        <option value="solved">Solved</option>
+                                        <option value="unsolved">Un Solved</option>
+                                        <option value="rejected">Rejected</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Solved Date:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <label for="solveddate" class="form-label">Solved Date:</label>
+                                    <input name="solveddate" type="text" class="form-control" id="DPC_solveddate"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Solution Given:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Solution Entered Time:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <label for="solutiongiven" class="form-label">Solution Given:</label>
+                                    <input name="solutiongiven" type="text" class="form-control" id="solutiongiven"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Remarks:</label>
-                                    <input name="customername" type="email" class="form-control" id="customername"
+                                    <label for="solutionenteredtime" class="form-label">Solution Entered Time:</label>
+                                    <input name="solutionenteredtime" type="text" class="form-control"
+                                        id="solutionenteredtime" autocomplete="off">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="remarks" class="form-label">Remarks:</label>
+                                    <input name="remarks" type="email" class="form-control" id="remarks"
+                                        autocomplete="off">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="userid" class="form-label">Entered BY:</label> <br>
+                                    <input name="userid" type="text" class="form-control" id="userid"
                                         autocomplete="off">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="registered-name" class="form-label">Order Status:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="state" class="form-label">Remarks:</label>
-                                    <select name="s_productgroup" class="form-select swiftselect form-control"
-                                        id="s_productgroup">
-                                        <option value="" selected="selected">ALL</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="caller-type" class="form-label">Entered BY:</label> <br>
-                                    <input name="customername" type="text" class="form-control" id="customername"
-                                        autocomplete="off">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="caller-type" class="form-label">Requirement ID:</label>
-                                    <input name="customername" type="text" class="form-control" id="customername"
+                                    <label for="requirementid" class="form-label">Requirement ID:</label>
+                                    <input name="requirementid" type="text" class="form-control" id="requirementid"
                                         autocomplete="off">
                                 </div>
                                 <!-- More input fields -->
@@ -161,14 +173,17 @@ include("../navigation/navigation.php");
                 <div class="container mt-3">
                     <div class="row">
                         <div class="col-md-12 float-right text-end">
-                            <button name="new" type="submit" class="btn btn-secondary m-2" id="view"
-                                onclick="formsubmit('toview');">New</button>
+                            <button name="new" type="reset" class="btn btn-secondary m-2" id="view"
+                                onclick="setradiovalue(document.getElementById('submitform').anonymous, 'no'); newentry();  formsubmitcustomer(); clearinnerhtml(); gettime();">New</button>
                             <button name="save" type="submit" class="btn btn-primary m-2" id="view"
-                                onclick="formsubmit('toview');">Save</button>
-                            <button name="delete" type="submit" class="btn btn-danger m-2" id="toexcel"
-                                onclick="formsubmit('toexcel');">Delete</button>
+                                onclick="formsubmit('save');">Save</button>
+                            <button name="delete" type="submit" class="btn btn-danger m-2" id="delete"
+                                onclick="formsubmit('delete');">Delete</button>
                             <button name="error-report" type="submit" class="btn btn-warning m-2" id="toexcel"
                                 onclick="formsubmit('toexcel');">Error Report</button>
+                            <button name="requirementreport" type="submit" class="btn btn-warning m-2"
+                                id="requirementreport" onclick="formsubmit('requirementreport');"
+                                value="Req. Report">Error Report</button>
                         </div>
                     </div>
                 </div>

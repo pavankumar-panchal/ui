@@ -35,7 +35,11 @@
     }
 </style>
 
+
+
+
 <div class="container mt-5" style="z-index:0;">
+
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <div>Header Content</div>
@@ -49,12 +53,12 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="businessName">Business Name[Company]:</label>
-                                        <input name="businessname" type="text" class="form-control" id="businessName"
+                                        <input name="businessname" type="text" class="form-control" id="businessname"
                                             maxlength="200" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="businessName">Address:</label>
-                                        <input name="businessname" type="text" class="form-control" id="businessName"
+                                        <input name="address" type="text" class="form-control" id="address"
                                             maxlength="200" autocomplete="off">
                                     </div>
                                     <!-- Add other form groups here -->
@@ -69,98 +73,119 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="state">State:</label>
-                                        <select name="state" class="form-control form-select" id="state">
-                                            <option value="">Select A State</option>
+                                        <select name="state" class="form-control form-select" id="state"
+                                            onchange="getdistrict('districtcodedisplay',this.value);"
+                                            onkeyup="getdistrict('districtcodedisplay',this.value);">
+                                            <option value="">Select A State
+                                            </option>
+                                            <?php include('../inc/state.php'); ?>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="place">District:</label>
-                                        <select name="state" class="form-control form-select" id="state">
+                                        <select name="district" class="form-control form-select" id="district">
                                             <option value="">Select A State</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="state">Pin Code:</label>
-                                        <input name="place" type="text" class="form-control" id="place" maxlength="100"
-                                            autocomplete="off">
+                                        <input name="pincode" type="text" class="form-control" id="pincode"
+                                            maxlength="100" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="state">STD Code:</label>
-                                        <input name="place" type="text" class="form-control" id="place" maxlength="100"
-                                            autocomplete="off">
+                                        <input name="stdcode" type="text" class="form-control" id="stdcode"
+                                            maxlength="100" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="state">Fax Code:</label>
-                                        <input name="place" type="text" class="form-control" id="place" maxlength="100"
+                                        <input name="fax" type="text" class="form-control" id="fax" maxlength="100"
                                             autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="state">Website:</label>
-                                        <input name="place" type="text" class="form-control" id="place" maxlength="100"
-                                            autocomplete="off">
+                                        <input name="website" type="text" class="form-control" id="website"
+                                            maxlength="100" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="place">Type:</label>
-                                        <select name="state" class="form-control form-select" id="state">
+                                        <select name="type" class="form-control form-select" id="type">
                                             <option value="">Select A State</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="place">Category:</label>
-                                        <select name="state" class="form-control form-select" id="state">
-                                            <option value="">Select A State</option>
+                                        <select name="category" class="form-control form-select" id="category">
+                                            <option value="">Category
+                                                Selection</option>
+                                            <?php
+                                            include('../inc/businesscategory.php');
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="state">Website:</label>
-                                        <input name="place" type="text" class="form-control" id="place" maxlength="100"
-                                            autocomplete="off">
+                                        <label for="state">Region:</label>
+                                        <input name="region" type="text" class="form-control" id="region"
+                                            maxlength="100" autocomplete="off">
                                     </div>
                                     <div class="form-group">
-                                        <label for="state">Remarks:</label>
-                                        <input name="place" type="text" class="form-control" id="place" maxlength="100"
-                                            autocomplete="off">
+                                        <label for="state">Branch:</label>
+                                        <input name="branch" type="text" class="form-control" id="branch"
+                                            maxlength="100" autocomplete="off">
                                     </div>
 
                                     <!-- Add other form groups here -->
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="customerID">Customer ID:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customerID"
+                                        <label for="remarks">Remarks:</label>
+                                        <input name="remarks" type="text" class="form-control" id="remarks"
                                             maxlength="100" autocomplete="off">
                                     </div>
                                     <div class="form-group">
-                                        <label for="customerID">Last Password:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customerID"
+                                        <label for="customerID">Customer ID:</label>
+                                        <input name="customerid" type="text" class="form-control" id="customerid"
                                             maxlength="100" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastpassword">Last Password:</label>
+                                        <span id="initialpassworddfield" style="display:block">
+                                            <input name="lastpassword" type="text" class="form-control"
+                                                id="lastpassword" maxlength="100" autocomplete="off">
+                                        </span>
+                                        <span id="displayresetpwd" style="display:none">
+                                            <input name="initialpassword" type="text" class="form-control"
+                                                id="initialpassword" size="30" readonly="readonly"
+                                                style="background:#FEFFE6; color:#FF0000;" autocomplete="off" />
+                                        </span>
                                     </div>
                                     <div class="form-group">
                                         <label for="customerID">Current Dealer:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customerID"
+                                        <input name="currentdealer" type="text" class="form-control" id="currentdealer"
                                             maxlength="100" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="customerID">GSTIN:</label>
-                                        <input name="customerid" type="text" class="form-control" id="customerID"
+                                        <input name="gst_no" type="text" class="form-control" id="gst_no"
                                             maxlength="100" autocomplete="off">
+                                        <span id="state_gst" style="visibility:hidden"></span>
                                     </div>
                                     <div class="form-check mb-2">
-                                        <label class="form-check-label" for="servicecharge">
-                                            <input class="form-check-input" type="checkbox" name="servicecharge"
-                                                id="servicecharge">
+                                        <label class="form-check-label" for="companyclosed">
+                                            <input class="form-check-input" type="checkbox" name="companyclosed"
+                                                id="companyclosed">
                                             Company Closed</label>
                                     </div>
                                     <div class="form-check mb-2">
-                                        <label class="form-check-label" for="promotionalSMS">
-                                            <input class="form-check-input" type="checkbox" name="promotionalSMS"
-                                                id="promotionalSMS">
+                                        <label class="form-check-label" for="promotionalsms">
+                                            <input class="form-check-input" type="checkbox" name="promotionalsms"
+                                                id="promotionalsms">
                                             Promotional SMS</label>
                                     </div>
                                     <div class="form-check mb-2">
-                                        <label class="form-check-label" for="promotionalEmail">
-                                            <input class="form-check-input" type="checkbox" name="promotionalEmail"
-                                                id="promotionalEmail">
+                                        <label class="form-check-label" for="promotionalemail">
+                                            <input class="form-check-input" type="checkbox" name="promotionalemail"
+                                                id="promotionalemail">
                                             Promotional
                                             Email</label>
                                     </div>
@@ -274,6 +299,10 @@
         </div>
     </div>
 
+
+
+
+
     <div class="slider" id="customerSlider">
         <div class="close-icon" id="closeCustomerSlider">X</div>
         <!-- Customer Selection Content goes here -->
@@ -312,6 +341,12 @@
             </div> <!--  -->
         </div>
     </div>
+
+
+
+
+
+
     <div class="slider" id="advancedSlider">
         <div class="close-icon" id="closeAdvancedSlider">X</div>
         <!-- Advanced Selection Content goes here -->
@@ -433,6 +468,11 @@
                                             </div>
                                         </div>
                                     </div>
+
+
+
+
+
                                     <!-- second -->
                                     <div class="second mt-5" style=" width: 100%; ">
                                         <div class="container " style="position: relative; bottom: 95px;">
@@ -621,13 +661,10 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
     </div>
+
+
+
 
 
 
@@ -683,7 +720,11 @@
         <div class="text-end mt-2"> <a onclick="adddescriptionrows();" style="cursor:pointer" class="r-text">Add one
                 More
                 >></a> </div>
-    </div> <!-- Add the following script tag at the end of the body to include Bootstrap JS and custom JavaScript -->
+    </div>
+
+
+
+    <!-- Add the following script tag at the end of the body to include Bootstrap JS and custom JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script> let rowCounter = 1; function adddescriptionrows() { const tableBody = document.getElementById('adddescriptionrows'); const lastRow = tableBody.lastElementChild; const newRow = lastRow.cloneNode(true); rowCounter++; newRow.querySelector('td:first-child').innerText = rowCounter; const inputs = newRow.querySelectorAll('input'); const selectElement = newRow.querySelector('select'); selectElement.name = `selectiontype${rowCounter}`; selectElement.id = `selectiontype${rowCounter}`; inputs.forEach(input => { const inputName = input.name; input.name = inputName.replace(/\d+/, rowCounter); input.value = ''; }); const removeLink = newRow.querySelector('.removerow'); removeLink.addEventListener('click', () => { removedescriptionrows(newRow); }); tableBody.appendChild(newRow); } function row() { if (rowCounter == 1) { alert("Can't delete this row"); } } function removedescriptionrows(rowToRemove) { const tableBody = document.getElementById('adddescriptionrows'); tableBody.removeChild(rowToRemove); rowCounter--; const rows = tableBody.getElementsByTagName('tr'); for (let i = 0; i < rows.length; i++) { rows[i].getElementsByTagName('td')[0].innerText = i + 1; const inputs = rows[i].querySelectorAll('input'); const selectElement = rows[i].querySelector('select'); selectElement.name = `selectiontype${i + 1}`; selectElement.id = `selectiontype${i + 1}`; inputs.forEach(input => { const inputName = input.name; input.name = inputName.replace(/\d+/, i + 1); }); } } </script>
     <!--  -->
